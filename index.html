@@ -21,8 +21,14 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        .menu-items { display: flex; list-style: none; padding: 0; margin: 0; height: 100%; }
-        
+        /* ตั้งค่าให้ทุกลิงก์ในเมนูไม่มีเส้นใต้ */
+        .main-nav a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
         /* สไตล์รายการเมนูแต่ละช่อง */
         .dropdown {
             position: relative;
@@ -33,6 +39,7 @@
             color: #004a80;
             font-weight: bold;
             height: 100%;
+            transition: 0.3s;
         }
 
         /* เส้นใต้สีเหลืองทองเมื่อชี้ ตามรูป image_650822.png */
@@ -50,7 +57,7 @@
             background-color: white;
             min-width: 350px; 
             box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
+            z-index: 100;
             padding: 10px 0;
         }
 
@@ -66,9 +73,11 @@
             text-decoration: none;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid #eee;
             font-size: 14px;
             font-weight: normal;
+            height: auto;
         }
 
         .dropdown-content a:hover {
@@ -80,23 +89,27 @@
         .dropdown-content a::after {
             content: "→";
             color: #004a80;
+            margin-left: 10px;
         }
 
-        .hero-section { padding: 60px 10%; display: flex; gap: 50px; align-items: center; }
+        .hero-section { padding: 60px 10%; text-align: center; }
     </style>
 </head>
 <body>
 
     <nav class="main-nav">
-        <div class="dropdown">🏠</div>
-        <a href="https://www.unionpetrochemical.com/th/</a>
+        <!-- ปุ่มหน้าแรก -->
+        <a href="index.html" class="dropdown">🏠</a>
+        
+        <!-- ลิงก์ไปเว็บไซต์บริษัทที่ถูกต้อง -->
+        <a href="https://www.unionpetrochemical.com/th/" target="_blank" class="dropdown">เว็บไซต์หลัก</a>
         
         <!-- เมนูที่มี Dropdown -->
         <div class="dropdown">
             ภาพรวมความยั่งยืน
             <div class="dropdown-content">
-                <!-- ใส่ลิงก์ไปไฟล์ chairman-message.html เรียบร้อยแล้ว -->
-                <a href="สารจากประธานกรรมการบริษัท.html">สารจากประธานกรรมการบริษัท</a>
+                <!-- ลิงก์ไปไฟล์หน้าสารจากประธาน (ต้องตั้งชื่อไฟล์ใน GitHub ว่า chairman-message.html) -->
+                <a href="chairman-message.html">สารจากประธานกรรมการบริษัท</a>
                 <a href="#">การประเมินประเด็นด้านความยั่งยืนที่สำคัญ</a>
                 <a href="#">การสนับสนุนเป้าหมายการพัฒนาที่ยั่งยืน</a>
             </div>
@@ -106,5 +119,11 @@
         <div class="dropdown">สังคม</div>
         <div class="dropdown">การกำกับดูแลและเศรษฐกิจ</div>
     </nav>
+
+    <div class="hero-section">
+        <h1 style="color: #1b5e20;">ยินดีต้อนรับสู่โปรเจกต์ ESG</h1>
+        <p>ลองนำเมาส์ไปชี้ที่เมนูเพื่อดู Dropdown และทดสอบการคลิกได้เลยครับ</p>
+    </div>
+
 </body>
 </html>
