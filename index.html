@@ -2,9 +2,8 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>Web Ukem - ESG Report</title>
+    <title>Web Ukem - ESG Project</title>
     <style>
-        /* กำหนดฟอนต์และพื้นหลังไล่สีตาม image_6562d0.png */
         body { 
             margin: 0; 
             font-family: 'Sarabun', sans-serif; 
@@ -12,102 +11,104 @@
             min-height: 100vh;
         }
 
-        /* แถบบนสุดสีขาวโปร่งแสง */
-        .top-bar {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 8px 50px;
-            display: flex;
-            justify-content: flex-end;
-            font-size: 13px;
-            color: #444;
-        }
-        .top-bar span { margin-left: 15px; cursor: pointer; }
-
-        /* แถบเมนูหลัก */
+        /* เมนูหลัก */
         .main-nav {
             display: flex;
             align-items: center;
-            padding: 15px 50px;
+            padding: 0 50px;
             background: white;
+            height: 70px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .logo { height: 50px; margin-right: 30px; }
-        .menu-items { display: flex; list-style: none; padding: 0; margin: 0; }
-        .menu-items li { 
-            margin-right: 18px; 
-            color: #004a80; 
-            font-weight: bold; 
-            font-size: 14px;
-            cursor: pointer; 
-        }
 
-        /* ส่วนเนื้อหาหลักแบบในรูป image_6562d0.png */
-        .hero-section {
+        .menu-items { display: flex; list-style: none; padding: 0; margin: 0; height: 100%; }
+        
+        /* สไตล์รายการเมนูแต่ละช่อง */
+        .dropdown {
+            position: relative;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 60px 10%;
-            gap: 50px;
-        }
-        .report-card {
-            background: white;
-            padding: 40px;
-            box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            width: 300px;
-        }
-        .content-text h2 {
-            color: #1b5e20; /* สีเขียวเข้มแบบในภาพ */
-            font-size: 32px;
-            margin-bottom: 20px;
+            padding: 0 15px;
+            cursor: pointer;
+            color: #004a80;
+            font-weight: bold;
+            height: 100%;
         }
 
-        /* ปุ่มสีเขียวไล่สีแบบในภาพ */
-        .btn-detail {
-            background: linear-gradient(to right, #72ce60, #bed641);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        /* เส้นใต้สีเหลืองทองเมื่อชี้ ตามรูป image_650822.png */
+        .dropdown:hover {
+            color: #b08d3e;
+            border-bottom: 3px solid #b08d3e;
         }
+
+        /* กล่องรายการที่ซ่อนอยู่ (Dropdown Content) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 70px; /* ให้เริ่มต่อจากแถบเมนูพอดี */
+            left: 0;
+            background-color: white;
+            min-width: 350px; /* กว้างหน่อยตามรูป */
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            padding: 10px 0;
+        }
+
+        /* แสดงเมื่อเอาเมาส์ชี้ */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* รายการย่อยข้างในตามรูป image_650822.png */
+        .dropdown-content a {
+            color: #333;
+            padding: 15px 25px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f9f9f9;
+            color: #004a80;
+        }
+
+        /* ลูกศรชี้ขวา */
+        .dropdown-content a::after {
+            content: "→";
+            color: #004a80;
+        }
+
+        .hero-section { padding: 60px 10%; display: flex; gap: 50px; align-items: center; }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <span>🏠 กลับสู่หน้าเว็บไซต์หลัก</span>
-        <span>🔍 ค้นหา</span>
-        <span><strong>TH</strong> | EN</span>
-    </div>
-
     <nav class="main-nav">
-        <img src="https://via.placeholder.com/150x50?text=UNION+PETRO" class="logo">
-        <ul class="menu-items">
-            <li>หน้าหลักการลงทุน</li>
-            <li>ธุรกิจของบริษัท</li>
-            <li>ข้อมูลทางการเงิน ▼</li>
-            <li>ข้อมูลราคาหลักทรัพย์ ▼</li>
-            <li>ห้องข่าว ▼</li>
-        </ul>
+        <div class="dropdown">🏠</div>
+        
+        <!-- เมนูที่มี Dropdown ตามแบบ -->
+        <div class="dropdown">
+            ภาพรวมความยั่งยืน
+            <div class="dropdown-content">
+                <a href="#">สารจากคณะกรรมการบริษัท</a>
+                <a href="#">การประเมินประเด็นด้านความยั่งยืนที่สำคัญ</a>
+                <a href="#">ห่วงโซ่คุณค่าของธุรกิจ</a>
+                <a href="#">CK มุ่งสู่ความยั่งยืน</a>
+                <a href="#">การสนับสนุนเป้าหมายการพัฒนาที่ยั่งยืน</a>
+            </div>
+        </div>
+
+        <div class="dropdown">สิ่งแวดล้อม</div>
+        <div class="dropdown">สังคม</div>
+        <div class="dropdown">การกำกับดูแลและเศรษฐกิจ</div>
     </nav>
 
     <div class="hero-section">
-        <!-- จำลองรูปเล่มรายงาน -->
-        <div class="report-card">
-            <div style="color:red; font-weight:bold; border:2px solid red; display:inline-block; padding:5px; margin-bottom:20px;">
-                UNION<br>PETRO
-            </div>
-            <p style="font-size:14px; color:#333;">รายงานผลการดำเนินงานด้าน ESG<br>สำหรับบริษัทจดทะเบียนประจำปี 2568</p>
-        </div>
-
-        <!-- ข้อความและปุ่มด้านขวา -->
-        <div class="content-text">
-            <h2>รายงานผลการดำเนินงานด้าน ESG 2568</h2>
-            <button class="btn-detail">รายละเอียด</button>
-        </div>
+        <h1 style="color: #1b5e20;">ลองเอาเมาส์ชี้ที่ "ภาพรวมความยั่งยืน" ดูครับ</h1>
     </div>
 
 </body>
