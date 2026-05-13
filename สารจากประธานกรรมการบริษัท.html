@@ -1,143 +1,43 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <title>Web Ukem - ESG Project</title>
-    <style>
-        body { 
-            margin: 0; 
-            font-family: 'Sarabun', sans-serif; 
-            background: linear-gradient(135deg, #c5e1a5 0%, #e6ee9c 50%, #fff59d 100%);
-            min-height: 100vh;
-        }
-
-        /* เมนูหลัก */
-        .main-nav {
-            display: flex;
-            align-items: center;
-            padding: 0 50px;
-            background: white;
-            height: 70px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        /* ตั้งค่าให้ทุกลิงก์ในเมนูไม่มีเส้นใต้ */
-        .main-nav a {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-
-        /* สไตล์รายการเมนูแต่ละช่อง */
-        .dropdown {
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            cursor: pointer;
-            color: #004a80;
-            font-weight: bold;
-            height: 100%;
-            transition: 0.3s;
-        }
-
-        /* เส้นใต้สีเหลืองทองเมื่อชี้ ตามรูป image_650822.png */
-        .dropdown:hover {
-            color: #b08d3e;
-            border-bottom: 3px solid #b08d3e;
-        }
-
-        /* กล่องรายการที่ซ่อนอยู่ (Dropdown Content) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 70px; 
-            left: 0;
-            background-color: white;
-            min-width: 350px; 
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-            z-index: 100;
-            padding: 10px 0;
-        }
-
-        /* แสดงเมื่อเอาเมาส์ชี้ */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* รายการย่อยข้างใน */
-        .dropdown-content a {
-            color: #333;
-            padding: 15px 25px;
-            text-decoration: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-            font-size: 14px;
-            font-weight: normal;
-            height: auto;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f9f9f9;
-            color: #004a80;
-        }
-
-        /* ลูกศรชี้ขวา */
-        .dropdown-content a::after {
-            content: "→";
-            color: #004a80;
-            margin-left: 10px;
-        }
-
-        .hero-section { padding: 60px 10%; text-align: center; }
-    </style>
+    <meta charset="UTF-8">
+    <title>สารจากประธานกรรมการ - Web Ukem</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Sarabun', sans-serif; 
+            background: linear-gradient(135deg, #f1f8e9 0%, #ffffff 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 50px auto; padding: 40px; background: white; shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #72ce60; }
+        h1 { color: #1b5e20; border-bottom: 2px solid #e6ee9c; padding-bottom: 10px; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: #004a80; text-decoration: none; font-weight: bold; }
+        .signature { margin-top: 40px; text-align: right; font-weight: bold; color: #1b5e20; }
+    </style>
 </head>
 <body>
 
-    <nav class="main-nav">
-        <!-- ปุ่มหน้าแรก -->
-        <a href="index.html" class="dropdown">🏠</a>
-        <!-- ลิงก์ไปเว็บไซต์บริษัทที่ถูกต้อง -->
-        <a href="https://www.unionpetrochemical.com/th/" target="_blank" class="dropdown">เว็บไซต์หลัก</a>
-        
-        <!-- เมนูที่มี Dropdown -->
-        <div class="dropdown">
-            ภาพรวมความยั่งยืน
-            <div class="dropdown-content">
-                <!-- ลิงก์ไปไฟล์หน้าสารจากประธาน (ต้องตั้งชื่อไฟล์ใน GitHub ว่า chairman-message.html) -->
-                <a href="สารจากประธานกรรมการบริษัท.html">สารจากประธานกรรมการบริษัท</a>
-                <a href="#">การประเมินประเด็นด้านความยั่งยืนที่สำคัญ</a>
-                <a href="#">การสนับสนุนเป้าหมายการพัฒนาที่ยั่งยืน</a>
-            </div>
-        </div>
-
-        <div class="dropdown">สิ่งแวดล้อม</div>
-        <div class="dropdown">สังคม</div>
-        <div class="dropdown">การกำกับดูแลและเศรษฐกิจ</div>
-    </nav>
-
-    <div class="container">
-        <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
-        
-        <h1>สารจากประธานกรรมการบริษัท</h1        
-        <p>ปี 2568 ถือเป็นอีกหนึ่งปีที่เศรษฐกิจโลกและเศรษฐกิจไทยต้อง
+    <div class="container">
+        <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
+        
+        <h1>สารจากประธานกรรมการบริษัท</h1        
+        <p>ปี 2568 ถือเป็นอีกหนึ่งปีที่เศรษฐกิจโลกและเศรษฐกิจไทยต้อง
 เผชิญกับความไม่แน่นอนจากหลายปัจจัย ทั้งการชะลอตัวในบาง
 ภูมิภาค ความผันผวนของราคาพลังงานและอัตราดอกเบี้ย รวมถึง
 ความตึงเครียดทางภูมิรัฐศาสตร์ที่ส่งผลกระทบโดยตรงต่อห่วงโช่
 อุปทานและต้นทุนธุรกิจ ขณะเดียวกัน ภาคธุรกิจทั่วโลกต่างได้รับแรง
 กดดับจากการเปลี่ยนผ่านสู่เศรษฐกิจคาร์บอนต่ำ ซึ่งเป็นความ
 ท้าทายที่ต้องเร่งปรับตัวอย่างจริงจัง</p>
-       <P>บริษัทฯ ได้ยกระดับการดำเนินงานให้สอดรับกับกับกระแสการ
+       <P>บริษัทฯ ได้ยกระดับการดำเนินงานให้สอดรับกับกับกระแสการ
 เปลี่ยนแปลงนี้ โดยความสำเร็จจากการขยายเครือข่ายความร่วมมือ
 กับพันธมิตรทางธุรกิจระดับสากล ทำให้เราสามารถเพิ่มขีดความ
 สามารถในการแข่งขันได้อย่างก้าวกระโดด ปัจจุบันเราไม่ได้มุ่งเน้น
 เพียงแค่ความคล่องตัวทางการเงินเท่านั้น แต่ยังให้ความสำคัญกับ
 การนำเทคโนโลยีอัจฉริยะมาประยุกต์ใช้เพื่อเพิ่มประสิทธิภาพการ
 ดำเนินงานในทุกมิติ</p>
-        <p>ท่ามกลางบริบทดังกล่าว บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด
+        <p>ท่ามกลางบริบทดังกล่าว บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด
 (มหาชบ) ในฐานะผู้นำการนำเข้าและจัดจำหน่ายโซลเวนท์ ยังยังมุ่ง
 เน้นการบริหารจัดการห่วงโซ่อุปทานอย่างมีประสิทธิภาพและโปร่งใส
 โดยในปี 2568 บริษัทฯ ได้บรรลุความสำเร็จครั้งสำคัญสำคัญในการเปิด
@@ -147,7 +47,7 @@
 กลยุทธ์สำคัญใญในการลดระยะการขนส่ขนส่ง ซึ่งช่วยลดทั้งต้นทุนการ
 ดำเนินงาน การใช้พลังงาน และการปล่อยก๊าซเรือนกระจก อันเป็นการ
 เสริมสร้างขีดความสามารถในการแข่งขันอย่างยั่งยืน</p>
-        <p>บอกจากนี้ การดำเนินธุรกิจของ บริษัท ยูทิเจ กลีน โซลูชั่น
+        <p>บอกจากนี้ การดำเนินธุรกิจของ บริษัท ยูทิเจ กลีน โซลูชั่น
 (ประเทศไทย) จำกัด ในด้านการรีไซเคิลตัวทำละลาย ซึ่งเกิดจากความ
 ร่วมมือกับพันธมิตรผู้เชี่ยวชาญจากประเทศญี่ปุ่น ได้ก้าวขึ้นมาเป็น
 โมเดลต้นแบบของธุรกิจสีเขียว (Green Business) ของบริษัทฯ
@@ -155,18 +55,20 @@
 Social, and Governance) มาปรับใช้จริง ไม่ใช่เพียงแค่ระดับ
 นโยบาย แต่เป็นการสร้างคุณค่าทางเศรษฐกิจควบคู่ไปกับการดูแล
 สิ่งแวดล้อมอย่างยั่งยืน</p>
-        <p>ผมมีความเชื่อมั่นอย่างยิ่งว่า ด้วยประสบการณ์ที่สั่งสบบาอย่าง
+        <p>ผมมีความเชื่อมั่นอย่างยิ่งว่า ด้วยประสบการณ์ที่สั่งสบบาอย่าง
 ยาวบานและความร่วมแรงร่วมใจของคณะกรรบการ ผู้บริหาร และ
 พนักจานทุกคน บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด (บหาชบ)
 จะสาบารถก้าวข้ามทุกความท้ากาย เพื่อสร้างคุณค่าที่มั่นคงและ
 ยั่งยืนให้แก่ผู้ถือหุ้น สังคม และสิ่งแวดล้อมสืบไป</p>
 
-        <div class="signature">
-    <div class="signature-box">
-        <p>ประธานกรรมการบริษัท</p>
-        <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด(มหาชน)</p>
-    </div>
+        <div class="signature">
+    <div class="signature-box">
+        <p>ประธานกรรมการบริษัท</p>
+        <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด(มหาชน)</p>
+    </div>
 </div>
 
 </body>
 </html>
+
+แก้จากอันนี้
