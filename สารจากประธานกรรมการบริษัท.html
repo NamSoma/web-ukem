@@ -101,17 +101,23 @@
             margin: 2px 0; /* บรรทัดในลายเซ็นชิดกันเป็นพิเศษ */
             line-height: 1.2;
         }
-        .signature {
+/* ส่วนลายเซ็น (image_48be96.png) */
+.signature {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* เปลี่ยนเป็นกึ่งกลางหน้าจอ */
+    align-items: flex-end; /* ดันกลุ่มข้อความทั้งหมดไปทางขวา */
 }
 
 .signature-box {
-    text-align: center; /* จัดตัวหนังสือ 2 บรรทัดให้กึ่งกลางตรงกันเอง */
+    text-align: center; /* จัดให้ข้อความ 2 บรรทัดนี้วางกึ่งกลางตรงกันเอง */
     font-weight: bold;
     color: #1b5e20;
+}
+
+.signature-box p { 
+    margin: 2px 0; /* ปรับบรรทัดให้ชิดกันตามที่ต้องการก่อนหน้านี้ */
+    line-height: 1.2;
 }
     </style>
 </head>
