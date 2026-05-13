@@ -45,10 +45,10 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: 70px; /* ให้เริ่มต่อจากแถบเมนูพอดี */
+            top: 70px; 
             left: 0;
             background-color: white;
-            min-width: 350px; /* กว้างหน่อยตามรูป */
+            min-width: 350px; 
             box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
             z-index: 1;
             padding: 10px 0;
@@ -59,7 +59,7 @@
             display: block;
         }
 
-        /* รายการย่อยข้างในตามรูป image_650822.png */
+        /* รายการย่อยข้างใน */
         .dropdown-content a {
             color: #333;
             padding: 15px 25px;
@@ -90,11 +90,12 @@
     <nav class="main-nav">
         <div class="dropdown">🏠</div>
         
-        <!-- เมนูที่มี Dropdown ตามแบบ -->
+        <!-- เมนูที่มี Dropdown -->
         <div class="dropdown">
             ภาพรวมความยั่งยืน
             <div class="dropdown-content">
-                <a href="#">สารจากประธานกรรมการบริษัท</a>
+                <!-- ใส่ลิงก์ไปไฟล์ chairman-message.html เรียบร้อยแล้ว -->
+                <a href="สารจากประธานกรรมการบริษัท.html">สารจากประธานกรรมการบริษัท</a>
                 <a href="#">การประเมินประเด็นด้านความยั่งยืนที่สำคัญ</a>
                 <a href="#">การสนับสนุนเป้าหมายการพัฒนาที่ยั่งยืน</a>
             </div>
@@ -104,6 +105,11 @@
         <div class="dropdown">สังคม</div>
         <div class="dropdown">การกำกับดูแลและเศรษฐกิจ</div>
     </nav>
+
+    <div style="padding: 50px; text-align: center;">
+        <h1>หน้าหลัก (Index)</h1>
+        <p>ลองเอาเมาส์ชี้ที่เมนู แล้วกด "สารจากประธานกรรมการบริษัท" ดูครับ</p>
+    </div>
 
 </body>
 </html>
