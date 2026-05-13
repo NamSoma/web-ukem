@@ -2,60 +2,113 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>Web Ukem - My Project</title>
+    <title>Web Ukem - ESG Report</title>
     <style>
-        body { margin: 0; font-family: sans-serif; }
-        
-        /* แถบบนสุดสีเทาอ่อน */
+        /* กำหนดฟอนต์และพื้นหลังไล่สีตาม image_6562d0.png */
+        body { 
+            margin: 0; 
+            font-family: 'Sarabun', sans-serif; 
+            background: linear-gradient(135deg, #c5e1a5 0%, #e6ee9c 50%, #fff59d 100%);
+            min-height: 100vh;
+        }
+
+        /* แถบบนสุดสีขาวโปร่งแสง */
         .top-bar {
-            background-color: #f5f5f5;
-            padding: 5px 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 8px 50px;
             display: flex;
             justify-content: flex-end;
-            align-items: center;
-            font-size: 14px;
-            color: #666;
+            font-size: 13px;
+            color: #444;
         }
-        .top-bar span { margin-left: 20px; cursor: pointer; }
+        .top-bar span { margin-left: 15px; cursor: pointer; }
 
         /* แถบเมนูหลัก */
         .main-nav {
             display: flex;
             align-items: center;
-            padding: 10px 50px;
-            border-bottom: 1px solid #ddd;
+            padding: 15px 50px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .logo { height: 60px; margin-right: 30px; }
-        
-        .menu-items { display: flex; list-style: none; padding: 0; }
-        .menu-items li { margin-right: 20px; color: #004a80; font-weight: bold; cursor: pointer; }
-        .menu-items li:hover { color: #cc0000; }
+        .logo { height: 50px; margin-right: 30px; }
+        .menu-items { display: flex; list-style: none; padding: 0; margin: 0; }
+        .menu-items li { 
+            margin-right: 18px; 
+            color: #004a80; 
+            font-weight: bold; 
+            font-size: 14px;
+            cursor: pointer; 
+        }
+
+        /* ส่วนเนื้อหาหลักแบบในรูป image_6562d0.png */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 10%;
+            gap: 50px;
+        }
+        .report-card {
+            background: white;
+            padding: 40px;
+            box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .content-text h2 {
+            color: #1b5e20; /* สีเขียวเข้มแบบในภาพ */
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* ปุ่มสีเขียวไล่สีแบบในภาพ */
+        .btn-detail {
+            background: linear-gradient(to right, #72ce60, #bed641);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
 
-    <!-- ส่วนบนสุดตามรูป image_657598.png -->
     <div class="top-bar">
         <span>🏠 กลับสู่หน้าเว็บไซต์หลัก</span>
         <span>🔍 ค้นหา</span>
-        <span style="background:#004a80; color:white; padding:2px 8px; border-radius:15px;">TH</span>
-        <span>EN</span>
+        <span><strong>TH</strong> | EN</span>
     </div>
 
-    <!-- ส่วนโลโก้และเมนู -->
     <nav class="main-nav">
-        <!-- ใส่รูปโลโก้ของคุณที่นี่ -->
-        <img src="https://via.placeholder.com/150x60?text=LOGO" class="logo" alt="Logo">
-        
+        <img src="https://via.placeholder.com/150x50?text=UNION+PETRO" class="logo">
         <ul class="menu-items">
             <li>หน้าหลักการลงทุน</li>
             <li>ธุรกิจของบริษัท</li>
             <li>ข้อมูลทางการเงิน ▼</li>
             <li>ข้อมูลราคาหลักทรัพย์ ▼</li>
-            <li>ข้อมูลผู้ถือหุ้น ▼</li>
             <li>ห้องข่าว ▼</li>
-            <li>สอบถามข้อมูล ▼</li>
         </ul>
     </nav>
+
+    <div class="hero-section">
+        <!-- จำลองรูปเล่มรายงาน -->
+        <div class="report-card">
+            <div style="color:red; font-weight:bold; border:2px solid red; display:inline-block; padding:5px; margin-bottom:20px;">
+                UNION<br>PETRO
+            </div>
+            <p style="font-size:14px; color:#333;">รายงานผลการดำเนินงานด้าน ESG<br>สำหรับบริษัทจดทะเบียนประจำปี 2568</p>
+        </div>
+
+        <!-- ข้อความและปุ่มด้านขวา -->
+        <div class="content-text">
+            <h2>รายงานผลการดำเนินงานด้าน ESG 2568</h2>
+            <button class="btn-detail">รายละเอียด</button>
+        </div>
+    </div>
+
 </body>
 </html>
