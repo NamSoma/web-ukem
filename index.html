@@ -1,2 +1,67 @@
-<h1>สวัสดีครับ นี่คือเว็บไซต์แรกของผม!</h1>
-<p>กำลังทดลองใช้ Render เชื่อมกับ GitHub ครับ</p>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Ukem - My Project</title>
+    <style>
+        body { margin: 0; font-family: sans-serif; }
+        
+        /* แถบบนสุดสีเทาอ่อน */
+        .top-bar {
+            background-color: #f5f5f5;
+            padding: 5px 50px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .top-bar span { margin-left: 20px; cursor: pointer; }
+
+        /* แถบเมนูหลัก */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            padding: 10px 50px;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo { height: 60px; margin-right: 30px; }
+        
+        .menu-items { display: flex; list-style: none; padding: 0; }
+        .menu-items li { margin-right: 20px; color: #004a80; font-weight: bold; cursor: pointer; }
+        .menu-items li:hover { color: #cc0000; }
+    </style>
+</head>
+<body>
+
+    <!-- ส่วนบนสุดตามรูป image_657598.png -->
+    <div class="top-bar">
+        <span>🏠 กลับสู่หน้าเว็บไซต์หลัก</span>
+        <span>🔍 ค้นหา</span>
+        <span style="background:#004a80; color:white; padding:2px 8px; border-radius:15px;">TH</span>
+        <span>EN</span>
+    </div>
+
+    <!-- ส่วนโลโก้และเมนู -->
+    <nav class="main-nav">
+        <!-- ใส่รูปโลโก้ของคุณที่นี่ -->
+        <img src="https://via.placeholder.com/150x60?text=LOGO" class="logo" alt="Logo">
+        
+        <ul class="menu-items">
+            <li>หน้าหลักการลงทุน</li>
+            <li>ธุรกิจของบริษัท</li>
+            <li>ข้อมูลทางการเงิน ▼</li>
+            <li>ข้อมูลราคาหลักทรัพย์ ▼</li>
+            <li>ข้อมูลผู้ถือหุ้น ▼</li>
+            <li>ห้องข่าว ▼</li>
+            <li>สอบถามข้อมูล ▼</li>
+        </ul>
+    </nav>
+
+    <div style="padding: 50px; text-align: center;">
+        <h1>ยินดีต้อนรับสู่เว็บไซต์ของผม</h1>
+        <p>ตอนนี้หน้าเว็บเริ่มดูดีเหมือนตัวอย่างใน image_657598.png แล้วครับ!</p>
+    </div>
+
+</body>
+</html>
