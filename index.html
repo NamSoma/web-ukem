@@ -2,146 +2,157 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>Web Ukem - ESG Project</title>
+    <title>สารจากประธานกรรมการ - Web Ukem</title>
     <style>
         body { 
             margin: 0; 
             font-family: 'Sarabun', sans-serif; 
-            /* --- แก้ไขส่วนพื้นหลังตรงนี้ --- */
-            background-image: url('Mask-Group-8.png'); /* ใส่ชื่อไฟล์รูปที่อัปโหลดขึ้น GitHub */
-            background-size: cover;       /* ปรับภาพให้เต็มหน้าจอ */
-            background-position: center;  /* จัดภาพให้อยู่กึ่งกลาง */
-            background-attachment: fixed; /* ล็อคภาพไม่ให้เลื่อนตามการ Scroll */
-            background-repeat: no-repeat;
-            /* สำรองไว้เผื่อรูปไม่โหลด ให้แสดงสีไล่เฉดเดิม */
-            background-color: #f1f8e9; 
             min-height: 100vh;
+            position: relative;
+            background-color: #ffffff;
         }
 
-        /* เมนูหลัก */
+        /* --- ส่วนที่ทำให้ภาพพื้นหลังจางลง --- */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* แก้ชื่อไฟล์รูปภาพของคุณที่นี่ */
+            background-image: url('ชื่อไฟล์รูปของคุณ.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* ความจางของภาพ (0.1 - 0.9) */
+            z-index: -1;
+        }
+
+        /* เมนูหลักด้านบน */
         .main-nav {
             display: flex;
             align-items: center;
             padding: 0 50px;
-            /* ปรับให้ขาวโปร่งแสงเล็กน้อยเพื่อให้เห็นภาพพื้นหลังจางๆ*/
-            background: rgba(25, 25, 25, 0.5); 
+            background: rgba(255, 255, 255, 0.95);
             height: 70px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        /* ตั้งค่าให้ทุกลิงก์ในเมนูไม่มีเส้นใต้ */
         .main-nav a {
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-
-        /* สไตล์รายการเมนูแต่ละช่อง */
-        .dropdown {
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            cursor: pointer;
             color: #004a80;
             font-weight: bold;
+            padding: 0 20px;
             height: 100%;
+            display: flex;
+            align-items: center;
             transition: 0.3s;
         }
 
-        /* เส้นใต้สีเหลืองทองเมื่อชี้ */
-        .dropdown:hover {
+        .main-nav a:hover {
             color: #b08d3e;
             border-bottom: 3px solid #b08d3e;
         }
 
-        /* กล่องรายการที่ซ่อนอยู่ (Dropdown Content) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 70px; 
-            left: 0;
-            background-color: white;
-            min-width: 350px; 
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-            z-index: 100;
-            padding: 10px 0;
-        }
-
-        /* แสดงเมื่อเอาเมาส์ชี้ */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* รายการย่อยข้างใน */
-        .dropdown-content a {
-            color: #333;
-            padding: 15px 25px;
-            text-decoration: none;
+        /* ส่วนเนื้อหา */
+        .content-wrapper {
+            padding: 40px 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-            font-size: 14px;
-            font-weight: normal;
-            height: auto;
+            justify-content: center;
         }
 
-        .dropdown-content a:hover {
-            background-color: #f9f9f9;
-            color: #004a80;
+        .container { 
+            max-width: 800px; 
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9); /* ขาวโปร่งแสงเล็กน้อย */
+            padding: 50px 60px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-top: 8px solid #72ce60;
+            border-radius: 8px;
         }
 
-        /* ลูกศรชี้ขวา */
-        .dropdown-content a::after {
-            content: "→";
-            color: #004a80;
-            margin-left: 10px;
+        .back-btn { 
+            display: inline-block; 
+            margin-bottom: 20px; 
+            color: #004a80; 
+            text-decoration: none; 
+            font-weight: bold; 
         }
 
-        .hero-section { 
-            padding: 100px 10%; 
-            text-align: center; 
+        h1 { 
+            color: #1b5e20; 
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
         }
 
-        /* กล่องข้อความต้อนรับให้ดูเด่นขึ้นบนพื้นหลังภาพ */
-        .welcome-box {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 40px;
-            border-radius: 15px;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        p {
+            font-size: 16px;
+            line-height: 1.5; /* บรรทัดชิดกันตามที่ต้องการ */
+            color: #333;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* --- ส่วนลายเซ็นที่จัดตรงกันที่มุมขวา --- */
+        .signature {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* ดันไปทางขวา */
+        }
+
+        .signature-box {
+            text-align: center; /* จัดบรรทัดบน-ล่างให้กึ่งกลางตรงกันเอง */
+            font-weight: bold;
+            color: #1b5e20;
+        }
+
+        .signature-box p { 
+            margin: 2px 0; 
+            line-height: 1.2;
         }
     </style>
 </head>
 <body>
 
     <nav class="main-nav">
-        <a href="index.html" class="dropdown">🏠</a>
-        <a href="https://www.unionpetrochemical.com/th/" target="_blank" class="dropdown">เว็บไซต์หลัก</a>
-        
-        <div class="dropdown">
-            ภาพรวมความยั่งยืน
-            <div class="dropdown-content">
-                <a href="สารจากประธานกรรมการบริษัท.html">สารจากประธานกรรมการบริษัท</a>
-                <a href="#">การประเมินประเด็นด้านความยั่งยืนที่สำคัญ</a>
-                <a href="#">การสนับสนุนเป้าหมายการพัฒนาที่ยั่งยืน</a>
-            </div>
-        </div>
-
-        <div class="dropdown">สิ่งแวดล้อม</div>
-        <div class="dropdown">สังคม</div>
-        <div class="dropdown">การกำกับดูแลและเศรษฐกิจ</div>
+        <a href="index.html">🏠</a>
+        <a href="https://www.unionpetrochemical.com/th/" target="_blank">เว็บไซต์หลัก</a>
+        <a href="index.html">ภาพรวมความยั่งยืน</a>
+        <a href="#">สิ่งแวดล้อม</a>
+        <a href="#">สังคม</a>
+        <a href="#">การกำกับดูแลและเศรษฐกิจ</a>
     </nav>
 
-    <div class="hero-section">
-        <div class="welcome-box">
-            <h1 style="color: #1b5e20; margin: 0;">ยินดีต้อนรับสู่โปรเจกต์ ESG</h1>
-            <p style="color: #333;">บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
+    <div class="content-wrapper">
+        <div class="container">
+            <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
+            
+            <h1>สารจากประธานกรรมการบริษัท</h1>
+            
+            <p>ปี 2568 ถือเป็นอีกหนึ่งปีที่เศรษฐกิจโลกและเศรษฐกิจไทยต้องเผชิญกับความไม่แน่นอนจากหลายปัจจัย ทั้งการชะลอตัวในบางภูมิภาค ความผันผวนของราคาพลังงานและอัตราดอกเบี้ย รวมถึงความตึงเครียดทางภูมิรัฐศาสตร์ที่ส่งผลกระทบโดยตรงต่อห่วงโซ่อุปทานและต้นทุนธุรกิจ ขณะเดียวกัน ภาคธุรกิจทั่วโลกต่างได้รับแรงกดดันจากการเปลี่ยนผ่านสู่เศรษฐกิจคาร์บอนต่ำ ซึ่งเป็นความท้าทายที่ต้องเร่งปรับตัวอย่างจริงจัง</p>
+
+            <p>บริษัทฯ ได้ยกระดับการดำเนินงานให้สอดรับกับกระแสการเปลี่ยนแปลงนี้ โดยความสำเร็จจากการขยายเครือข่ายความร่วมมือกับพันธมิตรทางธุรกิจระดับสากล ทำให้เราสามารถเพิ่มขีดความสามารถในการแข่งขันได้อย่างก้าวกระโดด ปัจจุบันเราไม่ได้มุ่งเน้นเพียงแค่ความคล่องตัวทางการเงินเท่านั้น แต่ยังให้ความสำคัญกับการนำเทคโนโลยีอัจฉริยะมาประยุกต์ใช้เพื่อเพิ่มประสิทธิภาพการดำเนินงานในทุกมิติ</p>
+
+            <p>ท่ามกลางบริบทดังกล่าว บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) ในฐานะผู้นำการนำเข้าและจัดจำหน่ายโซลเวนท์ ยังคงมุ่งเน้นการบริหารจัดการห่วงโซ่อุปทานอย่างมีประสิทธิภาพและโปร่งใส โดยในปี 2568 บริษัทฯ ได้บรรลุความสำเร็จครั้งสำคัญในการเปิดดำเนินการ คลังสินค้า นิคมอุตสาหกรรมโรจนะแหลมฉบัง การเปิดศูนย์กระจายสินค้าแห่งนี้ ไม่เพียงแต่ช่วยเพิ่มความคล่องตัวในการบริการลูกค้าในเขตพื้นที่ภาคตะวันออก EEC เท่านั้น แต่ยังเป็นกลยุทธ์สำคัญในการลดระยะการขนส่ง ซึ่งช่วยลดทั้งต้นทุนการดำเนินงาน การใช้พลังงาน และการปล่อยก๊าซเรือนกระจก อันเป็นการเสริมสร้างขีดความสามารถในการแข่งขันอย่างยั่งยืน</p>
+
+            <p>นอกจากนี้ การดำเนินธุรกิจของ บริษัท ยูทิเจ คลีน โซลูชั่น (ประเทศไทย) จำกัด ในด้านการรีไซเคิลตัวทำละลาย ซึ่งเกิดจากความร่วมมือกับพันธมิตรผู้เชี่ยวชาญจากประเทศญี่ปุ่น ได้ก้าวขึ้นมาเป็นโมเดลต้นแบบของธุรกิจสีเขียว (Green Business) ของบริษัทฯ อย่างเต็มตัว สิ่งนี้สะท้อนถึงการนำแนวคิด ESG (Environmental, Social, and Governance) มาปรับใช้จริง ไม่ใช่เพียงแค่ระดับนโยบาย แต่เป็นการสร้างคุณค่าทางเศรษฐกิจควบคู่ไปกับการดูแลสิ่งแวดล้อมอย่างยั่งยืน</p>
+
+            <p>ผมมีความเชื่อมั่นอย่างยิ่งว่า ด้วยประสบการณ์ที่สั่งสมมาอย่างยาวนานและความร่วมแรงร่วมใจของคณะกรรมการ ผู้บริหาร และพนักงานทุกคน บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) จะสามารถก้าวข้ามทุกความท้าทาย เพื่อสร้างคุณค่าที่มั่นคงและยั่งยืนให้แก่ผู้ถือหุ้น สังคม และสิ่งแวดล้อมสืบไป</p>
+
+            <div class="signature">
+                <div class="signature-box">
+                    <p>ประธานกรรมการบริษัท</p>
+                    <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
+                </div>
+            </div>
         </div>
     </div>
 
