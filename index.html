@@ -7,15 +7,28 @@
         body { 
             margin: 0; 
             font-family: 'Sarabun', sans-serif; 
-            /* --- แก้ไขส่วนพื้นหลังตรงนี้ --- */
-            background-image: url('Mask-Group-8.png'); /* ใส่ชื่อไฟล์รูปที่อัปโหลดขึ้น GitHub */
-            background-size: cover;       /* ปรับภาพให้เต็มหน้าจอ */
-            background-position: center;  /* จัดภาพให้อยู่กึ่งกลาง */
-            background-attachment: fixed; /* ล็อคภาพไม่ให้เลื่อนตามการ Scroll */
-            background-repeat: no-repeat;
-            /* สำรองไว้เผื่อรูปไม่โหลด ให้แสดงสีไล่เฉดเดิม */
-            background-color: #f1f8e9; 
             min-height: 100vh;
+            position: relative; /* จำเป็นสำหรับการวางเลเยอร์พื้นหลัง */
+            background-color: #f1f8e9; /* สีสำรอง */
+        }
+
+        /* --- ส่วนที่ทำให้ภาพพื้นหลังจางลง --- */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('Mask-Group-8.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* ปรับความจางตรงนี้: 0.1 คือจางมาก, 0.3 คือกำลังดี */
+            opacity: 0.2; 
+            
+            z-index: -1; /* ส่งไปอยู่หลังสุด */
         }
 
         /* เมนูหลัก */
@@ -23,8 +36,7 @@
             display: flex;
             align-items: center;
             padding: 0 50px;
-            /* ปรับให้ขาวโปร่งแสงเล็กน้อยเพื่อให้เห็นภาพพื้นหลังจางๆ */
-            background: rgba(255, 255, 255, 0.9); 
+            background: rgba(255, 255, 255, 0.95); 
             height: 70px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
@@ -110,11 +122,12 @@
 
         /* กล่องข้อความต้อนรับให้ดูเด่นขึ้นบนพื้นหลังภาพ */
         .welcome-box {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 15px;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border-top: 5px solid #72ce60;
         }
     </style>
 </head>
