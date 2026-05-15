@@ -7,7 +7,14 @@
         body { 
             margin: 0; 
             font-family: 'Sarabun', sans-serif; 
-            background: linear-gradient(135deg, #c5e1a5 0%, #e6ee9c 50%, #fff59d 100%);
+            /* --- แก้ไขส่วนพื้นหลังตรงนี้ --- */
+            background-image: url('ชื่อไฟล์รูปของคุณ.jpg'); /* ใส่ชื่อไฟล์รูปที่อัปโหลดขึ้น GitHub */
+            background-size: cover;       /* ปรับภาพให้เต็มหน้าจอ */
+            background-position: center;  /* จัดภาพให้อยู่กึ่งกลาง */
+            background-attachment: fixed; /* ล็อคภาพไม่ให้เลื่อนตามการ Scroll */
+            background-repeat: no-repeat;
+            /* สำรองไว้เผื่อรูปไม่โหลด ให้แสดงสีไล่เฉดเดิม */
+            background-color: #f1f8e9; 
             min-height: 100vh;
         }
 
@@ -16,9 +23,13 @@
             display: flex;
             align-items: center;
             padding: 0 50px;
-            background: white;
+            /* ปรับให้ขาวโปร่งแสงเล็กน้อยเพื่อให้เห็นภาพพื้นหลังจางๆ */
+            background: rgba(255, 255, 255, 0.9); 
             height: 70px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         /* ตั้งค่าให้ทุกลิงก์ในเมนูไม่มีเส้นใต้ */
@@ -42,7 +53,7 @@
             transition: 0.3s;
         }
 
-        /* เส้นใต้สีเหลืองทองเมื่อชี้ ตามรูป image_650822.png */
+        /* เส้นใต้สีเหลืองทองเมื่อชี้ */
         .dropdown:hover {
             color: #b08d3e;
             border-bottom: 3px solid #b08d3e;
@@ -92,22 +103,30 @@
             margin-left: 10px;
         }
 
-        .hero-section { padding: 60px 10%; text-align: center; }
+        .hero-section { 
+            padding: 100px 10%; 
+            text-align: center; 
+        }
+
+        /* กล่องข้อความต้อนรับให้ดูเด่นขึ้นบนพื้นหลังภาพ */
+        .welcome-box {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
 
     <nav class="main-nav">
-        <!-- ปุ่มหน้าแรก -->
         <a href="index.html" class="dropdown">🏠</a>
-        <!-- ลิงก์ไปเว็บไซต์บริษัทที่ถูกต้อง -->
         <a href="https://www.unionpetrochemical.com/th/" target="_blank" class="dropdown">เว็บไซต์หลัก</a>
         
-        <!-- เมนูที่มี Dropdown -->
         <div class="dropdown">
             ภาพรวมความยั่งยืน
             <div class="dropdown-content">
-                <!-- ลิงก์ไปไฟล์หน้าสารจากประธาน (ต้องตั้งชื่อไฟล์ใน GitHub ว่า chairman-message.html) -->
                 <a href="สารจากประธานกรรมการบริษัท.html">สารจากประธานกรรมการบริษัท</a>
                 <a href="#">การประเมินประเด็นด้านความยั่งยืนที่สำคัญ</a>
                 <a href="#">การสนับสนุนเป้าหมายการพัฒนาที่ยั่งยืน</a>
@@ -118,6 +137,13 @@
         <div class="dropdown">สังคม</div>
         <div class="dropdown">การกำกับดูแลและเศรษฐกิจ</div>
     </nav>
+
+    <div class="hero-section">
+        <div class="welcome-box">
+            <h1 style="color: #1b5e20; margin: 0;">ยินดีต้อนรับสู่โปรเจกต์ ESG</h1>
+            <p style="color: #333;">บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
+        </div>
+    </div>
 
 </body>
 </html>
