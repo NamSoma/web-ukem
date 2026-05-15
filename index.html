@@ -8,27 +8,19 @@
             margin: 0; 
             font-family: 'Sarabun', sans-serif; 
             min-height: 100vh;
-            position: relative; /* จำเป็นสำหรับการวางเลเยอร์พื้นหลัง */
-            background-color: #f1f8e9; /* สีสำรอง */
+            /* กำหนดชุดสีที่ต้องการให้ไหลวน (เขียวอ่อน, เหลืองนวล, ขาว) */
+            background: linear-gradient(-45deg, #f1f8e9, #e6ee9c, #fff59d, #dcedc8);
+            background-size: 400% 400%; /* ขยายขนาดเพื่อให้สีไหลได้ */
+            animation: gradientMove 12s ease infinite; /* ความเร็ว 12 วินาที วนไปเรื่อยๆ */
+            display: flex;
+            flex-direction: column;
         }
 
-        /* --- ส่วนที่ทำให้ภาพพื้นหลังจางลง --- */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('Mask-Group-8.png'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            
-            /* ปรับความจางตรงนี้: 0.1 คือจางมาก, 0.3 คือกำลังดี */
-            opacity: 0.2; 
-            
-            z-index: -1; /* ส่งไปอยู่หลังสุด */
+        /* --- โค้ดคำสั่งทำให้พื้นหลังขยับ --- */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         /* เมนูหลัก */
@@ -36,15 +28,14 @@
             display: flex;
             align-items: center;
             padding: 0 50px;
-            background: rgba(255, 255, 255, 0.95); 
+            background: rgba(255, 255, 255, 0.9); /* ขาวโปร่งแสงเพื่อให้เห็นสีพื้นหลังข้างหลัง */
             height: 70px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        /* ตั้งค่าให้ทุกลิงก์ในเมนูไม่มีเส้นใต้ */
         .main-nav a {
             text-decoration: none;
             display: flex;
@@ -52,7 +43,6 @@
             height: 100%;
         }
 
-        /* สไตล์รายการเมนูแต่ละช่อง */
         .dropdown {
             position: relative;
             display: flex;
@@ -65,13 +55,11 @@
             transition: 0.3s;
         }
 
-        /* เส้นใต้สีเหลืองทองเมื่อชี้ */
         .dropdown:hover {
             color: #b08d3e;
             border-bottom: 3px solid #b08d3e;
         }
 
-        /* กล่องรายการที่ซ่อนอยู่ (Dropdown Content) */
         .dropdown-content {
             display: none;
             position: absolute;
@@ -84,12 +72,10 @@
             padding: 10px 0;
         }
 
-        /* แสดงเมื่อเอาเมาส์ชี้ */
         .dropdown:hover .dropdown-content {
             display: block;
         }
 
-        /* รายการย่อยข้างใน */
         .dropdown-content a {
             color: #333;
             padding: 15px 25px;
@@ -100,35 +86,30 @@
             border-bottom: 1px solid #eee;
             font-size: 14px;
             font-weight: normal;
-            height: auto;
         }
 
-        .dropdown-content a:hover {
-            background-color: #f9f9f9;
-            color: #004a80;
-        }
-
-        /* ลูกศรชี้ขวา */
-        .dropdown-content a::after {
-            content: "→";
-            color: #004a80;
-            margin-left: 10px;
-        }
-
+        /* ส่วนกลางหน้าจอ */
         .hero-section { 
-            padding: 100px 10%; 
-            text-align: center; 
+            flex-grow: 1; /* ดันเนื้อหาให้อยู่กลางจอ */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10%; 
         }
 
-        /* กล่องข้อความต้อนรับให้ดูเด่นขึ้นบนพื้นหลังภาพ */
+        /* กล่องข้อความต้อนรับ */
         .welcome-box {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            border-top: 5px solid #72ce60;
+            background: rgba(255, 255, 255, 0.85); /* พื้นหลังกล่องจางๆ */
+            padding: 50px 80px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-top: 6px solid #72ce60;
+            backdrop-filter: blur(10px); /* ทำให้พื้นที่หลังกล่องดูเบลอสวยงาม */
         }
+
+        h1 { color: #1b5e20; font-size: 36px; margin-bottom: 10px; }
+        p { color: #444; font-size: 18px; margin: 0; }
     </style>
 </head>
 <body>
@@ -153,8 +134,11 @@
 
     <div class="hero-section">
         <div class="welcome-box">
-            <h1 style="color: #1b5e20; margin: 0;">คำคมเท่ๆ ESG</h1>
-            <p style="color: #333;">บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
+            <h1>ยินดีต้อนรับสู่โปรเจกต์ ESG</h1>
+            <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
+            <div style="margin-top: 30px;">
+                <a href="สารจากประธานกรรมการบริษัท.html" style="text-decoration: none; background: #72ce60; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; transition: 0.3s;">อ่านสารจากประธาน</a>
+            </div>
         </div>
     </div>
 
