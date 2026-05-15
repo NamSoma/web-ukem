@@ -8,19 +8,58 @@
             margin: 0; 
             font-family: 'Sarabun', sans-serif; 
             min-height: 100vh;
-            /* กำหนดชุดสีที่ต้องการให้ไหลวน (เขียวอ่อน, เหลืองนวล, ขาว) */
-            background: linear-gradient(-45deg, #f1f8e9, #e6ee9c, #fff59d, #dcedc8);
-            background-size: 400% 400%; /* ขยายขนาดเพื่อให้สีไหลได้ */
-            animation: gradientMove 12s ease infinite; /* ความเร็ว 12 วินาที วนไปเรื่อยๆ */
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
+            background-color: #000; /* สีพื้นหลังกันพลาดระหว่างเปลี่ยนรูป */
         }
 
-        /* --- โค้ดคำสั่งทำให้พื้นหลังขยับ --- */
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        /* --- ระบบ Slideshow พื้นหลัง --- */
+        .bg-slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            z-index: -1;
+        }
+
+        .bg-slideshow li {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0; /* เริ่มที่จาง */
+            /* วนลูป 18 วินาที (รูปละ 6 วิ) */
+            animation: imageFade 18s linear infinite; 
+        }
+
+        /* --- จุดที่คุณต้องใส่ชื่อไฟล์ภาพ --- */
+        .bg-slideshow li:nth-child(1) { 
+            background-image: url('ใส่ชื่อรูปที่1.jpg'); 
+            animation-delay: 0s; 
+        }
+        .bg-slideshow li:nth-child(2) { 
+            background-image: url('ใส่ชื่อรูปที่2.jpg'); 
+            animation-delay: 6s; 
+        }
+        .bg-slideshow li:nth-child(3) { 
+            background-image: url('ใส่ชื่อรูปที่3.jpg'); 
+            animation-delay: 12s; 
+        }
+
+        /* คำสั่งทำให้ภาพค่อยๆ Fade */
+        @keyframes imageFade {
+            0% { opacity: 0; }
+            10% { opacity: 0.3; } /* ปรับความจางของรูปที่นี่ (0.3 คือกำลังสวย) */
+            33% { opacity: 0.3; }
+            43% { opacity: 0; }
+            100% { opacity: 0; }
         }
 
         /* เมนูหลัก */
@@ -28,9 +67,9 @@
             display: flex;
             align-items: center;
             padding: 0 50px;
-            background: rgba(255, 255, 255, 0.9); /* ขาวโปร่งแสงเพื่อให้เห็นสีพื้นหลังข้างหลัง */
+            background: rgba(255, 255, 255, 0.9);
             height: 70px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -72,9 +111,7 @@
             padding: 10px 0;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+        .dropdown:hover .dropdown-content { display: block; }
 
         .dropdown-content a {
             color: #333;
@@ -85,27 +122,25 @@
             align-items: center;
             border-bottom: 1px solid #eee;
             font-size: 14px;
-            font-weight: normal;
         }
 
         /* ส่วนกลางหน้าจอ */
         .hero-section { 
-            flex-grow: 1; /* ดันเนื้อหาให้อยู่กลางจอ */
+            flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0 10%; 
         }
 
-        /* กล่องข้อความต้อนรับ */
         .welcome-box {
-            background: rgba(255, 255, 255, 0.85); /* พื้นหลังกล่องจางๆ */
+            background: rgba(255, 255, 255, 0.85);
             padding: 50px 80px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
             border-top: 6px solid #72ce60;
-            backdrop-filter: blur(10px); /* ทำให้พื้นที่หลังกล่องดูเบลอสวยงาม */
+            backdrop-filter: blur(10px); /* เอฟเฟกต์กระจกฝ้า */
         }
 
         h1 { color: #1b5e20; font-size: 36px; margin-bottom: 10px; }
@@ -113,6 +148,12 @@
     </style>
 </head>
 <body>
+
+    <ul class="bg-slideshow">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 
     <nav class="main-nav">
         <a href="index.html" class="dropdown">🏠</a>
@@ -134,9 +175,10 @@
 
     <div class="hero-section">
         <div class="welcome-box">
-            <h1>รอคำคมเท่ๆ ESG</h1>
+            <h1>มุ่งสู่ความยั่งยืน ร่วมสร้างอนาคตสีเขียว</h1>
             <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
             <div style="margin-top: 30px;">
+                <a href="สารจากประธานกรรมการบริษัท.html" style="text-decoration: none; background: #72ce60; color: white; padding: 12px 30px; border-radius: 50px; font-weight: bold; transition: 0.3s; display: inline-block;">อ่านสารจากประธาน</a>
             </div>
         </div>
     </div>
