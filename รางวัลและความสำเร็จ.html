@@ -10,8 +10,6 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            overflow-x: hidden;
-            /* ปรับเป็นสีขาวสะอาด */
             background-color: #ffffff; 
         }
 
@@ -41,68 +39,75 @@
             display: block; border-bottom: 1px solid #eee; font-size: 14px;
         }
 
-        /* --- ส่วนเนื้อหาตรงกลาง --- */
-        .content-container {
-            flex-grow: 1;
-            padding: 40px 5%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* ส่วนหัวข้อขยายใหญ่เต็มหน้าจอ พื้นหลังขาวเทาอ่อนๆ ให้ดูมีมิติ */
-        .award-header {
-            background: #fcfcfc;
-            width: 100%; 
-            max-width: 1200px; 
-            padding: 80px 0; 
-            border-radius: 20px;
+        /* --- ส่วนหัวข้อที่ขยายเต็มด้านบน (Full-width Banner) --- */
+        .award-banner {
+            width: 100%;
+            background: linear-gradient(rgba(0, 74, 128, 0.03), rgba(0, 74, 128, 0.01)), #fcfcfc;
+            padding: 80px 0;
             text-align: center;
-            margin-bottom: 50px;
-            border: 1px solid #eee;
-            border-top: 10px solid #b08d3e; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border-bottom: 1px solid #eee;
+            border-top: 8px solid #b08d3e; /* แถบสีทองด้านบนขวางเต็มจอ */
         }
 
-        .award-header h1 { color: #004a80; margin: 0; font-size: 48px; letter-spacing: 1px; }
-        .award-header p { color: #b08d3e; margin-top: 15px; font-size: 22px; font-weight: 500; }
+        .award-banner h1 { 
+            color: #004a80; 
+            margin: 0; 
+            font-size: 54px; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-        /* พื้นที่วางรูปภาพรางวัล */
+        .award-banner p { 
+            color: #b08d3e; 
+            margin-top: 15px; 
+            font-size: 24px; 
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* --- ส่วนเนื้อหารูปภาพรางวัล --- */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 5%;
+        }
+
         .award-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
             width: 100%;
-            max-width: 1200px;
         }
 
         .award-card {
             background: #fff;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             transition: 0.4s ease;
-            text-align: center;
             border: 1px solid #f0f0f0;
+            text-align: center;
         }
 
-        .award-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .award-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+        }
 
         .award-image-placeholder {
             width: 100%;
-            height: 350px; /* ขยายความสูงให้ใส่รูปสวยขึ้น */
-            background: #f9f9f9;
+            height: 380px;
+            background: #fdfdfd;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ccc;
-            font-size: 16px;
+            color: #ddd;
             border-bottom: 1px solid #f0f0f0;
         }
 
-        .award-info { padding: 35px; }
-        .award-info h3 { color: #004a80; margin: 0 0 15px 0; font-size: 24px; }
-        .award-info p { color: #666; font-size: 16px; margin: 0; line-height: 1.8; }
+        .award-info { padding: 30px; }
+        .award-info h3 { color: #004a80; margin: 0 0 10px 0; font-size: 22px; }
+        .award-info p { color: #666; font-size: 15px; margin: 0; line-height: 1.6; }
 
     </style>
 </head>
@@ -126,37 +131,41 @@
         <a href="รางวัลและความสำเร็จ.html" class="nav-link">รางวัลและความสำเร็จ</a>
     </nav>
 
-    <div class="content-container">
-        <div class="award-header">
-            <h1>รางวัลและความสำเร็จ</h1>
-            <p>AWARDS & ACHIEVEMENTS</p>
-        </div>
+    <header class="award-banner">
+        <h1>รางวัลและความสำเร็จ</h1>
+        <p>AWARDS & ACHIEVEMENTS</p>
+    </header>
 
+    <div class="content-container">
         <div class="award-grid">
             
             <div class="award-card">
                 <div class="award-image-placeholder">
-                    พื้นที่สำหรับวางรูปภาพรางวัล (แนวตั้งหรือจัตุรัสจะสวยมาก)
+                    <span>วางรูปภาพรางวัล (Certificate/Trophy)</span>
                 </div>
                 <div class="award-info">
                     <h3>ชื่อรางวัลที่ได้รับ</h3>
-                    <p>รายละเอียดหน่วยงานที่มอบให้ และปีพ.ศ. ที่ได้รับรางวัล</p>
-                </div>
-            </div>
-
-            <div class="award-card">
-                <div class="award-image-placeholder">พื้นที่สำหรับวางรูปภาพรางวัล</div>
-                <div class="award-info">
-                    <h3>ชื่อรางวัลที่ได้รับ</h3>
-                    <p>รายละเอียดหน่วยงานที่มอบให้ และปีพ.ศ. ที่ได้รับรางวัล</p>
+                    <p>คำอธิบายหรือหน่วยงานที่มอบให้ปี พ.ศ.</p>
                 </div>
             </div>
 
             <div class="award-card">
-                <div class="award-image-placeholder">พื้นที่สำหรับวางรูปภาพรางวัล</div>
+                <div class="award-image-placeholder">
+                    <span>วางรูปภาพรางวัล</span>
+                </div>
                 <div class="award-info">
                     <h3>ชื่อรางวัลที่ได้รับ</h3>
-                    <p>รายละเอียดหน่วยงานที่มอบให้ และปีพ.ศ. ที่ได้รับรางวัล</p>
+                    <p>คำอธิบายหรือหน่วยงานที่มอบให้ปี พ.ศ.</p>
+                </div>
+            </div>
+
+            <div class="award-card">
+                <div class="award-image-placeholder">
+                    <span>วางรูปภาพรางวัล</span>
+                </div>
+                <div class="award-info">
+                    <h3>ชื่อรางวัลที่ได้รับ</h3>
+                    <p>คำอธิบายหรือหน่วยงานที่มอบให้ปี พ.ศ.</p>
                 </div>
             </div>
 
