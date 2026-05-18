@@ -11,33 +11,24 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
-            background-color: #f4f4f4; 
+            /* เปลี่ยนจากสไลด์เป็นภาพนิ่งภาพเดียว */
+            background-image: url('อาคารยูเนี่ยน.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* ภาพจะนิ่งเวลาเลื่อนจอ */
+            background-repeat: no-repeat;
         }
 
-        /* --- ระบบ Crossfade Slideshow (เหมือนหน้าแรก) --- */
-        .bg-slideshow {
+        /* เลเยอร์สีจางๆ ทับบนภาพพื้นหลังเพื่อให้เนื้อหาเด่นขึ้น */
+        body::before {
+            content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            list-style: none; margin: 0; padding: 0; z-index: -1;
-        }
-        .bg-slideshow li {
-            position: absolute; width: 100%; height: 100%;
-            background-size: cover; background-position: center;
-            opacity: 0; animation: imageCrossfade 12s linear infinite; 
-        }
-        .bg-slideshow li:nth-child(1) { background-image: url('Mask-Group-8.png'); animation-delay: 0s; }
-        .bg-slideshow li:nth-child(2) { background-image: url('warehouse.png'); animation-delay: 4s; }
-        .bg-slideshow li:nth-child(3) { background-image: url('อาคารยูเนี่ยน.png'); animation-delay: 8s; }
-
-        @keyframes imageCrossfade {
-            0% { opacity: 0; }
-            10% { opacity: 0.2; } /* ปรับความเข้มพื้นหลังให้อ่อนลงเพื่อให้เนื้อหาอ่านง่าย */
-            33% { opacity: 0.2; } 
-            43% { opacity: 0; }  
-            100% { opacity: 0; }
+            background: rgba(255, 255, 255, 0.3); /* ปรับความเข้ม/อ่อนของภาพพื้นหลังตรงนี้ */
+            z-index: -1;
         }
 
-        /* --- เมนูหลัก (ชุดเดิม) --- */
+        /* --- เมนูหลัก --- */
         .main-nav {
             display: flex; align-items: center; padding: 0 50px;
             background: rgba(255, 255, 255, 0.95); height: 70px;
@@ -64,75 +55,69 @@
         /* --- ส่วนเนื้อหาตรงกลาง --- */
         .content-container {
             flex-grow: 1;
-            padding: 50px 10%;
+            padding: 40px 5%;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
+        /* ส่วนหัวข้อขยายใหญ่เต็มช่วง */
         .award-header {
             background: rgba(255, 255, 255, 0.9);
-            padding: 30px 60px;
-            border-radius: 15px;
+            width: 100%; /* ขยายเต็มความกว้าง */
+            max-width: 1200px; /* กำหนดความกว้างสูงสุดเพื่อความสวยงาม */
+            padding: 60px 0; /* เพิ่มพื้นที่แนวตั้ง */
+            border-radius: 20px;
             text-align: center;
-            margin-bottom: 40px;
-            border-top: 6px solid #b08d3e; /* สีทองรางวัล */
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            backdrop-filter: blur(5px);
+            margin-bottom: 50px;
+            border-top: 10px solid #b08d3e; /* หนาขึ้นเพื่อให้ดูพรีเมียม */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
         }
 
-        .award-header h1 { color: #b08d3e; margin: 0; font-size: 32px; }
-        .award-header p { color: #555; margin-top: 10px; font-size: 18px; }
+        .award-header h1 { color: #b08d3e; margin: 0; font-size: 48px; letter-spacing: 2px; }
+        .award-header p { color: #444; margin-top: 15px; font-size: 22px; font-weight: 500; }
 
         /* พื้นที่วางรูปภาพรางวัล */
         .award-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
             width: 100%;
-            max-width: 1100px;
+            max-width: 1200px;
         }
 
         .award-card {
             background: #fff;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.4s ease;
             text-align: center;
+            border: 1px solid #eee;
         }
 
-        .award-card:hover { transform: translateY(-10px); }
+        .award-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
 
         .award-image-placeholder {
             width: 100%;
-            height: 250px;
-            background: #eee;
+            height: 300px;
+            background: #f8f8f8;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #999;
-            font-size: 14px;
+            color: #bbb;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
         }
 
-        /* เมื่อคุณมีรูปแล้ว ให้เปลี่ยนจาก placeholder เป็น <img> */
-        .award-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .award-info { padding: 20px; }
-        .award-info h3 { color: #004a80; margin: 0 0 10px 0; font-size: 20px; }
-        .award-info p { color: #666; font-size: 14px; margin: 0; line-height: 1.6; }
+        .award-info { padding: 30px; }
+        .award-info h3 { color: #004a80; margin: 0 0 15px 0; font-size: 24px; }
+        .award-info p { color: #666; font-size: 16px; margin: 0; line-height: 1.8; }
 
     </style>
 </head>
 <body>
-
-    <ul class="bg-slideshow">
-        <li></li><li></li><li></li>
-    </ul>
 
     <nav class="main-nav">
         <a href="index.html" class="nav-link">🏠</a>
@@ -155,32 +140,32 @@
     <div class="content-container">
         <div class="award-header">
             <h1>รางวัลและความสำเร็จ</h1>
-            <p>ความภูมิใจในการดำเนินธุรกิจอย่างยั่งยืนและมีธรรมาภิบาล</p>
+            <p>ความภูมิใจและรางวัลแห่งความสำเร็จด้านความยั่งยืน</p>
         </div>
 
         <div class="award-grid">
             
             <div class="award-card">
-                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่ 1 ตรงนี้</div>
+                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่นี่</div>
                 <div class="award-info">
-                    <h3>ชื่อรางวัลที่ได้รับ</h3>
-                    <p>คำอธิบายสั้นๆ เกี่ยวกับรางวัล ปีที่ได้รับ หรือหน่วยงานที่มอบให้</p>
+                    <h3>ชื่อรางวัลของคุณ</h3>
+                    <p>รายละเอียดที่ได้รับรางวัล ประจำปี หรือสถาบันที่มอบให้</p>
                 </div>
             </div>
 
             <div class="award-card">
-                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่ 2 ตรงนี้</div>
+                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่นี่</div>
                 <div class="award-info">
-                    <h3>ชื่อรางวัลที่ได้รับ</h3>
-                    <p>คำอธิบายสั้นๆ เกี่ยวกับรางวัล ปีที่ได้รับ หรือหน่วยงานที่มอบให้</p>
+                    <h3>ชื่อรางวัลของคุณ</h3>
+                    <p>รายละเอียดที่ได้รับรางวัล ประจำปี หรือสถาบันที่มอบให้</p>
                 </div>
             </div>
 
             <div class="award-card">
-                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่ 3 ตรงนี้</div>
+                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่นี่</div>
                 <div class="award-info">
-                    <h3>ชื่อรางวัลที่ได้รับ</h3>
-                    <p>คำอธิบายสั้นๆ เกี่ยวกับรางวัล ปีที่ได้รับ หรือหน่วยงานที่มอบให้</p>
+                    <h3>ชื่อรางวัลของคุณ</h3>
+                    <p>รายละเอียดที่ได้รับรางวัล ประจำปี หรือสถาบันที่มอบให้</p>
                 </div>
             </div>
 
