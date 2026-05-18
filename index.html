@@ -11,10 +11,10 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
-            background-color: #000; /* สีพื้นหลังกันพลาดระหว่างเปลี่ยนรูป */
+            background-color: #f4f4f4; /* สีพื้นหลังแบบสว่างแทนสีดำ */
         }
 
-        /* --- ระบบ Slideshow พื้นหลัง --- */
+        /* --- ระบบ Crossfade Slideshow --- */
         .bg-slideshow {
             position: fixed;
             top: 0;
@@ -34,27 +34,31 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0; /* เริ่มที่จาง */
-            /* วนลูป 18 วินาที (รูปละ 6 วิ) */
-            animation: imageFade 18s linear infinite; 
+            opacity: 0; /* เริ่มต้นที่จาง */
+            /* ปรับเป็น 12 วินาที (รูปละ 4 วินาทีรวมช่วงซ้อนทับ) */
+            animation: crossfade 12s linear infinite; 
         }
 
-        /* --- จุดที่คุณต้องใส่ชื่อไฟล์ภาพ --- */
+        /* --- ใส่ชื่อไฟล์ภาพของคุณที่นี่ --- */
         .bg-slideshow li:nth-child(1) { 
-            background-image: url('Mask-Group-8.png'); 
+            background-image: url('image_249efa.png'); /* เปลี่ยนเป็นชื่อไฟล์ที่คุณอัปโหลด */
             animation-delay: 0s; 
         }
         .bg-slideshow li:nth-child(2) { 
-            background-image: url('warehouse.png'); 
-            animation-delay: 6s; 
+            background-image: url('image_0728e9.png'); /* เปลี่ยนเป็นชื่อไฟล์ที่คุณอัปโหลด */
+            animation-delay: 4s; 
+        }
+        .bg-slideshow li:nth-child(3) { 
+            background-image: url('https://images.unsplash.com/photo-1586528116311-ad8de3c8a115?q=80&w=2070'); 
+            animation-delay: 8s; 
         }
 
-        /* คำสั่งทำให้ภาพค่อยๆ Fade */
-        @keyframes imageFade {
+        /* Keyframes สำหรับการซ้อนทับแบบ Crossfade */
+        @keyframes crossfade {
             0% { opacity: 0; }
-            10% { opacity: 0.3; } /* ปรับความจางของรูปที่นี่ (0.3 คือกำลังสวย) */
-            33% { opacity: 0.3; }
-            43% { opacity: 0; }
+            8% { opacity: 0.3; }  /* ช่วงที่ภาพที่ 1 ชัดขึ้นมา */
+            33% { opacity: 0.3; } /* ช่วงที่ภาพที่ 1 แช่ค้างไว้ */
+            41% { opacity: 0; }   /* ช่วงที่ภาพที่ 1 ค่อยๆ จางลงขณะที่ภาพถัดไปชัดขึ้น */
             100% { opacity: 0; }
         }
 
@@ -63,9 +67,9 @@
             display: flex;
             align-items: center;
             padding: 0 50px;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             height: 70px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -73,52 +77,15 @@
 
         .main-nav a {
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-
-        .dropdown {
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            cursor: pointer;
             color: #004a80;
             font-weight: bold;
+            padding: 0 15px;
             height: 100%;
-            transition: 0.3s;
-        }
-
-        .dropdown:hover {
-            color: #b08d3e;
-            border-bottom: 3px solid #b08d3e;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 70px; 
-            left: 0;
-            background-color: white;
-            min-width: 350px; 
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-            z-index: 100;
-            padding: 10px 0;
-        }
-
-        .dropdown:hover .dropdown-content { display: block; }
-
-        .dropdown-content a {
-            color: #333;
-            padding: 15px 25px;
-            text-decoration: none;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #eee;
-            font-size: 14px;
         }
+
+        .main-nav a:hover { color: #b08d3e; }
 
         /* ส่วนกลางหน้าจอ */
         .hero-section { 
@@ -126,21 +93,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0 10%; 
         }
 
         .welcome-box {
             background: rgba(255, 255, 255, 0.85);
-            padding: 50px 80px;
+            padding: 50px 70px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             border-top: 6px solid #72ce60;
-            backdrop-filter: blur(10px); /* เอฟเฟกต์กระจกฝ้า */
+            backdrop-filter: blur(10px);
         }
 
-        h1 { color: #1b5e20; font-size: 36px; margin-bottom: 10px; }
-        p { color: #444; font-size: 18px; margin: 0; }
+        h1 { color: #1b5e20; font-size: 32px; margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -152,28 +117,19 @@
     </ul>
 
     <nav class="main-nav">
-        <a href="index.html" class="dropdown">🏠</a>
-        <a href="https://www.unionpetrochemical.com/th/" target="_blank" class="dropdown">เว็บไซต์หลัก</a>
-        
-        <div class="dropdown">
-            ภาพรวมความยั่งยืน
-            <div class="dropdown-content">
-                <a href="สารจากประธานกรรมการบริษัท.html">สารจากประธานกรรมการบริษัท</a>
-                <a href="#">การประเมินประเด็นด้านความยั่งยืนที่สำคัญ</a>
-                <a href="#">การสนับสนุนเป้าหมายการพัฒนาที่ยั่งยืน</a>
-            </div>
-        </div>
-
-        <div class="dropdown">สิ่งแวดล้อม</div>
-        <div class="dropdown">สังคม</div>
-        <div class="dropdown">การกำกับดูแลและเศรษฐกิจ</div>
+        <a href="index.html">🏠 หน้าหลัก</a>
+        <a href="https://www.unionpetrochemical.com/th/" target="_blank">เว็บไซต์หลัก</a>
+        <a href="#">ภาพรวมความยั่งยืน</a>
+        <a href="#">สิ่งแวดล้อม</a>
+        <a href="#">สังคม</a>
     </nav>
 
     <div class="hero-section">
         <div class="welcome-box">
-            <h1>คำคมเท่ๆ</h1>
+            <h1>มุ่งสู่ความยั่งยืน ร่วมสร้างอนาคตสีเขียว</h1>
             <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
             <div style="margin-top: 30px;">
+                <a href="#" style="text-decoration: none; background: #72ce60; color: white; padding: 12px 30px; border-radius: 50px; font-weight: bold;">เริ่มต้นใช้งาน</a>
             </div>
         </div>
     </div>
