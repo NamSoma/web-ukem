@@ -11,28 +11,17 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
-            /* เปลี่ยนจากสไลด์เป็นภาพนิ่งภาพเดียว */
-            background-image: url('อาคารยูเนี่ยน.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* ภาพจะนิ่งเวลาเลื่อนจอ */
-            background-repeat: no-repeat;
-        }
-
-        /* เลเยอร์สีจางๆ ทับบนภาพพื้นหลังเพื่อให้เนื้อหาเด่นขึ้น */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255, 255, 255, 0.3); /* ปรับความเข้ม/อ่อนของภาพพื้นหลังตรงนี้ */
-            z-index: -1;
+            /* ปรับเป็นสีขาวสะอาด */
+            background-color: #ffffff; 
         }
 
         /* --- เมนูหลัก --- */
         .main-nav {
             display: flex; align-items: center; padding: 0 50px;
-            background: rgba(255, 255, 255, 0.95); height: 70px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+            background: #ffffff; height: 70px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            position: sticky; top: 0; z-index: 1000;
+            border-bottom: 1px solid #eee;
         }
         .nav-link, .dropdown {
             text-decoration: none; display: flex; align-items: center;
@@ -61,22 +50,22 @@
             align-items: center;
         }
 
-        /* ส่วนหัวข้อขยายใหญ่เต็มช่วง */
+        /* ส่วนหัวข้อขยายใหญ่เต็มหน้าจอ พื้นหลังขาวเทาอ่อนๆ ให้ดูมีมิติ */
         .award-header {
-            background: rgba(255, 255, 255, 0.9);
-            width: 100%; /* ขยายเต็มความกว้าง */
-            max-width: 1200px; /* กำหนดความกว้างสูงสุดเพื่อความสวยงาม */
-            padding: 60px 0; /* เพิ่มพื้นที่แนวตั้ง */
+            background: #fcfcfc;
+            width: 100%; 
+            max-width: 1200px; 
+            padding: 80px 0; 
             border-radius: 20px;
             text-align: center;
             margin-bottom: 50px;
-            border-top: 10px solid #b08d3e; /* หนาขึ้นเพื่อให้ดูพรีเมียม */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            backdrop-filter: blur(10px);
+            border: 1px solid #eee;
+            border-top: 10px solid #b08d3e; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
 
-        .award-header h1 { color: #b08d3e; margin: 0; font-size: 48px; letter-spacing: 2px; }
-        .award-header p { color: #444; margin-top: 15px; font-size: 22px; font-weight: 500; }
+        .award-header h1 { color: #004a80; margin: 0; font-size: 48px; letter-spacing: 1px; }
+        .award-header p { color: #b08d3e; margin-top: 15px; font-size: 22px; font-weight: 500; }
 
         /* พื้นที่วางรูปภาพรางวัล */
         .award-grid {
@@ -91,27 +80,27 @@
             background: #fff;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: 0.4s ease;
             text-align: center;
-            border: 1px solid #eee;
+            border: 1px solid #f0f0f0;
         }
 
-        .award-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .award-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 
         .award-image-placeholder {
             width: 100%;
-            height: 300px;
-            background: #f8f8f8;
+            height: 350px; /* ขยายความสูงให้ใส่รูปสวยขึ้น */
+            background: #f9f9f9;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #bbb;
+            color: #ccc;
             font-size: 16px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        .award-info { padding: 30px; }
+        .award-info { padding: 35px; }
         .award-info h3 { color: #004a80; margin: 0 0 15px 0; font-size: 24px; }
         .award-info p { color: #666; font-size: 16px; margin: 0; line-height: 1.8; }
 
@@ -140,32 +129,34 @@
     <div class="content-container">
         <div class="award-header">
             <h1>รางวัลและความสำเร็จ</h1>
-            <p>ความภูมิใจและรางวัลแห่งความสำเร็จด้านความยั่งยืน</p>
+            <p>AWARDS & ACHIEVEMENTS</p>
         </div>
 
         <div class="award-grid">
             
             <div class="award-card">
-                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่นี่</div>
+                <div class="award-image-placeholder">
+                    พื้นที่สำหรับวางรูปภาพรางวัล (แนวตั้งหรือจัตุรัสจะสวยมาก)
+                </div>
                 <div class="award-info">
-                    <h3>ชื่อรางวัลของคุณ</h3>
-                    <p>รายละเอียดที่ได้รับรางวัล ประจำปี หรือสถาบันที่มอบให้</p>
+                    <h3>ชื่อรางวัลที่ได้รับ</h3>
+                    <p>รายละเอียดหน่วยงานที่มอบให้ และปีพ.ศ. ที่ได้รับรางวัล</p>
                 </div>
             </div>
 
             <div class="award-card">
-                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่นี่</div>
+                <div class="award-image-placeholder">พื้นที่สำหรับวางรูปภาพรางวัล</div>
                 <div class="award-info">
-                    <h3>ชื่อรางวัลของคุณ</h3>
-                    <p>รายละเอียดที่ได้รับรางวัล ประจำปี หรือสถาบันที่มอบให้</p>
+                    <h3>ชื่อรางวัลที่ได้รับ</h3>
+                    <p>รายละเอียดหน่วยงานที่มอบให้ และปีพ.ศ. ที่ได้รับรางวัล</p>
                 </div>
             </div>
 
             <div class="award-card">
-                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่นี่</div>
+                <div class="award-image-placeholder">พื้นที่สำหรับวางรูปภาพรางวัล</div>
                 <div class="award-info">
-                    <h3>ชื่อรางวัลของคุณ</h3>
-                    <p>รายละเอียดที่ได้รับรางวัล ประจำปี หรือสถาบันที่มอบให้</p>
+                    <h3>ชื่อรางวัลที่ได้รับ</h3>
+                    <p>รายละเอียดหน่วยงานที่มอบให้ และปีพ.ศ. ที่ได้รับรางวัล</p>
                 </div>
             </div>
 
