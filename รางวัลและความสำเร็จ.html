@@ -2,142 +2,188 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>สารจากประธานกรรมการ - Web Ukem</title>
+    <title>รางวัลและความสำเร็จ - ESG Project</title>
     <style>
         body { 
             margin: 0; 
             font-family: 'Sarabun', sans-serif; 
-            background: linear-gradient(135deg, #c5e1a5 0%, #e6ee9c 50%, #fff59d 100%);
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            background-color: #f4f4f4; 
         }
 
-        /* --- แถบเมนูด้านบนตามรูป image_49bad1.png --- */
+        /* --- ระบบ Crossfade Slideshow (เหมือนหน้าแรก) --- */
+        .bg-slideshow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            list-style: none; margin: 0; padding: 0; z-index: -1;
+        }
+        .bg-slideshow li {
+            position: absolute; width: 100%; height: 100%;
+            background-size: cover; background-position: center;
+            opacity: 0; animation: imageCrossfade 12s linear infinite; 
+        }
+        .bg-slideshow li:nth-child(1) { background-image: url('Mask-Group-8.png'); animation-delay: 0s; }
+        .bg-slideshow li:nth-child(2) { background-image: url('warehouse.png'); animation-delay: 4s; }
+        .bg-slideshow li:nth-child(3) { background-image: url('อาคารยูเนี่ยน.png'); animation-delay: 8s; }
+
+        @keyframes imageCrossfade {
+            0% { opacity: 0; }
+            10% { opacity: 0.2; } /* ปรับความเข้มพื้นหลังให้อ่อนลงเพื่อให้เนื้อหาอ่านง่าย */
+            33% { opacity: 0.2; } 
+            43% { opacity: 0; }  
+            100% { opacity: 0; }
+        }
+
+        /* --- เมนูหลัก (ชุดเดิม) --- */
         .main-nav {
+            display: flex; align-items: center; padding: 0 50px;
+            background: rgba(255, 255, 255, 0.95); height: 70px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-link, .dropdown {
+            text-decoration: none; display: flex; align-items: center;
+            padding: 0 15px; cursor: pointer; color: #004a80;
+            font-weight: bold; height: 100%; transition: 0.3s; font-size: 16px;
+        }
+        .nav-link:hover, .dropdown:hover { color: #b08d3e; border-bottom: 3px solid #b08d3e; }
+        .dropdown { position: relative; }
+        .dropdown-content {
+            display: none; position: absolute; top: 70px; left: 0;
+            background-color: white; min-width: 250px; 
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1); padding: 10px 0;
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a {
+            color: #333; padding: 12px 25px; text-decoration: none;
+            display: block; border-bottom: 1px solid #eee; font-size: 14px;
+        }
+
+        /* --- ส่วนเนื้อหาตรงกลาง --- */
+        .content-container {
+            flex-grow: 1;
+            padding: 50px 10%;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            padding: 0 50px;
-            background: white;
-            height: 70px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
-        .main-nav a {
-            text-decoration: none;
-            color: #004a80;
-            font-weight: bold;
-            padding: 0 20px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            transition: 0.3s;
+        .award-header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px 60px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-top: 6px solid #b08d3e; /* สีทองรางวัล */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
         }
 
-        .main-nav a:hover {
-            color: #b08d3e;
-            border-bottom: 3px solid #b08d3e;
-        }
+        .award-header h1 { color: #b08d3e; margin: 0; font-size: 32px; }
+        .award-header p { color: #555; margin-top: 10px; font-size: 18px; }
 
-        /* --- ส่วนกรอบเนื้อหา --- */
-        .content-wrapper {
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container { 
-            max-width: 800px; 
+        /* พื้นที่วางรูปภาพรางวัล */
+        .award-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             width: 100%;
-            background: white; 
-            padding: 50px 60px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            border-top: 8px solid #72ce60; /* แถบเขียวหนาด้านบน */
+            max-width: 1100px;
         }
 
-        .back-btn { 
-            display: inline-block; 
-            margin-bottom: 20px; 
-            color: #004a80; 
-            text-decoration: none; 
-            font-weight: bold; 
+        .award-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .award-card:hover { transform: translateY(-10px); }
+
+        .award-image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
             font-size: 14px;
         }
 
-        h1 { 
-            color: #1b5e20; 
-            font-size: 28px;
-            margin-top: 0;
-            margin-bottom: 25px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+        /* เมื่อคุณมีรูปแล้ว ให้เปลี่ยนจาก placeholder เป็น <img> */
+        .award-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
         }
 
-        /* ปรับบรรทัดให้ชิดกันตามรูป image_48d178.png */
-        p {
-            font-size: 16px;
-            line-height: 1.4; /* บรรทัดชิดขึ้น */
-            color: #333;
-            margin-bottom: 15px; /* ระยะห่างระหว่างย่อหน้า */
-            text-align: justify;
-        }
+        .award-info { padding: 20px; }
+        .award-info h3 { color: #004a80; margin: 0 0 10px 0; font-size: 20px; }
+        .award-info p { color: #666; font-size: 14px; margin: 0; line-height: 1.6; }
 
-        /* --- ส่วนลายเซ็นตามรูป image_4a242d.png --- */
-.signature {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* ดันกลุ่มข้อความทั้งหมดไปทางขวา */
-}
-
-.signature-box {
-    text-align: center; /* จัดให้ข้อความ 2 บรรทัดนี้วางกึ่งกลางตรงกันเอง */
-    font-weight: bold;
-    color: #1b5e20;
-}
-
-.signature-box p { 
-    margin: 2px 0; /* ปรับบรรทัดให้ชิดกันตามที่ต้องการก่อนหน้านี้ */
-    line-height: 1.2;
-}
     </style>
 </head>
 <body>
 
-    <!-- แถบเมนูด้านบนที่เพิ่มให้ใหม่ -->
+    <ul class="bg-slideshow">
+        <li></li><li></li><li></li>
+    </ul>
+
     <nav class="main-nav">
-        <a href="index.html">🏠</a>
-        <a href="https://www.unionpetrochemical.com/th/" target="_blank">เว็บไซต์หลัก</a>
-        <a href="index.html">ภาพรวมความยั่งยืน</a>
-        <a href="#">สิ่งแวดล้อม</a>
-        <a href="#">สังคม</a>
-        <a href="#">การกำกับดูแลและเศรษฐกิจ</a>
+        <a href="index.html" class="nav-link">🏠</a>
+        <a href="https://www.unionpetrochemical.com/th/" target="_blank" class="nav-link">เว็บไซต์หลัก</a>
+        
+        <div class="dropdown">
+            ภาพรวมความยั่งยืน
+            <div class="dropdown-content">
+                <a href="สารจากประธานกรรมการบริษัท.html">สารจากประธานกรรมการบริษัท</a>
+                <a href="#">การประเมินประเด็นด้านความยั่งยืนที่สำคัญ</a>
+                <a href="#">การสนับสนุนเป้าหมายการพัฒนาที่ยั่งยืน</a>
+            </div>
+        </div>
+        <div class="dropdown">สิ่งแวดล้อม<div class="dropdown-content"><a href="#">หัวข้อ 1</a></div></div>
+        <div class="dropdown">สังคม<div class="dropdown-content"><a href="#">หัวข้อ 1</a></div></div>
+        <div class="dropdown">การกำกับดูแลและเศรษฐกิจ<div class="dropdown-content"><a href="#">หัวข้อ 1</a></div></div>
+        <a href="รางวัลและความสำเร็จ.html" class="nav-link">รางวัลและความสำเร็จ</a>
     </nav>
 
-    <div class="content-wrapper">
-        <div class="container">
-            <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
+    <div class="content-container">
+        <div class="award-header">
+            <h1>รางวัลและความสำเร็จ</h1>
+            <p>ความภูมิใจในการดำเนินธุรกิจอย่างยั่งยืนและมีธรรมาภิบาล</p>
+        </div>
+
+        <div class="award-grid">
             
-            <h1>สารจากประธานกรรมการบริษัท</h1>
-            
-            <p>ปี 2568 ถือเป็นอีกหนึ่งปีที่เศรษฐกิจโลกและเศรษฐกิจไทยต้องเผชิญกับความไม่แน่นอนจากหลายปัจจัย ทั้งการชะลอตัวในบางภูมิภาค ความผันผวนของราคาพลังงานและอัตราดอกเบี้ย รวมถึงความตึงเครียดทางภูมิรัฐศาสตร์ที่ส่งผลกระทบโดยตรงต่อห่วงโซ่อุปทานและต้นทุนธุรกิจ ขณะเดียวกัน ภาคธุรกิจทั่วโลกต่างได้รับแรงกดดันจากการเปลี่ยนผ่านสู่เศรษฐกิจคาร์บอนต่ำ ซึ่งเป็นความท้าทายที่ต้องเร่งปรับตัวอย่างจริงจัง</p>
+            <div class="award-card">
+                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่ 1 ตรงนี้</div>
+                <div class="award-info">
+                    <h3>ชื่อรางวัลที่ได้รับ</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับรางวัล ปีที่ได้รับ หรือหน่วยงานที่มอบให้</p>
+                </div>
+            </div>
 
-            <p>บริษัทฯ ได้ยกระดับการดำเนินงานให้สอดรับกับกระแสการเปลี่ยนแปลงนี้ โดยความสำเร็จจากการขยายเครือข่ายความร่วมมือกับพันธมิตรทางธุรกิจระดับสากล ทำให้เราสามารถเพิ่มขีดความสามารถในการแข่งขันได้อย่างก้าวกระโดด ปัจจุบันเราไม่ได้มุ่งเน้นเพียงแค่ความคล่องตัวทางการเงินเท่านั้นแต่ยังให้ความสำคัญกับการนำเทคโนโลยีอัจฉริยะมาประยุกต์ใช้เพื่อเพิ่มประสิทธิภาพการดำเนินงานในทุกมิติ</p>
+            <div class="award-card">
+                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่ 2 ตรงนี้</div>
+                <div class="award-info">
+                    <h3>ชื่อรางวัลที่ได้รับ</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับรางวัล ปีที่ได้รับ หรือหน่วยงานที่มอบให้</p>
+                </div>
+            </div>
 
-            <p>ท่ามกลางบริบทดังกล่าว บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) ในฐานะผู้นำการนำเข้าและจัดจำหน่ายโซลเวนท์ ยังคงมุ่งเน้นการบริหารจัดการห่วงโซ่อุปทานอย่างมีประสิทธิภาพและโปร่งใส โดยในปี 2568 บริษัทฯ ได้บรรลุความสำเร็จครั้งสำคัญในการเปิดดำเนินการ คลังสินค้า นิคมอุตสาหกรรมโรจนะแหลมฉบัง การเปิดศูนย์กระจายสินค้าแห่งนี้ ไม่เพียงแต่ช่วยเพิ่มความคล่องตัวในการบริการลูกค้าในเขตพื้นที่ภาคตะวันออก EEC เท่านั้น แต่ยังเป็นกลยุทธ์สำคัญในการลดระยะการขนส่ง ซึ่งช่วยลดทั้งต้นทุนการดำเนินงาน การใช้พลังงาน และการปล่อยก๊าซเรือนกระจก อันเป็นการเสริมสร้างขีดความสามารถในการแข่งขันอย่างยั่งยืน</p>
+            <div class="award-card">
+                <div class="award-image-placeholder">ใส่รูปภาพรางวัลที่ 3 ตรงนี้</div>
+                <div class="award-info">
+                    <h3>ชื่อรางวัลที่ได้รับ</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับรางวัล ปีที่ได้รับ หรือหน่วยงานที่มอบให้</p>
+                </div>
+            </div>
 
-            <p>นอกจากนี้ การดำเนินธุรกิจของ บริษัท ยูทิเจ คลีน โซลูชั่น (ประเทศไทย) จำกัด ในด้านการรีไซเคิลตัวทำละลาย ซึ่งเกิดจากความร่วมมือกับพันธมิตรผู้เชี่ยวชาญจากประเทศญี่ปุ่น ได้ก้าวขึ้นมาเป็นโมเดลต้นแบบของธุรกิจสีเขียว (Green Business) ของบริษัทฯ อย่างเต็มตัว สิ่งนี้สะท้อนถึงการนำแนวคิด ESG (Environmental, Social, and Governance) มาปรับใช้จริง ไม่ใช่เพียงแค่ระดับนโยบาย แต่เป็นการสร้างคุณค่าทางเศรษฐกิจควบคู่ไปกับการดูแลสิ่งแวดล้อมอย่างยั่งยืน</p>
-
-            <p>ผมมีความเชื่อมั่นอย่างยิ่งว่า ด้วยประสบการณ์ที่สั่งสมมาอย่างยาวนานและความร่วมแรงร่วมใจของคณะกรรมการ ผู้บริหาร และพนักงานทุกคน บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) จะสามารถก้าวข้ามทุกความท้าทาย เพื่อสร้างคุณค่าที่มั่นคงและยั่งยืนให้แก่ผู้ถือหุ้น สังคม และสิ่งแวดล้อมสืบไป</p>
-
-            <!-- ลายเซ็นที่จัดระเบียบใหม่ตามรูป image_4a242d.png -->
-<div class="signature">
-    <div class="signature-box">  
-        <p>ประธานกรรมการบริษัท</p>
-        <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
-    </div>
-</div>
         </div>
     </div>
 
