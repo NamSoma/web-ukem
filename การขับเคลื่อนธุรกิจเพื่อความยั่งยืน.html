@@ -78,13 +78,17 @@
         }
 
         .org-box {
-            display: inline-block;
+            display: inline-flex; /* ใช้ flex เพื่อจัดข้อความในกล่อง */
+            align-items: center;
+            justify-content: center;
             padding: 15px 10px;
             border-radius: 10px;
             color: white;
             font-weight: bold;
             margin: 10px;
-            min-width: 180px;
+            /* กำหนดขนาดให้เท่ากัน */
+            min-width: 200px; 
+            min-height: 55px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             position: relative;
             z-index: 2;
@@ -101,17 +105,18 @@
             margin: 0 auto;
         }
 
-        /* --- ไฮไลต์: จัดการเลขานุการออกข้าง --- */
+        /* --- จัดการเลขานุการให้เท่ากันและอยู่ข้างๆ --- */
         .secretary-row {
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            margin-left: -200px; /* ขยับกลุ่มให้ดูสมดุลเมื่อมีเลขานุการยื่นออกมา */
+            /* ปรับ Margin-left ให้สมดุลกับขนาดกล่องที่ใหญ่ขึ้น */
+            margin-left: -220px; 
         }
 
         .horizontal-line {
-            width: 60px;
+            width: 40px;
             height: 2px;
             background-color: #1e467a;
             margin: 0 -5px;
@@ -145,8 +150,9 @@
         .dept-item .org-box {
             min-width: 0; 
             width: 85%;
+            min-height: 50px; /* ปรับความสูงกล่องด้านล่างให้สมดุล */
             margin: 12px 0;
-            padding: 15px 5px;
+            padding: 10px 5px;
         }
 
         .line-small {
@@ -186,10 +192,10 @@
             <div class="line-vertical"></div>
 
             <div class="secretary-row">
-                <div class="org-box bg-green" style="margin-right: 0;">เลขานุการคณะทำงาน</div>
+                <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
                 <div class="horizontal-line"></div>
                 <div class="center-column">
-                    <div class="org-box bg-blue" style="margin-left: 0;">รองประธานคณะทำงาน</div>
+                    <div class="org-box bg-blue">รองประธานคณะทำงาน</div>
                     <div class="line-vertical" style="height: 50px;"></div>
                 </div>
             </div>
