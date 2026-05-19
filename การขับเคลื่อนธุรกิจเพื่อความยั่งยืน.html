@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>โครงสร้างการกำกับดูแล - ESG Project</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Sarabun', sans-serif; 
+            background-color: #ffffff; 
+            color: #333;
+        }
 
+        /* --- เมนูหลัก (ใช้แบบเดิมเพื่อให้เข้ากันทั้งเว็บ) --- */
+        .main-nav {
+            display: flex; align-items: center; padding: 0 50px;
+            background: #ffffff; height: 70px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-link {
+            text-decoration: none; padding: 0 15px; color: #004a80;
+            font-weight: bold; font-size: 16px;
+        }
+
+        /* --- ส่วน Banner (อ้างอิง image_0728e9.png) --- */
+        .hero-banner {
+            width: 100%;
+            height: 450px;
+            background-color: #000000; /* พื้นหลังดำตามรูป */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-box {
+            background: rgba(220, 220, 220, 0.9); /* กล่องสีเทาอ่อน */
+            padding: 50px 80px;
+            border-radius: 20px;
+            border-top: 10px solid #4CAF50; /* เส้นขอบสีเขียวด้านบน */
+            max-width: 800px;
+        }
+
+        .hero-box h1 {
+            color: #2E7D32; /* สีเขียวเข้ม */
+            margin: 0 0 15px 0;
+            font-size: 42px;
+        }
+
+        .hero-box p {
+            color: #555;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        /* --- ส่วนเนื้อหาและแผนผัง (อ้างอิง image_08e045.png) --- */
+        .content-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            line-height: 1.8;
+        }
+
+        .chart-container {
+            margin-top: 50px;
+            text-align: center;
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        /* จำลองกล่องแผนผังแบบง่ายด้วย CSS */
+        .org-box {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            margin: 10px;
+            min-width: 150px;
+        }
+        .bg-blue { background-color: #1e467a; }
+        .bg-green { background-color: #28a745; }
+        .bg-light-blue { background-color: #8dbde6; }
+        .bg-gray { background-color: #e2e6e9; color: #333; }
+
+        .line-vertical {
+            width: 2px;
+            height: 30px;
+            background: #1e467a;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link">🏠 หน้าแรก</a>
+        <a href="#" class="nav-link">ภาพรวมความยั่งยืน</a>
+        <a href="รางวัลและความสำเร็จ.html" class="nav-link">รางวัลและความสำเร็จ</a>
+    </nav>
+
+    <header class="hero-banner">
+        <div class="hero-box">
+            <h1>มุ่งสู่ความยั่งยืน ร่วมสร้างอนาคตสีเขียว</h1>
+            <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
+        </div>
+    </header>
+
+    <main class="content-section">
+        <h2>โครงสร้างการกำกับดูแลด้านความยั่งยืน</h2>
+        <p>โครงสร้างการกำกับดูแลด้านความยั่งยืนของบริษัทฯ ถูกออกแบบให้ครอบคลุมตั้งแต่ระดับคณะกรรมการ ตลอดจนผู้บริหารระดับสูง จนถึงหน่วยงานปฏิบัติการ เพื่อให้สามารถกำกับ ติดตาม และขับเคลื่อนประเด็นสำคัญที่เกี่ยวข้องกับความยั่งยืนได้อย่างมีประสิทธิภาพ</p>
+
+        <div class="chart-container">
+            <h3>ภาพรวมโครงสร้างการกำกับดูแล</h3>
+            
+            <div class="org-box bg-light-blue">คณะทำงานด้านความยั่งยืน</div>
+            <br><div class="line-vertical"></div>
+            <div class="org-box bg-blue">ประธานคณะทำงาน</div>
+            <br><div class="line-vertical"></div>
+            <div>
+                <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
+                <div class="org-box bg-blue">รองประธานคณะทำงาน</div>
+            </div>
+            <div class="line-vertical" style="height: 50px;"></div>
+            
+            <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <div class="org-box bg-gray">ฝ่ายบัญชี</div>
+                <div class="org-box bg-gray">ฝ่ายคลังและขนส่ง</div>
+                <div class="org-box bg-gray">ฝ่ายขาย</div>
+                <div class="org-box bg-gray">ฝ่ายจัดซื้อ</div>
+                <div class="org-box bg-gray">ฝ่ายไอที</div>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 14px; color: #888;">
+                หมายเหตุ: บริษัทฯ ได้ทบทวนการแต่งตั้งคณะทำงานด้านความยั่งยืน เมื่อวันที่ 21 กรกฎาคม 2568
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
