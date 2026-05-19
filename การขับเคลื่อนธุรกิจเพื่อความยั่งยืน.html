@@ -78,20 +78,21 @@
         }
 
         .org-box {
-            display: inline-flex; /* ใช้ flex เพื่อจัดข้อความในกล่อง */
+            display: inline-flex; 
             align-items: center;
             justify-content: center;
-            padding: 15px 10px;
+            padding: 10px 15px;
             border-radius: 10px;
             color: white;
             font-weight: bold;
             margin: 10px;
-            /* กำหนดขนาดให้เท่ากัน */
-            min-width: 200px; 
-            min-height: 55px;
+            /* กำหนดขนาดกว้างและสูงให้เท่ากันเป๊ะเพื่อให้อยู่บรรทัดเดียวกัน */
+            width: 220px; 
+            height: 65px; 
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             position: relative;
             z-index: 2;
+            box-sizing: border-box;
         }
         .bg-blue { background-color: #1e467a; }
         .bg-green { background-color: #28a745; }
@@ -105,14 +106,14 @@
             margin: 0 auto;
         }
 
-        /* --- จัดการเลขานุการให้เท่ากันและอยู่ข้างๆ --- */
+        /* --- ปรับแก้ให้เลขานุการและรองประธานอยู่บรรทัดเดียวกัน --- */
         .secretary-row {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center; /* ดึงให้อยู่กึ่งกลางบรรทัดเดียวกันในแนวตั้ง */
             position: relative;
-            /* ปรับ Margin-left ให้สมดุลกับขนาดกล่องที่ใหญ่ขึ้น */
-            margin-left: -220px; 
+            /* ชดเชยตำแหน่งเพื่อให้กล่องรองประธานอยู่ตรงกลางหน้าจอพอดี */
+            margin-left: -240px; 
         }
 
         .horizontal-line {
@@ -120,6 +121,7 @@
             height: 2px;
             background-color: #1e467a;
             margin: 0 -5px;
+            flex-shrink: 0;
         }
 
         .center-column {
@@ -150,9 +152,10 @@
         .dept-item .org-box {
             min-width: 0; 
             width: 85%;
-            min-height: 50px; /* ปรับความสูงกล่องด้านล่างให้สมดุล */
+            height: 60px;
             margin: 12px 0;
             padding: 10px 5px;
+            font-size: 13px;
         }
 
         .line-small {
@@ -185,10 +188,10 @@
         <div class="chart-container">
             <h3>ภาพรวมโครงสร้างการกำกับดูแล</h3>
             
-            <div class="org-box bg-light-blue">คณะทำงานด้านความยั่งยืน</div>
+            <div class="org-box bg-light-blue" style="margin: 0 auto; display: flex;">คณะทำงานด้านความยั่งยืน</div>
             <div class="line-vertical"></div>
             
-            <div class="org-box bg-blue">ประธานคณะทำงาน</div>
+            <div class="org-box bg-blue" style="margin: 0 auto; display: flex;">ประธานคณะทำงาน</div>
             <div class="line-vertical"></div>
 
             <div class="secretary-row">
