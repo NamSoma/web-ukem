@@ -11,7 +11,7 @@
             color: #333;
         }
 
-        /* --- เมนูหลัก (ใช้แบบเดิมเพื่อให้เข้ากันทั้งเว็บ) --- */
+        /* --- เมนูหลัก --- */
         .main-nav {
             display: flex; align-items: center; padding: 0 50px;
             background: #ffffff; height: 70px;
@@ -23,11 +23,11 @@
             font-weight: bold; font-size: 16px;
         }
 
-        /* --- ส่วน Banner (อ้างอิง image_0728e9.png) --- */
+        /* --- ส่วน Banner --- */
         .hero-banner {
             width: 100%;
             height: 450px;
-            background-color: #000000; /* พื้นหลังดำตามรูป */
+            background-color: #000000;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -35,15 +35,15 @@
         }
 
         .hero-box {
-            background: rgba(220, 220, 220, 0.9); /* กล่องสีเทาอ่อน */
+            background: rgba(220, 220, 220, 0.9);
             padding: 50px 80px;
             border-radius: 20px;
-            border-top: 10px solid #4CAF50; /* เส้นขอบสีเขียวด้านบน */
+            border-top: 10px solid #4CAF50;
             max-width: 800px;
         }
 
         .hero-box h1 {
-            color: #2E7D32; /* สีเขียวเข้ม */
+            color: #2E7D32;
             margin: 0 0 15px 0;
             font-size: 42px;
         }
@@ -54,9 +54,9 @@
             margin: 0;
         }
 
-        /* --- ส่วนเนื้อหาและแผนผัง (อ้างอิง image_08e045.png) --- */
+        /* --- ส่วนเนื้อหาและแผนผัง --- */
         .content-section {
-            max-width: 1100px;
+            max-width: 1200px; /* ขยายกว้างขึ้นเพื่อให้พอสำหรับแถวเดียว */
             margin: 60px auto;
             padding: 0 20px;
             line-height: 1.8;
@@ -66,30 +66,54 @@
             margin-top: 50px;
             text-align: center;
             background: #f9f9f9;
-            padding: 40px;
+            padding: 40px 10px;
             border-radius: 15px;
+            overflow-x: auto; /* เผื่อหน้าจอเล็กให้เลื่อนซ้ายขวาได้ */
         }
 
-        /* จำลองกล่องแผนผังแบบง่ายด้วย CSS */
         .org-box {
             display: inline-block;
-            padding: 15px 25px;
+            padding: 15px 20px;
             border-radius: 10px;
             color: white;
             font-weight: bold;
             margin: 10px;
-            min-width: 150px;
+            min-width: 140px;
         }
         .bg-blue { background-color: #1e467a; }
         .bg-green { background-color: #28a745; }
         .bg-light-blue { background-color: #8dbde6; }
-        .bg-gray { background-color: #e2e6e9; color: #333; }
+        .bg-gray { background-color: #e2e6e9; color: #333; font-size: 14px; min-width: 110px; }
 
         .line-vertical {
             width: 2px;
             height: 30px;
             background: #1e467a;
             margin: 0 auto;
+        }
+
+        /* --- ไฮไลต์: ส่วนที่จัดการให้เรียงแถวเดียว --- */
+        .dept-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: nowrap; /* บังคับไม่ให้ขึ้นบรรทัดใหม่ */
+            margin-top: 0px;
+            padding-top: 20px;
+            border-top: 2px solid #1e467a; /* เส้นแนวนอนเชื่อมทุกฝ่าย */
+            min-width: fit-content;
+        }
+
+        .dept-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .line-small {
+            width: 2px;
+            height: 20px;
+            background: #1e467a;
         }
 
     </style>
@@ -111,10 +135,7 @@
 
     <main class="content-section">
         <h2>โครงสร้างการกำกับดูแลด้านความยั่งยืน</h2>
-        <p>โครอสร้างการกำกับดูแลด้านความยั่งยืนของบริษัทฯ ถูกออกแบบให้ครอบคลุมตั้งแต่ระดับคณะกรรบการ (ภายใต้การกำกับดูแลของ
-คณะกรรมการตรววจสอบ) ตลอดจบผู้บริหารระดับสูง จนก็เหน่วยวยงานปฏิบัติการ เพื่อให้สามารถกำกับ ติดตาม และรับเคลื่อนประเด็นสำคัญสำคัญที่
-เกี่ยวข้องกับความยั่งยืนได้อย่างมีประสิทธิภาพ สอดดคล้องกับบริบทการดำเนินธุรกิจและความคาดหวังของผู้มีส่วนได้ส่วนเสีย พร้อมทั้งสนับสมับสนุน
-การเติบโตขององค์กรในระยะยาวอย่างมั่นคงและรับผิดชอบ</p>
+        <p>โครงสร้างการกำกับดูแลด้านความยั่งยืนของบริษัทฯ ถูกออกแบบให้ครอบคลุมตั้งแต่ระดับคณะกรรมการ (ภายใต้การกำกับดูแลของคณะกรรมการตรวจสอบ) ตลอดจนผู้บริหารระดับสูง จนถึงหน่วยงานปฏิบัติการ เพื่อให้สามารถกำกับ ติดตาม และขับเคลื่อนประเด็นสำคัญที่เกี่ยวข้องกับความยั่งยืนได้อย่างมีประสิทธิภาพ สอดคล้องกับบริบทการดำเนินธุรกิจและความคาดหวังของผู้มีส่วนได้ส่วนเสีย พร้อมทั้งสนับสนุนการเติบโตขององค์กรในระยะยาวอย่างมั่นคงและรับผิดชอบ</p>
 
         <div class="chart-container">
             <h3>ภาพรวมโครงสร้างการกำกับดูแล</h3>
@@ -127,14 +148,42 @@
                 <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
                 <div class="org-box bg-blue">รองประธานคณะทำงาน</div>
             </div>
-            <div class="line-vertical" style="height: 50px;"></div>
             
-            <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-                <div class="org-box bg-gray">ฝ่ายบัญชี</div>
-                <div class="org-box bg-gray">ฝ่ายคลังและขนส่ง</div>
-                <div class="org-box bg-gray">ฝ่ายขาย</div>
-                <div class="org-box bg-gray">ฝ่ายจัดซื้อ</div>
-                <div class="org-box bg-gray">ฝ่ายไอที</div>
+            <div class="line-vertical" style="height: 40px;"></div>
+            
+            <div class="dept-wrapper">
+                <div class="dept-item">
+                    <div class="line-small"></div>
+                    <div class="org-box bg-gray">ฝ่ายบัญชี</div>
+                </div>
+                <div class="dept-item">
+                    <div class="line-small"></div>
+                    <div class="org-box bg-gray">ฝ่ายคลังและขนส่ง</div>
+                </div>
+                <div class="dept-item">
+                    <div class="line-small"></div>
+                    <div class="org-box bg-gray">ฝ่ายขาย</div>
+                </div>
+                <div class="dept-item">
+                    <div class="line-small"></div>
+                    <div class="org-box bg-gray">ฝ่ายจัดซื้อ</div>
+                </div>
+                <div class="dept-item">
+                    <div class="line-small"></div>
+                    <div class="org-box bg-gray">ฝ่ายบริหารกลาง</div>
+                </div>
+                <div class="dept-item">
+                    <div class="line-small"></div>
+                    <div class="org-box bg-gray">ฝ่ายขาย (2)</div>
+                </div>
+                <div class="dept-item">
+                    <div class="line-small"></div>
+                    <div class="org-box bg-gray">ULT</div>
+                </div>
+                <div class="dept-item">
+                    <div class="line-small"></div>
+                    <div class="org-box bg-gray">ฝ่ายไอที</div>
+                </div>
             </div>
             
             <p style="margin-top: 30px; font-size: 14px; color: #888;">
