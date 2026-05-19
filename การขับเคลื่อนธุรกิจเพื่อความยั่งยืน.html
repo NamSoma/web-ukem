@@ -9,6 +9,8 @@
             font-family: 'Sarabun', sans-serif; 
             background-color: #ffffff; 
             color: #333;
+            /* ป้องกันการเกิดแถบเลื่อนแนวนอนในทุกกรณี */
+            overflow-x: hidden; 
         }
 
         /* --- เมนูหลัก --- */
@@ -48,71 +50,87 @@
             font-size: 42px;
         }
 
-        .hero-box p {
-            color: #555;
-            font-size: 18px;
-            margin: 0;
-        }
-
         /* --- ส่วนเนื้อหาและแผนผัง --- */
         .content-section {
-            max-width: 1200px; /* ขยายกว้างขึ้นเพื่อให้พอสำหรับแถวเดียว */
-            margin: 60px auto;
-            padding: 0 20px;
+            width: 100%;
+            margin: 60px 0;
             line-height: 1.8;
         }
 
-        .chart-container {
-            margin-top: 50px;
+        .content-section h2, .content-section > p {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
             text-align: center;
+        }
+
+        /* ปรับแต่งคอนเทนเนอร์ให้กว้างสุดขอบหน้าจอ */
+        .chart-container {
+            width: 100vw; 
             background: #f9f9f9;
-            padding: 40px 10px;
-            border-radius: 15px;
-            overflow-x: auto; /* เผื่อหน้าจอเล็กให้เลื่อนซ้ายขวาได้ */
+            padding: 60px 0;
+            margin-top: 50px;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            text-align: center;
         }
 
         .org-box {
             display: inline-block;
-            padding: 15px 20px;
+            padding: 15px 10px;
             border-radius: 10px;
             color: white;
             font-weight: bold;
             margin: 10px;
-            min-width: 140px;
+            min-width: 180px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .bg-blue { background-color: #1e467a; }
         .bg-green { background-color: #28a745; }
         .bg-light-blue { background-color: #8dbde6; }
-        .bg-gray { background-color: #e2e6e9; color: #333; font-size: 14px; min-width: 110px; }
+        /* ปรับสีเทาให้ดูซอฟต์ลงตามแบบ */
+        .bg-gray { background-color: #e9ecef; color: #444; font-size: 13px; font-weight: 600; }
 
         .line-vertical {
             width: 2px;
-            height: 30px;
+            height: 35px;
             background: #1e467a;
             margin: 0 auto;
         }
 
-        /* --- ไฮไลต์: ส่วนที่จัดการให้เรียงแถวเดียว --- */
+        /* --- ส่วนจัดการฝ่ายต่างๆ ให้กระจายสุดขอบ --- */
         .dept-wrapper {
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* กระจายช่องว่างให้เท่ากันจนชิดขอบ */
             align-items: flex-start;
-            flex-wrap: nowrap; /* บังคับไม่ให้ขึ้นบรรทัดใหม่ */
-            margin-top: 0px;
-            padding-top: 20px;
+            width: 95%; /* เว้นขอบไว้นิดหน่อยเพื่อความสวยงาม */
+            max-width: 1400px; /* ไม่ให้กว้างเกินไปจนอ่านยากบนจอใหญ่มาก */
+            margin: 0 auto;
+            padding-top: 25px;
             border-top: 2px solid #1e467a; /* เส้นแนวนอนเชื่อมทุกฝ่าย */
-            min-width: fit-content;
         }
 
         .dept-item {
+            flex: 1; /* บังคับให้ทุกฝ่ายแชร์พื้นที่เท่าๆ กัน */
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
+        .dept-item .org-box {
+            min-width: 0; /* ปลดล็อคขนาดตายตัวเพื่อให้ยืดหยุ่น */
+            width: 85%;
+            margin: 12px 0;
+            padding: 15px 5px;
+        }
+
         .line-small {
             width: 2px;
-            height: 20px;
+            height: 25px;
             background: #1e467a;
         }
 
@@ -135,58 +153,35 @@
 
     <main class="content-section">
         <h2>โครงสร้างการกำกับดูแลด้านความยั่งยืน</h2>
-        <p>โครงสร้างการกำกับดูแลด้านความยั่งยืนของบริษัทฯ ถูกออกแบบให้ครอบคลุมตั้งแต่ระดับคณะกรรมการ (ภายใต้การกำกับดูแลของคณะกรรมการตรวจสอบ) ตลอดจนผู้บริหารระดับสูง จนถึงหน่วยงานปฏิบัติการ เพื่อให้สามารถกำกับ ติดตาม และขับเคลื่อนประเด็นสำคัญที่เกี่ยวข้องกับความยั่งยืนได้อย่างมีประสิทธิภาพ สอดคล้องกับบริบทการดำเนินธุรกิจและความคาดหวังของผู้มีส่วนได้ส่วนเสีย พร้อมทั้งสนับสนุนการเติบโตขององค์กรในระยะยาวอย่างมั่นคงและรับผิดชอบ</p>
+        <p>โครงสร้างการกำกับดูแลด้านความยั่งยืนของบริษัทฯ ถูกออกแบบให้ครอบคลุมตั้งแต่ระดับคณะกรรมการ ตลอดจนผู้บริหารระดับสูง จนถึงหน่วยงานปฏิบัติการ เพื่อกำกับและขับเคลื่อนประเด็นสำคัญอย่างมีประสิทธิภาพ</p>
 
         <div class="chart-container">
             <h3>ภาพรวมโครงสร้างการกำกับดูแล</h3>
             
             <div class="org-box bg-light-blue">คณะทำงานด้านความยั่งยืน</div>
-            <br><div class="line-vertical"></div>
+            <div class="line-vertical"></div>
             <div class="org-box bg-blue">ประธานคณะทำงาน</div>
-            <br><div class="line-vertical"></div>
-            <div>
+            <div class="line-vertical"></div>
+            
+            <div style="display: flex; justify-content: center; gap: 20px;">
                 <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
                 <div class="org-box bg-blue">รองประธานคณะทำงาน</div>
             </div>
             
-            <div class="line-vertical" style="height: 40px;"></div>
+            <div class="line-vertical" style="height: 50px;"></div>
             
             <div class="dept-wrapper">
-                <div class="dept-item">
-                    <div class="line-small"></div>
-                    <div class="org-box bg-gray">ฝ่ายบัญชี</div>
-                </div>
-                <div class="dept-item">
-                    <div class="line-small"></div>
-                    <div class="org-box bg-gray">ฝ่ายคลังและขนส่ง</div>
-                </div>
-                <div class="dept-item">
-                    <div class="line-small"></div>
-                    <div class="org-box bg-gray">ฝ่ายขาย</div>
-                </div>
-                <div class="dept-item">
-                    <div class="line-small"></div>
-                    <div class="org-box bg-gray">ฝ่ายจัดซื้อ</div>
-                </div>
-                <div class="dept-item">
-                    <div class="line-small"></div>
-                    <div class="org-box bg-gray">ฝ่ายบริหารกลาง</div>
-                </div>
-                <div class="dept-item">
-                    <div class="line-small"></div>
-                    <div class="org-box bg-gray">ฝ่ายขาย</div>
-                </div>
-                <div class="dept-item">
-                    <div class="line-small"></div>
-                    <div class="org-box bg-gray">ULT</div>
-                </div>
-                <div class="dept-item">
-                    <div class="line-small"></div>
-                    <div class="org-box bg-gray">ฝ่ายไอที</div>
-                </div>
+                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายบัญชี</div></div>
+                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายคลังและขนส่ง</div></div>
+                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายขาย</div></div>
+                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายจัดซื้อ</div></div>
+                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายบริหารกลาง</div></div>
+                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายขาย (2)</div></div>
+                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ULT</div></div>
+                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายไอที</div></div>
             </div>
             
-            <p style="margin-top: 30px; font-size: 14px; color: #888;">
+            <p style="margin-top: 40px; font-size: 14px; color: #888; font-weight: bold;">
                 หมายเหตุ: บริษัทฯ ได้ทบทวนการแต่งตั้งคณะทำงานด้านความยั่งยืน เมื่อวันที่ 21 กรกฎาคม 2568
             </p>
         </div>
