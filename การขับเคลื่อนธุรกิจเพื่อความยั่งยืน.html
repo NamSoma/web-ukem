@@ -9,7 +9,6 @@
             font-family: 'Sarabun', sans-serif; 
             background-color: #ffffff; 
             color: #333;
-            /* ป้องกันการเกิดแถบเลื่อนแนวนอนในทุกกรณี */
             overflow-x: hidden; 
         }
 
@@ -65,7 +64,6 @@
             text-align: center;
         }
 
-        /* ปรับแต่งคอนเทนเนอร์ให้กว้างสุดขอบหน้าจอ */
         .chart-container {
             width: 100vw; 
             background: #f9f9f9;
@@ -88,11 +86,12 @@
             margin: 10px;
             min-width: 180px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
         }
         .bg-blue { background-color: #1e467a; }
         .bg-green { background-color: #28a745; }
         .bg-light-blue { background-color: #8dbde6; }
-        /* ปรับสีเทาให้ดูซอฟต์ลงตามแบบ */
         .bg-gray { background-color: #e9ecef; color: #444; font-size: 13px; font-weight: 600; }
 
         .line-vertical {
@@ -102,27 +101,49 @@
             margin: 0 auto;
         }
 
-        /* --- ส่วนจัดการฝ่ายต่างๆ ให้กระจายสุดขอบ --- */
+        /* --- ไฮไลต์: จัดการเลขานุการออกข้าง --- */
+        .secretary-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-left: -200px; /* ขยับกลุ่มให้ดูสมดุลเมื่อมีเลขานุการยื่นออกมา */
+        }
+
+        .horizontal-line {
+            width: 60px;
+            height: 2px;
+            background-color: #1e467a;
+            margin: 0 -5px;
+        }
+
+        .center-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- ส่วนจัดการฝ่ายต่างๆ --- */
         .dept-wrapper {
             display: flex;
-            justify-content: space-between; /* กระจายช่องว่างให้เท่ากันจนชิดขอบ */
+            justify-content: space-between; 
             align-items: flex-start;
-            width: 95%; /* เว้นขอบไว้นิดหน่อยเพื่อความสวยงาม */
-            max-width: 1400px; /* ไม่ให้กว้างเกินไปจนอ่านยากบนจอใหญ่มาก */
+            width: 95%; 
+            max-width: 1400px; 
             margin: 0 auto;
             padding-top: 25px;
-            border-top: 2px solid #1e467a; /* เส้นแนวนอนเชื่อมทุกฝ่าย */
+            border-top: 2px solid #1e467a; 
         }
 
         .dept-item {
-            flex: 1; /* บังคับให้ทุกฝ่ายแชร์พื้นที่เท่าๆ กัน */
+            flex: 1; 
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .dept-item .org-box {
-            min-width: 0; /* ปลดล็อคขนาดตายตัวเพื่อให้ยืดหยุ่น */
+            min-width: 0; 
             width: 85%;
             margin: 12px 0;
             padding: 15px 5px;
@@ -160,15 +181,18 @@
             
             <div class="org-box bg-light-blue">คณะทำงานด้านความยั่งยืน</div>
             <div class="line-vertical"></div>
+            
             <div class="org-box bg-blue">ประธานคณะทำงาน</div>
             <div class="line-vertical"></div>
-            
-            <div style="display: flex; justify-content: center; gap: 20px;">
-                <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
-                <div class="org-box bg-blue">รองประธานคณะทำงาน</div>
+
+            <div class="secretary-row">
+                <div class="org-box bg-green" style="margin-right: 0;">เลขานุการคณะทำงาน</div>
+                <div class="horizontal-line"></div>
+                <div class="center-column">
+                    <div class="org-box bg-blue" style="margin-left: 0;">รองประธานคณะทำงาน</div>
+                    <div class="line-vertical" style="height: 50px;"></div>
+                </div>
             </div>
-            
-            <div class="line-vertical" style="height: 50px;"></div>
             
             <div class="dept-wrapper">
                 <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายบัญชี</div></div>
