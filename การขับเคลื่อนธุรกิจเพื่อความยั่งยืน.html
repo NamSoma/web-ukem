@@ -12,186 +12,88 @@
             overflow-x: hidden; 
         }
 
-        /* --- เมนูหลัก --- */
+        /* --- เมนูและ Banner --- */
         .main-nav {
             display: flex; align-items: center; padding: 0 50px;
             background: #ffffff; height: 70px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
             position: sticky; top: 0; z-index: 1000;
         }
-        .nav-link {
-            text-decoration: none; padding: 0 15px; color: #004a80;
-            font-weight: bold; font-size: 16px;
-        }
+        .nav-link { text-decoration: none; padding: 0 15px; color: #004a80; font-weight: bold; font-size: 16px; }
 
-        /* --- ส่วน Banner --- */
         .hero-banner {
-            width: 100%;
-            height: 450px;
-            background-color: #000000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            width: 100%; height: 450px; background-color: #000000;
+            display: flex; align-items: center; justify-content: center; text-align: center;
         }
+        .hero-box { background: rgba(220, 220, 220, 0.9); padding: 50px 80px; border-radius: 20px; border-top: 10px solid #4CAF50; max-width: 800px; }
+        .hero-box h1 { color: #2E7D32; margin: 0 0 15px 0; font-size: 42px; }
 
-        .hero-box {
-            background: rgba(220, 220, 220, 0.9);
-            padding: 50px 80px;
-            border-radius: 20px;
-            border-top: 10px solid #4CAF50;
-            max-width: 800px;
-        }
-
-        .hero-box h1 {
-            color: #2E7D32;
-            margin: 0 0 15px 0;
-            font-size: 42px;
-        }
-
-        /* --- ส่วนเนื้อหาและแผนผัง --- */
-        .content-section {
-            width: 100%;
-            margin: 60px 0;
-            line-height: 1.8;
-        }
-
-        .content-section h2, .content-section > p {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
+        /* --- ส่วนแผนผัง --- */
         .chart-container {
-            width: 100vw; 
-            background: #f9f9f9;
-            padding: 60px 0;
-            margin-top: 50px;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
+            width: 100vw; background: #f9f9f9; padding: 60px 0;
+            position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;
             text-align: center;
         }
 
+        /* กำหนดขนาดกล่องให้เท่ากันถาวร */
         .org-box {
             display: inline-flex; 
             align-items: center;
             justify-content: center;
-            padding: 10px 15px;
             border-radius: 10px;
             color: white;
             font-weight: bold;
-            margin: 10px;
-            /* กำหนดขนาดกว้างและสูงให้เท่ากันเป๊ะเพื่อให้เส้นเชื่อมอยู่กึ่งกลางพอดี */
             width: 220px; 
             height: 65px; 
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 2;
             box-sizing: border-box;
+            margin: 0; /* ลบ margin เดิมออกเพื่อไม่ให้เบี้ยว */
         }
         .bg-blue { background-color: #1e467a; }
         .bg-green { background-color: #28a745; }
         .bg-light-blue { background-color: #8dbde6; }
         .bg-gray { background-color: #e9ecef; color: #444; font-size: 13px; font-weight: 600; }
 
-        .line-vertical {
-            width: 2px;
-            height: 35px;
-            background: #1e467a;
-            margin: 0 auto;
-        }
+        .line-vertical { width: 2px; height: 35px; background: #1e467a; margin: 0 auto; }
 
-        /* --- แก้ไขตำแหน่งเลขานุการให้ขยับขึ้นมาตรงกับรองประธาน --- */
+        /* --- [จุดสำคัญ] ปรับให้สีเขียวขยับขึ้นมาขนานพอดี --- */
         .secretary-row {
             display: flex;
             justify-content: center;
-            align-items: center; /* บังคับให้กล่องเขียวและน้ำเงินขนานกันในแนวตั้ง */
-            position: relative;
-            /* ปรับ Margin-left เพื่อชดเชยให้กล่องรองประธานอยู่กลางหน้าจอ */
-            margin-left: -240px; 
+            align-items: center; /* ดึงให้กึ่งกลางกล่องเท่ากันทุกใบ */
+            margin-left: -260px; /* ชดเชยให้รองประธานอยู่กลางจอพอดี */
         }
 
         .horizontal-line {
-            width: 40px;
+            width: 40px; /* ความยาวเส้นเชื่อมกลาง */
             height: 2px;
             background-color: #1e467a;
-            margin: 0 -5px;
             flex-shrink: 0;
         }
 
-        .center-column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        .center-column { display: flex; flex-direction: column; align-items: center; }
 
-        /* --- ส่วนจัดการฝ่ายต่างๆ --- */
+        /* --- ส่วนฝ่ายงานด้านล่าง --- */
         .dept-wrapper {
-            display: flex;
-            justify-content: space-between; 
-            align-items: flex-start;
-            width: 95%; 
-            max-width: 1400px; 
-            margin: 0 auto;
-            padding-top: 25px;
-            border-top: 2px solid #1e467a; 
+            display: flex; justify-content: space-between; width: 95%; max-width: 1400px; 
+            margin: 0 auto; padding-top: 25px; border-top: 2px solid #1e467a; 
         }
-
-        .dept-item {
-            flex: 1; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .dept-item .org-box {
-            min-width: 0; 
-            width: 85%;
-            height: 60px;
-            margin: 12px 0;
-            padding: 10px 5px;
-            font-size: 13px;
-        }
-
-        .line-small {
-            width: 2px;
-            height: 25px;
-            background: #1e467a;
-        }
+        .dept-item { flex: 1; display: flex; flex-direction: column; align-items: center; }
+        .dept-item .org-box { width: 85%; height: 60px; font-size: 13px; margin: 12px 0; }
+        .line-small { width: 2px; height: 25px; background: #1e467a; }
 
     </style>
 </head>
 <body>
 
-    <nav class="main-nav">
-        <a href="index.html" class="nav-link">🏠 หน้าแรก</a>
-        <a href="#" class="nav-link">ภาพรวมความยั่งยืน</a>
-        <a href="รางวัลและความสำเร็จ.html" class="nav-link">รางวัลและความสำเร็จ</a>
-    </nav>
-
-    <header class="hero-banner">
-        <div class="hero-box">
-            <h1>มุ่งสู่ความยั่งยืน ร่วมสร้างอนาคตสีเขียว</h1>
-            <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
-        </div>
-    </header>
-
     <main class="content-section">
-        <h2>โครงสร้างการกำกับดูแลด้านความยั่งยืน</h2>
-        <p>โครงสร้างการกำกับดูแลด้านความยั่งยืนของบริษัทฯ ถูกออกแบบให้ครอบคลุมตั้งแต่ระดับคณะกรรมการ (ภายใต้การกำกับดูแลของคณะกรรมการตรวจสอบ) ตลอดจนผู้บริหารระดับสูง จนถึงหน่วยงานปฏิบัติการ เพื่อให้สามารถกำกับ ติดตาม และขับเคลื่อนประเด็นสำคัญที่เกี่ยวข้องกับความยั่งยืนได้อย่างมีประสิทธิภาพ สอดคล้องกับบริบทการดำเนินธุรกิจและความคาดหวังของผู้มีส่วนได้ส่วนเสีย พร้อมทั้งสนับสนุนการเติบโตขององค์กรในระยะยาวอย่างมั่นคงและรับผิดชอบ</p>
-
         <div class="chart-container">
             <h3>ภาพรวมโครงสร้างการกำกับดูแล</h3>
             
-            <div class="org-box bg-light-blue" style="margin: 0 auto; display: flex;">คณะทำงานด้านความยั่งยืน</div>
+            <div class="org-box bg-light-blue" style="display: flex; margin: 0 auto;">คณะทำงานด้านความยั่งยืน</div>
             <div class="line-vertical"></div>
             
-            <div class="org-box bg-blue" style="margin: 0 auto; display: flex;">ประธานคณะทำงาน</div>
+            <div class="org-box bg-blue" style="display: flex; margin: 0 auto;">ประธานคณะทำงาน</div>
             <div class="line-vertical"></div>
 
             <div class="secretary-row">
