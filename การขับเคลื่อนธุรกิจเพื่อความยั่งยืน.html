@@ -12,7 +12,7 @@
             overflow-x: hidden; 
         }
 
-        /* --- แผนผัง --- */
+        /* --- ส่วนแผนผัง --- */
         .chart-container {
             width: 100vw; 
             background: #f9f9f9;
@@ -20,7 +20,7 @@
             text-align: center;
         }
 
-        /* บังคับขนาดกล่องให้เท่ากัน และลบ margin ที่ทำให้เบี้ยวออก */
+        /* กำหนดขนาดกล่องให้เท่ากัน และลบ margin เดิมที่ทำให้ตำแหน่งเยื้องออก */
         .org-box {
             display: inline-flex; 
             align-items: center;
@@ -32,7 +32,7 @@
             height: 65px; 
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             box-sizing: border-box;
-            margin: 0; /* สำคัญ: ลบ margin เพื่อให้ align-items ทำงานได้แม่นยำ */
+            margin: 0; /* ลบ margin เพื่อให้การจัดกึ่งกลางแม่นยำที่สุด */
         }
         .bg-blue { background-color: #1e467a; }
         .bg-green { background-color: #28a745; }
@@ -46,18 +46,18 @@
             margin: 0 auto;
         }
 
-        /* --- จุดที่ปรับ: ขยับกล่องสีเขียวขึ้นมาให้ตรงกัน --- */
+        /* --- ส่วนที่แก้ไข: จัดการแถวเลขานุการและรองประธาน --- */
         .secretary-row {
             display: flex;
             justify-content: center;
-            align-items: center; /* ดึงกล่องเขียวขึ้นมาขนานกับกล่องน้ำเงินกึ่งกลางเป๊ะ */
+            align-items: center; /* ดึงกล่องสีเขียวขึ้นมาให้ขนานกับสีน้ำเงินกึ่งกลางพอดี */
             position: relative;
-            /* ชดเชยเพื่อให้กล่องน้ำเงินอยู่ตรงกึ่งกลางหน้าจอพอดี */
+            /* ชดเชยตำแหน่งเพื่อให้กล่องรองประธานอยู่กลางหน้าจอพอดี */
             margin-left: -260px; 
         }
 
         .horizontal-line {
-            width: 40px; /* ระยะห่างเส้นเชื่อม */
+            width: 40px; /* ระยะห่างของเส้นเชื่อมระหว่างกล่อง */
             height: 2px;
             background-color: #1e467a;
             flex-shrink: 0;
@@ -69,7 +69,7 @@
             align-items: center;
         }
 
-        /* --- ส่วนฝ่ายงานด้านล่าง --- */
+        /* --- ส่วนจัดการฝ่ายต่างๆ ด้านล่าง --- */
         .dept-wrapper {
             display: flex;
             justify-content: space-between; 
@@ -115,7 +115,9 @@
 
         <div class="secretary-row">
             <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
+            
             <div class="horizontal-line"></div>
+            
             <div class="center-column">
                 <div class="org-box bg-blue">รองประธานคณะทำงาน</div>
                 <div class="line-vertical" style="height: 50px;"></div>
