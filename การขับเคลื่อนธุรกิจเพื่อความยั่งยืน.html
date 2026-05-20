@@ -20,7 +20,7 @@
             text-align: center;
         }
 
-        /* กำหนดขนาดกล่องให้เท่ากัน และลบ margin เดิมที่ทำให้ตำแหน่งเยื้องออก */
+        /* กำหนดขนาดกล่องให้เท่ากัน และลบ margin เดิมที่เคยดันกล่องให้เบี้ยวออก */
         .org-box {
             display: inline-flex; 
             align-items: center;
@@ -32,7 +32,7 @@
             height: 65px; 
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             box-sizing: border-box;
-            margin: 0; /* ลบ margin เพื่อให้การจัดกึ่งกลางแม่นยำที่สุด */
+            margin: 0; /* ลบ margin เพื่อให้ Browser จัดกึ่งกลางได้แม่นยำที่สุด */
         }
         .bg-blue { background-color: #1e467a; }
         .bg-green { background-color: #28a745; }
@@ -46,18 +46,18 @@
             margin: 0 auto;
         }
 
-        /* --- ส่วนที่แก้ไข: จัดการแถวเลขานุการและรองประธาน --- */
+        /* --- จุดที่ปรับ: แถวเลขานุการและรองประธาน --- */
         .secretary-row {
             display: flex;
             justify-content: center;
-            align-items: center; /* ดึงกล่องสีเขียวขึ้นมาให้ขนานกับสีน้ำเงินกึ่งกลางพอดี */
+            align-items: center; /* ดึงกล่องสีเขียวขึ้นมาให้ขนานกับกล่องสีน้ำเงินกึ่งกลางพอดี */
             position: relative;
-            /* ชดเชยตำแหน่งเพื่อให้กล่องรองประธานอยู่กลางหน้าจอพอดี */
+            /* ชดเชยเพื่อให้กล่องรองประธานอยู่แกนกลางหน้าจอพอดี */
             margin-left: -260px; 
         }
 
         .horizontal-line {
-            width: 40px; /* ระยะห่างของเส้นเชื่อมระหว่างกล่อง */
+            width: 40px; 
             height: 2px;
             background-color: #1e467a;
             flex-shrink: 0;
@@ -115,9 +115,7 @@
 
         <div class="secretary-row">
             <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
-            
             <div class="horizontal-line"></div>
-            
             <div class="center-column">
                 <div class="org-box bg-blue">รองประธานคณะทำงาน</div>
                 <div class="line-vertical" style="height: 50px;"></div>
