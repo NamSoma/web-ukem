@@ -4,113 +4,72 @@
     <meta charset="UTF-8">
     <title>โครงสร้างการกำกับดูแล - ESG Project</title>
     <style>
-        body { 
-            margin: 0; 
-            font-family: 'Sarabun', sans-serif; 
-            background-color: #ffffff; 
-        }
+        body { margin: 0; font-family: 'Sarabun', sans-serif; background-color: #ffffff; }
 
         .chart-container {
-            width: 100%; 
-            padding: 60px 0; 
-            text-align: center; 
-            background: #f9f9f9;
+            width: 100%; padding: 60px 0; text-align: center; background: #f9f9f9;
             position: relative;
         }
 
         .org-box {
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center;
-            border-radius: 10px; 
-            color: white; 
-            font-weight: bold;
-            width: 220px; 
-            height: 65px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative; 
-            z-index: 5;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 10px; color: white; font-weight: bold;
+            width: 220px; height: 65px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative; z-index: 5;
         }
         .bg-blue { background-color: #1e467a; }
         .bg-green { background-color: #28a745; }
         .bg-light-blue { background-color: #8dbde6; }
         .bg-gray { background-color: #e9ecef; color: #444; font-size: 13px; }
 
-        .line-vertical { 
-            width: 2px; 
-            height: 35px; 
-            background: #1e467a; 
-            margin: 0 auto; 
-        }
+        .line-vertical { width: 2px; height: 35px; background: #1e467a; margin: 0 auto; }
 
         /* --- ส่วนจัดการตำแหน่งแถวกลาง --- */
         .secretary-row {
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-            position: relative;
-            margin-top: 10px;
+            display: flex; justify-content: center; align-items: center;
+            position: relative; margin-top: 10px;
         }
 
-        .center-column { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-        }
+        .center-column { display: flex; flex-direction: column; align-items: center; }
 
-        /* กล่องสีเขียวขยับอิสระ */
+        /* กล่องสีเขียวพร้อมเส้นเชื่อมสีแดง */
         .org-box.bg-green {
             position: absolute;
-            left: calc(50% - 320px); 
+            left: calc(50% - 320px); /* ระยะห่างจากกล่องกลาง */
             top: 0;
         }
 
-        /* --- [ใหม่] เส้นตรงสีแดงเชื่อมพร้อมหัวลูกศร --- */
-        .red-straight-line {
+        /* สร้างเส้นตรงสีแดงลากออกมาจากกล่องเขียว */
+        .org-box.bg-green::after {
+            content: "";
             position: absolute;
+            right: -60px; /* ความยาวของเส้นที่ยื่นออกมา */
+            top: 50%;
+            width: 60px;
             height: 2px;
-            background-color: red; /* เปลี่ยนเป็นเส้นตรงสีแดง */
-            top: 32px; /* กึ่งกลางความสูงของกล่อง (65px / 2) */
-            left: calc(50% - 100px); /* จุดเริ่มจากกล่องรองประธาน */
-            width: 80px; /* ความยาวเส้น */
-            z-index: 1;
-            /* พลิกเส้นไปทางซ้าย */
-            transform: scaleX(-1);
-            transform-origin: left;
+            background-color: red; /* สีแดงตามสั่ง */
+            z-index: -1;
         }
 
-        /* หัวลูกศรสีแดง */
-        .red-straight-line::after {
-            content: '';
+        /* หัวลูกศรสีแดงตรงปลายเส้น */
+        .org-box.bg-green::before {
+            content: "";
             position: absolute;
-            right: 0;
-            top: -4px;
+            right: -60px;
+            top: calc(50% - 4px);
             border-top: 5px solid transparent;
             border-bottom: 5px solid transparent;
             border-left: 8px solid red;
+            z-index: 1;
         }
 
-        /* ส่วนฝ่ายงานด้านล่าง */
+        /* ฝ่ายงานด้านล่าง */
         .dept-wrapper {
-            display: flex; 
-            justify-content: space-between; 
-            width: 95%; 
-            max-width: 1400px; 
-            margin: 0 auto; 
-            padding-top: 25px; 
-            border-top: 2px solid #1e467a; 
+            display: flex; justify-content: space-between; width: 95%; 
+            max-width: 1400px; margin: 0 auto; padding-top: 25px; border-top: 2px solid #1e467a; 
         }
-        .dept-item { 
-            flex: 1; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-        }
-        .line-small { 
-            width: 2px; 
-            height: 25px; 
-            background: #1e467a; 
-        }
+        .dept-item { flex: 1; display: flex; flex-direction: column; align-items: center; }
+        .line-small { width: 2px; height: 25px; background: #1e467a; }
     </style>
 </head>
 <body>
@@ -124,8 +83,6 @@
         <div class="line-vertical"></div>
 
         <div class="secretary-row">
-            <div class="red-straight-line"></div>
-
             <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
             
             <div class="center-column">
@@ -138,7 +95,7 @@
             <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายบัญชี</div></div>
             <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายคลังและขนส่ง</div></div>
             <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายขาย</div></div>
-            <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายจัดซื้อ</div></div>
+            <div class="dept-item"><div class="line-small"></div><div cass="org-box bg-gray">ฝ่ายจัดซื้อ</div></div>
             <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายบริหารกลาง</div></div>
             <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายขาย (2)</div></div>
             <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ULT</div></div>
