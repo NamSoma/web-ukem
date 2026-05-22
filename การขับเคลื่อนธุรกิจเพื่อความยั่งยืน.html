@@ -8,231 +8,143 @@
             margin: 0; 
             font-family: 'Sarabun', sans-serif; 
             background-color: #ffffff; 
-            color: #333;
-            overflow-x: hidden; 
-        }
-
-        /* --- เมนูหลัก --- */
-        .main-nav {
-            display: flex; align-items: center; padding: 0 50px;
-            background: #ffffff; height: 70px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-            position: sticky; top: 0; z-index: 1000;
-        }
-        .nav-link {
-            text-decoration: none; padding: 0 15px; color: #004a80;
-            font-weight: bold; font-size: 16px;
-        }
-
-        /* --- ส่วน Banner --- */
-        .hero-banner {
-            width: 100%;
-            height: 450px;
-            background-color: #000000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .hero-box {
-            background: rgba(220, 220, 220, 0.9);
-            padding: 50px 80px;
-            border-radius: 20px;
-            border-top: 10px solid #4CAF50;
-            max-width: 800px;
-        }
-
-        .hero-box h1 {
-            color: #2E7D32;
-            margin: 0 0 15px 0;
-            font-size: 42px;
-        }
-
-        /* --- ส่วนเนื้อหาและแผนผัง --- */
-        .content-section {
-            width: 100%;
-            margin: 60px 0;
-            line-height: 1.8;
-        }
-
-        .content-section h2, .content-section > p {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 20px;
-            text-align: center;
         }
 
         .chart-container {
-            width: 100vw; 
+            width: 100%; 
+            padding: 60px 0; 
+            text-align: center; 
             background: #f9f9f9;
-            padding: 60px 0;
-            margin-top: 50px;
             position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            text-align: center;
         }
 
         .org-box {
             display: inline-flex; 
-            align-items: center;
+            align-items: center; 
             justify-content: center;
-            padding: 10px 15px;
-            border-radius: 10px;
-            color: white;
+            border-radius: 10px; 
+            color: white; 
             font-weight: bold;
             width: 220px; 
             height: 65px; 
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 2;
-            box-sizing: border-box;
+            position: relative; 
+            z-index: 5;
         }
         .bg-blue { background-color: #1e467a; }
         .bg-green { background-color: #28a745; }
         .bg-light-blue { background-color: #8dbde6; }
-        .bg-gray { background-color: #e9ecef; color: #444; font-size: 13px; font-weight: 600; }
+        .bg-gray { background-color: #e9ecef; color: #444; font-size: 13px; }
 
-        .line-vertical {
-            width: 2px;
-            height: 35px;
-            background: #1e467a;
-            margin: 0 auto;
+        .line-vertical { 
+            width: 2px; 
+            height: 35px; 
+            background: #1e467a; 
+            margin: 0 auto; 
         }
 
-        /* --- [ปรับปรุงใหม่] จัดการเลขานุการให้ขยับอิสระ --- */
+        /* --- ส่วนจัดการตำแหน่งแถวกลาง --- */
         .secretary-row {
-            display: flex;
-            justify-content: center;
-            align-items: center; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
             position: relative;
-            /* ชดเชยให้รองประธานอยู่กลางหน้าจอเสมอ */
-            margin-left: 0; 
+            margin-top: 10px;
         }
 
-        /* ปรับแต่งกล่องสีเขียวแบบอิสระ */
+        .center-column { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        /* กล่องสีเขียวขยับอิสระ */
         .org-box.bg-green {
             position: absolute;
-            /* --- ปรับตำแหน่งที่นี่ --- */
-            left: calc(50% - 400px); /* ขยับไปทางซ้ายของแกนกลาง */
-            top: 0px;               /* ขยับขึ้นหรือลง (0 คือกึ่งกลางพอดี) */
-            /* -------------------- */
-            margin: 0;
+            left: calc(50% - 320px); 
+            top: 0;
         }
 
-        .horizontal-line {
-            width: 90px; /* เพิ่มความยาวเส้นเชื่อมให้ถึงกล่องที่ขยับออกไป */
-            height: 2px;
-            background-color: #1e467a;
+        /* --- [ใหม่] เส้นตรงสีแดงเชื่อมพร้อมหัวลูกศร --- */
+        .red-straight-line {
             position: absolute;
-            left: calc(50% - 1000px);
+            height: 2px;
+            background-color: red; /* เปลี่ยนเป็นเส้นตรงสีแดง */
+            top: 32px; /* กึ่งกลางความสูงของกล่อง (65px / 2) */
+            left: calc(50% - 100px); /* จุดเริ่มจากกล่องรองประธาน */
+            width: 80px; /* ความยาวเส้น */
             z-index: 1;
+            /* พลิกเส้นไปทางซ้าย */
+            transform: scaleX(-1);
+            transform-origin: left;
         }
 
-        .center-column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* หัวลูกศรสีแดง */
+        .red-straight-line::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid red;
         }
 
-        /* --- ส่วนจัดการฝ่ายต่างๆ --- */
+        /* ส่วนฝ่ายงานด้านล่าง */
         .dept-wrapper {
-            display: flex;
+            display: flex; 
             justify-content: space-between; 
-            align-items: flex-start;
             width: 95%; 
             max-width: 1400px; 
-            margin: 0 auto;
-            padding-top: 25px;
+            margin: 0 auto; 
+            padding-top: 25px; 
             border-top: 2px solid #1e467a; 
         }
-
-        .dept-item {
+        .dept-item { 
             flex: 1; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
         }
-
-        .dept-item .org-box {
-            min-width: 0; 
-            width: 85%;
-            height: 60px;
-            margin: 12px 0;
-            padding: 10px 5px;
-            font-size: 13px;
+        .line-small { 
+            width: 2px; 
+            height: 25px; 
+            background: #1e467a; 
         }
-
-        .line-small {
-            width: 2px;
-            height: 25px;
-            background: #1e467a;
-        }
-
     </style>
 </head>
 <body>
 
-    <nav class="main-nav">
-        <a href="index.html" class="nav-link">🏠 หน้าแรก</a>
-        <a href="#" class="nav-link">ภาพรวมความยั่งยืน</a>
-        <a href="รางวัลและความสำเร็จ.html" class="nav-link">รางวัลและความสำเร็จ</a>
-    </nav>
+    <div class="chart-container">
+        <h3>ภาพรวมโครงสร้างการกำกับดูแล</h3>
+        
+        <div class="org-box bg-light-blue">คณะทำงานด้านความยั่งยืน</div>
+        <div class="line-vertical"></div>
+        <div class="org-box bg-blue">ประธานคณะทำงาน</div>
+        <div class="line-vertical"></div>
 
-    <header class="hero-banner">
-        <div class="hero-box">
-            <h1>มุ่งสู่ความยั่งยืน ร่วมสร้างอนาคตสีเขียว</h1>
-            <p>บริษัท ยูเนี่ยนปิโตรเคมีคอล จำกัด (มหาชน)</p>
-        </div>
-    </header>
+        <div class="secretary-row">
+            <div class="red-straight-line"></div>
 
-    <main class="content-section">
-        <h2>โครงสร้างการกำกับดูแลด้านความยั่งยืน</h2>
-        <p>โครงสร้างการกำกับดูแลด้านความยั่งยืนของบริษัทฯ ถูกออกแบบให้ครอบคลุมตั้งแต่ระดับคณะกรรมการ (กายใต้การกำกับดูแลขลูของ
-คณะกรรมการตรวจสอบ) ตลอดจนผู้บริหารระดับสูง จนถึงหน่วยงานปฏิบัติการ เพื่อให้สามารถกำกับ ติดตาม และขับเคลื่อนประเด็นสำคัญที่
-เกี่ยวข้องกับความยั่งยืนได้อย่างมีประสิทธิภาพ สอดคล้อมกับบริบการดำเนินธุรกิจและความคาดหวังของผู้มีส่วนได้ส่วนเสีย พร้อมทั้งสมับสนุน
-การเติบโตขององค์กรในระยะยาวอย่างมั่นคงและรับผิดชอบ</p>
-
-        <div class="chart-container">
-            <h3>ภาพรวมโครงสร้างการกำกับดูแล</h3>
+            <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
             
-            <div class="org-box bg-light-blue" style="margin: 0 auto; display: flex;">คณะทำงานด้านความยั่งยืน</div>
-            <div class="line-vertical"></div>
-            
-            <div class="org-box bg-blue" style="margin: 0 auto; display: flex;">ประธานคณะทำงาน</div>
-            <div class="line-vertical"></div>
-
-            <div class="secretary-row">
-                <div class="org-box bg-green">เลขานุการคณะทำงาน</div>
-                
-                <div class="horizontal-line"></div>
-                
-                <div class="center-column">
-                    <div class="org-box bg-blue">รองประธานคณะทำงาน</div>
-                    <div class="line-vertical" style="height: 50px;"></div>
-                </div>
+            <div class="center-column">
+                <div class="org-box bg-blue">รองประธานคณะทำงาน</div>
+                <div class="line-vertical" style="height: 50px;"></div>
             </div>
-            
-            <div class="dept-wrapper">
-                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายบัญชี</div></div>
-                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายคลังและขนส่ง</div></div>
-                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายขาย</div></div>
-                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายจัดซื้อ</div></div>
-                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายบริหารกลาง</div></div>
-                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายขาย (2)</div></div>
-                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ULT</div></div>
-                <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายไอที</div></div>
-            </div>
-            
-            <p style="margin-top: 40px; font-size: 14px; color: #888; font-weight: bold;">
-                หมายเหตุ: บริษัทฯ ได้ทบทวนการแต่งตั้งคณะทำงานด้านความยั่งยืน เมื่อวันที่ 21 กรกฎาคม 2568
-            </p>
         </div>
-    </main>
+        
+        <div class="dept-wrapper">
+            <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายบัญชี</div></div>
+            <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายคลังและขนส่ง</div></div>
+            <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายขาย</div></div>
+            <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายจัดซื้อ</div></div>
+            <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายบริหารกลาง</div></div>
+            <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายขาย (2)</div></div>
+            <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ULT</div></div>
+            <div class="dept-item"><div class="line-small"></div><div class="org-box bg-gray">ฝ่ายไอที</div></div>
+        </div>
+    </div>
 
 </body>
 </html>
