@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Sarabun', sans-serif; margin: 0; background-color: #f4f7f6; }
+        
+        .container { max-width: 1200px; margin: 50px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        .header-title { background-color: #1e467a; color: white; text-align: center; padding: 15px; font-weight: bold; font-size: 20px; border-radius: 5px 5px 0 0; }
+
+        /* การจัด Layout แบบ 6 คอลัมน์ตามต้นฉบับ */
+        .value-chain-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; background-color: #fff; }
+
+        .column-header { background-color: #8dbde6; color: #1e467a; padding: 20px 10px; text-align: center; font-weight: bold; font-size: 14px; min-height: 80px; display: flex; align-items: center; justify-content: center; }
+
+        .content-box { background-color: #e9ecef; padding: 20px 15px; font-size: 13px; color: #333; line-height: 1.6; min-height: 400px; }
+
+        .content-box ul { padding-left: 15px; margin: 0; list-style-type: '• '; }
+        .content-box li { margin-bottom: 10px; }
+
+        /* ปรับสีคอลัมน์สุดท้ายให้เด่นตาม Support Activities */
+        .highlight { background-color: #d1e3f3; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-title">ห่วงโซ่คุณค่าของธุรกิจ (Value Chain)</div>
+    
+    <div class="value-chain-grid">
+        <div class="column-header">การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า</div>
+        <div class="column-header">การปฏิบัติการ (Operations)</div>
+        <div class="column-header">การตลาดและการขาย</div>
+        <div class="column-header">การบริการหลังการขาย</div>
+        <div class="column-header">การกระจายสินค้า หรือ โลจิสติกส์ขาออก</div>
+        <div class="column-header highlight">กิจกรรมสนับสนุน (Support Activities)</div>
+
+        <div class="content-box">
+            <ul>
+                <li>การพัฒนาธุรกิจ</li>
+                <li>การจัดหาและจัดซื้อสารเคมี</li>
+                <li>การขอใบอนุญาตนำเข้า</li>
+            </ul>
+        </div>
+
+        <div class="content-box">
+            <ul>
+                <li>การจัดเก็บสารเคมีเข้าคลัง</li>
+                <li>การบริหารจัดการพื้นที่คลังสินค้า</li>
+                <li>การบรรจุสารเคมี</li>
+            </ul>
+        </div>
+
+        <div class="content-box">
+            <ul>
+                <li>การจัดทำและปรับปรุงฐานข้อมูลลูกค้า</li>
+                <li>การกำหนดราคาสินค้าและบริการ</li>
+            </ul>
+        </div>
+
+        <div class="content-box">
+            <ul>
+                <li>การบริหารยอดซื้อขายกับลูกค้า</li>
+                <li>การประสานงานระหว่างคลังสินค้า</li>
+            </ul>
+        </div>
+
+        <div class="content-box">
+            <ul>
+                <li>การบริหารจัดการคลังสินค้า</li>
+                <li>การบริหารจัดการระบบขนส่ง</li>
+            </ul>
+        </div>
+
+        <div class="content-box highlight">
+            <ul>
+                <li>บัญชี และการเงิน</li>
+                <li>การบริหารทรัพยากรบุคคล</li>
+                <li>การกำกับดูแลกิจการที่ดี</li>
+                <li>ระบบเทคโนโลยีสารสนเทศ</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
