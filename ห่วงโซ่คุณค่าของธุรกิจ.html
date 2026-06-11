@@ -6,20 +6,22 @@
     <style>
         body { font-family: 'Sarabun', sans-serif; margin: 0; background-color: #f4f7f6; }
         
-        .container { max-width: 1200px; margin: 50px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        
-        .header-title { background-color: #1e467a; color: white; text-align: center; padding: 15px; font-weight: bold; font-size: 20px; border-radius: 5px 5px 0 0; }
+        /* เอา container หลักมาคุมตั้งแต่ข้อความเกริ่นนำเพื่อให้กึ่งกลางสวยงาม */
+        .main-wrapper { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
 
-        /* --- [ใหม่] สไตล์สำหรับข้อความนอกตาราง --- */
+        /* --- [ย้ายมาตรงนี้] สไตล์สำหรับข้อความนอกตารางด้านบนสุด --- */
         .intro-text {
             text-align: center;
             color: #333;
             font-size: 15px;
             line-height: 1.8;
-            margin: 25px auto;
-            max-width: 800px;
+            margin-bottom: 25px; /* เว้นระยะห่างก่อนถึงตาราง */
             font-weight: 500;
         }
+        
+        .container { background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; }
+        
+        .header-title { background-color: #1e467a; color: white; text-align: center; padding: 15px; font-weight: bold; font-size: 20px; }
 
         /* การจัด Layout แบบ 6 คอลัมน์ตามต้นฉบับ */
         .value-chain-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; background-color: #fff; }
@@ -40,80 +42,86 @@
 </head>
 <body>
 
-<div class="container">
+<div class="main-wrapper">
+
     <div class="intro-text">
         บริษัทฯ ดำเนินธุรกิจโดยให้ความสำคัญถึงการมีส่วนร่วมของ<br>
         ผู้มีส่วนได้ส่วนเสีย ตลอดจนการบริหารจัดการความยั่งยืนของ<br>
         กิจกรรมตลอดห่วงโซ่คุณค่าของธุรกิจ
     </div>
-    <div class="header-title">ห่วงโซ่คุณค่าของธุรกิจ (Value Chain)</div>    
-    <div class="value-chain-grid">
-        <div class="column-header">การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า</div>
-        <div class="column-header">การปฏิบัติการ (Operations)</div>
-        <div class="column-header">การตลาดและการขาย</div>
-        <div class="column-header">การบริการหลังการขาย</div>
-        <div class="column-header">การกระจายสินค้า หรือ โลจิสติกส์ขาออก</div>
-        <div class="column-header highlight">กิจกรรมสนับสนุน (Support Activities)</div>
 
-        <div class="content-box">
-            <ul>
-                <li>การพัฒนาธุรกิจ</li>
-                <li>การจัดหาและจัดซื้อสารเคมีและวัตถุดิบที่มีคุณภาพและปลอดภัยภายในประเทศและต่างประเทศ</li>
-                <li>การขอใบอนุญาตนำเข้าสารเคมีจากต่างประเทศ กับทางศุลกากร</li>
-                <li>การขอยกเว้นภาษีสรรพสามิต</li>
-                <li>การขอสิทธิประโยชน์ภายใต้เขตการค้าเสรี (FTA)</li>
-                <li>การนำเข้าสารเคมีจากต่างประเทศเข้าคลังสินค้าอันตราย</li>
-                <li>การขนส่งสารเคมีภายในประเทศเข้าคลังสินค้าสินค้าอันตราย</li>
-            </ul>
-        </div>
+    <div class="container">
+        <div class="header-title">ห่วงโซ่คุณค่าของธุรกิจ (Value Chain)</div>
+        
+        <div class="value-chain-grid">
+            <div class="column-header">การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า</div>
+            <div class="column-header">การปฏิบัติการ (Operations)</div>
+            <div class="column-header">การตลาดและการขาย</div>
+            <div class="column-header">การบริการหลังการขาย</div>
+            <div class="column-header">การกระจายสินค้า หรือ โลจิสติกส์ขาออก</div>
+            <div class="column-header highlight">กิจกรรมสนับสนุน (Support Activities)</div>
 
-        <div class="content-box">
-            <ul>
-                <li>การจัดเก็บสารเคมีเข้าคลังสินค้าของบริษัทและที่เช่า</li>
-                <li>การบริหารจัดการพื้นที่คลังสินค้า</li>
-                <li>การบรรจุสารเคมี</li>
-                <li>การตรวจสอบคุณภาพตามมาตรฐานสินค้า</li>
-            </ul>
-        </div>
+            <div class="content-box">
+                <ul>
+                    <li>การพัฒนาธุรกิจ</li>
+                    <li>การจัดหาและจัดซื้อสารเคมีและวัตถุดิบที่มีคุณภาพและปลอดภัยภายในประเทศและต่างประเทศ</li>
+                    <li>การขอใบอนุญาตนำเข้าสารเคมีจากต่างประเทศ กับทางศุลกากร</li>
+                    <li>การขอยกเว้นภาษีสรรพสามิต</li>
+                    <li>การขอสิทธิประโยชน์ภายใต้เขตการค้าเสรี (FTA)</li>
+                    <li>การนำเข้าสารเคมีจากต่างประเทศเข้าคลังสินค้าอันตราย</li>
+                    <li>การขนส่งสารเคมีภายในประเทศเข้าคลังสินค้าสินค้าอันตราย</li>
+                </ul>
+            </div>
 
-        <div class="content-box">
-            <ul>
-                <li>การจัดทำและปรับปรุงฐานข้อมูลลูกค้า</li>
-                <li>การกำหนดราคาสินค้าและบริการอย่างเหมาะสม</li>
-                <li>การให้ข้อมูลเกี่ยวกับการใช้งานอย่างถูกต้องและครบถ้วน</li>
-                <li>การบริหารความสัมพันธ์กับลูกค้า</li>
-            </ul>
-        </div>
+            <div class="content-box">
+                <ul>
+                    <li>การจัดเก็บสารเคมีเข้าคลังสินค้าของบริษัทและที่เช่า</li>
+                    <li>การบริหารจัดการพื้นที่คลังสินค้า</li>
+                    <li>การบรรจุสารเคมี</li>
+                    <li>การตรวจสอบคุณภาพตามมาตรฐานสินค้า</li>
+                </ul>
+            </div>
 
-        <div class="content-box">
-            <ul>
-                <li>การบริหารยอดซื้อขายกับลูกค้า</li>
-                <li>การประสานงานระหว่างคลังสินค้ากับลูกค้าในการจัดส่งสินค้า</li>
-                <li>การรับประกันสินค้าและความพึงพอใจ</li>
-                <li>หน่วยบริการรับฟังความเห็นหรือข้อเสนอแนะเกี่ยวกับการให้บริการ</li>
-            </ul>
-        </div>
+            <div class="content-box">
+                <ul>
+                    <li>การจัดทำและปรับปรุงฐานข้อมูลลูกค้า</li>
+                    <li>การกำหนดราคาสินค้าและบริการอย่างเหมาะสม</li>
+                    <li>การให้ข้อมูลเกี่ยวกับการใช้งานอย่างถูกต้องและครบถ้วน</li>
+                    <li>การบริหารความสัมพันธ์กับลูกค้า</li>
+                </ul>
+            </div>
 
-        <div class="content-box">
-            <ul>
-                <li>การบริหารจัดการคลังสินค้า</li>
-                <li>การบริหารจัดการระบบขนส่ง</li>
-                <li>การขนส่งสินค้าและบริการที่มีคุณภาพและตรงเวลา</li>
-            </ul>
-        </div>
+            <div class="content-box">
+                <ul>
+                    <li>การบริหารยอดซื้อขายกับลูกค้า</li>
+                    <li>การประสานงานระหว่างคลังสินค้ากับลูกค้าในการจัดส่งสินค้า</li>
+                    <li>การรับประกันสินค้าและความพึงพอใจ</li>
+                    <li>หน่วยบริการรับฟังความเห็นหรือข้อเสนอแนะเกี่ยวกับการให้บริการ</li>
+                </ul>
+            </div>
 
-        <div class="content-box highlight">
-            <ul>
-                <li>บัญชี และการเงิน</li>
-                <li>การจัดซื้อจัดหา</li>
-                <li>การบริหารทรัพยากรบุคคล</li>
-                <li>การกำกับดูแลกิจการที่ดี</li>
-                <li>การบริหารจัดการความเสี่ยง</li>
-                <li>อาชีวอนามัยและความปลอดภัย</li>
-                <li>ระบบเทคโนโลยีสารสนเทศ</li>
-            </ul>
+            <div class="content-box">
+                <ul>
+                    <li>การบริหารจัดการคลังสินค้า</li>
+                    <li>การบริหารจัดการระบบขนส่ง</li>
+                    <li>การขนส่งสินค้าและบริการที่มีคุณภาพและตรงเวลา</li>
+                </ul>
+            </div>
+
+            <div class="content-box highlight">
+                <ul>
+                    <li>บัญชี และการเงิน</li>
+                    <li>การจัดซื้อจัดหา</li>
+                    <li>การบริหารทรัพยากรบุคคล</li>
+                    <li>การกำกับดูแลกิจการที่ดี</li>
+                    <li>การบริหารจัดการความเสี่ยง</li>
+                    <li>อาชีวอนามัยและความปลอดภัย</li>
+                    <li>ระบบเทคโนโลยีสารสนเทศ</li>
+                </ul>
+            </div>
         </div>
     </div>
+
 </div>
 
 </body>
