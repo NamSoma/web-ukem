@@ -53,7 +53,7 @@
         /* --- โซนเนื้อหาข้อความเกริ่นนำ (อยู่ที่เดิมเต็มบรรทัด) --- */
         .content-section {
             max-width: 1160px;
-            margin: 50px auto 30px auto; /* เว้นระยะห่างรอบๆ */
+            margin: 50px auto 30px auto; 
             padding: 0 20px;
             text-align: center;
         }
@@ -65,31 +65,28 @@
             color: #222222;
         }
 
-        /* --- ตารางแบ่งซ้าย-ขวา (อยู่ด้านล่างข้อความเกริ่นนำ) --- */
-        .split-container {
+        /* --- [ใหม่] ตารางชิ้นเดียวติดกัน (แบ่งซ้าย-ขวา ไม่มีช่องว่างตรงกลาง) --- */
+        .unified-table {
             max-width: 1200px;
             margin: 0 auto 60px auto;
-            padding: 0 20px;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* แบ่งซ้าย-ขวาเท่ากัน 2 ฝั่ง */
-            gap: 30px; /* ช่องว่างตรงกลางตาราง */
+            grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 ช่องเท่ากัน */
+            background-color: #f8f9fa; /* สีพื้นหลังของตาราง */
+            border: 1px solid #cccccc; /* เส้นขอบรอบนอกตาราง */
+            border-radius: 8px;
+            overflow: hidden; /* เพื่อให้มุมโค้งตัดขอบเนื้อหาด้านใน */
         }
 
-        /* ตกแต่งกล่องฝั่งซ้าย */
-        .left-box {
-            background-color: #f8f9fa;
-            border-radius: 8px;
+        /* ตกแต่งเนื้อหาช่องฝั่งซ้าย */
+        .table-left {
             padding: 30px;
-            border-top: 4px solid #1e467a; /* เพิ่มเส้นสีน้ำเงินหัวกล่อง */
             min-height: 200px;
+            border-right: 1px solid #cccccc; /* เส้นคั่นกลางแบ่งฝั่งซ้าย-ขวา */
         }
 
-        /* ตกแต่งกล่องฝั่งขวา */
-        .right-box {
-            background-color: #f8f9fa;
-            border-radius: 8px;
+        /* ตกแต่งเนื้อหาช่องฝั่งขวา */
+        .table-right {
             padding: 30px;
-            border-top: 4px solid #4CAF50; /* เพิ่มเส้นสีเขียวหัวกล่อง */
             min-height: 200px;
         }
     </style>
@@ -115,16 +112,16 @@
         </div>
     </div>
 
-    <main class="split-container">
+    <main class="unified-table">
         
-        <div class="left-box">
+        <div class="table-left">
             <h3>เนื้อหาฝั่งซ้าย</h3>
-            <p>คุณสามารถเพิ่มข้อความ รายละเอียด หรือหัวข้อต่างๆ ลงในฝั่งซ้ายตรงนี้ได้เลยครับ</p>
+            <p>คุณสามารถใส่ข้อมูล รายละเอียด หรือข้อความต่างๆ ในช่องนี้ได้เลยครับ</p>
         </div>
 
-        <div class="right-box">
+        <div class="table-right">
             <h3>เนื้อหาฝั่งขวา</h3>
-            <p>คุณสามารถเพิ่มข้อความ รายละเอียด หรือหัวข้อต่างๆ ลงในฝั่งขวาตรงนี้ได้เลยครับ</p>
+            <p>คุณสามารถใส่ข้อมูล รายละเอียด หรือข้อความต่างๆ ในช่องนี้ได้เลยครับ</p>
         </div>
 
     </main>
