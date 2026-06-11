@@ -2,127 +2,36 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เริ่มต้นใหม่</title>
     <style>
-        body { font-family: 'Sarabun', sans-serif; margin: 0; background-color: #f4f7f6; }
-        
-        /* เอา container หลักมาคุมตั้งแต่ข้อความเกริ่นนำเพื่อให้กึ่งกลางสวยงาม */
-        .main-wrapper { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
-
-        /* --- [ย้ายมาตรงนี้] สไตล์สำหรับข้อความนอกตารางด้านบนสุด --- */
-        .intro-text {
-            text-align: center;
-            color: #333;
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 25px; /* เว้นระยะห่างก่อนถึงตาราง */
-            font-weight: 500;
+        body { 
+            font-family: 'Sarabun', sans-serif; 
+            margin: 0; 
+            padding: 0;
+            background-color: #f4f7f6; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         
-        .container { background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; }
-        
-        .header-title { background-color: #1e467a; color: white; text-align: center; padding: 15px; font-weight: bold; font-size: 20px; }
-
-        /* การจัด Layout แบบ 6 คอลัมน์ตามต้นฉบับ */
-        .value-chain-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; background-color: #fff; }
-
-        /* ปรับสีพื้นหลังเป็นน้ำเงินสว่างและตัวอักษรขาวให้เหมือนต้นฉบับ */
-        .column-header { background-color: #4182c3; color: #ffffff; padding: 20px 10px; text-align: center; font-weight: bold; font-size: 14px; min-height: 90px; display: flex; align-items: center; justify-content: center; }
-
-        .content-box { background-color: #e9ecef; padding: 20px 15px; font-size: 13px; color: #333; line-height: 1.6; min-height: 400px; }
-
-        .content-box ul { padding-left: 15px; margin: 0; list-style-type: '• '; }
-        .content-box li { margin-bottom: 10px; }
-
-        /* ปรับสีคอลัมน์สุดท้ายให้เด่นตาม Support Activities */
-        .highlight { background-color: #d1e3f3; }
-        /* ปรับหัวข้อคอลัมน์สุดท้ายให้เข้มขึ้นอีกนิดนึงตามภาพต้นฉบับ */
-        .column-header.highlight { background-color: #316ba5; color: white; }
+        .intro-text {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.8;
+            color: #222222;
+            padding: 20px;
+            max-width: 800px;
+        }
     </style>
 </head>
 <body>
 
-<div class="main-wrapper">
-
     <div class="intro-text">
-        บริษัทฯ ดำเนินธุรกิจโดยให้ความสำคัญถึงการมีส่วนร่วมของ<br>
-        ผู้มีส่วนได้ส่วนเสีย ตลอดจนการบริหารจัดการความยั่งยืนของ<br>
-        กิจกรรมตลอดห่วงโซ่คุณค่าของธุรกิจ
+        บริษัทฯ ดำเนินธุรกิจโดยให้ความสำคัญถึงการมีส่วนร่วมของผู้มีส่วนได้ส่วนเสีย ตลอดจนการบริหารจัดการความยั่งยืนของกิจกรรมตลอดห่วงโซ่คุณค่าของธุรกิจ
     </div>
-
-    <div class="container">
-        <div class="header-title">ห่วงโซ่คุณค่าของธุรกิจ (Value Chain)</div>
-        
-        <div class="value-chain-grid">
-            <div class="column-header">การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า</div>
-            <div class="column-header">การปฏิบัติการ (Operations)</div>
-            <div class="column-header">การตลาดและการขาย</div>
-            <div class="column-header">การบริการหลังการขาย</div>
-            <div class="column-header">การกระจายสินค้า หรือ โลจิสติกส์ขาออก</div>
-            <div class="column-header highlight">กิจกรรมสนับสนุน (Support Activities)</div>
-
-            <div class="content-box">
-                <ul>
-                    <li>การพัฒนาธุรกิจ</li>
-                    <li>การจัดหาและจัดซื้อสารเคมีและวัตถุดิบที่มีคุณภาพและปลอดภัยภายในประเทศและต่างประเทศ</li>
-                    <li>การขอใบอนุญาตนำเข้าสารเคมีจากต่างประเทศ กับทางศุลกากร</li>
-                    <li>การขอยกเว้นภาษีสรรพสามิต</li>
-                    <li>การขอสิทธิประโยชน์ภายใต้เขตการค้าเสรี (FTA)</li>
-                    <li>การนำเข้าสารเคมีจากต่างประเทศเข้าคลังสินค้าอันตราย</li>
-                    <li>การขนส่งสารเคมีภายในประเทศเข้าคลังสินค้าสินค้าอันตราย</li>
-                </ul>
-            </div>
-
-            <div class="content-box">
-                <ul>
-                    <li>การจัดเก็บสารเคมีเข้าคลังสินค้าของบริษัทและที่เช่า</li>
-                    <li>การบริหารจัดการพื้นที่คลังสินค้า</li>
-                    <li>การบรรจุสารเคมี</li>
-                    <li>การตรวจสอบคุณภาพตามมาตรฐานสินค้า</li>
-                </ul>
-            </div>
-
-            <div class="content-box">
-                <ul>
-                    <li>การจัดทำและปรับปรุงฐานข้อมูลลูกค้า</li>
-                    <li>การกำหนดราคาสินค้าและบริการอย่างเหมาะสม</li>
-                    <li>การให้ข้อมูลเกี่ยวกับการใช้งานอย่างถูกต้องและครบถ้วน</li>
-                    <li>การบริหารความสัมพันธ์กับลูกค้า</li>
-                </ul>
-            </div>
-
-            <div class="content-box">
-                <ul>
-                    <li>การบริหารยอดซื้อขายกับลูกค้า</li>
-                    <li>การประสานงานระหว่างคลังสินค้ากับลูกค้าในการจัดส่งสินค้า</li>
-                    <li>การรับประกันสินค้าและความพึงพอใจ</li>
-                    <li>หน่วยบริการรับฟังความเห็นหรือข้อเสนอแนะเกี่ยวกับการให้บริการ</li>
-                </ul>
-            </div>
-
-            <div class="content-box">
-                <ul>
-                    <li>การบริหารจัดการคลังสินค้า</li>
-                    <li>การบริหารจัดการระบบขนส่ง</li>
-                    <li>การขนส่งสินค้าและบริการที่มีคุณภาพและตรงเวลา</li>
-                </ul>
-            </div>
-
-            <div class="content-box highlight">
-                <ul>
-                    <li>บัญชี และการเงิน</li>
-                    <li>การจัดซื้อจัดหา</li>
-                    <li>การบริหารทรัพยากรบุคคล</li>
-                    <li>การกำกับดูแลกิจการที่ดี</li>
-                    <li>การบริหารจัดการความเสี่ยง</li>
-                    <li>อาชีวอนามัยและความปลอดภัย</li>
-                    <li>ระบบเทคโนโลยีสารสนเทศ</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-</div>
 
 </body>
 </html>
