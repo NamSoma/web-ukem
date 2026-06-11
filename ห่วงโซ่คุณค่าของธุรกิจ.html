@@ -2,6 +2,7 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
+    
     <style>
         body { font-family: 'Sarabun', sans-serif; margin: 0; background-color: #f4f7f6; }
         
@@ -9,10 +10,22 @@
         
         .header-title { background-color: #1e467a; color: white; text-align: center; padding: 15px; font-weight: bold; font-size: 20px; border-radius: 5px 5px 0 0; }
 
-        /* การจัด Layout แบบ 6 คอลัมน์ตามต้นฉบับ */
-        .value-chain-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; background-color: #fff; }
+        /* --- [ใหม่] สไตล์สำหรับข้อความนอกตาราง --- */
+        .intro-text {
+            text-align: center;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 25px auto;
+            max-width: 800px;
+            font-weight: 500;
+        }
 
-        .column-header { background-color: #8dbde6; color: #1e467a; padding: 20px 10px; text-align: center; font-weight: bold; font-size: 14px; min-height: 80px; display: flex; align-items: center; justify-content: center; }
+        /* การจัด Layout แบบ 6 คอลัมน์ตามต้นฉบับ */
+        .value-chain-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; background-color: #fff; }
+
+        /* ปรับสีพื้นหลังเป็นน้ำเงินสว่างและตัวอักษรขาวให้เหมือนต้นฉบับ */
+        .column-header { background-color: #4182c3; color: #ffffff; padding: 20px 10px; text-align: center; font-weight: bold; font-size: 14px; min-height: 90px; display: flex; align-items: center; justify-content: center; }
 
         .content-box { background-color: #e9ecef; padding: 20px 15px; font-size: 13px; color: #333; line-height: 1.6; min-height: 400px; }
 
@@ -21,12 +34,20 @@
 
         /* ปรับสีคอลัมน์สุดท้ายให้เด่นตาม Support Activities */
         .highlight { background-color: #d1e3f3; }
+        /* ปรับหัวข้อคอลัมน์สุดท้ายให้เข้มขึ้นอีกนิดนึงตามภาพต้นฉบับ */
+        .column-header.highlight { background-color: #316ba5; color: white; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header-title">ห่วงโซ่คุณค่าของธุรกิจ (Value Chain)</div>
+    
+    <div class="intro-text">
+        บริษัทฯ ดำเนินธุรกิจโดยให้ความสำคัญถึงการมีส่วนร่วมของ<br>
+        ผู้มีส่วนได้ส่วนเสีย ตลอดจนการบริหารจัดการความยั่งยืนของ<br>
+        กิจกรรมตลอดห่วงโซ่คุณค่าของธุรกิจ
+    </div>
     
     <div class="value-chain-grid">
         <div class="column-header">การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า</div>
