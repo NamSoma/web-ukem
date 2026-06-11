@@ -65,29 +65,57 @@
             color: #222222;
         }
 
-        /* --- [ใหม่] ตารางชิ้นเดียวติดกัน (แบ่งซ้าย-ขวา ไม่มีช่องว่างตรงกลาง) --- */
+        /* --- ตารางชิ้นเดียวติดกัน (แบ่งซ้าย-ขวา ไม่มีช่องว่างตรงกลาง) --- */
         .unified-table {
             max-width: 1200px;
             margin: 0 auto 60px auto;
             display: grid;
             grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 ช่องเท่ากัน */
-            background-color: #f8f9fa; /* สีพื้นหลังของตาราง */
-            border: 1px solid #cccccc; /* เส้นขอบรอบนอกตาราง */
+            background-color: #f8f9fa; 
+            border: 1px solid #cccccc; 
             border-radius: 8px;
-            overflow: hidden; /* เพื่อให้มุมโค้งตัดขอบเนื้อหาด้านใน */
+            overflow: hidden; 
         }
 
         /* ตกแต่งเนื้อหาช่องฝั่งซ้าย */
         .table-left {
-            padding: 30px;
             min-height: 200px;
             border-right: 1px solid #cccccc; /* เส้นคั่นกลางแบ่งฝั่งซ้าย-ขวา */
+            display: flex;
+            flex-direction: column;
         }
 
         /* ตกแต่งเนื้อหาช่องฝั่งขวา */
         .table-right {
-            padding: 30px;
             min-height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ส่วนกล่องข้อความด้านในที่ถัดลงมาจาก h3 */
+        .box-body {
+            padding: 25px 30px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* --- [ใหม่] ปรับสไตล์สีพื้นหลังของหัวข้อ h3 แยกตามฝั่งเพื่อความสวยงาม --- */
+        .table-left h3, .table-right h3 {
+            margin: 0;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff; /* ตัวอักษรสีขาวเพื่อให้ตัดกับพื้นหลัง */
+        }
+
+        /* สีพื้นหลังหัวข้อฝั่งซ้าย (โทนสีน้ำเงิน) */
+        .table-left h3 {
+            background-color: #1e467a;
+        }
+
+        /* สีพื้นหลังหัวข้อฝั่งขวา (โทนสีเขียว) */
+        .table-right h3 {
+            background-color: #2e7d32;
         }
     </style>
 </head>
@@ -115,13 +143,17 @@
     <main class="unified-table">
         
         <div class="table-left">
-            <h3>กิจกรรม</h3>
-            <p>คุณสามารถใส่ข้อมูล รายละเอียด หรือข้อความต่างๆ ในช่องนี้ได้เลยครับ</p>
+            <h3>กิจกรรมหลัก</h3>
+            <div class="box-body">
+                <p>คุณสามารถใส่ข้อมูล รายละเอียด หรือข้อความต่างๆ ในช่องนี้ได้เลยครับ</p>
+            </div>
         </div>
 
         <div class="table-right">
             <h3>คำอธิบาย</h3>
-            <p>คุณสามารถใส่ข้อมูล รายละเอียด หรือข้อความต่างๆ ในช่องนี้ได้เลยครับ</p>
+            <div class="box-body">
+                <p>คุณสามารถใส่ข้อมูล รายละเอียด หรือข้อความต่างๆ ในช่องนี้ได้เลยครับ</p>
+            </div>
         </div>
 
     </main>
