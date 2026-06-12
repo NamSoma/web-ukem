@@ -87,10 +87,10 @@
             text-align: center; 
         }
 
-        .header-left { background-color: #1e467a; }  
-        .header-right { background-color: #2e7d32; } 
+        .header-left { background-color: #1e467a; }  /* สีน้ำเงินฝั่งกิจกรรมหลัก */
+        .header-right { background-color: #2e7d32; } /* สีเขียวฝั่งคำอธิบาย */
 
-        /* ส่วนกล่องเนื้อหาด้านใน */
+        /* ส่วนกล่องเนื้อหาด้านในแบบปกติ */
         .row-content {
             padding: 25px 30px;
             font-size: 15px;
@@ -118,21 +118,21 @@
         
         .title-highlight {
             font-weight: bold;
-            color: #1e467a;
+            color: #1e467a; /* ตัวอักษรสีน้ำเงินเข้มตามรูปภาพตัวอย่าง */
         }
 
-        /* --- [ใหม่] ปรับให้เป็นแถบสีน้ำเงินยาวเต็มแถวและตัวหนังสืออยู่ตรงกลางเหมือนช่องกิจกรรม --- */
-        .full-width-activity-row {
-            grid-column: span 2; /* ขยายยาวเต็ม 2 คอลัมน์ */
-            background-color: #1e467a; /* สีน้ำเงินแบบเดียวกับกิจกรรมหลัก */
-            color: #ffffff; /* ตัวหนังสือสีขาว */
-            font-weight: bold;
+        /* --- [ใหม่] สไตล์สำหรับแถวเดี่ยวยาวเต็มหน้า (ตัวอักษรสีน้ำเงินอยู่ตรงกลางเหมือนรูปตัวอย่าง) --- */
+        .full-width-center-row {
+            grid-column: span 2; /* ยุบรวมคอลัมน์ซ้ายขวาให้เป็นแถวเดียวยาวเต็มหน้า */
+            padding: 30px;
             font-size: 16px;
-            padding: 15px 30px;
+            font-weight: bold;
+            color: #1e467a; /* ตัวอักษรสีน้ำเงินตามรูป */
             text-align: center;
             justify-content: center;
             display: flex;
             align-items: center;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -180,7 +180,7 @@
             การตลาดและการขาย
         </div>
         <div class="row-content row-separator">
-            เข้าพบปะลูกค้าเพื่อสอบถามความต้องการในการใช้สินค้าของบริษัทฯ เป็นประจำรวมทั้งมีการนำเสนอข้อมูลของสินค้าและบริการใหม่ของบริษัทฯ โดยจะมีการจัดการด้านราคาและการบริการตามมาตรฐานที่เหมาะสม
+            เข้าพบปะลูกค้าเพื่อสอบถามความต้องการในการใช้สินค้า of บริษัทฯ เป็นประจำรวมทั้งมีการนำเสนอข้อมูลของสินค้าและบริการใหม่ของบริษัทฯ โดยจะมีการจัดการด้านราคาและการบริการตามมาตรฐานที่เหมาะสม
         </div>
 
         <div class="row-content border-divider row-separator title-highlight text-center-left">
@@ -198,16 +198,24 @@
         </div>
 
 
-        <div class="full-width-activity-row row-separator">
-            หัวข้อใหญ่ข้อใหม่แถวยาวชิ้นเดียวที่ 1
+        <div class="full-width-center-row row-separator">
+            โครงสร้างพื้นฐานขององค์กร
         </div>
 
-        <div class="full-width-activity-row row-separator">
-            หัวข้อใหญ่ข้อใหม่แถวยาวชิ้นเดียวที่ 2
+        <div class="full-width-center-row row-separator">
+            การบริหารทรัพยากรบุคคล
         </div>
 
-        <div class="full-width-activity-row">
-            หัวข้อใหญ่ข้อใหม่แถวยาวชิ้นเดียวที่ 3
+        <div class="full-width-center-row row-separator">
+            การพัฒนาเทคโนโลยี
+        </div>
+
+        <div class="full-width-center-row row-separator">
+            การจัดซื้อจัดจ้าง
+        </div>
+
+        <div class="full-width-center-row">
+            (พิมพ์หัวข้อเพิ่มเติมข้อที่ 5 ตรงนี้)
         </div>
 
     </main>
