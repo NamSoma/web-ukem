@@ -65,26 +65,26 @@
             color: #222222;
         }
 
-        /* --- ตารางชิ้นเดียวรวมกัน (Grid แบบแบ่ง 2 ช่อง ซ้าย-ขวา) --- */
+        /* --- ตารางชิ้นเดียวรวมกันยาวลงมาเลย (Grid แบ่ง 2 ช่อง ซ้าย-ขวา) --- */
         .unified-table {
             max-width: 1200px;
-            margin: 0 auto 60px auto;
+            margin: 0 auto 80px auto;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* แบ่งซ้ายและขวาเท่ากัน */
+            grid-template-columns: 1fr 1fr; /* แบ่งซ้ายและขวาเท่ากันสำหรับตารางครึ่งบน */
             background-color: #f8f9fa; 
             border: 1px solid #cccccc; 
             border-radius: 8px;
             overflow: hidden; 
         }
 
-        /* ส่วนหัวตาราง h3 (แถบสีพื้นหลังยาวเต็มฝั่ง) */
+        /* ส่วนหัวตาราง h3 (แถบสีพื้นหลัง อยู่ตรงกลางทั้งหมด) */
         .unified-table h3 {
             margin: 0;
             padding: 15px 30px;
             font-size: 18px;
             font-weight: bold;
             color: #ffffff;
-            text-align: center; /* <-- [เช็กตรงนี้] หัวข้อทั้ง 2 ฝั่งจะอยู่ตรงกลางเรียบร้อยครับ */
+            text-align: center; 
         }
 
         .header-left { background-color: #1e467a; }  /* สีน้ำเงินฝั่งกิจกรรมหลัก */
@@ -97,10 +97,10 @@
             line-height: 1.7;
             box-sizing: border-box;
             display: flex;
-            align-items: center; /* จัดเนื้อหาให้อยู่กลางแนวตั้ง */
+            align-items: center; 
         }
 
-        /* บังคับให้เฉพาะเนื้อหาฝั่งกิจกรรม (ซ้าย) อยู่ตรงกลางแนวราบ */
+        /* บังคับให้เนื้อหาฝั่งกิจกรรม (ซ้าย) อยู่ตรงกลางแนวราบ */
         .text-center-left {
             justify-content: center;
             text-align: center;
@@ -119,6 +119,26 @@
         .title-highlight {
             font-weight: bold;
             color: #1e467a;
+        }
+
+        /* --- [ใหม่] สไตล์สำหรับแถวเนื้อหาใหม่แบบเต็มบรรทัด ไม่แบ่งซ้ายขวา --- */
+        .full-width-row {
+            grid-column: span 2; /* สั่งให้เนื้อหายาวคลุมตารางทั้ง 2 ฝั่ง */
+            display: block; /* เปลี่ยนเป็น block เพื่อให้จัดหัวข้อและเนื้อหาต่อกันแบบบนลงล่างปกติ */
+            padding: 30px;
+        }
+
+        .full-width-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1e467a;
+            margin-bottom: 10px;
+        }
+
+        .full-width-body {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333333;
         }
     </style>
 </head>
@@ -146,7 +166,9 @@
     <main class="unified-table">
         
         <h3 class="header-left">กิจกรรมหลัก</h3>
-        <h3 class="header-right">คำอธิบาย</h3> <div class="row-content border-divider row-separator title-highlight text-center-left">
+        <h3 class="header-right">คำอธิบาย</h3>
+
+        <div class="row-content border-divider row-separator title-highlight text-center-left">
             การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า
         </div>
         <div class="row-content row-separator">
@@ -174,11 +196,27 @@
             ฝ่ายบริการลูกค้าจะทำหน้าที่ในการประสานงานกับฝ่ายขายของบริษัทฯ และลูกค้า เพื่อจัดการตรวจสอบยอดซื้อและรายละเอียดการสั่งซื้อจากฝ่ายขายและลูกค้าแบบรายวัน โดยจะทำหน้าที่ประสานงานระหว่างคลังสินค้าของบริษัทฯ กับลูกค้า เพื่อการจัดส่งสินค้าพร้อมทั้งรับฟังความคิดเห็นและข้อเสนอแนะที่ได้รับจากลูกค้าเกี่ยวกับสินค้าและบริการของบริษัทฯ ซึ่งข้อมูลและข้อเสนอแนะจะนำมาวิเคราะห์เพื่อปรับปรุงการให้บริการอย่างต่อเนื่อง รวมถึงการจัดทำการประเมินความพึงพอใจของลูกค้า
         </div>
 
-        <div class="row-content border-divider title-highlight text-center-left">
+        <div class="row-content border-divider row-separator title-highlight text-center-left">
             การกระจายสินค้าและบริการ หรือ โลจิสติกส์ขาออก
         </div>
-        <div class="row-content">
+        <div class="row-content row-separator">
             บริษัทฯ มีการกระจายจัดเก็บสินค้า โดยแยกจัดเก็บตามขนาดบรรจุภัณฑ์ เช่น ถัง 20 ลิตร ถัง 200 ลิตร และถังเก็บขนส่งขนาดใหญ่ ซึ่งอยู่ในพื้นที่จัดเก็บที่เหมาะสม ปลอดภัย และสะดวกต่อการจัดสินค้าให้กับลูกค้า เมื่อฝ่ายคลังสินค้าได้รับแจ้งให้จัดเตรียมสินค้าและรายละเอียดสถานที่การส่งสินค้า ฝ่ายคลังสินค้าจะดำเนินการจัดเตรียมสินค้า และวางแผนการจัดส่งสินค้า เพื่อให้สามารถส่งสินค้าได้อย่างปลอดภัยและตรงตามเวลาที่กำหนด
+        </div>
+
+
+        <div class="full-width-row row-separator">
+            <div class="full-width-title">หัวข้อใหญ่ชุดใหม่ที่ 1 (ยาวเต็มหน้า)</div>
+            <div class="full-width-body">คุณสามารถใส่คำอธิบาย เนื้อหารายละเอียด หรือหัวข้อย่อยแบบยาวต่อเนื่องเต็มแถวในกล่องนี้ได้ทันทีเลยครับ</div>
+        </div>
+
+        <div class="full-width-row row-separator">
+            <div class="full-width-title">หัวข้อใหญ่ชุดใหม่ที่ 2 (ยาวเต็มหน้า)</div>
+            <div class="full-width-body">คุณสามารถใส่คำอธิบาย เนื้อหารายละเอียด หรือหัวข้อย่อยแบบยาวต่อเนื่องเต็มแถวในกล่องนี้ได้ทันทีเลยครับ</div>
+        </div>
+
+        <div class="full-width-row">
+            <div class="full-width-title">หัวข้อใหญ่ชุดใหม่ที่ 3 (ยาวเต็มหน้า)</div>
+            <div class="full-width-body">คุณสามารถใส่คำอธิบาย เนื้อหารายละเอียด หรือหัวข้อย่อยแบบยาวต่อเนื่องเต็มแถวในกล่องนี้ได้ทันทีเลยครับ</div>
         </div>
 
     </main>
