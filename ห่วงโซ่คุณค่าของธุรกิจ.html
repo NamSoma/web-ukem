@@ -50,7 +50,7 @@
             font-size: 42px;
         }
 
-        /* --- โซนเนื้อหาข้อความเกริ่นนำ (อยู่ที่เดิมเต็มบรรทัด) --- */
+        /* --- โซนเนื้อหาข้อความเกริ่นนำนอกตาราง --- */
         .content-section {
             max-width: 1160px;
             margin: 50px auto 30px auto; 
@@ -65,57 +65,53 @@
             color: #222222;
         }
 
-        /* --- ตารางชิ้นเดียวติดกัน (แบ่งซ้าย-ขวา ไม่มีช่องว่างตรงกลาง) --- */
+        /* --- ตารางชิ้นเดียวรวมกัน (Grid แบบแบ่ง 2 ช่อง ซ้าย-ขวา) --- */
         .unified-table {
             max-width: 1200px;
             margin: 0 auto 60px auto;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 ช่องเท่ากัน */
+            grid-template-columns: 1fr 1fr; /* แบ่งซ้ายและขวาเท่ากัน */
             background-color: #f8f9fa; 
             border: 1px solid #cccccc; 
             border-radius: 8px;
             overflow: hidden; 
         }
 
-        /* ตกแต่งเนื้อหาช่องฝั่งซ้าย */
-        .table-left {
-            min-height: 200px;
-            border-right: 1px solid #cccccc; /* เส้นคั่นกลางแบ่งฝั่งซ้าย-ขวา */
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* ตกแต่งเนื้อหาช่องฝั่งขวา */
-        .table-right {
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* ส่วนกล่องข้อความด้านในที่ถัดลงมาจาก h3 */
-        .box-body {
-            padding: 25px 30px;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* --- [ใหม่] ปรับสไตล์สีพื้นหลังของหัวข้อ h3 แยกตามฝั่งเพื่อความสวยงาม --- */
-        .table-left h3, .table-right h3 {
+        /* ส่วนหัวตาราง h3 (แถบสีพื้นหลังยาวเต็มฝั่ง) */
+        .unified-table h3 {
             margin: 0;
             padding: 15px 30px;
             font-size: 18px;
             font-weight: bold;
-            color: #ffffff; /* ตัวอักษรสีขาวเพื่อให้ตัดกับพื้นหลัง */
+            color: #ffffff;
         }
 
-        /* สีพื้นหลังหัวข้อฝั่งซ้าย (โทนสีน้ำเงิน) */
-        .table-left h3 {
-            background-color: #1e467a;
+        .header-left { background-color: #1e467a; }  /* สีน้ำเงินฝั่งกิจกรรมหลัก */
+        .header-right { background-color: #2e7d32; } /* สีเขียวฝั่งคำอธิบาย */
+
+        /* ส่วนกล่องเนื้อหาด้านใน */
+        .row-content {
+            padding: 25px 30px;
+            font-size: 15px;
+            line-height: 1.7;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center; /* จัดเนื้อหาให้อยู่กลางแนวตั้ง */
         }
 
-        /* สีพื้นหลังหัวข้อฝั่งขวา (โทนสีเขียว) */
-        .table-right h3 {
-            background-color: #2e7d32;
+        /* เส้นแบ่งฝั่งซ้าย-ขวาตรงกลางตาราง */
+        .border-divider {
+            border-right: 1px solid #cccccc;
+        }
+
+        /* เส้นคั่นแบ่งระหว่างแถวเนื้อหา */
+        .row-separator {
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .title-highlight {
+            font-weight: bold;
+            color: #1e467a;
         }
     </style>
 </head>
@@ -142,19 +138,42 @@
 
     <main class="unified-table">
         
-        <div class="table-left">
-            <h3>กิจกรรมหลัก</h3>
-            <div class="box-body">
-                <p>การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า</p>
-                <p>การปฏิบัติการ</p>
-            </div>
+        <h3 class="header-left">กิจกรรมหลัก</h3>
+        <h3 class="header-right">คำอธิบาย</h3>
+
+        <div class="row-content border-divider row-separator title-highlight">
+            การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า
+        </div>
+        <div class="row-content row-separator">
+            ดำเนินการพัฒนาธุรกิจใหม่ โดยฝ่ายพัฒนาธุรกิจทำหน้าที่ในการศึกษาข้อมูลและสถานการณ์ทางการตลาดสารเคมีทั่วโลกร่วมกับฝ่ายขาย ในการคัดเลือกผลิตภัณฑ์ให้ตรงตามความต้องการของลูกค้า และคัดเลือกคู่ค้าที่มีศักยภาพในการจัดส่งสินค้าให้กับทางบริษัททั้งภายในประเทศและต่างประเทศ
         </div>
 
-        <div class="table-right">
-            <h3>คำอธิบาย</h3>
-            <div class="box-body">
-                <p>ดำเนินการพัฒนาธุรกิจใหม่ โดยฝ่ายพัฒนาธุรกิจทำหน้าที่ในการศึกษาข้อมูลและสถานการณ์ทางการตลาดสารเคมีทั่วโลกร่วมกับฝ่ายขาย ในการคัดเลือกผลิตภัณฑ์ให้ตรงตามความต้องการของลูกค้า และคัดเลือกคู่ค้าที่มีศักยภาพในการจัดส่งสินค้าให้กับทางบริษัททั้งภายในประเทศและต่างประเทศ</p>
-            </div>
+        <div class="row-content border-divider row-separator title-highlight">
+            การปฏิบัติการ (Operations)
+        </div>
+        <div class="row-content row-separator">
+            คำอธิบายเกี่ยวกับการปฏิบัติการ เช่น การจัดเก็บสารเคมีเข้าคลังสินค้า การบริหารจัดการพื้นที่คลังสินค้า การบรรจุสารเคมี และการตรวจสอบคุณภาพสินค้าให้เป็นไปตามมาตรฐานที่กำหนด
+        </div>
+
+        <div class="row-content border-divider row-separator title-highlight">
+            การตลาดและการขาย
+        </div>
+        <div class="row-content row-separator">
+            (พิมพ์คำอธิบายหรือเนื้อหาเพิ่มเติมเกี่ยวกับการตลาดและการขายตรงนี้)
+        </div>
+
+        <div class="row-content border-divider row-separator title-highlight">
+            การบริการหลังการขาย
+        </div>
+        <div class="row-content row-separator">
+            (พิมพ์คำอธิบายหรือเนื้อหาเพิ่มเติมเกี่ยวกับการบริการหลังการขายตรงนี้)
+        </div>
+
+        <div class="row-content border-divider title-highlight">
+            การกระจายสินค้า หรือ โลจิสติกส์ขาออก
+        </div>
+        <div class="row-content">
+            (พิมพ์คำอธิบายหรือเนื้อหาเพิ่มเติมเกี่ยวกับการกระจายสินค้าตรงนี้)
         </div>
 
     </main>
