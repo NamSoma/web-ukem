@@ -70,7 +70,7 @@
             max-width: 1200px;
             margin: 0 auto 80px auto;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* แบ่งซ้ายและขวาเท่ากันสำหรับตารางครึ่งบน */
+            grid-template-columns: 1fr 1fr; 
             background-color: #f8f9fa; 
             border: 1px solid #cccccc; 
             border-radius: 8px;
@@ -87,8 +87,8 @@
             text-align: center; 
         }
 
-        .header-left { background-color: #1e467a; }  /* สีน้ำเงินฝั่งกิจกรรมหลัก */
-        .header-right { background-color: #2e7d32; } /* สีเขียวฝั่งคำอธิบาย */
+        .header-left { background-color: #1e467a; }  
+        .header-right { background-color: #2e7d32; } 
 
         /* ส่วนกล่องเนื้อหาด้านใน */
         .row-content {
@@ -121,24 +121,18 @@
             color: #1e467a;
         }
 
-        /* --- [ใหม่] สไตล์สำหรับแถวเนื้อหาใหม่แบบเต็มบรรทัด ไม่แบ่งซ้ายขวา --- */
-        .full-width-row {
-            grid-column: span 2; /* สั่งให้เนื้อหายาวคลุมตารางทั้ง 2 ฝั่ง */
-            display: block; /* เปลี่ยนเป็น block เพื่อให้จัดหัวข้อและเนื้อหาต่อกันแบบบนลงล่างปกติ */
-            padding: 30px;
-        }
-
-        .full-width-title {
-            font-size: 18px;
+        /* --- [ใหม่] ปรับให้เป็นแถบสีน้ำเงินยาวเต็มแถวและตัวหนังสืออยู่ตรงกลางเหมือนช่องกิจกรรม --- */
+        .full-width-activity-row {
+            grid-column: span 2; /* ขยายยาวเต็ม 2 คอลัมน์ */
+            background-color: #1e467a; /* สีน้ำเงินแบบเดียวกับกิจกรรมหลัก */
+            color: #ffffff; /* ตัวหนังสือสีขาว */
             font-weight: bold;
-            color: #1e467a;
-            margin-bottom: 10px;
-        }
-
-        .full-width-body {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #333333;
+            font-size: 16px;
+            padding: 15px 30px;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
@@ -204,19 +198,16 @@
         </div>
 
 
-        <div class="full-width-row row-separator">
-            <div class="full-width-title">หัวข้อใหญ่ชุดใหม่ที่ 1 (ยาวเต็มหน้า)</div>
-            <div class="full-width-body">คุณสามารถใส่คำอธิบาย เนื้อหารายละเอียด หรือหัวข้อย่อยแบบยาวต่อเนื่องเต็มแถวในกล่องนี้ได้ทันทีเลยครับ</div>
+        <div class="full-width-activity-row row-separator">
+            หัวข้อใหญ่ข้อใหม่แถวยาวชิ้นเดียวที่ 1
         </div>
 
-        <div class="full-width-row row-separator">
-            <div class="full-width-title">หัวข้อใหญ่ชุดใหม่ที่ 2 (ยาวเต็มหน้า)</div>
-            <div class="full-width-body">คุณสามารถใส่คำอธิบาย เนื้อหารายละเอียด หรือหัวข้อย่อยแบบยาวต่อเนื่องเต็มแถวในกล่องนี้ได้ทันทีเลยครับ</div>
+        <div class="full-width-activity-row row-separator">
+            หัวข้อใหญ่ข้อใหม่แถวยาวชิ้นเดียวที่ 2
         </div>
 
-        <div class="full-width-row">
-            <div class="full-width-title">หัวข้อใหญ่ชุดใหม่ที่ 3 (ยาวเต็มหน้า)</div>
-            <div class="full-width-body">คุณสามารถใส่คำอธิบาย เนื้อหารายละเอียด หรือหัวข้อย่อยแบบยาวต่อเนื่องเต็มแถวในกล่องนี้ได้ทันทีเลยครับ</div>
+        <div class="full-width-activity-row">
+            หัวข้อใหญ่ข้อใหม่แถวยาวชิ้นเดียวที่ 3
         </div>
 
     </main>
