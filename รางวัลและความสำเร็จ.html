@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รางวัลและความสำเร็จ - UKEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="components/Navbar.js" defer></script>
+    <script src="components/Footer.js" defer></script>
+    <style>
+        
+        
+        .awards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .award-card {
+            background: #ffffff;
+            border-radius: 0px;
+            overflow: hidden;
+            box-shadow: none;
+            transition: all 0.4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .award-card:hover {
+            transform: translateY(-10px);
+            box-shadow: none;
+        }
+
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            z-index: 2;
+        }
+
+        .award-image-container {
+            width: 100%;
+            height: 220px;
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .award-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .award-card:hover .award-image-container img {
+            transform: scale(1.05);
+        }
+
+        .image-placeholder {
+            color: #94a3b8;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .image-placeholder svg {
+            width: 40px;
+            height: 40px;
+            opacity: 0.5;
+        }
+
+        .award-info {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .award-year {
+            display: inline-block;
+            background: rgba(30, 70, 122, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 0px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            align-self: flex-start;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .award-title {
+            font-size: 20px;
+            color: var(--primary);
+            margin: 0 0 15px 0;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .award-desc {
+            color: var(--text-muted);
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .award-issuer {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+            font-size: 18px;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .award-issuer svg {
+            width: 16px;
+            height: 16px;
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <main-nav depth="0"></main-nav>
+
+    <!-- Hero Section using standard inner-hero -->
+    <header class="inner-hero" style="background-image: url('ถ้วยรางวัล.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+        <div class="inner-hero-content" style="position: relative; z-index: 2;">
+            <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">รางวัลและความสำเร็จ</h1>
+
+        </div>
+    </header>
+
+    <main style="position: relative; overflow: hidden; padding-bottom: 60px;">
+        <div class="container" id="content-start">
+            <div class="content-section" style="max-width: 1200px;">
+                <div class="section-header text-center">
+                    <h2>ความสำเร็จแห่งความภาคภูมิใจ</h2>
+                    <p style="text-align: center; max-width: 700px; margin: 0 auto;">รางวัลและประกาศเกียรติคุณที่สะท้อนถึงความมุ่งมั่นในการดำเนินธุรกิจอย่างมีความรับผิดชอบต่อสังคม สิ่งแวดล้อม และยึดมั่นในหลักบรรษัทภิบาล</p>
+                </div>
+
+                <div class="awards-container">
+                    
+                    <!-- Award 1 -->
+                    <div class="award-card">
+                        <div class="award-image-container">
+                            <div class="image-placeholder">
+                                
+                                วางรูปภาพรางวัล 800x600px
+                            </div>
+                        </div>
+                        <div class="award-info">
+                            <span class="award-year">2568</span>
+                            <h3 class="award-title">สมาชิกแนวร่วมต่อต้านคอร์รัปชันของภาคเอกชนไทย (CAC)</h3>
+                            <p class="award-desc">ได้รับการรับรองเป็นสมาชิกแนวร่วมต่อต้านคอร์รัปชันของภาคเอกชนไทยอย่างต่อเนื่องเป็นครั้งที่ 3 (สิ้นสุด 2571)</p>
+                            <div class="award-issuer">
+                                
+                                <span>มอบโดย: สมาคมส่งเสริมสถาบันกรรมการ<span style="white-space: nowrap;">บริษัท</span>ไทย (IOD)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Award 2 -->
+                    <div class="award-card">
+                        <div class="award-image-container">
+                            <div class="image-placeholder">
+                                
+                                วางรูปภาพรางวัล 800x600px
+                            </div>
+                        </div>
+                        <div class="award-info">
+                            <span class="award-year">2568</span>
+                            <h3 class="award-title">เกียรติบัตรโครงการ ESG DNA</h3>
+                            <p class="award-desc"><span style="white-space: nowrap;">บริษัท</span>ให้ความสำคัญและส่งเสริมพนักงานขององค์กรให้สามารถประยุกต์ใช้และต่อยอดการพัฒนาองค์กรให้เติบโตอย่างยั่งยืน</p>
+                            <div class="award-issuer">
+                                
+                                <span>มอบโดย: ตลาดหลักทรัพย์แห่งประเทศไทย</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Award 3 -->
+                    <div class="award-card">
+                        <div class="award-image-container">
+                            <div class="image-placeholder">
+                                
+                                วางรูปภาพรางวัล 800x600px
+                            </div>
+                        </div>
+                        <div class="award-info">
+                            <span class="award-year">2568</span>
+                            <h3 class="award-title">การรับรองระบบคุณภาพ ISO 9001:2015</h3>
+                            <p class="award-desc">ได้รับการรับรองระบบบริหารงานคุณภาพตามมาตรฐานสากล (สิ้นสุด 14 ธันวาคม 2571)</p>
+                            <div class="award-issuer">
+                                
+                                <span>มอบโดย: <span style="white-space: nowrap;">บริษัท</span> เอสจีเอส (ประเทศไทย) จำกัด</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Award 4 -->
+                    <div class="award-card">
+                        <div class="award-image-container">
+                            <div class="image-placeholder">
+                                
+                                วางรูปภาพรางวัล 800x600px
+                            </div>
+                        </div>
+                        <div class="award-info">
+                            <span class="award-year">2568</span>
+                            <h3 class="award-title">เครื่องหมายคาร์บอนฟุตพริ้นท์ขององค์กร (CFO)</h3>
+                            <p class="award-desc">สะท้อนความมุ่งมั่นในการวัดผลและบริหารจัดการการปล่อยก๊าซเรือนกระจกอย่างมีมาตรฐานในระดับสากล</p>
+                            <div class="award-issuer">
+                                
+                                <span>มอบโดย: องค์การบริหารจัดการก๊าซเรือนกระจก (องค์การมหาชน)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Award 5 -->
+                    <div class="award-card">
+                        <div class="award-image-container">
+                            <div class="image-placeholder">
+                                
+                                วางรูปภาพรางวัล 800x600px
+                            </div>
+                        </div>
+                        <div class="award-info">
+                            <span class="award-year">2568</span>
+                            <h3 class="award-title">รับรองรายงานปริมาณก๊าซเรือนกระจก ISO 14064-1</h3>
+                            <p class="award-desc">ผ่านการทวนสอบและรับรองรายงานปริมาณก๊าซเรือนกระจกตามมาตรฐานระดับสากล</p>
+                            <div class="award-issuer">
+                                
+                                <span>มอบโดย: สถาบันรับรองมาตรฐานไอเอสโอ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Award 6 -->
+                    <div class="award-card">
+                        <div class="award-image-container">
+                            <div class="image-placeholder">
+                                
+                                วางรูปภาพรางวัล 800x600px
+                            </div>
+                        </div>
+                        <div class="award-info">
+                            <span class="award-year">2568</span>
+                            <h3 class="award-title">การประเมินการกำกับดูแลกิจการที่ดี ประจำปี 2568</h3>
+                            <p class="award-desc">ได้รับการประเมินการกำกับดูแลกิจการที่ดี (CGR) จากสถาบันกรรมการ<span style="white-space: nowrap;">บริษัท</span>ไทย</p>
+                            <div class="award-issuer">
+                                
+                                <span>มอบโดย: สมาคมส่งเสริมสถาบันกรรมการ<span style="white-space: nowrap;">บริษัท</span>ไทย (IOD)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Award 7 -->
+                    <div class="award-card">
+                        <div class="award-image-container">
+                            <div class="image-placeholder">
+                                
+                                วางรูปภาพรางวัล 800x600px
+                            </div>
+                        </div>
+                        <div class="award-info">
+                            <span class="award-year">2568</span>
+                            <h3 class="award-title">การประเมินคุณภาพการจัดประชุมสามัญผู้ถือหุ้น</h3>
+                            <p class="award-desc">ประเมินคุณภาพการจัดประชุมสามัญผู้ถือหุ้น (AGM Checklist) ประจำปี 2568</p>
+                            <div class="award-issuer">
+                                
+                                <span>มอบโดย: สมาคมส่งเสริมผู้ลงทุนไทย</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main-footer></main-footer>
+</body>
+</html>
+
+
+

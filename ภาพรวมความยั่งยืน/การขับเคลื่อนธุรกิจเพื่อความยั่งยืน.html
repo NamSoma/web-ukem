@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>โครงสร้างการกำกับดูแล - ESG Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../components/Navbar.js" defer></script>
+    <script src="../components/Footer.js" defer></script>
+    <script src="../components/InnerHero.js" defer></script>
+    <script src="../components/SectionHeader.js" defer></script>
+    <style>
+        .chart-container-p28 {
+            margin-top: 40px;
+            padding: 20px 0;
+            background: transparent;
+            overflow-x: auto;
+            text-align: center;
+        }
+        .org-chart-wrapper {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .org-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .org-box-pill {
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: #fff;
+            font-size: 18px;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            z-index: 2;
+            position: relative;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .org-box-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .bg-lightblue { background: #85b9e5; }
+        .bg-darkblue { background: #294b7a; }
+        .bg-green { background: #229f55; }
+        .bg-lightgray { 
+            background: #e2e8f0; 
+            color: #1e3a8a !important; 
+        }
+        .line-v {
+            width: 3px;
+            height: 40px;
+            background: #294b7a;
+        }
+        .sec-vp-row {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .sec-box {
+            position: absolute;
+            right: 100%;
+            display: flex;
+            align-items: center;
+        }
+        /* ย่อขนาดเฉพาะกล่องเลขาฯ ด้านข้าง */
+        .sec-box .org-box-pill {
+            min-width: 200px;
+            padding: 12px 20px;
+            font-size: 18px;
+        }
+        .line-h-connect {
+            width: 50px;
+            height: 3px;
+            background: #294b7a;
+        }
+        
+        .deps-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+        .dep-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 0 5px;
+            flex: 1;
+            min-width: 0;
+        }
+        .dep-col::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #294b7a;
+        }
+        .dep-col:first-child::before {
+            left: 50%;
+        }
+        .dep-col:last-child::before {
+            right: 50%;
+        }
+        .line-v-small {
+            width: 3px;
+            height: 30px;
+            background: #294b7a;
+        }
+        .org-box-dep {
+            padding: 15px 5px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+            min-height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            line-height: 1.3;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .org-box-dep:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Styles from ห่วงโซ่คุณค่าของธุรกิจ.html */
+        .section-title {
+            color: #193f6e;
+            font-weight: 700;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            font-size: 22px;
+        }
+        .sh-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 30px;
+            font-size: 18px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border-radius: 0px;
+            border: 1px solid #e2e8f0;
+            background: #fff;
+        }
+        .sh-table th, .sh-table td {
+            padding: 20px 24px;
+            vertical-align: top;
+            border-bottom: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+        }
+        .sh-table th:last-child, .sh-table td:last-child {
+            border-right: none;
+        }
+        .sh-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .sh-table th {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: #fff;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+        }
+        .sh-table tbody tr {
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .sh-table tbody tr:hover {
+            background-color: #f8fafc;
+        }
+        .sh-table td {
+            text-align: left;
+            color: #334155;
+            line-height: 1.7;
+        }
+        .sh-table td:first-child {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1e3a8a;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #f1f5f9;
+        }
+        .sh-table tbody tr:hover td:first-child {
+            background-color: #e2e8f0;
+        }
+        
+        .activities-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .activity-card {
+            background: #f8f9fa;
+            padding: 24px 30px;
+            border-radius: 0px;
+            
+            box-shadow: none;
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        .activity-card h4 {
+            color: #193f6e;
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: left;
+        }
+        .activity-card p {
+            margin: 0;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            .activity-card {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <main-nav depth="1"></main-nav>
+
+    <inner-hero 
+        title="การขับเคลื่อนธุรกิจเพื่อความยั่งยืน" 
+        image-url="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=1920">
+    </inner-hero>
+
+    <main id="content-start" style="padding-bottom: 60px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px;">
+            <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 50px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <section-header title="โครงสร้างการกำกับดูแลด้านความยั่งยืน"></section-header>
+                    <p class="text-body" style="line-height: 1.8; color: #555;">โครงสร้างการกำกับดูแลด้านความยั่งยืนของ<span style="white-space: nowrap;">บริษัทฯ</span> ถูกออกแบบให้ครอบคลุมตั้งแต่ระดับคณะกรรมการ<span style="white-space: nowrap;">บริษัท</span> ซึ่งกำหนดนโยบายทิศทางด้านความยั่งยืน ทั้งนี้ภายใต้การกำกับดูแลของคณะกรรมการตรวจสอบ ตลอดจนผู้บริหารระดับสูง จนถึงหน่วยงานปฏิบัติการ เพื่อให้สามารถกำกับติดตาม และขับเคลื่อนประเด็นสำคัญที่เกี่ยวข้องกับความยั่งยืนได้อย่างมีประสิทธิภาพสอดคล้องกับบริบทการดำเนินธุรกิจและความคาดหวังของผู้มีส่วนได้ส่วนเสียพร้อมทั้งสนับสนุนการเติบโตขององค์กรในระยะยาวอย่างมั่นคงและรับผิดชอบ</p>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="../assets/รูปภาพรวมความยั่งยืน/การขับเคลื่อนธุรกิจเพื่อความยั่งยืน/ประชุม.jpg" alt="ภาพถ่ายการประชุมและทีมงาน" style="width: 100%; height: 320px; object-fit: cover; border-radius: 0px; box-shadow: none;">
+                </div>
+            </div>
+
+            <div class="chart-container-p28">
+                <section-header title="ภาพรวมโครงสร้างการกำกับดูแล"></section-header>
+                
+                <div class="org-chart-wrapper">
+                    <div class="org-node">
+                        <div class="org-box-pill bg-lightblue">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></div>
+                        <div class="line-v"></div>
+                    </div>
+                <div class="org-chart-wrapper">
+                    <div class="org-node">
+                        <div class="org-box-pill bg-lightblue">คณะกรรมการตรวจสอบ</div>
+                        <div class="line-v"></div>
+                    </div>
+                    
+                    <div class="org-node">
+                        <div class="org-box-pill bg-darkblue">ประธานคณะทำงาน</div>
+                        <div class="line-v"></div>
+                    </div>
+
+                    <div class="org-node sec-vp-row">
+                        <div class="sec-box">
+                            <div class="org-box-pill bg-green">เลขานุการคณะทำงาน</div>
+                            <div class="line-h-connect"></div>
+                        </div>
+                        <div class="org-box-pill bg-darkblue">รองประธานคณะทำงาน</div>
+                    </div>
+                    
+                    <div class="org-node">
+                        <div class="line-v" style="height: 30px;"></div>
+                    </div>
+                    
+                    <div class="deps-items">
+                        <div class="dep-col">
+                            <div class="line-v-small"></div>
+                            <div class="org-box-dep bg-lightgray">ฝ่ายบัญชี</div>
+                        </div>
+                        <div class="dep-col">
+                            <div class="line-v-small"></div>
+                            <div class="org-box-dep bg-lightgray">ฝ่ายคลัง<br>และขนส่ง</div>
+                        </div>
+                        <div class="dep-col">
+                            <div class="line-v-small"></div>
+                            <div class="org-box-dep bg-lightgray">ฝ่ายขาย</div>
+                        </div>
+                        <div class="dep-col">
+                            <div class="line-v-small"></div>
+                            <div class="org-box-dep bg-lightgray">ฝ่ายจัดซื้อ</div>
+                        </div>
+                        <div class="dep-col">
+                            <div class="line-v-small"></div>
+                            <div class="org-box-dep bg-lightgray">ฝ่าย<br>บริหารกลาง</div>
+                        </div>
+                        <div class="dep-col">
+                            <div class="line-v-small"></div>
+                            <div class="org-box-dep bg-lightgray">ฝ่ายบุคคล</div>
+                        </div>
+                        <div class="dep-col">
+                            <div class="line-v-small"></div>
+                            <div class="org-box-dep bg-lightgray">ULT</div>
+                        </div>
+                        <div class="dep-col">
+                            <div class="line-v-small"></div>
+                            <div class="org-box-dep bg-lightgray">ฝ่ายไอที</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-small" style="margin-top: 40px;  color: #888; font-weight: normal; text-align: left; padding-left: 20px;">
+                    หมายเหตุ: <span style="white-space: nowrap;">บริษัทฯ</span> ได้ทบทวนการแต่งตั้งคณะทำงานด้านความยั่งยืน เมื่อวันที่ 21 กรกฎาคม 2568
+                </p>
+                                                <div style="margin-top: 60px; margin-bottom: 10px;">
+                <div style="background: transparent; border-radius: 0px; padding: 40px 0; text-align: center; box-shadow: none; border: none;">
+                    <section-header title="กรอบการทำงานด้านความยั่งยืน (Sustainability Framework)"></section-header>
+                    <p class="text-body" style="color: #64748b;  margin-bottom: 30px;">บูรณาการแนวคิดด้านสิ่งแวดล้อม สังคม และการกำกับดูแล (ESG) เข้ากับกลยุทธ์ขององค์กร</p>
+                    <div style="display: inline-block; padding: 10px; background-color: transparent; border-radius: 0px; box-shadow: none;">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000" alt="Infographic กรอบการทำงานด้านความยั่งยืน" style="max-width: 100%; height: auto; border-radius: 0px; display: block;">
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 60px;">
+                <section-header title="ตารางสรุปความสำคัญของโครงสร้างการกำกับดูแลด้านความยั่งยืน"></section-header>
+                <table class="sh-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">ลำดับ</th>
+                            <th style="width: 35%;">ประเด็นความสำคัญ</th>
+                            <th style="width: 55%;">สาระสำคัญโดยสรุป</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>เสริมสร้างทิศทางการดำเนินงานที่ชัดเจนและเป็นเอกภาพ</td>
+                            <td>กำหนดกรอบการทำงาน บทบาท และความรับผิดชอบของแต่ละระดับการบริหารอย่างชัดเจน ทำให้การกำหนดนโยบาย เป้าหมาย และแผนงานด้านความยั่งยืนเป็นไปในทิศทางเดียวกันทั้งองค์กร ลดความซ้ำซ้อน และเพิ่มประสิทธิภาพในการขับเคลื่อนงาน</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>สนับสนุนการตัดสินใจเชิงกลยุทธ์และการบริหารจัดการความเสี่ยง</td>
+                            <td>นำประเด็นด้านความยั่งยืนมาใช้เป็นข้อมูลประกอบการตัดสินใจเชิงกลยุทธ์ ควบคู่กับการบริหารจัดการความเสี่ยงจากการดำเนินงานในมิติสิ่งแวดล้อม สังคม และธรรมาภิบาล เพื่อป้องกันผลกระทบและรักษาความต่อเนื่องทางธุรกิจ</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>เพิ่มประสิทธิภาพในการติดตามและประเมินผลการดำเนินงาน</td>
+                            <td>เอื้อต่อการติดตาม ประเมินผล และรายงานความก้าวหน้าการดำเนินงานด้านความยั่งยืนอย่างเป็นระบบ ทำให้ผู้บริหารสามารถรับทราบสถานะ ปัญหา และโอกาสในการปรับปรุงได้อย่างทันท่วงที</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>สร้างความโปร่งใสและความเชื่อมั่นแก่ผู้มีส่วนได้ส่วนเสีย</td>
+                            <td>เสริมสร้างความโปร่งใสในการดำเนินงาน และสะท้อนถึงความมุ่งมั่นในการดำเนินธุรกิจอย่างมีความรับผิดชอบ ส่งผลให้เกิดความเชื่อมั่นและความไว้วางใจจากผู้มีส่วนได้ส่วนเสียทุกกลุ่ม</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>สนับสนุนการเติบโตขององค์กรในระยะยาว</td>
+                            <td>บูรณาการประเด็นด้านความยั่งยืนเข้ากับโครงสร้างการบริหารจัดการเพื่อสร้างคุณค่าทางธุรกิจควบคู่กับการดูแลสังคมและสิ่งแวดล้อมอันเป็นรากฐานของการเติบโตอย่างมั่นคงและยั่งยืนในระยะยาว</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="activities-grid" style="margin-top: 40px;">
+                <div class="activity-card" style="background: transparent; padding: 0; border: none; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div><h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">บทบาทและความรับผิดชอบของคณะกรรมการและผู้บริหาร</h4></div>
+                    <p>คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span>มีหน้าที่กำกับดูแลการบริหารจัดการขององค์กรให้เป็นไปตามกฎหมาย ข้อบังคับ และหลักธรรมาภิบาล โดยคำนึงถึงผลประโยชน์ของผู้ถือหุ้น และผู้มีส่วนได้ส่วนเสียในทุกกลุ่มอย่างเท่าเทียมกัน คณะกรรมการยังดูแลให้ฝ่ายบริหารปฏิบัติตามนโยบายของ<span style="white-space: nowrap;">บริษัทฯ</span> อย่างมีจริยธรรมและโปร่งใส<br><br>นอกจากนี้<span style="white-space: nowrap;">บริษัทฯ</span> ได้แยกบทบาทระหว่างประธานกรรมการและกรรมการผู้จัดการอย่างชัดเจน พร้อมแต่งตั้งคณะกรรมการตรวจสอบเพื่อเสริมกระบวนการตรวจสอบภายในและจัดการความเสี่ยงในเชิงระบบ</p>
+                </div>
+                
+                <div class="activity-card" style="background: transparent; padding: 0; border: none; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div><h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">นโยบายและกรอบการดำเนินงานด้านความยั่งยืน</h4></div>
+                    <p><span style="white-space: nowrap;">บริษัทฯ</span> กำหนดนโยบายการดำเนินธุรกิจที่มุ่งเน้นการคำนึงถึงผู้มีส่วนได้ส่วนเสียทั้งภายในและภายนอก รวมถึงตอบสนองต่อข้อกำหนดด้านสิ่งแวดล้อมและข้อกฎหมายที่เกี่ยวข้องอย่างเคร่งครัด โดยมุ่งหวังให้การดำเนินธุรกิจเกิดผลกระทบต่อสังคมน้อยที่สุดและส่งเสริมคุณภาพชีวิตของผู้คนในสังคม</p>
+                </div>
+
+                <div class="activity-card" style="background: transparent; padding: 0; border: none; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div><h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">การบูรณาการความยั่งยืนกับกลยุทธ์องค์กร</h4></div>
+                    <p><span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญกับการบูรณาการประเด็นด้านสิ่งแวดล้อม สังคม และการกำกับดูแลเข้ากับกลยุทธ์หลักขององค์กร โดยพิจารณาเป็นส่วนหนึ่งของการตัดสินใจเชิงกลยุทธ์ทั้งในระดับนโยบายและระดับปฏิบัติ การดำเนินงานเช่นนี้ช่วยรองรับการเติบโตของธุรกิจอย่างมีความรับผิดชอบต่อผู้มีส่วนได้ส่วนเสียทุกฝ่าย และสร้างคุณค่าโดยรวมให้กับองค์กรในระยะยาว<br><br>นโยบายของ<span style="white-space: nowrap;">บริษัทฯ</span> รวมถึงหลักการปฏิบัติด้านความโปร่งใส การต่อต้านทุจริตคอร์รัปชัน และการจัดการความสัมพันธ์กับผู้มีส่วนได้ส่วนเสียให้เกิดความเป็นธรรมและโปร่งใส</p>
+                </div>
+
+                <div class="activity-card" style="background: transparent; padding: 0; border: none; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div><h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">การบริหารความเสี่ยงและโอกาสด้านความยั่งยืน</h4></div>
+                    <p><span style="white-space: nowrap;">บริษัทฯ</span> ได้กำหนดกระบวนการในการระบุและติดตามความเสี่ยงด้านความยั่งยืนหลายมิติ ทั้งจากมิติด้านสิ่งแวดล้อม สังคม และธรรมาภิบาล เพื่อให้สามารถจัดการและควบคุมความเสี่ยงที่อาจเกิดขึ้นได้อย่างมีประสิทธิภาพ ทั้งนี้กระบวนการดังกล่าวถูกผสานเข้ากับระบบบริหารความเสี่ยงขององค์กรโดยรวมเพื่อให้เกิดการตรวจสอบและตอบสนองอย่างทันท่วงที</p>
+                </div>
+
+                <div class="activity-card" style="background: transparent; padding: 0; border: none; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div><h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">การมีส่วนร่วมของผู้มีส่วนได้ส่วนเสีย</h4></div>
+                    <p><span style="white-space: nowrap;">บริษัทฯ</span> กำหนดวิธีการสื่อสารและมีส่วนร่วมกับผู้มีส่วนได้ส่วนเสียต่างๆ ตั้งแต่ผู้ถือหุ้น ลูกค้า คู่ค้า พนักงาน ไปจนถึงชุมชนและสังคมรอบข้าง โดยให้ความสำคัญกับการรับฟังความคิดเห็นและข้อเสนอแนะเพื่อปรับปรุงการดำเนินงานและเสริมความมั่นใจในกระบวนการตัดสินใจ</p>
+                </div>
+
+                <div class="activity-card" style="background: transparent; padding: 0; border: none; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div><h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">การติดตาม ประเมินผล และรายงานผล</h4></div>
+                    <p>กระบวนการติดตามและประเมินผลเป็นส่วนสำคัญในการกำกับดูแลด้านความยั่งยืน โดยฝ่ายบริหารระดับสูงมีหน้าที่รายงานความคืบหน้าและผลลัพธ์การดำเนินงานต่อคณะกรรมการเป็นประจำ เพื่อให้แน่ใจว่าการดำเนินงานด้านความยั่งยืนเป็นไปตามวัตถุประสงค์และเป้าหมายที่กำหนดไว้</p>
+                </div>
+
+                <div class="activity-card" style="background: transparent; padding: 0; border: none; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div><h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">การเปิดเผยข้อมูลและความโปร่งใส</h4></div>
+                    <p><span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญกับการเปิดเผยข้อมูลที่สำคัญอย่างครบถ้วน ถูกต้อง และทันเวลา ทั้งในส่วนของข้อมูลการเงิน ข้อมูลธุรกิจและข้อมูลความยั่งยืนอื่นๆ โดยมีหน่วยงานที่ประสานงานด้านนักลงทุนสัมพันธ์เพื่อสื่อสารกับผู้ถือหุ้น นักลงทุน นักวิเคราะห์ และผู้มีส่วนได้ส่วนเสียอื่นๆ อย่างเท่าเทียมกัน<br><br>ทั้งนี้ โครงสร้างการกำกับดูแลด้านความยั่งยืนของ<span style="white-space: nowrap;">บริษัท</span> ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) ถือเป็นกลไกสำคัญในการขับเคลื่อนการดำเนินงาน ให้สามารถตอบโจทย์การบริหารจัดการทั้งด้านเศรษฐกิจ สังคม และสิ่งแวดล้อมควบคู่กันอย่างปรับตัวได้ในบริบทของธุรกิจและความคาดหวังของผู้มีส่วนได้ส่วนเสียทุกกลุ่ม พร้อมทั้งเสริมสร้างความมั่นคงและการเติบโตอย่างยั่งยืนขององค์กรในระยะยาว</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main-footer depth="1"></main-footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

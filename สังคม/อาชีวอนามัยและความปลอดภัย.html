@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อาชีวอนามัยและความปลอดภัย - UKEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../components/Navbar.js" defer></script>
+    <script src="../components/Footer.js" defer></script>
+    <script src="../components/InnerHero.js" defer></script>
+    <script src="../components/SectionHeader.js" defer></script>
+    <script src="../components/CardGrid.js" defer></script><style>
+        
+
+
+        /* Horizontally scrollable project grid */
+        .project-grid {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 30px;
+            margin-bottom: 60px;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 20px 10px;
+        }
+        .project-grid::-webkit-scrollbar {
+            height: 10px;
+        }
+        .project-grid::-webkit-scrollbar-track {
+            background: #ffffff; border: 1px solid #e5e7eb; 
+            border-radius: 0px;
+        }
+        .project-grid::-webkit-scrollbar-thumb {
+            background: var(--secondary, #888); 
+            border-radius: 0px;
+        }
+        .project-grid::-webkit-scrollbar-thumb:hover {
+            background: var(--primary, #555); 
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 0px;
+            overflow: hidden;
+            box-shadow: none;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 350px;
+            scroll-snap-align: start;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: none;
+        }
+        .project-img-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+        .project-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .project-img-wrapper img {
+            transform: scale(1.05);
+        }
+        .project-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-content h3 {
+            color: var(--primary);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .project-content p {
+            font-size: var(--fs-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .project-content li {
+            font-size: var(--fs-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <main-nav depth="1"></main-nav>
+
+    <inner-hero 
+        title="อาชีวอนามัยและความปลอดภัย" 
+        image-url="../assets/รูปสังคม/health_and_safety_cover.png">
+    </inner-hero>
+
+    <main style="position: relative; overflow: hidden; padding-bottom: 60px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px;">
+            <section-header title="แนวทางการบริหารจัดการ"></section-header>
+            <p class="intro-text text-body-lg">
+                <span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญสูงสุดต่อการดูแลด้านอาชีวอนามัยและความปลอดภัยของพนักงาน คู่ค้า ผู้รับเหมา และผู้มีส่วนเกี่ยวข้องทุกภาคส่วน โดยถือเป็นรากฐานสำคัญในการดำเนินธุรกิจอย่างมีความรับผิดชอบและยั่งยืน โดยเฉพาะในภาคอุตสาหกรรมที่มีความเสี่ยงสูง อาทิ การทำงานเกี่ยวข้องกับสารเคมีอันตราย เครื่องจักรกลขนาดใหญ่ พื้นที่ปฏิบัติงานอับอากาศ หรือสภาพแวดล้อมที่อาจก่อให้เกิดอันตราย <span style="white-space: nowrap;">บริษัทฯ</span> ตระหนักดีว่าการป้องกันความเสี่ยงเหล่านี้ ไม่เพียงเป็นเรื่องของความปลอดภัยเท่านั้น แต่ยังเกี่ยวข้องโดยตรงกับคุณภาพชีวิตของบุคลากรและภาพลักษณ์ขององค์กร
+            </p>
+            <p class="intro-text text-body-lg">
+                เพื่อรองรับความเสี่ยงที่อาจเกิดขึ้น <span style="white-space: nowrap;">บริษัทฯ</span> จึงได้พัฒนาระบบการจัดการอาชีวอนามัยและความปลอดภัยให้สอดคล้องกับมาตรฐานสากล ISO 45001 และแนวทางการรายงานตาม Global Reporting Initiative (GRI) 403: Occupational Health and Safety โดยเน้นหลักการสำคัญ 3 ด้าน ได้แก่
+            </p>
+            <ul class="cards-grid">
+                <li class="card-item"><strong>การป้องกัน (Prevention)</strong> – มุ่งเน้นการลดและควบคุมปัจจัยเสี่ยงที่อาจนำไปสู่อุบัติเหตุหรือโรคจากการทำงาน</li>
+                <li class="card-item"><strong>การมีส่วนร่วมของพนักงาน (Participation)</strong> – ส่งเสริมให้พนักงานมีบทบาทในทุกขั้นตอนของการบริหารจัดการด้านความปลอดภัย เช่น การเสนอแนวทางป้องกัน การเป็น Safety Champion หรือการเข้าร่วมกิจกรรมตรวจสอบความปลอดภัยในพื้นที่ปฏิบัติงาน</li>
+                <li class="card-item"><strong>การปรับปรุงอย่างต่อเนื่อง (Continuous Improvement)</strong> – ดำเนินการตรวจสอบ ทบทวน และพัฒนาระบบความปลอดภัยอย่างสม่ำเสมอ เพื่อให้ทันต่อการเปลี่ยนแปลงของสภาพแวดล้อม เทคโนโลยี และข้อกำหนดทางกฎหมาย</li>
+            </ul>
+
+            <section-header title="มาตรการด้านอาชีวอนามัยและความปลอดภัยขององค์กร"></section-header>
+            <p class="intro-text text-body-lg">
+                <span style="white-space: nowrap;">บริษัทฯ</span> ได้กำหนดเป้าหมายด้านความปลอดภัยอย่างชัดเจน เช่น การลดอัตราการเกิดอุบัติเหตุเป็นศูนย์ การลดจำนวนวันสูญเสียจากการบาดเจ็บ (Lost Time Injury – LTI) และการปรับปรุงระดับความปลอดภัยในพื้นที่เสี่ยงสูง โดยมีมาตรการสนับสนุนที่เป็นรูปธรรม ได้แก่
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch; margin-bottom: 40px;">
+                <div style="flex: 1 1 500px;">
+                    <ul class="cards-grid" style="margin-top: 0;">
+                        <li class="card-item">การจัดฝึกอบรมด้านความปลอดภัยอย่างต่อเนื่อง ทั้งภาคทฤษฎีและภาคปฏิบัติ</li>
+                        <li class="card-item">การดำเนินการ ประเมินความเสี่ยง (Risk Assessment) อย่างเป็นระบบ</li>
+                        <li class="card-item">การส่งเสริม การรายงานอุบัติการณ์ใกล้เกิดเหตุ (Near Miss Reporting)</li>
+                        <li class="card-item">การสอบสวนและวิเคราะห์สาเหตุของอุบัติเหตุ (Root Cause Analysis) เพื่อป้องกันการเกิดซ้ำ</li>
+                        <li class="card-item">การสื่อสารเชิงรุกและการปลูกฝังวัฒนธรรม “ความปลอดภัยเป็นหน้าที่ของทุกคน” ให้เป็นส่วนหนึ่งของกระบวนการทำงานในองค์กร</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <style>
+                .safety-stats-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 20px;
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                }
+                .safety-stat-card {
+                    background: white;
+                    border-radius: 0px;
+                    padding: 25px 20px;
+                    text-align: center;
+                    border: 1px solid #e2e8f0;
+                    box-shadow: none;
+                }
+                .safety-stat-value {
+                    font-size: 36px;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+                .safety-stat-label {
+                    font-size: 16px;
+                    color: #64748b;
+                }
+            </style>
+            <div class="safety-stats-grid">
+                <div class="safety-stat-card" style="border-top: 3px solid #10b981;">
+                    <div class="safety-stat-value" style="color: #10b981;">0</div>
+                    <div class="safety-stat-label">อัตราความถี่ของการบาดเจ็บจากการทำงาน (LTIFR)</div>
+                    <div class="safety-stat-label" style="font-size: 12px; margin-top: 5px;">(ต่อ 1,000,000 ชั่วโมงการทำงาน)</div>
+                </div>
+                <div class="safety-stat-card" style="border-top: 3px solid #10b981;">
+                    <div class="safety-stat-value" style="color: #10b981;">0</div>
+                    <div class="safety-stat-label">จำนวนผู้เสียชีวิตจากการทำงาน (ราย)</div>
+                </div>
+            </div>
+
+            <section-header title="โครงการและกิจกรรมที่เกี่ยวข้อง"></section-header>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="../assets/รูปสังคม/ประชุมคุณพล.jpg" alt="การทำ Morning Talk / การประชุม">
+                    </div>
+                    <div class="project-content">
+                    <h3>การสื่อสารภายในองค์กร</h3>
+                    <p style="margin-bottom: 10px;"><span style="white-space: nowrap;">บริษัทฯ</span> ได้สร้างการมีส่วนร่วมในการปฏิบัติงานทุกระดับด้วยการจัดตั้งคณะกรรมการความปลอดภัย อาชีวอนามัยและสภาพแวดล้อมในการทำงาน ซึ่งประกอบด้วยผู้แทนในระดับบังคับบัญชาและผู้แทนลูกจ้าง เพื่อร่วมกันสำรวจสภาพการทำงานที่ไม่ปลอดภัย พิจารณาแผนงานและนโยบายด้านความปลอดภัย อาชีวอนามัย และสิ่งแวดล้อม การติดตามการดำเนินงานให้สอดคล้องกับกฎหมาย รวมถึงการสื่อสารเพื่อป้องกันและลดอุบัติเหตุหรือการเจ็บป่วยอันเนื่องมาจากการทำงานผ่านช่องทางที่หลากหลาย เช่น</p>
+                    <ul class="styled-list" style="margin-top: 5px;">
+                        <li>การส่งข้อมูลข่าวสารด้านความปลอดภัยในการทำงานผ่านทางจดหมายอิเล็กทรอนิกส์และทางโซเชียล มีเดีย (SocialMedia)</li>
+                        <li>การประชุมก่อนเริ่มปฏิบัติงานของพนักงาน เช่น Morning Talk เป็นต้น</li>
+                    </ul>
+                    <div class="text-small" style="text-align: right; margin-top: auto; color: #6c757d;">
+                        <span style="display: inline-flex; align-items: center; gap: 5px;">
+                            
+                            ปี 2568
+                        </span>
+                    </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="../assets/รูปสังคม/2ตรวจสุขภาพประจำปี 2568.jpg" alt="การจัดกิจกรรมส่งเสริมสุขภาพ">
+                    </div>
+                    <div class="project-content">
+                    <h3>การจัดกิจกรรมส่งเสริมสุขภาพ</h3>
+                    <p><span style="white-space: nowrap;">บริษัทฯ</span> จัดให้มีการตรวจสุขภาพสำหรับพนักงานเข้าใหม่ การตรวจสุขภาพประจำปีให้กับพนักงานทุกคนตามปัจจัยเสี่ยงในงานและเฝ้าระวังผลกระทบที่อาจเกิดจากการปฏิบัติงาน เช่นการตรวจสมรรถภาพปอด การตรวจสมรรถภาพการได้ยิน การตรวจสายตาอาชีวอนามัย และการตรวจหาสารโลหะหนักในร่างกาย ภายใต้ระบบฐานข้อมูลด้านสุขภาพและการเจ็บป่วยของพนักงาน นอกจากนี้ ยังดำเนินกิจกรรมส่งเสริมสุขภาพตามหลัก Happy Workplace</p>
+                    <div class="text-small" style="text-align: right; margin-top: auto; color: #6c757d;">
+                        <span style="display: inline-flex; align-items: center; gap: 5px;">
+                            
+                            ปี 2568
+                        </span>
+                    </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="../assets/รูปสังคม/ซ้อมดับเพลิง.jpg" alt="ซ้อมอพยพหนีไฟและปฐมพยาบาล">
+                    </div>
+                    <div class="project-content">
+                    <h3>การสร้างความตระหนักและวัฒนธรรมด้านความปลอดภัยขององค์กร</h3>
+                    <p style="margin-bottom: 10px;">การสร้างความตระหนักและวัฒนธรรมด้านความปลอดภัยเป็นหัวใจสำคัญของการดำเนินธุรกิจในอุตสาหกรรมเคมีภัณฑ์ <span style="white-space: nowrap;">บริษัทฯ</span> จึงให้ความสำคัญกับการปลูกฝังแนวคิด “ความปลอดภัยเป็นหน้าที่ของทุกคน” ผ่านการฝึกอบรมอย่างต่อเนื่อง มาตรการป้องกันเชิงรุก และการส่งเสริมการมีส่วนร่วมของพนักงานในทุกระดับ นอกจากนี้ ยังนำเทคโนโลยีและมาตรฐานสากลมาปรับใช้ เพื่อเสริมสร้างสภาพแวดล้อมการทำงานที่ปลอดภัยและลดความเสี่ยงในการปฏิบัติงาน โดยในปี 2568 <span style="white-space: nowrap;">บริษัทฯ</span> ได้จัดให้มีการฝึกอบรมและฝึกซ้อมแผนต่าง ๆ เพื่อตอบสนองต่อเหตุฉุกเฉิน (Emergency Preparedness) ดังนี้</p>
+                    <ul class="styled-list" style="margin-top: 5px;">
+                        <li>การฝึกอบรมด้านอาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อม</li>
+                        <li>การดับเพลิงขั้นต้นและการฝึกซ้อมอพยพหนีไฟ</li>
+                        <li>การฝึกซ้อมโต้ตอบเหตุการณ์สารเคมีรั่วไหล</li>
+                        <li>การฝึกอบรมการปฐมพยาบาล (First Aid)</li>
+                    </ul>
+                    <div class="text-small" style="text-align: right; margin-top: auto; color: #6c757d;">
+                        <span style="display: inline-flex; align-items: center; gap: 5px;">
+                            
+                            ปี 2568
+                        </span>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <main-footer depth="1"></main-footer>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ศูนย์รวมการดาวน์โหลด - UKEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="components/Navbar.js" defer></script>
+    <script src="components/Footer.js" defer></script>
+</head>
+<body>
+    
+    <main-nav></main-nav>
+    
+    <main style="position: relative; overflow: hidden; padding-bottom: 80px;">
+        <header class="inner-hero" style="background-image: url('assets/การกำกับดูแล/financial_hero.png'); background-color: #0f172a; background-size: cover; background-position: center; position: relative;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <div class="inner-hero-content" style="position: relative; z-index: 2;">
+                <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">ศูนย์รวมการดาวน์โหลด</h1>
+            </div>
+        </header>
+
+        <style>
+            .download-list {
+                max-width: 900px;
+                margin: 60px auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .download-item {
+                background: white;
+                border: 1px solid #e2e8f0;
+                border-radius: 0px;
+                padding: 25px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: all 0.3s ease;
+                box-shadow: none;
+            }
+            .download-item:hover {
+                transform: translateY(-3px);
+                box-shadow: none;
+                border-color: var(--primary);
+            }
+            .download-info {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            .download-icon {
+                width: 50px;
+                height: 50px;
+                background: #f1f5f9;
+                color: #ef4444;
+                border-radius: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .download-title {
+                font-size: 18px;
+                font-weight: 600;
+                color: var(--primary);
+                margin-bottom: 5px;
+            }
+            .download-desc {
+                font-size: 14px;
+                color: #64748b;
+            }
+            .btn-download {
+                padding: 10px 20px;
+                background: var(--primary);
+                color: white;
+                text-decoration: none;
+                border-radius: 0px;
+                font-weight: 500;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                transition: background 0.3s ease;
+            }
+            .btn-download:hover {
+                background: var(--primary-dark);
+            }
+            .section-label {
+                font-size: 24px;
+                font-weight: 700;
+                color: var(--primary);
+                margin-bottom: 15px;
+                margin-top: 40px;
+                
+                display: inline-block;
+            }
+        </style>
+
+        <div class="container">
+            <div class="download-list">
+                
+                <div>
+                    <h2 class="section-label">รายงานความยั่งยืน / ESG Report</h2>
+                </div>
+
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-icon">
+                            
+                        </div>
+                        <div>
+                            <div class="download-title">รายงานข้อมูล ESG Data Platform ประจำปี 2568</div>
+                            <div class="download-desc">รูปแบบ PDF (ภาษาไทย) - ขนาด 2.4 MB</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-download">
+                        
+                        ดาวน์โหลด
+                    </a>
+                </div>
+
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-icon">
+                            
+                        </div>
+                        <div>
+                            <div class="download-title">ESG Data Platform Report 2025</div>
+                            <div class="download-desc">PDF format (English) - Size 2.3 MB</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-download">
+                        
+                        Download
+                    </a>
+                </div>
+
+                <div>
+                    <h2 class="section-label" style="margin-top: 20px;">รายงานประจำปี / Annual Report</h2>
+                </div>
+
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-icon">
+                            
+                        </div>
+                        <div>
+                            <div class="download-title">แบบแสดงรายการข้อมูลประจำปี (One Report) 2568</div>
+                            <div class="download-desc">รูปแบบ PDF (ภาษาไทย) - ขนาด 7.9 MB</div>
+                        </div>
+                    </div>
+                    <a href="ukem-or-2025-th.pdf" target="_blank" class="btn-download">
+                        
+                        ดาวน์โหลด
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <main-footer></main-footer>
+</body>
+</html>

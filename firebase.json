@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/*.exe",
+      "**/*.ps1",
+      "**/*.pb",
+      ".agent/**",
+      "import easyocr.py",
+      "sync_github.ps1"
+    ]
+  }
+}

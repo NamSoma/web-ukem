@@ -1,0 +1,17 @@
+﻿<header class="inner-hero" style="background-image: url('../assets/รูปสังคม/ปกสังคม.png'); background-size: cover; background-position: center;">
+        <div class="inner-hero-content" style="position: relative; z-index: 2;">
+            <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">นโยบายและการปฏิบัติด้านสังคม</h1>
+            <div class="inner-breadcrumb">
+                <a href="../index.html">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    &#3627;&#3609;&#3657;&#3634;&#3627;&#3621;&#3633;&#3585;
+                </a>
+                <a href="#">สังคม</a>
+                <span>&gt;</span>
+                <span>นโยบายและการปฏิบัติด้านสังคม</span>
+            </div>
+        </div>
+        <a href="#content-start" class="scroll-down-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+    </header>

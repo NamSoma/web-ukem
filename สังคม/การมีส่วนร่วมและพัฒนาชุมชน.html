@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การมีส่วนร่วมและพัฒนาชุมชน - UKEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../components/Navbar.js" defer></script>
+    <script src="../components/Footer.js" defer></script>
+    <script src="../components/InnerHero.js" defer></script>
+    <script src="../components/SectionHeader.js" defer></script>
+    <script src="../components/CardGrid.js" defer></script>
+    <style>
+        .intro-container {
+            display: flex;
+            gap: 30px;
+            align-items: stretch;
+            margin-bottom: 40px;
+        }
+        .intro-text-box {
+            flex: 1;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            padding: 30px;
+            background: #f8fafc;
+            border-radius: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .intro-image {
+            flex: 1;
+            border-radius: 0px;
+            overflow: hidden;
+            box-shadow: none;
+        }
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .intro-container { flex-direction: column; }
+            .intro-image { height: 250px; }
+        }
+
+        /* PDCA Grid */
+        .pdca-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .process-box {
+            background: #fff;
+            border-radius: 0px;
+            padding: 35px 30px;
+            box-shadow: none;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .process-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary-light));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .process-box:hover {
+            transform: translateY(-5px);
+            box-shadow: none;
+        }
+        .process-box:hover::before {
+            opacity: 1;
+        }
+        .process-box h4 {
+            color: var(--primary);
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .process-box h4::before {
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(76, 175, 80, 0.1);
+        }
+        .styled-list {
+            padding-left: 20px;
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .styled-list li {
+            margin-bottom: 10px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 0px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-img-wrapper {
+            height: 220px;
+            overflow: hidden;
+        }
+        .project-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .project-img-wrapper img {
+            transform: scale(1.05);
+        }
+        .project-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-content h3 {
+            color: var(--primary);
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .project-content p {
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <main-nav depth="1"></main-nav>
+
+    <inner-hero 
+        title="กิจกรรมเพื่อสังคมและการมีส่วนร่วมในชุมชน" 
+        image-url="../assets/รูปสังคม/ชุมชน.png">
+    </inner-hero>
+
+    <main style="position: relative; overflow: hidden; padding-bottom: 60px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px;">
+            <div class="intro-container">
+                <div class="intro-text-box">
+                    <strong style="display: block; margin-bottom: 15px;">ภาพรวมกิจกรรมเพื่อสังคมและการมีส่วนร่วมในชุมชน</strong>
+                    <p style="margin-bottom: 15px;">ในภาคอุตสาหกรรมเคมีภัณฑ์ การดำเนินธุรกิจอย่างยั่งยืนไม่ได้หมายถึงเพียงการพัฒนาเทคโนโลยีการผลิตที่เป็นมิตรต่อสิ่งแวดล้อมหรือการบริหารจัดการทรัพยากรอย่างมีประสิทธิภาพเท่านั้น แต่ยังครอบคลุมถึงความรับผิดชอบต่อสังคมและการมีส่วนร่วมในการพัฒนาชุมชนอย่างยั่งยืน ในบริบทของการดำเนินธุรกิจตามหลัก ESG (Environmental, Social, and Governance)</p>
+                    <p><span style="white-space: nowrap;">บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน)</span> ตระหนักถึงบทบาทในการสร้างผลกระทบเชิงบวกต่อสังคม ผ่านการดำเนินโครงการต่างๆ ที่มุ่งเน้นการยกระดับคุณภาพชีวิตของชุมชนรอบข้าง การส่งเสริมการศึกษาด้านสิ่งแวดล้อมและความปลอดภัย รวมถึงการสนับสนุนกิจกรรมทางสังคมที่ช่วยลดผลกระทบจากการดำเนินธุรกิจ</p>
+                </div>
+                <div class="intro-image">
+                    <img src="../assets/รูปสังคม/ชุมชน.png" alt="การมีส่วนร่วมและพัฒนาชุมชน">
+                </div>
+            </div>
+
+            <section-header title="แนวทางการบริหารจัดการ"></section-header>
+                <p class="text-body" style="line-height: 1.8; color: var(--text-muted); margin-bottom: 30px;">
+                    <span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญกับการดำเนินกิจกรรมเพื่อสังคม (CSR) และการมีส่วนร่วมกับชุมชนในพื้นที่ดำเนินธุรกิจอย่างจริงจังและต่อเนื่อง เพื่อสร้างความสัมพันธ์ที่ดีระหว่างองค์กรกับชุมชน รวมถึงลดผลกระทบและสร้างคุณค่าร่วม (Creating Shared Value) ทั้งในด้านเศรษฐกิจ สังคม และสิ่งแวดล้อม โดยใช้หลักการบริหารจัดการแบบ PDCA เป็นกรอบแนวทางในการดำเนินงานเพื่อให้เกิดความยั่งยืนและปรับปรุงอย่างต่อเนื่อง
+                </p>
+
+                <div class="pdca-grid">
+                    <div class="process-box">
+                        <h4>1) การวางแผน (Plan)</h4>
+                        <p><strong>1.1) ศึกษาบริบทของชุมชน</strong></p>
+                        <ul class="styled-list">
+                            <li>วิเคราะห์พื้นที่รอบสถานประกอบการหรือที่เกี่ยวข้องกับห่วงโซ่อุปทาน</li>
+                            <li>รับฟังข้อมูลจากผู้มีส่วนได้ส่วนเสีย เช่น ผู้นำชุมชน องค์กรปกครองส่วนท้องถิ่น โรงเรียน เพื่อรวบรวมข้อมูล หรือร่วมดำเนินกิจกรรม</li>
+                        </ul>
+                        <p><strong>1.2) สร้างความร่วมมือกับพันธมิตร</strong></p>
+                        <ul class="styled-list">
+                            <li>บูรณาการการทำงานร่วมกับหน่วยงานภาครัฐ เอกชน หรือองค์กรไม่แสวงหากำไร (NGOs) เพื่อขยายผลและสร้างผลลัพธ์ที่ยั่งยืน</li>
+                        </ul>
+                    </div>
+
+                    <div class="process-box">
+                        <h4>2) การดำเนินงาน (Do)</h4>
+                        <p><strong>2.1) ลงมือปฏิบัติและดำเนินกิจกรรม</strong></p>
+                        <ul class="styled-list">
+                            <li>ดำเนินการตามแผนที่กำหนดไว้ โดยเน้นการมีส่วนร่วมของพนักงานและคนในชุมชน</li>
+                            <li>จัดสรรทรัพยากร ทั้งงบประมาณ บุคลากร และเวลา อย่างเหมาะสมและโปร่งใส</li>
+                        </ul>
+                        <p><strong>2.2) สื่อสารและสร้างความเข้าใจ</strong></p>
+                        <ul class="styled-list">
+                            <li>สื่อสารให้ผู้มีส่วนได้ส่วนเสียรับทราบถึงวัตถุประสงค์ ขั้นตอน และผลประโยชน์ของกิจกรรมอย่างต่อเนื่อง</li>
+                        </ul>
+                    </div>
+
+                    <div class="process-box">
+                        <h4>3) ตรวจสอบและประเมินผล (Check)</h4>
+                        <p><strong>3.1) ติดตามความคืบหน้าและตรวจสอบผลการดำเนินงาน</strong></p>
+                        <ul class="styled-list">
+                            <li>ตรวจสอบความสอดคล้องของกิจกรรมกับแผนงาน</li>
+                            <li>ประเมินผลลัพธ์ที่เกิดขึ้นในเชิงปริมาณและคุณภาพ เช่น จำนวนผู้เข้าร่วม ระดับความพึงพอใจ การเปลี่ยนแปลงเชิงพฤติกรรม</li>
+                        </ul>
+                        <p><strong>3.2) จัดทำรายงานและสรุปผลการดำเนินงาน</strong></p>
+                        <ul class="styled-list">
+                            <li>สื่อสารผลต่อฝ่ายบริหาร และผู้มีส่วนได้ส่วนเสียที่เกี่ยวข้อง</li>
+                            <li>หากมีปัญหา ต้องระบุสาเหตุและแนวทางปรับปรุง</li>
+                        </ul>
+                    </div>
+
+                    <div class="process-box">
+                        <h4>4) ปรับปรุงและพัฒนา (Act)</h4>
+                        <p><strong>4.1) สรุปบทเรียนและข้อเสนอแนะ</strong></p>
+                        <ul class="styled-list">
+                            <li>รวบรวมข้อคิดเห็นจากผู้เข้าร่วมกิจกรรม ชุมชน และทีมงาน เพื่อนำมาวิเคราะห์เป็นแนวทางปรับปรุงในอนาคต</li>
+                        </ul>
+                        <p><strong>4.2) ปรับปรุงแผนงานในรอบถัดไป</strong></p>
+                        <ul class="styled-list">
+                            <li>นำข้อมูลจากการประเมินมาทบทวนและปรับปรุงกระบวนการวางแผน เช่น ขยายขอบเขตโครงการ เพิ่มความลึกของกิจกรรม หรือเปลี่ยนวิธีการดำเนินงาน</li>
+                        </ul>
+                        <p><strong>4.3) บูรณาการเข้ากับกลยุทธ์องค์กร</strong></p>
+                        <ul class="styled-list">
+                            <li>ส่งต่อข้อมูลและผลลัพธ์เข้าสู่แผนกลยุทธ์ด้าน ESG/CSR เพื่อให้การดำเนินงานมีทิศทางและเป้าหมายระยะยาวร่วมกับองค์กร</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section-header title="โครงการและกิจกรรม"></section-header>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="../assets/รูปสังคม/S__21028968_0.jpg" alt="โครงการสนับสนุนการพัฒนาเส้นทางสัญจร">
+                        </div>
+                        <div class="project-content">
+                            <h3>1. โครงการสนับสนุนการพัฒนาเส้นทางสัญจรและซ่อมแซมพื้นที่ชำรุดในแหล่งชุมชน</h3>
+                            <p><span style="white-space: nowrap;">บริษัทฯ</span> มุ่งเน้นการยกระดับคุณภาพชีวิตและความปลอดภัยของชุมชนโดยรอบสถานประกอบการ จึงได้ดำเนินโครงการปรับปรุงผิวจราจรและเทพื้นคอนกรีตบริเวณพื้นที่คลังสินค้าสุขสวัสดิ์ (ปากซอย 19) เพื่อซ่อมแซมส่วนที่ชำรุดเสียหายและเป็นหลุมเป็นบ่อ การดำเนินงานครั้งนี้ไม่เพียงแต่ช่วยเพิ่มประสิทธิภาพในการขนส่ง แต่ยังมุ่งหวังให้ประชาชนในชุมชนที่ใช้เส้นทางดังกล่าวสามารถสัญจรได้อย่างสะดวกและปลอดภัย ลดความเสี่ยงในการเกิดอุบัติเหตุจากการเดินทาง</p>
+                            <div class="text-small" style="text-align: right; margin-top: 15px;  color: #6c757d;">
+                                <span style="display: inline-flex; align-items: center; gap: 5px;">
+                                    
+                                    ปี 2568
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="../assets/รูปสังคม/235367.jpg" alt="โครงการ ปันน้ำใจ ห่วงใยจากใจเรา">
+                        </div>
+                        <div class="project-content">
+                            <h3>2. โครงการ ปันน้ำใจ ห่วงใยจากใจเรา</h3>
+                            <p><span style="white-space: nowrap;">บริษัทฯ</span> ร่วมสนับสนุนปัจจัยพื้นฐานและสิ่งของอุปโภคบริโภคที่จำเป็น ให้แก่หน่วยปฏิบัติการในพื้นที่ชายแดนไทย เพื่อแทนความห่วงใยและเสริมสร้างขวัญกำลังใจแก่เจ้าหน้าที่ผู้เสียสละในการดูแลความสงบเรียบร้อยตามแนวชายแดน พร้อมทั้งมุ่งหวังเป็นส่วนหนึ่งในการบรรเทาความเดือดร้อนและส่งต่อความช่วยเหลือแก่ผู้ที่ได้รับผลกระทบในพื้นที่สงคราม</p>
+                            <div class="text-small" style="text-align: right; margin-top: 15px;  color: #6c757d;">
+                                <span style="display: inline-flex; align-items: center; gap: 5px;">
+                                    
+                                    ปี 2568
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="../assets/รูปสังคม/396943_0.jpg" alt="สนับสนุนกิจกรรม 7 วัน อันตราย ช่วงเทศกาลปีใหม่">
+                        </div>
+                        <div class="project-content">
+                            <h3>3. สนับสนุนกิจกรรม 7 วัน อันตราย ช่วงเทศกาลปีใหม่</h3>
+                            <p><span style="white-space: nowrap;">บริษัทฯ</span> ตระหนักถึงความปลอดภัยในการเดินทางของประชาชนในช่วงเทศกาล จึงได้สนับสนุนสิ่งอุปโภคบริโภคที่จำเป็นให้แก่เจ้าหน้าที่เทศบาลตะเคียนเตี้ย ณ จุดบริการประชาชน เพื่ออำนวยความสะดวกและเสริมสร้างขวัญกำลังใจให้แก่เจ้าหน้าที่ในการปฏิบัติงานช่วง 7 วันอันตราย กิจกรรมนี้มุ่งหวังที่จะเป็นส่วนหนึ่งในการลดอุบัติเหตุและดูแลความปลอดภัยแก่ผู้สัญจรบนท้องถนน เพื่อให้ทุกคนเดินทางกลับภูมิลำเนาและท่องเที่ยวอย่างมีความสุขและปลอดภัย</p>
+                            <div class="text-small" style="text-align: right; margin-top: 15px;  color: #6c757d;">
+                                <span style="display: inline-flex; align-items: center; gap: 5px;">
+                                    
+                                    ปี 2568
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main-footer depth="1"></main-footer>
+</body>
+</html>
+
+
+
+
