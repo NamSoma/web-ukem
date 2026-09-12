@@ -138,21 +138,6 @@
             </div>
             
             <style>
-                .safety-stats-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                    gap: 20px;
-                    margin-top: 40px;
-                    margin-bottom: 40px;
-                }
-                .safety-stat-card {
-                    background: white;
-                    border-radius: 0px;
-                    padding: 25px 20px;
-                    text-align: center;
-                    border: 1px solid #e2e8f0;
-                    box-shadow: none;
-                }
                 .safety-stat-value {
                     font-size: 36px;
                     font-weight: 700;
@@ -163,17 +148,17 @@
                     color: #64748b;
                 }
             </style>
-            <div class="safety-stats-grid">
-                <div class="safety-stat-card" style="border-top: 3px solid #10b981;">
-                    <div class="safety-stat-value" style="color: #10b981;">0</div>
+            <card-grid style="margin-top: 40px; margin-bottom: 40px;">
+                <div class="card-item-blue" style="text-align: center;">
+                    <div class="safety-stat-value" style="color: var(--primary);">0</div>
                     <div class="safety-stat-label">อัตราความถี่ของการบาดเจ็บจากการทำงาน (LTIFR)</div>
                     <div class="safety-stat-label" style="font-size: 12px; margin-top: 5px;">(ต่อ 1,000,000 ชั่วโมงการทำงาน)</div>
                 </div>
-                <div class="safety-stat-card" style="border-top: 3px solid #10b981;">
-                    <div class="safety-stat-value" style="color: #10b981;">0</div>
+                <div class="card-item-blue" style="text-align: center;">
+                    <div class="safety-stat-value" style="color: var(--primary);">0</div>
                     <div class="safety-stat-label">จำนวนผู้เสียชีวิตจากการทำงาน (ราย)</div>
                 </div>
-            </div>
+            </card-grid>
 
             <section-header title="โครงการและกิจกรรมที่เกี่ยวข้อง"></section-header>
             <div class="project-grid">

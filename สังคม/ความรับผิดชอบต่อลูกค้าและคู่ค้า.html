@@ -12,75 +12,6 @@
     <script src="../components/SectionHeader.js" defer></script>
     <script src="../components/CardGrid.js" defer></script>
     <style>
-        /* Background styling matching Social section */
-        
-
-        .customer-policy-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 40px;
-        }
-        
-        .policy-card {
-            background: var(--bg-light);
-            border-radius: 0px;
-            padding: 30px 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.03);
-            box-shadow: none;
-            flex: 1 1 290px;
-            max-width: 310px;
-            box-sizing: border-box;
-        }
-        
-        .policy-card:hover {
-            transform: translateY(-8px);
-            box-shadow: none;
-            border-color: rgba(76, 175, 80, 0.2); /* secondary color */
-        }
-        
-        .policy-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            box-shadow: none;
-            transition: all 0.3s ease;
-        }
-        
-        .policy-card:hover .policy-icon {
-            background: var(--secondary);
-            color: var(--white);
-            transform: scale(1.1);
-        }
-        
-        .policy-card p {
-            margin: 0;
-            font-size: 18px;
-            line-height: 1.7;
-            color: var(--text-muted);
-        }
-        
-        .policy-card strong {
-            display: block;
-            color: var(--primary);
-            font-size: 18px;
-            margin-bottom: 12px;
-            font-family: 'Outfit', 'Kanit', sans-serif;
-            font-weight: 600;
-        }
-    
         .content-section {
             max-width: 1100px;
             padding: 60px;
@@ -126,22 +57,22 @@
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px;">
             <section-header title="ผลการดำเนินงานด้านลูกค้า ปี 2568"></section-header>
             
-            <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 40px;">
-                <div class="stat-card">
+            <card-grid style="margin-bottom: 40px;">
+                <div class="card-item">
                     <div class="stat-title">ความพึงพอใจโดยรวมของลูกค้า</div>
                     <div class="stat-value">90%</div>
                     <div class="stat-desc">เป้าหมายปี 2572: <strong style="color: var(--primary);">95%</strong><br>วัดจากผลิตภัณฑ์และบริการของ<span style="white-space: nowrap;">บริษัทฯ</span></div>
                 </div>
-                <div class="stat-card blue">
+                <div class="card-item">
                     <div class="stat-title">ข้อร้องเรียนการละเมิดข้อมูล (PDPA)</div>
                     <div class="stat-value">0 <span class="text-body-lg" style="color: var(--text-muted); font-weight: 400;">กรณี</span></div>
                     <div class="stat-desc">สะท้อนความสำเร็จในการปกป้องข้อมูลส่วนบุคคลของลูกค้าอย่างเข้มงวด</div>
                 </div>
-            </div>
+            </card-grid>
 
             <section-header title="กระบวนการจัดการข้อร้องเรียนของลูกค้าอย่างเป็นระบบ"></section-header>
             <p style="color: var(--text-muted); margin-bottom: 20px;"><span style="white-space: nowrap;">บริษัทฯ</span> ได้จัดทำกระบวนการรับข้อร้องเรียนที่ชัดเจนใน 7 ขั้นตอน ได้แก่:</p>
-            <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 0px; padding: 30px;  margin-bottom: 60px;">
+            <div class="card-item-blue" style="padding: 30px; margin-bottom: 60px;">
                 <ol style="margin: 0; padding-left: 20px; color: var(--text-main); line-height: 1.8;">
                     <li style="margin-bottom: 10px;"><strong>รับเรื่องร้องเรียน:</strong> ผ่านช่องทางฝ่ายขาย, LINE, Email โดยบันทึกข้อมูลเบื้องต้นครบถ้วน</li>
                     <li style="margin-bottom: 10px;"><strong>วิเคราะห์ปัญหา:</strong> ตรวจสอบข้อมูลเอกสาร ใบสั่งซื้อ ใบส่งสินค้า COA หรือ SPEC</li>
@@ -156,65 +87,56 @@
             <!-- Partner Section -->
             <section-header title="ความรับผิดชอบต่อคู่ค้า เจ้าหนี้ คู่แข่ง"></section-header>
 
-            <div class="customer-policy-grid">
+            <card-grid>
                 <!-- Card 1: คู่ค้า -->
-                <div class="policy-card">
-                    <div class="policy-icon">
-                        
-                    </div>
-                    <strong>คู่ค้า</strong>
-                    <p><span style="white-space: nowrap;">บริษัทฯ</span> ยึดถือข้อปฏิบัติทางสัญญาที่เป็นธรรมกับคู่ค้า ปฏิบัติตามมาตรการต่อต้านการทุจริต<span style="white-space: nowrap;">คอร์รัปชั่น</span>ที่กำหนดไว้ เคารพต่อสิทธิในทรัพย์สินหรือกรรมสิทธิ์ของคู่ค้า ไม่เอารัดเอาเปรียบต่อคู่ค้า และส่งเสริมให้คู่ค้าดำเนินกิจกรรม<span style="white-space: nowrap;">ความรับผิดชอบ</span>ต่อสังคมร่วมกันกับ<span style="white-space: nowrap;">บริษัทฯ</span></p>
+                <div class="card-item">
+                    <strong style="display: block; color: var(--primary); font-size: 18px; margin-bottom: 12px; font-weight: 600;">คู่ค้า</strong>
+                    <p style="margin: 0; font-size: 18px; line-height: 1.7; color: var(--text-muted);"><span style="white-space: nowrap;">บริษัทฯ</span> ยึดถือข้อปฏิบัติทางสัญญาที่เป็นธรรมกับคู่ค้า ปฏิบัติตามมาตรการต่อต้านการทุจริต<span style="white-space: nowrap;">คอร์รัปชั่น</span>ที่กำหนดไว้ เคารพต่อสิทธิในทรัพย์สินหรือกรรมสิทธิ์ของคู่ค้า ไม่เอารัดเอาเปรียบต่อคู่ค้า และส่งเสริมให้คู่ค้าดำเนินกิจกรรม<span style="white-space: nowrap;">ความรับผิดชอบ</span>ต่อสังคมร่วมกันกับ<span style="white-space: nowrap;">บริษัทฯ</span></p>
                 </div>
                 <!-- Card 2: เจ้าหนี้ -->
-                <div class="policy-card">
-                    <div class="policy-icon">
-                        
-                    </div>
-                    <strong>เจ้าหนี้</strong>
-                    <p><span style="white-space: nowrap;">บริษัทฯ</span> ปฏิบัติตามข้อตกลงที่มีกับเจ้าหนี้ในด้านต่างๆ ในกรณีที่<span style="white-space: nowrap;">บริษัทฯ</span>ไม่สามารถชำระหนี้ตามกำหนดได้ <span style="white-space: nowrap;">บริษัทฯ</span> จะแจ้งเจ้าหนี้เพื่อร่วมกันหาทางแก้ไข</p>
+                <div class="card-item">
+                    <strong style="display: block; color: var(--primary); font-size: 18px; margin-bottom: 12px; font-weight: 600;">เจ้าหนี้</strong>
+                    <p style="margin: 0; font-size: 18px; line-height: 1.7; color: var(--text-muted);"><span style="white-space: nowrap;">บริษัทฯ</span> ปฏิบัติตามข้อตกลงที่มีกับเจ้าหนี้ในด้านต่างๆ ในกรณีที่<span style="white-space: nowrap;">บริษัทฯ</span>ไม่สามารถชำระหนี้ตามกำหนดได้ <span style="white-space: nowrap;">บริษัทฯ</span> จะแจ้งเจ้าหนี้เพื่อร่วมกันหาทางแก้ไข</p>
                 </div>
                 <!-- Card 3: คู่แข่ง -->
-                <div class="policy-card">
-                    <div class="policy-icon">
-                        
-                    </div>
-                    <strong>คู่แข่ง</strong>
-                    <p><span style="white-space: nowrap;">บริษัทฯ</span> ดำเนินการแข่งขันทางธุรกิจอย่างเป็นธรรมไม่ใช้วิธีกลั่นแกล้ง กีดกัน หรือดำเนินการใด ๆ ที่ต้องห้ามตามกฎหมายเพื่อมิให้เกิดการแข่งขันอย่างไม่เป็นธรรม</p>
+                <div class="card-item">
+                    <strong style="display: block; color: var(--primary); font-size: 18px; margin-bottom: 12px; font-weight: 600;">คู่แข่ง</strong>
+                    <p style="margin: 0; font-size: 18px; line-height: 1.7; color: var(--text-muted);"><span style="white-space: nowrap;">บริษัทฯ</span> ดำเนินการแข่งขันทางธุรกิจอย่างเป็นธรรมไม่ใช้วิธีกลั่นแกล้ง กีดกัน หรือดำเนินการใด ๆ ที่ต้องห้ามตามกฎหมายเพื่อมิให้เกิดการแข่งขันอย่างไม่เป็นธรรม</p>
                 </div>
-            </div>
+            </card-grid>
 
             <!-- Supplier Evaluation Section -->
             <section-header title="วิธีการคัดเลือกและเกณฑ์การประเมินคู่ค้า"></section-header>
             <p style="color: var(--text-muted); margin-bottom: 30px;"><span style="white-space: nowrap;">บริษัทฯ</span> มุ่งเน้นการคัดเลือกคู่ค้าที่มีศักยภาพและดำเนินธุรกิจอย่างมีความรับผิดชอบ โดยมีเกณฑ์การพิจารณาดังนี้:</p>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                <div style="background: #fff; padding: 25px; border-radius: 0px; border: 1px solid rgba(0,0,0,0.05); box-shadow: none; transition: transform 0.3s;">
+            <card-grid>
+                <div class="card-item">
                     <div class="text-h3" style="color: var(--secondary); font-weight: 700;  margin-bottom: 15px; font-family: 'Outfit', sans-serif;">01</div>
                     <p class="text-body" style="margin: 0;  color: var(--text-muted); line-height: 1.6;">มีประวัติการดำเนินงานและการเงินที่เชื่อถือได้ รวมทั้งศักยภาพที่จะเติบโตไปพร้อมกับ<span style="white-space: nowrap;">บริษัทฯ</span> ได้ในระยะยาว</p>
                 </div>
-                <div style="background: #fff; padding: 25px; border-radius: 0px; border: 1px solid rgba(0,0,0,0.05); box-shadow: none; transition: transform 0.3s;">
+                <div class="card-item">
                     <div class="text-h3" style="color: var(--secondary); font-weight: 700;  margin-bottom: 15px; font-family: 'Outfit', sans-serif;">02</div>
                     <p class="text-body" style="margin: 0;  color: var(--text-muted); line-height: 1.6;">ผลิตหรือจำหน่ายสินค้าหรือให้บริการที่มีคุณภาพ ตรงกับความต้องการทั้งด้านปริมาณและราคา และสามารถตรวจสอบคุณภาพได้</p>
                 </div>
-                <div style="background: #fff; padding: 25px; border-radius: 0px; border: 1px solid rgba(0,0,0,0.05); box-shadow: none; transition: transform 0.3s;">
+                <div class="card-item">
                     <div class="text-h3" style="color: var(--secondary); font-weight: 700;  margin-bottom: 15px; font-family: 'Outfit', sans-serif;">03</div>
                     <p class="text-body" style="margin: 0;  color: var(--text-muted); line-height: 1.6;">ประเมินความตรงต่อเวลาในการส่งมอบงานสินค้าและบริการ</p>
                 </div>
-                <div style="background: #fff; padding: 25px; border-radius: 0px; border: 1px solid rgba(0,0,0,0.05); box-shadow: none; transition: transform 0.3s;">
+                <div class="card-item">
                     <div class="text-h3" style="color: var(--secondary); font-weight: 700;  margin-bottom: 15px; font-family: 'Outfit', sans-serif;">04</div>
                     <p class="text-body" style="margin: 0;  color: var(--text-muted); line-height: 1.6;">ประเมินความสามารถในการประสานงาน การแก้ไขปัญหาและความพร้อมของทีมงาน</p>
                 </div>
-                <div style="background: #fff; padding: 25px; border-radius: 0px; border: 1px solid rgba(0,0,0,0.05); box-shadow: none; transition: transform 0.3s;">
+                <div class="card-item">
                     <div class="text-h3" style="color: var(--secondary); font-weight: 700;  margin-bottom: 15px; font-family: 'Outfit', sans-serif;">05</div>
                     <p class="text-body" style="margin: 0;  color: var(--text-muted); line-height: 1.6;">วางแผนประเมินความเสี่ยงด้านสิทธิมนุษยชน (Human Rights Due Deligence) จากการดำเนินงานของคู่ค้ารายสำคัญ</p>
                 </div>
-                <div style="background: #fff; padding: 25px; border-radius: 0px; border: 1px solid rgba(0,0,0,0.05); box-shadow: none; transition: transform 0.3s;">
+                <div class="card-item">
                     <div class="text-h3" style="color: var(--secondary); font-weight: 700;  margin-bottom: 15px; font-family: 'Outfit', sans-serif;">06</div>
                     <p class="text-body" style="margin: 0;  color: var(--text-muted); line-height: 1.6;">การดำเนินธุรกิจที่รับผิดชอบต่อสิ่งแวดล้อม สังคม และธรรมาภิบาล (ESG)</p>
                 </div>
-            </div>
+            </card-grid>
             
-            <div style="margin-top: 40px; background: #ffffff; border: 1px solid #e5e7eb; padding: 25px; border-radius: 0px; ">
+            <div class="card-item" style="margin-top: 40px;">
                 <p class="text-body" style="margin: 0;  color: var(--text-main); line-height: 1.6; display: flex; gap: 15px; align-items: center;">
                     
                     <span><strong>การจัดทำจรรยาบรรณคู่ค้า:</strong> ในปี 2568 <span style="white-space: nowrap;">บริษัทฯ</span> อยู่ระหว่างการศึกษาการจัดทำ จรรยาบรรณคู่ค้า (Supplier Code of Conduct) เพื่อใช้เป็นแนวทางในการปฏิบัติและพิจารณาคู่ค้ารายใหม่และคู่ค้ารายสำคัญ ซึ่งจะมีการรายงานความคืบหน้าในปีถัดไป</span>

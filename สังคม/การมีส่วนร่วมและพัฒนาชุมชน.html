@@ -54,54 +54,7 @@
             gap: 30px;
             margin-bottom: 60px;
         }
-        .process-box {
-            background: #fff;
-            border-radius: 0px;
-            padding: 35px 30px;
-            box-shadow: none;
-            border: 1px solid rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-        .process-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--secondary), var(--primary-light));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .process-box:hover {
-            transform: translateY(-5px);
-            box-shadow: none;
-        }
-        .process-box:hover::before {
-            opacity: 1;
-        }
-        .process-box h4 {
-            color: var(--primary);
-            font-size: 22px;
-            font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .process-box h4::before {
-            content: '';
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(76, 175, 80, 0.1);
-        }
+        /* process-box styles removed */
         .styled-list {
             padding-left: 20px;
             margin: 0;
@@ -189,63 +142,71 @@
                     <span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญกับการดำเนินกิจกรรมเพื่อสังคม (CSR) และการมีส่วนร่วมกับชุมชนในพื้นที่ดำเนินธุรกิจอย่างจริงจังและต่อเนื่อง เพื่อสร้างความสัมพันธ์ที่ดีระหว่างองค์กรกับชุมชน รวมถึงลดผลกระทบและสร้างคุณค่าร่วม (Creating Shared Value) ทั้งในด้านเศรษฐกิจ สังคม และสิ่งแวดล้อม โดยใช้หลักการบริหารจัดการแบบ PDCA เป็นกรอบแนวทางในการดำเนินงานเพื่อให้เกิดความยั่งยืนและปรับปรุงอย่างต่อเนื่อง
                 </p>
 
-                <div class="pdca-grid">
-                    <div class="process-box">
-                        <h4>1) การวางแผน (Plan)</h4>
-                        <p><strong>1.1) ศึกษาบริบทของชุมชน</strong></p>
+                <card-grid style="margin-bottom: 60px;">
+                    <div class="card-item">
+                        <h4 style="color: var(--primary); font-size: 22px; font-weight: 700; margin-top: 0; margin-bottom: 25px;">1. การวางแผน (Plan)</h4>
+                        <p><strong>1.1 ศึกษาบริบทของชุมชน</strong></p>
                         <ul class="styled-list">
                             <li>วิเคราะห์พื้นที่รอบสถานประกอบการหรือที่เกี่ยวข้องกับห่วงโซ่อุปทาน</li>
                             <li>รับฟังข้อมูลจากผู้มีส่วนได้ส่วนเสีย เช่น ผู้นำชุมชน องค์กรปกครองส่วนท้องถิ่น โรงเรียน เพื่อรวบรวมข้อมูล หรือร่วมดำเนินกิจกรรม</li>
                         </ul>
-                        <p><strong>1.2) สร้างความร่วมมือกับพันธมิตร</strong></p>
+                        <p><strong>1.2 สร้างความร่วมมือกับพันธมิตร</strong></p>
                         <ul class="styled-list">
                             <li>บูรณาการการทำงานร่วมกับหน่วยงานภาครัฐ เอกชน หรือองค์กรไม่แสวงหากำไร (NGOs) เพื่อขยายผลและสร้างผลลัพธ์ที่ยั่งยืน</li>
                         </ul>
                     </div>
 
-                    <div class="process-box">
-                        <h4>2) การดำเนินงาน (Do)</h4>
-                        <p><strong>2.1) ลงมือปฏิบัติและดำเนินกิจกรรม</strong></p>
+                    <div class="card-item">
+                        <h4 style="color: var(--primary); font-size: 22px; font-weight: 700; margin-top: 0; margin-bottom: 25px;">2. การดำเนินงาน (Do)</h4>
+                        <p><strong>2.1 ลงมือปฏิบัติและดำเนินกิจกรรม</strong></p>
                         <ul class="styled-list">
                             <li>ดำเนินการตามแผนที่กำหนดไว้ โดยเน้นการมีส่วนร่วมของพนักงานและคนในชุมชน</li>
                             <li>จัดสรรทรัพยากร ทั้งงบประมาณ บุคลากร และเวลา อย่างเหมาะสมและโปร่งใส</li>
                         </ul>
-                        <p><strong>2.2) สื่อสารและสร้างความเข้าใจ</strong></p>
+                        <p><strong>2.2 สื่อสารและสร้างความเข้าใจ</strong></p>
                         <ul class="styled-list">
                             <li>สื่อสารให้ผู้มีส่วนได้ส่วนเสียรับทราบถึงวัตถุประสงค์ ขั้นตอน และผลประโยชน์ของกิจกรรมอย่างต่อเนื่อง</li>
                         </ul>
                     </div>
 
-                    <div class="process-box">
-                        <h4>3) ตรวจสอบและประเมินผล (Check)</h4>
-                        <p><strong>3.1) ติดตามความคืบหน้าและตรวจสอบผลการดำเนินงาน</strong></p>
+                    <div class="card-item">
+                        <h4 style="color: var(--primary); font-size: 22px; font-weight: 700; margin-top: 0; margin-bottom: 25px;">3. ตรวจสอบและประเมินผล (Check)</h4>
+                        <p><strong>3.1 ติดตามความคืบหน้าและตรวจสอบผลการดำเนินงาน</strong></p>
                         <ul class="styled-list">
                             <li>ตรวจสอบความสอดคล้องของกิจกรรมกับแผนงาน</li>
                             <li>ประเมินผลลัพธ์ที่เกิดขึ้นในเชิงปริมาณและคุณภาพ เช่น จำนวนผู้เข้าร่วม ระดับความพึงพอใจ การเปลี่ยนแปลงเชิงพฤติกรรม</li>
                         </ul>
-                        <p><strong>3.2) จัดทำรายงานและสรุปผลการดำเนินงาน</strong></p>
+                        <p><strong>3.2 จัดทำรายงานและสรุปผลการดำเนินงาน</strong></p>
                         <ul class="styled-list">
                             <li>สื่อสารผลต่อฝ่ายบริหาร และผู้มีส่วนได้ส่วนเสียที่เกี่ยวข้อง</li>
                             <li>หากมีปัญหา ต้องระบุสาเหตุและแนวทางปรับปรุง</li>
                         </ul>
                     </div>
 
-                    <div class="process-box">
-                        <h4>4) ปรับปรุงและพัฒนา (Act)</h4>
-                        <p><strong>4.1) สรุปบทเรียนและข้อเสนอแนะ</strong></p>
-                        <ul class="styled-list">
-                            <li>รวบรวมข้อคิดเห็นจากผู้เข้าร่วมกิจกรรม ชุมชน และทีมงาน เพื่อนำมาวิเคราะห์เป็นแนวทางปรับปรุงในอนาคต</li>
-                        </ul>
-                        <p><strong>4.2) ปรับปรุงแผนงานในรอบถัดไป</strong></p>
-                        <ul class="styled-list">
-                            <li>นำข้อมูลจากการประเมินมาทบทวนและปรับปรุงกระบวนการวางแผน เช่น ขยายขอบเขตโครงการ เพิ่มความลึกของกิจกรรม หรือเปลี่ยนวิธีการดำเนินงาน</li>
-                        </ul>
-                        <p><strong>4.3) บูรณาการเข้ากับกลยุทธ์องค์กร</strong></p>
-                        <ul class="styled-list">
-                            <li>ส่งต่อข้อมูลและผลลัพธ์เข้าสู่แผนกลยุทธ์ด้าน ESG/CSR เพื่อให้การดำเนินงานมีทิศทางและเป้าหมายระยะยาวร่วมกับองค์กร</li>
-                        </ul>
+                    <div class="card-item" style="grid-column: 1 / -1;">
+                        <h4 style="color: var(--primary); font-size: 22px; font-weight: 700; margin-top: 0; margin-bottom: 25px;">4. ปรับปรุงและพัฒนา (Act)</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                            <div>
+                                <p><strong>4.1 สรุปบทเรียนและข้อเสนอแนะ</strong></p>
+                                <ul class="styled-list">
+                                    <li>รวบรวมข้อคิดเห็นจากผู้เข้าร่วมกิจกรรม ชุมชน และทีมงาน เพื่อนำมาวิเคราะห์เป็นแนวทางปรับปรุงในอนาคต</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p><strong>4.2 ปรับปรุงแผนงานในรอบถัดไป</strong></p>
+                                <ul class="styled-list">
+                                    <li>นำข้อมูลจากการประเมินมาทบทวนและปรับปรุงกระบวนการวางแผน เช่น ขยายขอบเขตโครงการ เพิ่มความลึกของกิจกรรม หรือเปลี่ยนวิธีการดำเนินงาน</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p><strong>4.3 บูรณาการเข้ากับกลยุทธ์องค์กร</strong></p>
+                                <ul class="styled-list">
+                                    <li>ส่งต่อข้อมูลและผลลัพธ์เข้าสู่แผนกลยุทธ์ด้าน ESG/CSR เพื่อให้การดำเนินงานมีทิศทางและเป้าหมายระยะยาวร่วมกับองค์กร</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </card-grid>
 
                 <section-header title="โครงการและกิจกรรม"></section-header>
                 <div class="project-grid">
