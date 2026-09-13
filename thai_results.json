@@ -1,0 +1,322 @@
+﻿[
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\index.html",
+        "LineNumber":  77,
+        "Line":  "                \u003ca href=\"ภาพรวมความยั่งยืน/สารจากประธานกรรมการบริษัท.html\" class=\"pillar-card overview-card\" style=\"display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s ease; height: auto !important; min-height: 100%;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\index.html",
+        "LineNumber":  84,
+        "Line":  "                \u003ca href=\"สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html\" class=\"pillar-card env-card\" style=\"display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s ease; height: auto !important; min-height: 100%;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\index.html",
+        "LineNumber":  91,
+        "Line":  "                \u003ca href=\"สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html\" class=\"pillar-card soc-card\" style=\"display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s ease; height: auto !important; min-height: 100%;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\index.html",
+        "LineNumber":  98,
+        "Line":  "                \u003ca href=\"การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html\" class=\"pillar-card gov-card\" style=\"display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s ease; height: auto !important; min-height: 100%;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\index.html",
+        "LineNumber":  108,
+        "Line":  "                \u003ca href=\"รางวัลและความสำเร็จ.html\" style=\"display: inline-flex; align-items: center; gap: 10px; background: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; color: #1e293b; font-weight: 600; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.3s ease;\" onmouseover=\"this.style.transform=\u0027translateY(-3px)\u0027; this.style.boxShadow=\u00270 10px 15px rgba(0,0,0,0.05)\u0027;\" onmouseout=\"this.style.transform=\u0027translateY(0)\u0027; this.style.boxShadow=\u00270 4px 6px rgba(0,0,0,0.02)\u0027;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\index.html",
+        "LineNumber":  111,
+        "Line":  "                \u003ca href=\"ศูนย์รวมการดาวน์โหลด.html\" style=\"display: inline-flex; align-items: center; gap: 10px; background: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; color: #1e293b; font-weight: 600; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.3s ease;\" onmouseover=\"this.style.transform=\u0027translateY(-3px)\u0027; this.style.boxShadow=\u00270 10px 15px rgba(0,0,0,0.05)\u0027;\" onmouseout=\"this.style.transform=\u0027translateY(0)\u0027; this.style.boxShadow=\u00270 4px 6px rgba(0,0,0,0.02)\u0027;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\รางวัลและความสำเร็จ.html",
+        "LineNumber":  139,
+        "Line":  "    \u003cmain-nav depth=\"1\" path=\"รางวัลและความสำเร็จ.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\รางวัลและความสำเร็จ.html",
+        "LineNumber":  142,
+        "Line":  "    \u003cheader class=\"inner-hero\" style=\"background-image: url(\u0027ถ้วยรางวัล.png\u0027); background-size: cover; background-position: center; position: relative;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ศูนย์รวมการดาวน์โหลด.html",
+        "LineNumber":  14,
+        "Line":  "    \u003cmain-nav depth=\"1\" path=\"ศูนย์รวมการดาวน์โหลด.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ศูนย์รวมการดาวน์โหลด.html",
+        "LineNumber":  17,
+        "Line":  "        \u003cheader class=\"inner-hero\" style=\"background-image: url(\u0027../assets/การกำกับดูแล/financial_hero.png\u0027); background-color: #0f172a; background-size: cover; background-position: center; position: relative;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\การควบคุมภายใน.html",
+        "LineNumber":  6,
+        "Line":  "    \u003ctitle\u003eการควบคุมภายใน - UKEM\u003c/title\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\การควบคุมภายใน.html",
+        "LineNumber":  16,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\การควบคุมภายใน.html",
+        "LineNumber":  139,
+        "Line":  "        image-url=\"../assets/การกำกับดูแล/internal_control_hero.png\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\การควบคุมภายใน.html",
+        "LineNumber":  152,
+        "Line":  "                    \u003cimg src=\"../../assets/การกำกับดูแล/coso_framework.png\" alt=\"COSO Framework Concept\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\การบริหารจัดการความเสี่ยง.html",
+        "LineNumber":  6,
+        "Line":  "    \u003ctitle\u003eการบริหารจัดการความเสี่ยง - UKEM\u003c/title\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\การบริหารจัดการความเสี่ยง.html",
+        "LineNumber":  16,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\การบริหารจัดการความเสี่ยง.html",
+        "LineNumber":  20,
+        "Line":  "        image-url=\"../assets/การกำกับดูแล/risk_management_hero.png\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\ข้อมูลทางการเงิน.html",
+        "LineNumber":  16,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\ข้อมูลทางการเงิน.html",
+        "LineNumber":  71,
+        "Line":  "        image-url=\"../assets/การกำกับดูแล/financial_hero.png\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\ข้อมูลทางการเงิน.html",
+        "LineNumber":  81,
+        "Line":  "                \u003c!-- ยอดขาย (EBITDA) --\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\ข้อมูลทางการเงิน.html",
+        "LineNumber":  93,
+        "Line":  "                \u003c!-- กำไรสุทธิ --\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\ข้อมูลทางการเงิน.html",
+        "LineNumber":  105,
+        "Line":  "                \u003c!-- กำไรสุทธิต่อหุ้น --\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\นโยบายการกำกับดูแลกิจการ.html",
+        "LineNumber":  6,
+        "Line":  "    \u003ctitle\u003eนโยบายการกำกับดูแลกิจการ - UKEM\u003c/title\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\นโยบายการกำกับดูแลกิจการ.html",
+        "LineNumber":  36,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\นโยบายการกำกับดูแลกิจการ.html",
+        "LineNumber":  40,
+        "Line":  "        image-url=\"../assets/การกำกับดูแล/policy_intro.png\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\โครงสร้างการกำกับดูแลกิจการ.html",
+        "LineNumber":  264,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"การกำกับดูแลและเศรษฐกิจ/โครงสร้างการกำกับดูแลกิจการ.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\การกำกับดูแลและเศรษฐกิจ\\โครงสร้างการกำกับดูแลกิจการ.html",
+        "LineNumber":  267,
+        "Line":  "        image-url=\"../assets/การกำกับดูแล/policy_intro.png\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html",
+        "LineNumber":  77,
+        "Line":  "        /* ย่อขนาดเฉพาะกล่องเลขาฯ ด้านข้าง */"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html",
+        "LineNumber":  145,
+        "Line":  "        /* Styles from ห่วงโซ่คุณค่าของธุรกิจ.html */"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html",
+        "LineNumber":  252,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"ภาพรวมความยั่งยืน/การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html",
+        "LineNumber":  267,
+        "Line":  "                    \u003cimg src=\"../../assets/รูปภาพรวมความยั่งยืน/การขับเคลื่อนธุรกิจเพื่อความยั่งยืน/ประชุม.jpg\" alt=\"ภาพถ่ายการประชุมและทีมงาน\" style=\"width: 100%; height: 320px; object-fit: cover; border-radius: 0px; box-shadow: none;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html",
+        "LineNumber":  346,
+        "Line":  "                        \u003cimg src=\"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\" alt=\"Infographic กรอบการทำงานด้านความยั่งยืน\" style=\"max-width: 100%; height: auto; border-radius: 0px; display: block;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\การประเมินประเด็นด้านความยั่งยืนที่สำคัญ.html",
+        "LineNumber":  18,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"ภาพรวมความยั่งยืน/การประเมินประเด็นด้านความยั่งยืนที่สำคัญ.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\สารจากประธานกรรมการบริษัท.html",
+        "LineNumber":  17,
+        "Line":  "            background-image: url(\u0027../../assets/รูปภาพรวมความยั่งยืน/สารจากประธาน/tank_ult_clear.png\u0027);"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\สารจากประธานกรรมการบริษัท.html",
+        "LineNumber":  163,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"ภาพรวมความยั่งยืน/สารจากประธานกรรมการบริษัท.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\สารจากประธานกรรมการบริษัท.html",
+        "LineNumber":  171,
+        "Line":  "                \u003cimg src=\"../../assets/รูปภาพรวมความยั่งยืน/สารจากประธาน/คุณพละ-clear.png\" alt=\"Chairman\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\สารจากประธานกรรมการบริษัท.html",
+        "LineNumber":  192,
+        "Line":  "                    \u003cimg src=\"../../assets/รูปภาพรวมความยั่งยืน/สารจากประธาน/ลายเซ็นคุณพละ-clear.png\" alt=\"Signature\" style=\"width: 220px; margin-top: -40px; margin-bottom: -60px; mix-blend-mode: multiply; filter: contrast(1.2);\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\ภาพรวมความยั่งยืน\\ห่วงโซ่คุณค่าของธุรกิจ.html",
+        "LineNumber":  191,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"ภาพรวมความยั่งยืน/ห่วงโซ่คุณค่าของธุรกิจ.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\การมีส่วนร่วมและพัฒนาชุมชน.html",
+        "LineNumber":  120,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\การมีส่วนร่วมและพัฒนาชุมชน.html",
+        "LineNumber":  124,
+        "Line":  "        image-url=\"../assets/รูปสังคม/ชุมชน.png\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\การมีส่วนร่วมและพัฒนาชุมชน.html",
+        "LineNumber":  136,
+        "Line":  "                    \u003cimg src=\"../../assets/รูปสังคม/ชุมชน.png\" alt=\"Community Engagement and Development\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\การมีส่วนร่วมและพัฒนาชุมชน.html",
+        "LineNumber":  215,
+        "Line":  "                            \u003cimg src=\"../../assets/รูปสังคม/S__21028968_0.jpg\" alt=\"Traffic Route Improvement Project\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\การมีส่วนร่วมและพัฒนาชุมชน.html",
+        "LineNumber":  231,
+        "Line":  "                            \u003cimg src=\"../../assets/รูปสังคม/235367.jpg\" alt=\"Sharing Kindness, Caring From Our Hearts Project\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\การมีส่วนร่วมและพัฒนาชุมชน.html",
+        "LineNumber":  247,
+        "Line":  "                            \u003cimg src=\"../../assets/รูปสังคม/396943_0.jpg\" alt=\"Supporting 7 Dangerous Days Activity During New Year\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\ความรับผิดชอบต่อลูกค้าและคู่ค้า.html",
+        "LineNumber":  49,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"สังคม/ความรับผิดชอบต่อลูกค้าและคู่ค้า.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\ความรับผิดชอบต่อลูกค้าและคู่ค้า.html",
+        "LineNumber":  53,
+        "Line":  "        image-url=\"../assets/รูปสังคม/ลูกค้า.png\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\นโยบายและการปฏิบัติด้านสังคม.html",
+        "LineNumber":  18,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"สังคม/นโยบายและการปฏิบัติด้านสังคม.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\นโยบายและการปฏิบัติด้านสังคม.html",
+        "LineNumber":  20,
+        "Line":  "        \u003cinner-hero title=\"Social Policy and Practices\" bg-image=\"../assets/รูปสังคม/ปกสังคม.png\"\u003e\u003c/inner-hero\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\นโยบายและการปฏิบัติด้านสังคม.html",
+        "LineNumber":  55,
+        "Line":  "                \u003cimg src=\"../../assets/รูปสังคม/แรงงาน.png\" alt=\"Safe Labor\" style=\"width: 100%; height: auto; display: block; max-height: 400px; object-fit: cover;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\นโยบายและการปฏิบัติด้านสังคม.html",
+        "LineNumber":  72,
+        "Line":  "                \u003cimg src=\"../../assets/รูปสังคม/ลูกค้า.png\" alt=\"Responsibility to Customers\" style=\"width: 100%; height: auto; display: block; max-height: 400px; object-fit: cover;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\นโยบายและการปฏิบัติด้านสังคม.html",
+        "LineNumber":  96,
+        "Line":  "                \u003cimg src=\"../../assets/รูปสังคม/ชุมชน.png\" alt=\"Community or Social Development Participation\" style=\"width: 100%; height: auto; display: block; max-height: 400px; object-fit: cover;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html",
+        "LineNumber":  29,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html",
+        "LineNumber":  33,
+        "Line":  "        image-url=\"../assets/รูปสังคม/แรงงาน.png\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\อาชีวอนามัยและความปลอดภัย.html",
+        "LineNumber":  102,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"สังคม/อาชีวอนามัยและความปลอดภัย.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\อาชีวอนามัยและความปลอดภัย.html",
+        "LineNumber":  106,
+        "Line":  "        image-url=\"../assets/รูปสังคม/health_and_safety_cover.png\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\อาชีวอนามัยและความปลอดภัย.html",
+        "LineNumber":  167,
+        "Line":  "                        \u003cimg src=\"../../assets/รูปสังคม/ประชุมคุณพล.jpg\" alt=\"Morning Talk / Meetings\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\อาชีวอนามัยและความปลอดภัย.html",
+        "LineNumber":  186,
+        "Line":  "                        \u003cimg src=\"../../assets/รูปสังคม/2ตรวจสุขภาพประจำปี 2568.jpg\" alt=\"Health Promotion Activities\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สังคม\\อาชีวอนามัยและความปลอดภัย.html",
+        "LineNumber":  201,
+        "Line":  "                        \u003cimg src=\"../../assets/รูปสังคม/ซ้อมดับเพลิง.jpg\" alt=\"Fire Evacuation and First Aid Drills\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สิ่งแวดล้อม\\การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html",
+        "LineNumber":  17,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สิ่งแวดล้อม\\การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html",
+        "LineNumber":  19,
+        "Line":  "    \u003cheader class=\"inner-hero\" style=\"background-image: url(\u0027../../assets/รูปสิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ/ปกพลังงาน.png\u0027); background-size: cover; background-position: center;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สิ่งแวดล้อม\\การบริหารจัดการสิ่งแวดล้อม.html",
+        "LineNumber":  17,
+        "Line":  "    \u003cmain-nav depth=\"2\" path=\"สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html\" lang=\"en\"\u003e\u003c/main-nav\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สิ่งแวดล้อม\\การบริหารจัดการสิ่งแวดล้อม.html",
+        "LineNumber":  19,
+        "Line":  "    \u003chero-banner title=\"Environmental Management\" bg-image=\"../assets/รูปสิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม/ปกสิ่งแวดล้อม.png\"\u003e\u003c/hero-banner\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สิ่งแวดล้อม\\การบริหารจัดการสิ่งแวดล้อม.html",
+        "LineNumber":  38,
+        "Line":  "                \u003cimg src=\"../../assets/รูปสิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม/env_policy.png\" alt=\"Environmental Policy\" style=\"float: right; width: 100%; max-width: 450px; border-radius: 0px; box-shadow: none; object-fit: cover; margin-left: 40px; margin-bottom: 20px;\"\u003e"
+    },
+    {
+        "Path":  "C:\\Users\\Admin\\.gemini\\antigravity-ide\\scratch\\web-ukem\\en\\สิ่งแวดล้อม\\การบริหารจัดการสิ่งแวดล้อม.html",
+        "LineNumber":  61,
+        "Line":  "                \u003cimg src=\"../../assets/รูปสิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม/env_water.png\" alt=\"Water Management\" style=\"float: left; width: 100%; max-width: 450px; border-radius: 0px; box-shadow: none; object-fit: cover; margin-right: 40px; margin-bottom: 20px;\"\u003e"
+    }
+]
