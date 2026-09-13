@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ข้อมูลทางการเงิน - UKEM</title>
+    <title>Financial Information - UKEM</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/global.css">
-    <script src="../components/Navbar.js" defer></script>
-    <script src="../components/Footer.js" defer></script>
-    <script src="../components/InnerHero.js" defer></script>
-    <script src="../components/SectionHeader.js" defer></script>
+    <link rel="stylesheet" href="../../css/global.css">
+    <script src="../../components/Navbar.js" defer></script>
+    <script src="../../components/Footer.js" defer></script>
+    <script src="../../components/InnerHero.js" defer></script>
+    <script src="../../components/SectionHeader.js" defer></script>
 </head>
 <body>
     
-    <main-nav depth="1" path="การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html" lang="en"></main-nav>
+    <main-nav depth="2" path="การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html" lang="en"></main-nav>
     
     <style>
             display: grid;
@@ -67,25 +67,25 @@
     </style>
 
     <inner-hero 
-        title="ข้อมูลทางการเงิน" 
+        title="Financial Information" 
         image-url="../assets/การกำกับดูแล/financial_hero.png">
     </inner-hero>
 
     <main style="position: relative; overflow: hidden; padding-bottom: 60px;">
     <div class="container" id="content-start" style="padding-top: 60px; padding-bottom: 60px; max-width: 1200px; margin: 0 auto;">
         
-            <section-header title="สรุปผลการดำเนินงานทางการเงินที่สำคัญ"></section-header>
-            <p style="color: var(--text-muted); font-size: 18px; margin-top: 10px; text-align: center; margin-bottom: 20px;">สำหรับปีสิ้นสุดวันที่ 31 ธันวาคม 2568 เปรียบเทียบกับปี 2567</p>
-            <div class="financial-grid">
+            <section-header title="Summary of Key Financial Performance"></section-header>
+            <p style="color: var(--text-muted); font-size: 18px; margin-top: 10px; text-align: center; margin-bottom: 20px;">For the year ended December 31, 2025 compared to 2024</p>
+            <div class="financial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; margin-bottom: 40px;">
                 
                 <!-- ยอดขาย (EBITDA) -->
                 <div class="fin-card">
                     <div class="fin-icon">💰</div>
-                    <div class="fin-title">ยอดขาย (EBITDA)</div>
+                    <div class="fin-title">Sales (EBITDA)</div>
                     <div class="fin-value">2,631.48</div>
-                    <div class="fin-unit">ล้านบาท</div>
+                    <div class="fin-unit">Million Baht</div>
                     <div class="fin-comparison">
-                        <span>ปี 2567: 3,201.95 ล้านบาท</span>
+                        <span>Year 2024: 3,201.95 Million Baht</span>
                         <span style="color: #ef4444; font-weight: 600;">▼ (17.82%)</span>
                     </div>
                 </div>
@@ -93,11 +93,11 @@
                 <!-- กำไรสุทธิ -->
                 <div class="fin-card" style="border-top-color: var(--secondary);">
                     <div class="fin-icon">📈</div>
-                    <div class="fin-title">กำไรสุทธิ</div>
+                    <div class="fin-title">Net Profit</div>
                     <div class="fin-value" style="color: var(--secondary);">55.42</div>
-                    <div class="fin-unit">ล้านบาท</div>
+                    <div class="fin-unit">Million Baht</div>
                     <div class="fin-comparison">
-                        <span>ปี 2567: 7.26 ล้านบาท</span>
+                        <span>Year 2024: 7.26 Million Baht</span>
                         <span style="color: #10b981; font-weight: 600;">▲ 663.09%</span>
                     </div>
                 </div>
@@ -105,11 +105,11 @@
                 <!-- กำไรสุทธิต่อหุ้น -->
                 <div class="fin-card" style="border-top-color: #f59e0b;">
                     <div class="fin-icon">📊</div>
-                    <div class="fin-title">กำไรสุทธิต่อหุ้น</div>
+                    <div class="fin-title">Earnings Per Share</div>
                     <div class="fin-value" style="color: #f59e0b;">0.050</div>
-                    <div class="fin-unit">บาท / หุ้น</div>
+                    <div class="fin-unit">Baht / Share</div>
                     <div class="fin-comparison">
-                        <span>ปี 2567: 0.006 บาท/หุ้น</span>
+                        <span>Year 2024: 0.006 Baht / Share</span>
                         <span style="color: #10b981; font-weight: 600;">▲ 733.33%</span>
                     </div>
                 </div>
@@ -117,18 +117,18 @@
             </div>
 
             <div style="margin-top: 50px;">
-                <section-header title="การวิเคราะห์คำอธิบายของฝ่ายจัดการ (MD&A) สรุป"></section-header>
+                <section-header title="Management Discussion and Analysis (MD&A) Summary"></section-header>
                 <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8; text-align: justify; margin-bottom: 15px;">
-                    ในปี 2568 บริษัทมียอดขายรวม (EBITDA) 2,631.48 ล้านบาท ลดลงจากปีก่อนร้อยละ 17.82 เนื่องจากปริมาณการขายที่ลดลงของทุกกลุ่มสินค้า โดยเฉพาะเคมีภัณฑ์ทั่วไป (Solvent) กลุ่มเม็ดพลาสติกและกลุ่มอุตสาหกรรมอื่น รวมถึงราคาขายเฉลี่ยที่มีการปรับตัวลดลงเมื่อเทียบกับปีก่อน
+                    In 2025, the Company had total sales (EBITDA) of 2,631.48 million baht, a decrease of 17.82% from the previous year due to lower sales volumes across all product groups, especially general chemicals (Solvents), plastic resins, and other industrial groups, as well as a decrease in average selling prices compared to the previous year.
                 </p>
                 <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8; text-align: justify;">
-                    อย่างไรก็ตาม บริษัทสามารถบริหารจัดการต้นทุนขายและต้นทุนการจัดจำหน่ายได้อย่างมีประสิทธิภาพ ทำให้มี <strong>กำไรสุทธิ 55.42 ล้านบาท เพิ่มขึ้นจากปีก่อนถึงร้อยละ 663.09</strong> ซึ่งเกิดจากการปรับแผนการขายโดยเน้นบริหารจัดการขายสินค้ากลุ่มลูกค้าที่ทำกำไรได้ดี และต้นทุนเฉลี่ยของสินค้ามีการปรับลดลงมากกว่าราคาขายเฉลี่ย ทำให้การทำกำไรขั้นต้นเพิ่มขึ้น
+                    However, the Company was able to efficiently manage the cost of sales and distribution costs, resulting in a <strong>net profit of 55.42 million baht, an increase of 663.09% from the previous year.</strong> This was due to adjusting the sales plan by focusing on managing sales to highly profitable customer groups, and the average cost of goods decreased more than the average selling price, leading to an increase in gross profit.
                 </p>
             </div>
 
     </div>
 
     </main>
-    <main-footer lang="en"></main-footer>
+    <main-footer depth="2" lang="en"></main-footer>
 </body>
 </html>

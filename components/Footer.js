@@ -1,7 +1,11 @@
 class MainFooter extends HTMLElement {
     connectedCallback() {
-        const depth = this.getAttribute('depth') || '';
-        const prefix = depth === '1' ? '../' : '';
+        const depthAttr = this.getAttribute('depth') || '';
+        const depth = depthAttr === '' ? 0 : parseInt(depthAttr);
+        let prefix = '';
+        for(let i=0; i<depth; i++) {
+            prefix += '../';
+        }
         const lang = this.getAttribute('lang') || 'th';
         const isEn = lang === 'en';
         
