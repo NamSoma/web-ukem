@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ศูนย์รวมการดาวน์โหลด - UKEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="components/Navbar.js" defer></script>
+    <script src="components/Footer.js" defer></script>
+    <!-- Include Feather Icons for clean scalable SVG icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <style>
+        /* === DOWNLOAD CENTER STYLES === */
+        .download-center {
+            padding-bottom: 80px;
+            background-color: #f8fafc; /* Very light cool grey background */
+        }
+        
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+        
+        .filter-btn {
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-family: 'Kanit', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        
+        .filter-btn:hover {
+            border-color: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 4px 10px rgba(25, 63, 110, 0.2);
+        }
+
+        /* Grid Layout */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        /* Download Card - Premium Look */
+        .dl-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dl-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+        }
+        
+        /* Thumbnail Area */
+        .dl-cover {
+            height: 200px;
+            background: linear-gradient(135deg, #193f6e 0%, #2a6bb5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Simulated Cover Image - Using CSS gradients/icons for mockup */
+        .dl-cover::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg opacity="0.1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>');
+            background-size: 80px;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            transform: rotate(-5deg) scale(1.5);
+            transition: transform 0.5s ease;
+        }
+        
+        .dl-card:hover .dl-cover::before {
+            transform: rotate(0deg) scale(1.6);
+        }
+
+        .dl-year-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.95);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            backdrop-filter: blur(4px);
+        }
+        
+        /* Card Content */
+        .dl-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dl-category {
+            color: var(--secondary);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .dl-title {
+            color: var(--primary);
+            font-size: 20px;
+            line-height: 1.4;
+            font-weight: 600;
+            margin-bottom: 12px;
+            margin-top: 0;
+        }
+        
+        .dl-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #64748b;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+        
+        .dl-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .dl-meta-item i {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Action Buttons Area */
+        .dl-actions {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .btn-dl {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        /* Primary button (usually TH or Main Download) */
+        .btn-dl-primary {
+            background-color: var(--primary);
+            color: white;
+            border: 1px solid var(--primary);
+        }
+        .btn-dl-primary:hover {
+            background-color: #122d50;
+            box-shadow: 0 4px 8px rgba(25, 63, 110, 0.3);
+        }
+        
+        /* Secondary button (usually EN or Read Online) */
+        .btn-dl-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid #cbd5e1;
+        }
+        .btn-dl-outline:hover {
+            border-color: var(--primary);
+            background-color: #f1f5f9;
+        }
+
+        /* Multi-language button group */
+        .dl-btn-group {
+            display: flex;
+            gap: 10px;
+        }
+        .dl-btn-group .btn-dl {
+            flex: 1;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .filter-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 15px;
+                white-space: nowrap;
+                margin: 20px 0;
+            }
+            .dl-cover {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main-nav depth="0" path="ศูนย์ดาวน์โหลด.html" lang="th"></main-nav>
+
+    <!-- Hero Section -->
+    <header class="inner-hero" style="background-color: var(--primary); position: relative; min-height: 250px;">
+        <!-- Clean geometric overlay pattern for a corporate tech look -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+        <div class="inner-hero-content" style="position: relative; z-index: 2; padding-top: 60px;">
+            <h1 style="color: white; margin-bottom: 15px;">ศูนย์รวมการดาวน์โหลด</h1>
+            <p style="color: #e2e8f0; font-size: 18px; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                รวมเอกสารสำคัญ รายงานประจำปี และรายงานด้านความยั่งยืนของบริษัท เพื่อความโปร่งใสและตรวจสอบได้
+            </p>
+        </div>
+    </header>
+
+    <main class="download-center">
+        <div class="container">
+            
+            <!-- Filters -->
+            <div class="filter-tabs">
+                <button class="filter-btn active">ทั้งหมด</button>
+                <button class="filter-btn">รายงานประจำปี (56-1 One Report)</button>
+                <button class="filter-btn">รายงานความยั่งยืน</button>
+                <button class="filter-btn">เอกสารการประชุมผู้ถือหุ้น (AGM)</button>
+            </div>
+
+            <!-- Download Grid -->
+            <div class="download-grid">
+                
+                <!-- Item 1 -->
+                <div class="dl-card">
+                    <div class="dl-cover">
+                        <span class="dl-year-badge">2567</span>
+                        <!-- Mock text in cover -->
+                        <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-family: 'Outfit'; font-weight: 700; font-size: 24px; opacity: 0.9;">ONE REPORT</div>
+                    </div>
+                    <div class="dl-body">
+                        <div class="dl-category">รายงานประจำปี</div>
+                        <h3 class="dl-title">แบบแสดงรายการข้อมูลประจำปี / รายงานประจำปี 2567</h3>
+                        <div class="dl-meta">
+                            <span class="dl-meta-item"><i data-feather="file-text"></i> PDF</span>
+                            <span class="dl-meta-item"><i data-feather="hard-drive"></i> 12.4 MB</span>
+                        </div>
+                        <div class="dl-actions">
+                            <a href="#" class="btn-dl btn-dl-outline"><i data-feather="book-open"></i> อ่านออนไลน์ (e-Book)</a>
+                            <div class="dl-btn-group">
+                                <a href="#" class="btn-dl btn-dl-primary"><i data-feather="download"></i> (TH)</a>
+                                <a href="#" class="btn-dl btn-dl-outline"><i data-feather="download"></i> (EN)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="dl-card">
+                    <div class="dl-cover" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);">
+                        <span class="dl-year-badge">2567</span>
+                        <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-family: 'Kanit'; font-weight: 600; font-size: 20px; opacity: 0.9;">รายงานความยั่งยืน<br>SUSTAINABILITY</div>
+                    </div>
+                    <div class="dl-body">
+                        <div class="dl-category">รายงานความยั่งยืน</div>
+                        <h3 class="dl-title">รายงานความยั่งยืน (Sustainability Report) ปี 2567</h3>
+                        <div class="dl-meta">
+                            <span class="dl-meta-item"><i data-feather="file-text"></i> PDF</span>
+                            <span class="dl-meta-item"><i data-feather="hard-drive"></i> 8.1 MB</span>
+                        </div>
+                        <div class="dl-actions">
+                            <div class="dl-btn-group" style="margin-top: auto;">
+                                <a href="#" class="btn-dl btn-dl-primary"><i data-feather="download"></i> โหลดฉบับภาษาไทย</a>
+                            </div>
+                            <div class="dl-btn-group">
+                                <a href="#" class="btn-dl btn-dl-outline"><i data-feather="download"></i> Download English</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="dl-card">
+                    <div class="dl-cover" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                        <span class="dl-year-badge">2568</span>
+                        <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-family: 'Kanit'; font-weight: 600; font-size: 20px; opacity: 0.9;">AGM<br>การประชุมผู้ถือหุ้น</div>
+                    </div>
+                    <div class="dl-body">
+                        <div class="dl-category">การประชุมผู้ถือหุ้น</div>
+                        <h3 class="dl-title">หนังสือเชิญประชุมสามัญผู้ถือหุ้น ประจำปี 2568</h3>
+                        <div class="dl-meta">
+                            <span class="dl-meta-item"><i data-feather="file-text"></i> PDF</span>
+                            <span class="dl-meta-item"><i data-feather="hard-drive"></i> 3.5 MB</span>
+                        </div>
+                        <div class="dl-actions">
+                            <a href="#" class="btn-dl btn-dl-primary"><i data-feather="download"></i> ดาวน์โหลดเอกสารแนบ</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 (Older Report) -->
+                <div class="dl-card">
+                    <div class="dl-cover" style="background: linear-gradient(135deg, #475569 0%, #334155 100%);">
+                        <span class="dl-year-badge">2566</span>
+                        <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-family: 'Outfit'; font-weight: 700; font-size: 24px; opacity: 0.9;">ONE REPORT</div>
+                    </div>
+                    <div class="dl-body">
+                        <div class="dl-category">รายงานประจำปี</div>
+                        <h3 class="dl-title">แบบแสดงรายการข้อมูลประจำปี / รายงานประจำปี 2566</h3>
+                        <div class="dl-meta">
+                            <span class="dl-meta-item"><i data-feather="file-text"></i> PDF</span>
+                            <span class="dl-meta-item"><i data-feather="hard-drive"></i> 11.2 MB</span>
+                        </div>
+                        <div class="dl-actions">
+                            <div class="dl-btn-group">
+                                <a href="#" class="btn-dl btn-dl-primary"><i data-feather="download"></i> (TH)</a>
+                                <a href="#" class="btn-dl btn-dl-outline"><i data-feather="download"></i> (EN)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Pagination Mockup -->
+            <div style="display: flex; justify-content: center; gap: 8px; margin-top: 50px;">
+                <button class="filter-btn active" style="padding: 8px 16px;">1</button>
+                <button class="filter-btn" style="padding: 8px 16px;">2</button>
+                <button class="filter-btn" style="padding: 8px 16px;"><i data-feather="chevron-right" style="width:16px; height:16px; margin-bottom:-3px;"></i></button>
+            </div>
+
+        </div>
+    </main>
+
+    <main-footer depth="0"></main-footer>
+
+    <!-- Initialize Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+--- EN
+
++++ TH
+
+@@ -6,18 +6,18 @@
+
+ <title>
+ </title>
+ <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+-<link rel="stylesheet" href="../../css/global.css">
+-<script src="../../components/Navbar.js" defer>
++<link rel="stylesheet" href="../css/global.css">
++<script src="../components/Navbar.js" defer>
+ </script>
+-<script src="../../components/Footer.js" defer>
++<script src="../components/Footer.js" defer>
+ </script>
+ <style>
+ </style>
+ </head>
+ <body>
+-<main-nav depth="2" path="สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html" >
++<main-nav depth="1" path="สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html" >
+ </main-nav>
+-<header class="inner-hero" style="background-image: url('../../assets/รูปสิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ/ปกพลังงาน.png'); background-size: cover; background-position: center;">
++<header class="inner-hero" style="background-image: url('../assets/รูปสิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ/ปกพลังงาน.png'); background-size: cover; background-position: center;">
+ <div class="inner-hero-content" style="max-width: 1200px;">
+ <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+ </h1>
+@@ -33,7 +33,7 @@
+
+ </div>
+ <div class="container" style="position: relative; z-index: 1;">
+ <div class="content-section" id="content-start">
+-<!-- Section 1: Energy Management -->
++<!-- ส่วนที่ 1: การจัดการพลังงาน -->
+ <div class="section-header" style="padding: 0; border: none; margin-bottom: 30px;">
+ <h2 class="text-h1" style="color: var(--primary); ">
+ </h2>
+@@ -76,6 +76,7 @@
+
+ <tr>
+ <td>
+ <strong>
++<br>
+ </strong>
+ </td>
+ <td>
+@@ -256,7 +257,7 @@
+
+ </span>
+ </p>
+ </div>
+-<!-- Section 2: Greenhouse Gas Management -->
++<!-- ส่วนที่ 2: การจัดการก๊าซเรือนกระจก -->
+ <div class="section-header" style="margin-top: 40px;">
+ <h2 class="text-h1" style="color: var(--primary); ">
+ </h2>
+@@ -492,12 +493,14 @@
+
+ <style>
+ </style>
+ <p class="text-small" style="color: #777;">
++<span style="white-space: nowrap;">
++</span>
+ </p>
+ </div>
+ </div>
+ </div>
+ </main>
+-<main-footer depth="2" >
++<main-footer depth="1">
+ </main-footer>
+ </body>
+ </html>

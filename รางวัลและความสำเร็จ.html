@@ -36,13 +36,6 @@
             box-shadow: none;
         }
 
-        .award-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            z-index: 2;
-        }
 
         .award-image-container {
             width: 100%;
@@ -58,7 +51,9 @@
         .award-image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            padding: 20px;
+            box-sizing: border-box;
             transition: transform 0.5s ease;
         }
 
@@ -132,6 +127,25 @@
             height: 16px;
             color: var(--secondary);
         }
+    
+        .btn-view-doc {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        .btn-view-doc:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+
     </style>
 </head>
 <body>
@@ -160,10 +174,7 @@
                     <!-- Award 1 -->
                     <div class="award-card">
                         <div class="award-image-container">
-                            <div class="image-placeholder">
-                                
-                                วางรูปภาพรางวัล 800x600px
-                            </div>
+                            <img src="images/awards/cac.jpg" alt="CAC">
                         </div>
                         <div class="award-info">
                             <span class="award-year">2568</span>
@@ -173,16 +184,14 @@
                                 
                                 <span>มอบโดย: สมาคมส่งเสริมสถาบันกรรมการ<span style="white-space: nowrap;">บริษัท</span>ไทย (IOD)</span>
                             </div>
+                            <a href="images/awards/cac.jpg" target="_blank" class="btn-view-doc">ดูเอกสารเต็ม</a>
                         </div>
                     </div>
 
                     <!-- Award 2 -->
                     <div class="award-card">
                         <div class="award-image-container">
-                            <div class="image-placeholder">
-                                
-                                วางรูปภาพรางวัล 800x600px
-                            </div>
+                            <img src="images/awards/esg-dna.jpg" alt="ESG DNA">
                         </div>
                         <div class="award-info">
                             <span class="award-year">2568</span>
@@ -192,16 +201,14 @@
                                 
                                 <span>มอบโดย: ตลาดหลักทรัพย์แห่งประเทศไทย</span>
                             </div>
+                            <a href="images/awards/esg-dna.jpg" target="_blank" class="btn-view-doc">ดูเอกสารเต็ม</a>
                         </div>
                     </div>
 
                     <!-- Award 3 -->
                     <div class="award-card">
                         <div class="award-image-container">
-                            <div class="image-placeholder">
-                                
-                                วางรูปภาพรางวัล 800x600px
-                            </div>
+                            <img src="images/awards/iso9001.jpg" alt="ISO 9001">
                         </div>
                         <div class="award-info">
                             <span class="award-year">2568</span>
@@ -211,16 +218,14 @@
                                 
                                 <span>มอบโดย: <span style="white-space: nowrap;">บริษัท</span> เอสจีเอส (ประเทศไทย) จำกัด</span>
                             </div>
+                            <a href="images/awards/iso9001.jpg" target="_blank" class="btn-view-doc">ดูเอกสารเต็ม</a>
                         </div>
                     </div>
 
                     <!-- Award 4 -->
                     <div class="award-card">
                         <div class="award-image-container">
-                            <div class="image-placeholder">
-                                
-                                วางรูปภาพรางวัล 800x600px
-                            </div>
+                            <img src="images/awards/cfo.png" alt="CFO">
                         </div>
                         <div class="award-info">
                             <span class="award-year">2568</span>
@@ -230,16 +235,14 @@
                                 
                                 <span>มอบโดย: องค์การบริหารจัดการก๊าซเรือนกระจก (องค์การมหาชน)</span>
                             </div>
+                            <a href="images/awards/cfo.png" target="_blank" class="btn-view-doc">ดูเอกสารเต็ม</a>
                         </div>
                     </div>
 
                     <!-- Award 5 -->
                     <div class="award-card">
                         <div class="award-image-container">
-                            <div class="image-placeholder">
-                                
-                                วางรูปภาพรางวัล 800x600px
-                            </div>
+                            <img src="images/awards/iso14064.jpg" alt="ISO 14064-1">
                         </div>
                         <div class="award-info">
                             <span class="award-year">2568</span>
@@ -249,16 +252,14 @@
                                 
                                 <span>มอบโดย: สถาบันรับรองมาตรฐานไอเอสโอ</span>
                             </div>
+                            <a href="images/awards/iso14064.jpg" target="_blank" class="btn-view-doc">ดูเอกสารเต็ม</a>
                         </div>
                     </div>
 
                     <!-- Award 6 -->
                     <div class="award-card">
                         <div class="award-image-container">
-                            <div class="image-placeholder">
-                                
-                                วางรูปภาพรางวัล 800x600px
-                            </div>
+                            <img src="images/awards/messageImage.jpg" alt="CGR">
                         </div>
                         <div class="award-info">
                             <span class="award-year">2568</span>
@@ -268,10 +269,41 @@
                                 
                                 <span>มอบโดย: สมาคมส่งเสริมสถาบันกรรมการ<span style="white-space: nowrap;">บริษัท</span>ไทย (IOD)</span>
                             </div>
+                            <a href="images/awards/messageImage.jpg" target="_blank" class="btn-view-doc">ดูเอกสารเต็ม</a>
                         </div>
                     </div>
 
                     <!-- Award 7 -->
+                    <div class="award-card">
+                        <div class="award-image-container">
+                            <div class="image-placeholder">
+                                
+                                วางรูปภาพรางวัล 800x600px
+                            </div>
+                        </div>
+                        <div class="award-info">
+                            <span class="award-year">2568</span>
+                            <h3 class="award-title">การประเมินคุณภาพการจัดประชุมสามัญผู้ถือหุ้น</h3>
+                            <p class="award-desc">ประเมินคุณภาพการจัดประชุมสามัญผู้ถือหุ้น (AGM Checklist) ประจำปี 2568</p>
+                            <div class="award-issuer">
+                                
+                                <span>มอบโดย: สมาคมส่งเสริมผู้ลงทุนไทย</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main-footer></main-footer>
+</body>
+</html>
+
+
+
+
                     <div class="award-card">
                         <div class="award-image-container">
                             <div class="image-placeholder">
