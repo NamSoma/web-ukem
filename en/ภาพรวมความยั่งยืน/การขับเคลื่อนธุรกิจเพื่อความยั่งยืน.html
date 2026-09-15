@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <title>Sustainability Governance Structure - UKEM</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
@@ -246,6 +255,7 @@
         }
         
     </style>
+    <script src="../../components/DocDownload.js" defer></script>
 </head>
 <body>
 
@@ -424,8 +434,16 @@
                     <p>The Company prioritizes fully, accurately, and timely disclosing essential information, including financial, business, and other sustainability data. An investor relations unit coordinates communication equally with shareholders, investors, analysts, and other stakeholders.<br><br>The sustainability governance structure of Union Petrochemical Public Company Limited is a vital mechanism driving operations to meet economic, social, and environmental management requirements adaptively within the business context and the expectations of all stakeholder groups, while simultaneously enhancing long-term organizational stability and sustainable growth.</p>
                 </div>
             </div>
+
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="en">
+                <doc-card title="Document Name 1 (Pending)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="Document Name 2 (Pending)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="Document Name 3 (Pending)" url="#" meta="PDF • - MB"></doc-card>
+            </doc-section>
         </div>
     </main>
+
 
     <main-footer depth="2" lang="en"></main-footer>
 </body>

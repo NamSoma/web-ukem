@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <title>โครงสร้างการกำกับดูแล - ESG Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
@@ -246,6 +255,7 @@
         }
         
     </style>
+    <script src="../components/DocDownload.js" defer></script>
 </head>
 <body>
 
@@ -424,8 +434,16 @@
                     <p><span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญกับการเปิดเผยข้อมูลที่สำคัญอย่างครบถ้วน ถูกต้อง และทันเวลา ทั้งในส่วนของข้อมูลการเงิน ข้อมูลธุรกิจและข้อมูลความยั่งยืนอื่นๆ โดยมีหน่วยงานที่ประสานงานด้านนักลงทุนสัมพันธ์เพื่อสื่อสารกับผู้ถือหุ้น นักลงทุน นักวิเคราะห์ และผู้มีส่วนได้ส่วนเสียอื่นๆ อย่างเท่าเทียมกัน<br><br>ทั้งนี้ โครงสร้างการกำกับดูแลด้านความยั่งยืนของ<span style="white-space: nowrap;">บริษัท</span> ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) ถือเป็นกลไกสำคัญในการขับเคลื่อนการดำเนินงาน ให้สามารถตอบโจทย์การบริหารจัดการทั้งด้านเศรษฐกิจ สังคม และสิ่งแวดล้อมควบคู่กันอย่างปรับตัวได้ในบริบทของธุรกิจและความคาดหวังของผู้มีส่วนได้ส่วนเสียทุกกลุ่ม พร้อมทั้งเสริมสร้างความมั่นคงและการเติบโตอย่างยั่งยืนขององค์กรในระยะยาว</p>
                 </div>
             </div>
+
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="th">
+                <doc-card title="ชื่อเอกสารที่ 1 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="ชื่อเอกสารที่ 2 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="ชื่อเอกสารที่ 3 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+            </doc-section>
         </div>
     </main>
+
 
     <main-footer depth="1"></main-footer>
 </body>

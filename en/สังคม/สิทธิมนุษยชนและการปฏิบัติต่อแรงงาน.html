@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human Rights and Labor Practices - UKEM</title>
@@ -24,6 +33,7 @@
             color: #64748b;
         }
     </style>
+    <script src="../../components/DocDownload.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html" lang="en"></main-nav>
@@ -140,6 +150,11 @@
                     </div>
                 </card-grid>
             </div>
+
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="en">
+                <doc-card title="Labor, Human Rights, and Non-discrimination Policy" url="../../assets/เอกสารต่างๆ/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf" meta="PDF"></doc-card>
+            </doc-section>
         </div>
     </main>
 

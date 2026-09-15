@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>นโยบายและการปฏิบัติด้านสังคม - UKEM</title>
@@ -13,6 +22,7 @@
     <script src="../components/SectionHeader.js" defer></script>
     <style>
     </style>
+    <script src="../components/DocDownload.js" defer></script>
 </head>
 <body>
     <main-nav depth="1" path="สังคม/นโยบายและการปฏิบัติด้านสังคม.html" lang="th"></main-nav>
@@ -109,8 +119,16 @@
                 <span style="white-space: nowrap;">บริษัทฯ</span> ตระหนักถึงความสำคัญของการดำเนินการโดยคำนึงถึงความรับผิดชอบต่อสังคมอย่างต่อเนื่อง <span style="white-space: nowrap;">บริษัทฯ</span> จะดำเนินการติดตาม ประเมินและทบทวนโครงการต่างๆ ที่ได้สนับสนุนทั้งในปัจจุบัน และจะพิจารณาโครงการความรับผิดชอบต่อสังคมในอนาคตอย่างรอบคอบ ต่อเนื่องและสม่ำเสมอ <span style="white-space: nowrap;">บริษัทฯ</span> ได้มีการรายงานผลการพัฒนาอย่างยั่งยืนตามกรอบของ Global Reporting Initiative (GRI) ฉบับ Standard โดยเปิดเผยข้อมูลต่างๆ ทั้งด้านเศรษฐกิจ สิ่งแวดล้อม สังคม โดยได้เริ่มดำเนินการในปี 2564 เป็นปีแรก และมีการเปิดเผยเอาไว้ในรายการข้อมูลประจำปีแบบ 56-1 One Report
             </div>
             </div>
+
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="th">
+                <doc-card title="ชื่อเอกสารที่ 1 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="ชื่อเอกสารที่ 2 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="ชื่อเอกสารที่ 3 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+            </doc-section>
         </div>
     </main>
+
 
     <main-footer depth="1"></main-footer>
 </body>

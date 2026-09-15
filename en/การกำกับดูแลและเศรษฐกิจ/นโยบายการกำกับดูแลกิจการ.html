@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corporate Governance Policy - UKEM</title>
@@ -30,6 +39,7 @@
             text-decoration: underline;
         }
     </style>
+    <script src="../../components/DocDownload.js" defer></script>
 </head>
 <body>
     
@@ -70,8 +80,16 @@
                 <div class="footer-note">
                     The Company has disseminated its good corporate governance policy, ethics, and business code of conduct on the Company's website at <a href="http://www.unionpetrochemical.com" target="_blank">www.unionpetrochemical.com</a> for investors, interested persons, and stakeholders to read.
                 </div>
+
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="en">
+                <doc-card title="Document Name 1 (Pending)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="Document Name 2 (Pending)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="Document Name 3 (Pending)" url="#" meta="PDF • - MB"></doc-card>
+            </doc-section>
         </div>
     </main>
+
 
     <main-footer depth="2" lang="en"></main-footer>
 </body>

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน - UKEM</title>
@@ -24,6 +33,7 @@
             color: #64748b;
         }
     </style>
+    <script src="../components/DocDownload.js" defer></script>
 </head>
 <body>
     <main-nav depth="1" path="สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html" lang="th"></main-nav>
@@ -140,6 +150,11 @@
                     </div>
                 </card-grid>
             </div>
+
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="th">
+                <doc-card title="นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ" url="../assets/เอกสารต่างๆ/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf" meta="PDF"></doc-card>
+            </doc-section>
         </div>
     </main>
 

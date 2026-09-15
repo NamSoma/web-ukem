@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Policy and Practices - UKEM</title>
@@ -13,6 +22,7 @@
     <script src="../../components/SectionHeader.js" defer></script>
     <style>
     </style>
+    <script src="../../components/DocDownload.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สังคม/นโยบายและการปฏิบัติด้านสังคม.html" lang="en"></main-nav>
@@ -109,8 +119,16 @@
                 <span style="white-space: nowrap;">The Company</span> recognizes the importance of continuous operations with a view toward social responsibility. <span style="white-space: nowrap;">The Company</span> will monitor, evaluate, and review currently supported projects and will carefully, continuously, and consistently consider future social responsibility projects. <span style="white-space: nowrap;">The Company</span> has reported its sustainable development results under the Global Reporting Initiative (GRI) Standards framework, disclosing economic, environmental, and social data, beginning in 2021, and such disclosures are included in the 56-1 One Report annual data filing.
             </div>
             </div>
+
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="en">
+                <doc-card title="Document Name 1 (Pending)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="Document Name 2 (Pending)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="Document Name 3 (Pending)" url="#" meta="PDF • - MB"></doc-card>
+            </doc-section>
         </div>
     </main>
+
 
     <main-footer depth="2" lang="en"></main-footer>
 </body>

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Management and Climate Change - UKEM</title>
@@ -12,6 +21,7 @@
         
     </style>
     
+    <script src="../../components/DocDownload.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html" lang="en"></main-nav>
@@ -348,11 +358,11 @@
 
                 <!-- Total 1 & 2 Card -->
                 <div class="ghg-card" style="background: #f8fafc; border-radius: 0px; padding: 25px; box-shadow: none; text-align: center; border: 2px solid #cbd5e1; grid-column: span 3;">
-                    <div class="text-body-lg" style="color: #334155; font-weight: 700; margin-bottom: 20px;">Total Scope 1 & 2</div>
+                    <div class="text-body-lg" style="color: var(--text-main); font-weight: 700; margin-bottom: 20px;">Total Scope 1 & 2</div>
                     <div style="display: flex; justify-content: space-around; align-items: center;">
                         <div style="background: white; padding: 10px 20px; border-radius: 0px; border: 1px solid #e2e8f0; width: 40%;">
                             <div class="text-small" style="color: #64748b; margin-bottom: 5px;">Year 2024</div>
-                            <div class="text-h3" style="font-weight: 600; color: #475569;">852.00</div>
+                            <div class="text-h3" style="font-weight: 600; color: var(--text-muted);">852.00</div>
                         </div>
                         <div class="text-h2" style="color: #94a3b8;">➔</div>
                         <div style="background: white; padding: 10px 20px; border-radius: 0px; border: 1px solid var(--primary); width: 40%; box-shadow: none;">
@@ -403,6 +413,11 @@
 
     </div>
 
+
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="en">
+                <doc-card title="Climate Change and Carbon Reduction Policy" url="../../assets/เอกสารต่างๆ/นโยบายการเปลี่ยนแปลงสภาพภูมิอากาศและการลดการปล่อยคาร์บอน.pdf" meta="PDF"></doc-card>
+            </doc-section>
         </div>
     </main>
     <main-footer depth="2" lang="en"></main-footer>

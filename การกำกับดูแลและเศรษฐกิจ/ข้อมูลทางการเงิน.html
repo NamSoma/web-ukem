@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ข้อมูลทางการเงิน - UKEM</title>
@@ -10,60 +19,52 @@
     <script src="../components/Footer.js" defer></script>
     <script src="../components/InnerHero.js" defer></script>
     <script src="../components/SectionHeader.js" defer></script>
+    <script src="../components/CardGrid.js" defer></script>
+    <script src="../components/DocDownload.js" defer></script>
 </head>
 <body>
     
     <main-nav depth="1" path="การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html" lang="th"></main-nav>
     
     <style>
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-        .fin-card {
-            background: #ffffff;
-            border-radius: 0px;
-            padding: 30px;
-            box-shadow: none;
-            border-top: 5px solid var(--primary);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        .fin-card:hover {
-            transform: translateY(-5px);
-        }
-        .fin-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-        .fin-title {
-            color: var(--text-muted);
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-        .fin-value {
-            color: var(--primary);
-            font-size: 42px;
+        .fin-stat-value {
+            font-size: 36px;
             font-weight: 700;
+            color: var(--primary);
             margin-bottom: 5px;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Prompt', sans-serif;
         }
-        .fin-unit {
-            color: #94a3b8;
+        .fin-stat-label {
             font-size: 16px;
+            color: #64748b;
         }
         .fin-comparison {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #f1f5f9;
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
-            color: #64748b;
+            align-items: center;
+        }
+        .comparison-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
             font-size: 14px;
         }
+        .badge-down {
+            background-color: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+        .badge-up {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+        }
+
     </style>
 
     <inner-hero 
@@ -71,64 +72,142 @@
         image-url="../assets/การกำกับดูแล/financial_hero.png">
     </inner-hero>
 
-    <main style="position: relative; overflow: hidden; padding-bottom: 60px;">
-    <div class="container" id="content-start" style="padding-top: 60px; padding-bottom: 60px; max-width: 1200px; margin: 0 auto;">
-        
+    <main style="position: relative; overflow: hidden; padding-bottom: 80px;">
+        <div class="container" id="content-start" style="padding-top: 80px; max-width: 1200px; margin: 0 auto;">
+            
             <section-header title="สรุปผลการดำเนินงานทางการเงินที่สำคัญ"></section-header>
-            <p style="color: var(--text-muted); font-size: 18px; margin-top: 10px; text-align: center; margin-bottom: 20px;">สำหรับปีสิ้นสุดวันที่ 31 ธันวาคม 2568 เปรียบเทียบกับปี 2567</p>
-            <div class="financial-grid">
+            <p style="color: var(--text-muted); font-size: 18px; margin-top: 10px; text-align: center; margin-bottom: 30px;">สำหรับปีสิ้นสุดวันที่ 31 ธันวาคม 2568 เปรียบเทียบกับปี 2567</p>
+            
+            <card-grid style="margin-top: 30px; margin-bottom: 40px;">
                 
                 <!-- ยอดขาย (EBITDA) -->
-                <div class="fin-card">
-                    <div class="fin-icon">💰</div>
-                    <div class="fin-title">ยอดขาย (EBITDA)</div>
-                    <div class="fin-value">2,631.48</div>
-                    <div class="fin-unit">ล้านบาท</div>
+                <div class="card-item-blue" style="text-align: center;">
+                    <div class="fin-stat-value"><span class="counter-value" data-target="2631.48">0</span></div>
+                    <div class="fin-stat-label">ยอดขาย (EBITDA) ปี 2568 (ล้านบาท)</div>
                     <div class="fin-comparison">
-                        <span>ปี 2567: 3,201.95 ล้านบาท</span>
-                        <span style="color: #ef4444; font-weight: 600;">▼ (17.82%)</span>
+                        <span>ปี 2567: 3,201.95 ลบ.</span>
+                        <span class="comparison-badge badge-down">▼ 17.82%</span>
                     </div>
                 </div>
 
                 <!-- กำไรสุทธิ -->
-                <div class="fin-card" style="border-top-color: var(--secondary);">
-                    <div class="fin-icon">📈</div>
-                    <div class="fin-title">กำไรสุทธิ</div>
-                    <div class="fin-value" style="color: var(--secondary);">55.42</div>
-                    <div class="fin-unit">ล้านบาท</div>
+                <div class="card-item" style="text-align: center;">
+                    <div class="fin-stat-value" style="color: var(--secondary);"><span class="counter-value" data-target="55.42">0</span></div>
+                    <div class="fin-stat-label">กำไรสุทธิ ปี 2568 (ล้านบาท)</div>
                     <div class="fin-comparison">
-                        <span>ปี 2567: 7.26 ล้านบาท</span>
-                        <span style="color: #10b981; font-weight: 600;">▲ 663.09%</span>
+                        <span>ปี 2567: 7.26 ลบ.</span>
+                        <span class="comparison-badge badge-up">▲ 663.09%</span>
                     </div>
                 </div>
 
                 <!-- กำไรสุทธิต่อหุ้น -->
-                <div class="fin-card" style="border-top-color: #f59e0b;">
-                    <div class="fin-icon">📊</div>
-                    <div class="fin-title">กำไรสุทธิต่อหุ้น</div>
-                    <div class="fin-value" style="color: #f59e0b;">0.050</div>
-                    <div class="fin-unit">บาท / หุ้น</div>
+                <div class="card-item-yellow" style="text-align: center;">
+                    <div class="fin-stat-value" style="color: #f59e0b;"><span class="counter-value" data-target="0.050">0</span></div>
+                    <div class="fin-stat-label">กำไรสุทธิต่อหุ้น ปี 2568 (บาท / หุ้น)</div>
                     <div class="fin-comparison">
-                        <span>ปี 2567: 0.006 บาท/หุ้น</span>
-                        <span style="color: #10b981; font-weight: 600;">▲ 733.33%</span>
+                        <span>ปี 2567: 0.006 บาท</span>
+                        <span class="comparison-badge badge-up">▲ 733.33%</span>
                     </div>
                 </div>
 
-            </div>
+            </card-grid>
 
             <div style="margin-top: 50px;">
-                <section-header title="การวิเคราะห์คำอธิบายของฝ่ายจัดการ (MD&A) สรุป"></section-header>
-                <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8; text-align: justify; margin-bottom: 15px;">
+                <section-header title="งบแสดงฐานะการเงิน"></section-header>
+                <div style="overflow-x: auto; margin-top: 20px;">
+                    <table class="data-table" style="text-align: right;">
+                        <thead>
+                            <tr>
+                                <th style="text-align: left;">รายการ (หน่วย: ล้านบาท)</th>
+                                <th style="text-align: right;">ณ วันที่ 31 ธันวาคม 2567</th>
+                                <th style="text-align: right;">ณ วันที่ 31 ธันวาคม 2568</th>
+                                <th style="text-align: right;">เปลี่ยนแปลง (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;"><strong>สินทรัพย์รวม</strong></td>
+                                <td>1,693.21</td>
+                                <td>1,736.58</td>
+                                <td><span style="color: #ef4444;">(2.50%)</span></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>หนี้สินรวม</strong></td>
+                                <td>895.53</td>
+                                <td>983.72</td>
+                                <td><span style="color: #ef4444;">(8.96%)</span></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>ส่วนของผู้ถือหุ้น</strong></td>
+                                <td>797.67</td>
+                                <td>752.86</td>
+                                <td><span style="color: #10b981;">5.95%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <section-header title="การวิเคราะห์คำอธิบายของฝ่ายจัดการ (MD&A) สรุป" style="margin-top: 50px;"></section-header>
+            <div class="intro-text" style="margin-top: 20px;">
+                <p>
                     ในปี 2568 บริษัทมียอดขายรวม (EBITDA) 2,631.48 ล้านบาท ลดลงจากปีก่อนร้อยละ 17.82 เนื่องจากปริมาณการขายที่ลดลงของทุกกลุ่มสินค้า โดยเฉพาะเคมีภัณฑ์ทั่วไป (Solvent) กลุ่มเม็ดพลาสติกและกลุ่มอุตสาหกรรมอื่น รวมถึงราคาขายเฉลี่ยที่มีการปรับตัวลดลงเมื่อเทียบกับปีก่อน
                 </p>
-                <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8; text-align: justify;">
+                <p>
                     อย่างไรก็ตาม บริษัทสามารถบริหารจัดการต้นทุนขายและต้นทุนการจัดจำหน่ายได้อย่างมีประสิทธิภาพ ทำให้มี <strong>กำไรสุทธิ 55.42 ล้านบาท เพิ่มขึ้นจากปีก่อนถึงร้อยละ 663.09</strong> ซึ่งเกิดจากการปรับแผนการขายโดยเน้นบริหารจัดการขายสินค้ากลุ่มลูกค้าที่ทำกำไรได้ดี และต้นทุนเฉลี่ยของสินค้ามีการปรับลดลงมากกว่าราคาขายเฉลี่ย ทำให้การทำกำไรขั้นต้นเพิ่มขึ้น
                 </p>
             </div>
 
-    </div>
-
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="th">
+                <doc-card title="ชื่อเอกสารที่ 1 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="ชื่อเอกสารที่ 2 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="ชื่อเอกสารที่ 3 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+            </doc-section>
+        </div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter-value');
+            const speed = 100; // The lower the slower
+
+            const animateCounters = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseFloat(counter.getAttribute('data-target'));
+                        const isDecimal = counter.getAttribute('data-target').includes('.');
+                        const decimalPlaces = isDecimal ? counter.getAttribute('data-target').split('.')[1].length : 0;
+                        
+                        const updateCount = () => {
+                            const count = parseFloat(counter.innerText.replace(/,/g, ''));
+                            const inc = target / speed;
+
+                            if (count < target) {
+                                counter.innerText = (count + inc).toFixed(decimalPlaces);
+                                setTimeout(updateCount, 15);
+                            } else {
+                                counter.innerText = target.toLocaleString('en-US', { minimumFractionDigits: decimalPlaces, maximumFractionDigits: decimalPlaces });
+                            }
+                        };
+                        
+                        counter.innerText = '0';
+                        updateCount();
+                        observer.unobserve(counter); // Only animate once
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(animateCounters, {
+                threshold: 0.5
+            });
+
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+        });
+    </script>
     <main-footer depth="1"></main-footer>
 </body>
 </html>

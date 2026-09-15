@@ -37,6 +37,18 @@ class MainNav extends HTMLElement {
         document.addEventListener('click', () => {
             dropdowns.forEach(d => d.classList.remove('active'));
         });
+
+        // Theme Toggle Logic
+        const themeToggle = this.querySelector('#theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeToggle.textContent = newTheme === 'light' ? '🌙' : '☀️';
+            });
+        }
     }
 
     getThNav(linkBase, thUrl, enUrl, prefix) {
@@ -91,6 +103,9 @@ class MainNav extends HTMLElement {
                 </div>
 
                 <div class="lang-switcher" style="display: flex; gap: 10px; align-items: center; margin-left: 20px; font-weight: bold;">
+                    <button id="theme-toggle" style="background: none; border: none; cursor: pointer; font-size: 1.2rem; margin-right: 10px;" title="Toggle Dark Mode">
+                        ${document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙'}
+                    </button>
                     <a href="${thUrl}" style="color: var(--primary); text-decoration: none;">TH</a>
                     <span style="color: #ccc;">|</span>
                     <a href="${enUrl}" style="color: var(--text-muted); text-decoration: none;">EN</a>
@@ -151,6 +166,9 @@ class MainNav extends HTMLElement {
                 </div>
 
                 <div class="lang-switcher" style="display: flex; gap: 10px; align-items: center; margin-left: 20px; font-weight: bold;">
+                    <button id="theme-toggle" style="background: none; border: none; cursor: pointer; font-size: 1.2rem; margin-right: 10px;" title="Toggle Dark Mode">
+                        ${document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙'}
+                    </button>
                     <a href="${thUrl}" style="color: var(--text-muted); text-decoration: none;">TH</a>
                     <span style="color: #ccc;">|</span>
                     <a href="${enUrl}" style="color: var(--primary); text-decoration: none;">EN</a>

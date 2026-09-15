@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>การบริหารจัดการสิ่งแวดล้อม - UKEM</title>
@@ -12,6 +21,7 @@
     <style>
         
     </style>
+    <script src="../components/DocDownload.js" defer></script>
 </head>
 <body>
     <main-nav depth="1" path="สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html" lang="th"></main-nav>
@@ -61,7 +71,7 @@
                 <img src="../assets/รูปสิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม/env_water.png" alt="การจัดการน้ำ" style="float: left; width: 100%; max-width: 450px; border-radius: 0px; box-shadow: none; object-fit: cover; margin-right: 40px; margin-bottom: 20px;">
                 ธุรกิจปิโตรเคมีและการจัดจำหน่ายเคมีภัณฑ์มีความจำเป็นต้องใช้น้ำในกระบวนการดำเนินงานหลายด้าน อาทิ การทำความสะอาดถังและอุปกรณ์ การควบคุมคุณภาพ การจัดการคลังสินค้า รวมถึงการดูแลสภาพแวดล้อมและความปลอดภัยภายในสถานประกอบการ การใช้น้ำอย่างมีประสิทธิภาพและการบริหารจัดการน้ำอย่างเหมาะสมจึงเป็นองค์ประกอบสำคัญในการลดผลกระทบต่อทรัพยากรธรรมชาติ ควบคู่กับการรับมือกับความท้าทายด้านการเปลี่ยนแปลงสภาพภูมิอากาศและความมั่นคงด้านทรัพยากรน้ำ<br><br>
                 นอกจากนี้ <span style="white-space: nowrap;">บริษัทฯ</span> ยังตระหนักถึงบทบาทและความรับผิดชอบในการบริหารจัดการทรัพยากรน้ำอย่างยั่งยืน จึงได้กำหนดมาตรการในการควบคุมและเพิ่มประสิทธิภาพการใช้น้ำในกระบวนการดำเนินงานอย่างเหมาะสม อาทิ การตรวจสอบและติดตามการใช้น้ำอย่างสม่ำเสมอ การปรับปรุงกระบวนการทำงานเพื่อลดการใช้น้ำที่ไม่จำเป็น รวมถึงการดูแลระบบบำบัดและจัดการน้ำเสียให้เป็นไปตามกฎหมายและมาตรฐานที่เกี่ยวข้อง ทั้งนี้ เพื่อสนับสนุนการดำเนินธุรกิจอย่างรับผิดชอบต่อสิ่งแวดล้อม และสร้างคุณค่าอย่างยั่งยืนให้แก่ผู้มีส่วนได้ส่วนเสียทุกกลุ่ม
-                <div style="margin-top: 30px; border: 1px solid #e2e8f0; border-radius: 0px; overflow: hidden; background: #fff; box-shadow: none;">
+                <div style="margin-top: 30px; border: 1px solid #e2e8f0; border-radius: 0px; overflow: hidden; background: var(--bg-surface); box-shadow: none;">
                     <div style="background-color: var(--primary, #193f6e); color: white; padding: 15px 20px; font-weight: 700; text-align: center; font-size: 18px;">
                         เป้าหมายการดำเนินการบริหารจัดการน้ำ
                     </div>
@@ -69,15 +79,15 @@
                         <tbody>
                             <tr style="border-bottom: 1px solid #e2e8f0;">
                                 <td style="background-color: #2a5a9c; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">เป้าหมาย</td>
-                                <td style="padding: 16px 20px; color: #334155; font-weight: 600; font-size: 18px; background-color: #f8fafc;">ลดการใช้น้ำ</td>
+                                <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">ลดการใช้น้ำ</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e2e8f0;">
                                 <td style="background-color: #3b71b8; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">ปีฐาน</td>
-                                <td style="padding: 16px 20px; color: #334155; font-weight: 600; font-size: 18px; background-color: #f1f5f9;">ปี 2567: ใช้น้ำ <span style="color: #0284c7;">4,585</span> ลูกบาศก์เมตร</td>
+                                <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">ปี 2567: ใช้น้ำ <span style="color: #0284c7;">4,585</span> ลูกบาศก์เมตร</td>
                             </tr>
                             <tr>
                                 <td style="background-color: #2a5a9c; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">ปีเป้าหมาย</td>
-                                <td style="padding: 16px 20px; color: #334155; font-weight: 600; font-size: 18px; background-color: #f8fafc;">ปี 2572: <span style="color: var(--secondary, #229f55);">ลด 20%</span> หรือ <span style="color: var(--secondary, #229f55);">917</span> ลูกบาศก์เมตร</td>
+                                <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">ปี 2572: <span style="color: var(--secondary, #229f55);">ลด 20%</span> หรือ <span style="color: var(--secondary, #229f55);">917</span> ลูกบาศก์เมตร</td>
                             </tr>
                         </tbody>
                     </table>
@@ -85,7 +95,7 @@
 
                 <div style="margin-top: 35px;">
                     <h3 class="sub-header" style="color: var(--primary); font-weight: 700; margin-bottom: 15px; font-size: 18px;">ผลการดำเนินงาน</h3>
-                    <p class="intro-text" style="color: #475569; margin-top: 10px; font-size: 18px; text-align: justify;">
+                    <p class="intro-text" style="color: var(--text-muted); margin-top: 10px; font-size: 18px; text-align: justify;">
                         จากการดำเนินงานในปี 2568 <span style="white-space: nowrap;">บริษัท</span>มีปริมาณการใช้น้ำ 3,421 ลูกบาศก์เมตร ซึ่ง ลดลงร้อยละ 25.38 เมื่อเทียบกับปีฐาน (2567) ส่งผลให้มียอดการใช้น้ำสะสมรวมสองปี (2567-2568) อยู่ที่ 8,006 ลูกบาศก์เมตร
                     </p>
                 </div>
@@ -94,7 +104,7 @@
                     <table class="data-table" style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; box-shadow: none; border-radius: 0px; overflow: hidden; text-align: center; border: 1px solid #e2e8f0;">
                         <thead>
                             <tr>
-                                <th class="text-body-lg" colspan="2" style="background-color: #ffffff; color: var(--primary, #193f6e); padding: 16px; border-bottom: 2px solid var(--primary, #193f6e); text-align: center; font-weight: 700;">
+                                <th class="text-body-lg" colspan="2" style="background-color: var(--bg-surface);fff; color: var(--primary, #193f6e); padding: 16px; border-bottom: 2px solid var(--primary, #193f6e); text-align: center; font-weight: 700;">
                                     ปริมาณการใช้น้ำรวม (ลูกบาศก์เมตร)
                                 </th>
                             </tr>
@@ -105,8 +115,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: #334155; border: 1px solid #e2e8f0; background-color: #f8fafc; text-align: center;">4,585</td>
-                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: #334155; border: 1px solid #e2e8f0; background-color: #f8fafc; text-align: center;">3,421</td>
+                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid #e2e8f0; background-color: var(--bg-surface); text-align: center;">4,585</td>
+                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid #e2e8f0; background-color: var(--bg-surface); text-align: center;">3,421</td>
                             </tr>
                         </tbody>
                     </table>
@@ -114,7 +124,7 @@
 
                 <div style="margin-top: 40px; margin-bottom: 20px;">
                     <h3 class="sub-header" style="color: var(--primary); font-weight: 700; margin-bottom: 15px; font-size: 18px;">โครงการและกิจกรรมภายในปี 2568</h3>
-                    <p style="color: #475569; line-height: 1.7; font-size: 18px; text-align: justify;">
+                    <p style="color: var(--text-muted); line-height: 1.7; font-size: 18px; text-align: justify;">
                         <strong>โครงการ Green Workplace Project</strong> “(โครงการต่อเนื่อง) <span style="white-space: nowrap;">บริษัท</span> ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) มีความมุ่งมั่นที่จะลดผลกระทบต่อสิ่งแวดล้อมและเพิ่มประสิทธิภาพในการใช้ทรัพยากร ดังนั้นจึงได้ริเริ่มโครงการ “Green Workplace Project” เพื่อสร้างสำนักงานที่เป็นมิตรต่อสิ่งแวดล้อมส่งเสริมการใช้พลังงานและทรัพยากรอย่างมีประสิทธิภาพ และสนับสนุนการพัฒนาที่ยั่งยืนโดยมีการกำหนดกิจกรรมการประหยัดน้ำ โดยการส่งเสริมการใช้น้ำอย่างรู้คุณค่า และติดโปสเตอร์หรือสัญลักษณ์เตือนในจุดต่างๆในบริเวณที่ใช้น้ำ
                     </p>
                 </div>
@@ -126,28 +136,28 @@
         </div>
         <div class="content-body">
             <div class="intro-text" style="display: block; margin-bottom: 20px;">
-                <p style="margin-bottom: 15px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 15px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     ธุรกิจด้านปิโตรเคมีและการจัดจำหน่ายเคมีภัณฑ์มีโอกาสก่อให้เกิดของเสียทั้งประเภทอันตรายและไม่อันตรายจากการดำเนินงานในหลายขั้นตอน อาทิ การจัดเก็บและขนถ่ายสินค้าเคมี การทำความสะอาดถังและอุปกรณ์ การบำบัดน้ำเสีย การควบคุมมลพิษ รวมถึงกิจกรรมสนับสนุนภายในสำนักงานและคลังสินค้า ด้วยเหตุนี้ การบริหารจัดการของเสียอย่างเป็นระบบและมีความรับผิดชอบจึงเป็นประเด็นสำคัญที่สะท้อนถึงความมุ่งมั่นขององค์กรในการดำเนินธุรกิจอย่างยั่งยืน โดยคำนึงถึงผลกระทบต่อสิ่งแวดล้อม ชุมชน และระบบนิเวศโดยรอบ
                 </p>
-                <p style="margin-bottom: 25px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 25px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     <span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญกับการจัดการของเสียในทุกขั้นตอน ตั้งแต่การคัดแยกและจัดประเภทของเสีย การจัดเก็บอย่างเหมาะสมและปลอดภัย การขนส่ง และการกำจัดหรือใช้ประโยชน์จากของเสียโดยผู้ให้บริการที่ได้รับอนุญาตตามกฎหมายที่เกี่ยวข้อง <span style="white-space: nowrap;">บริษัทฯ</span> มุ่งเน้นการลดการเกิดของเสีย ณ แหล่งกำเนิด (Reduce) การนำกลับมาใช้ใหม่ (Reuse) และการรีไซเคิล (Recycle) ควบคู่กับการเลือกแนวทางการจัดการของเสียที่เหมาะสม เพื่อลดปริมาณของเสียที่ต้องนำไปกำจัด และลดผลกระทบต่อสิ่งแวดล้อมอย่างมีประสิทธิภาพ ทั้งนี้ <span style="white-space: nowrap;">บริษัทฯ</span> ดำเนินงานภายใต้การปฏิบัติตามกฎหมาย มาตรฐานด้านสิ่งแวดล้อม และข้อกำหนดที่เกี่ยวข้องอย่างเคร่งครัด เพื่อสร้างความเชื่อมั่นให้แก่ผู้มีส่วนได้ส่วนเสียทุกกลุ่ม
                 </p>
 
                 <h3 class="sub-header" style="color: var(--primary); margin-top: 30px; border: none; padding: 0; font-weight: 700; font-size: 18px;">แนวทางการบริหารจัดการ</h3>
                 
                 <h4 style="color: var(--secondary); margin-top: 15px; font-weight: 600; font-size: 18px;">1) การบริหารจัดการของเสียตามหลักวิชาการและกฎหมาย</h4>
-                <p style="margin-bottom: 15px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 15px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     <span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญในการจัดการของเสีย เพื่อลดผลกระทบต่อสิ่งแวดล้อมตามกฎหมายกำหนดอย่างเคร่งครัดและต่อเนื่อง โดยยึดแนวปฏิบัติการจัดการของเสียตามหลัก 3Rs ซึ่งสอดคล้องกับแนวทางปฏิบัติทั้งในประเทศและต่างประเทศ ได้แก่ การลดปริมาณของเสียโดยการลดการใช้ (Reduce) การนำของเสียกลับมาใช้ซ้ำ (Reuse) และการนำกลับมาใช้ใหม่ (Recycle) ทั้งนี้ของเสียที่เกิดขึ้นส่วนใหญ่เกิดขึ้นจากพื้นที่สำนักงานและพื้นที่คลังสินค้าอันตราย ซึ่งถูกจัดเป็นขยะประเภทขยะทั่วไปที่ต้องปฏิบัติตามระเบียบกฎหมายและข้อบังคับที่เกี่ยวข้องคือ พระราชบัญญัติสาธารณสุข พ.ศ. 2535 ทั้งนี้<span style="white-space: nowrap;">บริษัทฯ</span> ไม่ได้มีขยะที่เกิดจากกระบวนการผลิตที่เข้าข่ายเป็นขยะอุตสาหกรรม สำหรับขยะทั่วไปที่เกิดขึ้นใน<span style="white-space: nowrap;">บริษัทฯ</span> ถูกแบ่งออกเป็น 4 กลุ่ม ได้แก่ ขยะอินทรีย์ ขยะรีไซเคิล ขยะทั่วไป และขยะอันตราย การจัดการขยะในปัจจุบันของ<span style="white-space: nowrap;">บริษัทฯ</span> จะเน้นที่การลดปริมาณการเกิดขยะที่แหล่งกำเนิด การคัดแยกและเก็บรวบรวม และการส่งไปกำจัดอย่างถูกวิธี
                 </p>
 
                 <h4 style="color: var(--secondary); margin-top: 20px; font-weight: 600; font-size: 18px;">2) การบริหารจัดการของเสียโดยกระบวนการมีส่วนร่วมของบุคลากรใน<span style="white-space: nowrap;">บริษัทฯ</span></h4>
-                <p style="margin-bottom: 10px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     การจัดการของเสียอย่างยั่งยืนในภาคอุตสาหกรรมไม่อาจเกิดขึ้นได้โดยอาศัยเพียงเทคโนโลยีหรือมาตรการด้านสิ่งแวดล้อมเพียงอย่างเดียว หากแต่ต้องอาศัยความร่วมมือจากบุคลากรในทุกระดับขององค์กร ซึ่งมีบทบาทสำคัญในการส่งเสริมพฤติกรรมการลด แยก และจัดการของเสียอย่างถูกต้องและต่อเนื่อง
                 </p>
-                <p style="margin-bottom: 10px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     <span style="white-space: nowrap;">บริษัทฯ</span> ตระหนักถึงความสำคัญของการมีส่วนร่วมของพนักงานในการบริหารจัดการของเสีย จึงได้พัฒนาแนวทางและกิจกรรมที่ส่งเสริมให้บุคลากรสามารถมีส่วนร่วมในทุกขั้นตอนของการจัดการ ตั้งแต่การคัดแยกของเสียที่ต้นทาง การลดการใช้วัสดุที่ก่อให้เกิดขยะ ไปจนถึงการส่งต่อของเสียเข้าสู่กระบวนการรีไซเคิลหรือกำจัดอย่างถูกวิธี ทั้งนี้เพื่อยกระดับประสิทธิภาพของระบบการจัดการของเสีย และสร้างวัฒนธรรมองค์กรที่มีความรับผิดชอบต่อสิ่งแวดล้อม
                 </p>
-                <p style="margin-bottom: 20px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 20px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     การดำเนินงานดังกล่าวไม่เพียงช่วยลดผลกระทบด้านสิ่งแวดล้อม แต่ยังเสริมสร้างจิตสำนึกด้านความยั่งยืนให้กับพนักงาน เพิ่มความโปร่งใสในการจัดการของเสีย และสนับสนุนเป้าหมายด้าน ESG และเศรษฐกิจหมุนเวียนขององค์กรอย่างเป็นรูปธรรม โดยกระบวนสำคัญที่<span style="white-space: nowrap;">บริษัทฯ</span> นำมาใช้เพื่อส่งเสริมกระบวนการมีส่วนร่วมของบุคลากรในการบริหารจัดการของเสีย
                 </p>
 
@@ -155,14 +165,14 @@
                     <div class="stat-card blue" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); ">
                         <div class="stat-title" style="color: #0284c7; font-weight: 600;">เป้าหมายระยะยาว</div>
                         <div class="stat-value" style="color: #0369a1; font-size: 24px; font-weight: 800; margin: 8px 0;">Zero Waste to Landfill</div>
-                        <div class="stat-desc" style="color: #475569;">ปริมาณขยะหรือของเสียนำไปฝังกลบเป็นศูนย์ ภายในปี 2572</div>
+                        <div class="stat-desc" style="color: var(--text-muted);">ปริมาณขยะหรือของเสียนำไปฝังกลบเป็นศูนย์ ภายในปี 2572</div>
                     </div>
                 </div>
                 <div style="clear: both;"></div>
             </div>
 
             <!-- Management Guidelines Table -->
-            <div style="overflow-x: auto; margin: 30px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: #fff;">
+            <div style="overflow-x: auto; margin: 30px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: var(--bg-surface);">
                 <table class="data-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 18px;">
                     <thead>
                         <tr style="background-color: var(--primary, #193f6e); color: white;">
@@ -173,10 +183,10 @@
                     <tbody>
                         <!-- Row 1 (Page 44) -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 การให้ความรู้และอบรมด้านการจัดการของเสีย
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">จัดการฝึกอบรมหรือกิจกรรมให้ความรู้เกี่ยวกับประเภทของของเสีย การแยกขยะอย่างถูกวิธี และผลกระทบของของเสียต่อสิ่งแวดล้อม</li>
                                     <li>จัดทำสื่อประชาสัมพันธ์ เช่น ป้ายไวนิล โปสเตอร์ หรือคลิปวิดีโอให้พนักงานเข้าใจง่ายและเข้าถึงได้</li>
@@ -185,10 +195,10 @@
                         </tr>
                         <!-- Row 2 (Page 44) -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 การติดตั้งระบบแยกขยะในสถานที่ทำงาน
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">จัดวางถังขยะแยกประเภทอย่างชัดเจนในพื้นที่ทำงาน พร้อมป้ายกำกับและคู่มือการใช้งาน</li>
                                     <li>ตั้งจุดรับคืนของเสียอันตรายจากพนักงาน เช่น ถ่านไฟฉาย หลอดไฟ หรือบรรจุภัณฑ์สารเคมี</li>
@@ -197,10 +207,10 @@
                         </tr>
                         <!-- Row 3 (Page 44) -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 การสร้างกิจกรรมส่งเสริมการมีส่วนร่วม
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">จัดโครงการประกวด "แยกขยะถูกวิธี" หรือ "ลดขยะในแผนก" โดยให้รางวัลหรือประกาศเกียรติคุณ</li>
                                     <li style="margin-bottom: 8px;">ส่งเสริมกิจกรรมรีไซเคิลในองค์กร เช่น การรับบริจาคขยะรีไซเคิลเพื่อแลกของรางวัล หรือร่วมกับหน่วยงานภายนอกนำขยะไปสร้างประโยชน์</li>
@@ -210,10 +220,10 @@
                         </tr>
                         <!-- Row 4 (Page 44) -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 การรวมของเสียเข้าสู่ระบบข้อมูลขององค์กร
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">ให้พนักงานมีส่วนร่วมในการรายงานปริมาณของเสียจากหน่วยงานของตนเองเพื่อวิเคราะห์และวางแผนลดขยะ</li>
                                     <li>ใช้ระบบดิจิทัลหรือแบบฟอร์มออนไลน์ให้พนักงานรายงานแนวทางการลดของเสียหรือแนวคิดที่สามารถนำไปใช้จริง</li>
@@ -222,10 +232,10 @@
                         </tr>
                         <!-- Row 5 (Page 45) -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 การบูรณาการแนวคิด "Zero Waste"<br>สู่พฤติกรรมประจำวัน
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">ส่งเสริมให้พนักงานใช้ภาชนะส่วนตัว งดใช้พลาสติกแบบใช้ครั้งเดียว<br>(Single-use plastic)</li>
                                     <li style="margin-bottom: 8px;">รณรงค์พฤติกรรม 3Rs: Reduce (ลดใช้), Reuse (ใช้ซ้ำ), Recycle (รีไซเคิล)<br>ผ่านกิจกรรมภายในองค์กร</li>
@@ -235,10 +245,10 @@
                         </tr>
                         <!-- Row 6 (Page 45) -->
                         <tr>
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 การสื่อสารและรายงานผลการดำเนินงาน
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">สื่อสารผลการลดของเสียหรือปริมาณของเสียที่จัดการได้สำเร็จผ่านช่องทางภายใน<br>องค์กร เช่น Intranet, E-mail, บอร์ดประกาศ</li>
                                     <li>เชื่อมโยงการมีส่วนร่วมของพนักงานกับเป้าหมาย ESG และแสดงในรายงานความยั่งยืน</li>
@@ -253,7 +263,7 @@
                 ผลการดำเนินงาน
             </h3>
             
-            <div style="overflow-x: auto; margin: 20px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: #fff;">
+            <div style="overflow-x: auto; margin: 20px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: var(--bg-surface);">
                 <table class="data-table" style="width: 100%; border-collapse: collapse; text-align: center; font-size: 18px;">
                     <thead>
                         <tr style="background: var(--primary, #193f6e); color: white;">
@@ -266,31 +276,31 @@
                     <tbody>
                         <!-- ขยะทั่วไป -->
                         <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 14px 10px; color: #334155; font-weight: 500; border-right: 1px solid #e2e8f0;">ขยะทั่วไป</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">10.88 ตัน</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">8.60 ตัน</td>
-                            <td rowspan="3" style="padding: 14px 10px; color: #0f172a; font-weight: 700; background-color: #ffffff; vertical-align: middle;">
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">ขยะทั่วไป</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">10.88 ตัน</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">8.60 ตัน</td>
+                            <td rowspan="3" style="padding: 14px 10px; color: #0f172a; font-weight: 700; background-color: var(--bg-surface);fff; vertical-align: middle;">
                                 เพิ่มสัดส่วน<br>รีไซเคิล 5% ต่อปี
                             </td>
                         </tr>
                         <!-- ขยะรีไซเคิล -->
                         <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 14px 10px; color: #334155; font-weight: 500; border-right: 1px solid #e2e8f0;">ขยะรีไซเคิล</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">0.64 ตัน</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">0.36 ตัน</td>
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">ขยะรีไซเคิล</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">0.64 ตัน</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">0.36 ตัน</td>
                         </tr>
                         <!-- ขยะอุตสาหกรรม -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 14px 10px; color: #334155; font-weight: 500; border-right: 1px solid #e2e8f0;">ขยะอุตสาหกรรม</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">64.76 ตัน</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">98.79 ตัน</td>
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">ขยะอุตสาหกรรม</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">64.76 ตัน</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">98.79 ตัน</td>
                         </tr>
                         
                         <!-- รวม -->
                         <tr style="background-color: #e2e8f0; border-bottom: 1px solid #cbd5e1;">
-                            <td style="padding: 14px 10px; font-weight: 700; color: #334155; border-right: 1px solid #cbd5e1;">รวม</td>
-                            <td style="padding: 14px 10px; font-weight: 700; color: #334155; border-right: 1px solid #cbd5e1;">76.28 ตัน</td>
-                            <td style="padding: 14px 10px; font-weight: 700; color: #334155; border-right: 1px solid #cbd5e1;">107.75 ตัน</td>
+                            <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">รวม</td>
+                            <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">76.28 ตัน</td>
+                            <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">107.75 ตัน</td>
                             <td style="padding: 14px 10px; background-color: #e2e8f0;"></td>
                         </tr>
                         
@@ -308,6 +318,10 @@
                 หมายเหตุ: ในปี 2568 <span style="white-space: nowrap;">บริษัท</span>ได้เริ่มดำเนินธุรกิจคลังสินค้าโรจนะแหลมฉบัง (ULT) จึงส่งผลให้มีปริมาณขยะที่เพิ่มขึ้น
             </div>
 
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="th">
+                <doc-card title="นโยบายความหลากหลายทางชีวภาพ 2569" url="../assets/เอกสารต่างๆ/นโยบายความหลากหลายทางชีวภาพ 2569.pdf" meta="PDF"></doc-card>
+            </doc-section>
         </div>
 
 

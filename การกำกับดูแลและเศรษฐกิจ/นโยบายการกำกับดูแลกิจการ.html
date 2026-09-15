@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>นโยบายการกำกับดูแลกิจการ - UKEM</title>
@@ -30,6 +39,7 @@
             text-decoration: underline;
         }
     </style>
+    <script src="../components/DocDownload.js" defer></script>
 </head>
 <body>
     
@@ -70,8 +80,16 @@
                 <div class="footer-note">
                     <span style="white-space: nowrap;">บริษัทฯ</span> ได้เผยแพร่นโยบายการกำกับดูแลกิจการที่ดี จริยธรรม และจรรยาบรรณในการดำเนินธุรกิจของ<span style="white-space: nowrap;">บริษัทฯ</span> บนเว็บไซต์ของ<span style="white-space: nowrap;">บริษัทฯ</span> ที่ <a href="http://www.unionpetrochemical.com" target="_blank">www.unionpetrochemical.com</a> เพื่อให้นักลงทุนและผู้สนใจ รวมถึงผู้มีส่วนได้เสียสามารถเข้าไปอ่านได้
                 </div>
+
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="th">
+                <doc-card title="ชื่อเอกสารที่ 1 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="ชื่อเอกสารที่ 2 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+                <doc-card title="ชื่อเอกสารที่ 3 (รออัปโหลด)" url="#" meta="PDF • - MB"></doc-card>
+            </doc-section>
         </div>
     </main>
+
 
     <main-footer depth="1"></main-footer>
 </body>

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Environmental Management - UKEM</title>
@@ -12,6 +21,7 @@
     <style>
         
     </style>
+    <script src="../../components/DocDownload.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html" lang="en"></main-nav>
@@ -61,7 +71,7 @@
                 <img src="../../assets/รูปสิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม/env_water.png" alt="Water Management" style="float: left; width: 100%; max-width: 450px; border-radius: 0px; box-shadow: none; object-fit: cover; margin-right: 40px; margin-bottom: 20px;">
                 The petrochemical and chemical distribution business necessitates water usage in various operational areas, such as cleaning tanks and equipment, quality control, warehouse management, and maintaining environmental and safety conditions within operational sites. Efficient water use and appropriate water management are essential components in reducing natural resource impacts, alongside tackling challenges posed by climate change and water resource security.<br><br>
                 Furthermore, <span style="white-space: nowrap;">the Company</span> recognizes its role and responsibility in sustainable water resource management. It has established measures to appropriately control and enhance water efficiency in its operations. These include regular inspection and monitoring of water usage, process improvements to reduce unnecessary consumption, and managing wastewater treatment systems in compliance with relevant laws and standards. This supports responsible environmental business operations and creates sustainable value for all stakeholder groups.
-                <div style="margin-top: 30px; border: 1px solid #e2e8f0; border-radius: 0px; overflow: hidden; background: #fff; box-shadow: none;">
+                <div style="margin-top: 30px; border: 1px solid #e2e8f0; border-radius: 0px; overflow: hidden; background: var(--bg-surface); box-shadow: none;">
                     <div style="background-color: var(--primary, #193f6e); color: white; padding: 15px 20px; font-weight: 700; text-align: center; font-size: 18px;">
                         Water Management Targets
                     </div>
@@ -69,15 +79,15 @@
                         <tbody>
                             <tr style="border-bottom: 1px solid #e2e8f0;">
                                 <td style="background-color: #2a5a9c; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">Target</td>
-                                <td style="padding: 16px 20px; color: #334155; font-weight: 600; font-size: 18px; background-color: #f8fafc;">Reduce water consumption</td>
+                                <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">Reduce water consumption</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e2e8f0;">
                                 <td style="background-color: #3b71b8; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">Base Year</td>
-                                <td style="padding: 16px 20px; color: #334155; font-weight: 600; font-size: 18px; background-color: #f1f5f9;">Year 2024: Water usage <span style="color: #0284c7;">4,585</span> cubic meters</td>
+                                <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">Year 2024: Water usage <span style="color: #0284c7;">4,585</span> cubic meters</td>
                             </tr>
                             <tr>
                                 <td style="background-color: #2a5a9c; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">Target Year</td>
-                                <td style="padding: 16px 20px; color: #334155; font-weight: 600; font-size: 18px; background-color: #f8fafc;">Year 2029: <span style="color: var(--secondary, #229f55);">Reduce by 20%</span> or <span style="color: var(--secondary, #229f55);">917</span> cubic meters</td>
+                                <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">Year 2029: <span style="color: var(--secondary, #229f55);">Reduce by 20%</span> or <span style="color: var(--secondary, #229f55);">917</span> cubic meters</td>
                             </tr>
                         </tbody>
                     </table>
@@ -85,7 +95,7 @@
 
                 <div style="margin-top: 35px;">
                     <h3 class="sub-header" style="color: var(--primary); font-weight: 700; margin-bottom: 15px; font-size: 18px;">Performance Results</h3>
-                    <p class="intro-text" style="color: #475569; margin-top: 10px; font-size: 18px; text-align: justify;">
+                    <p class="intro-text" style="color: var(--text-muted); margin-top: 10px; font-size: 18px; text-align: justify;">
                         Based on operations in 2025, <span style="white-space: nowrap;">the Company</span> used 3,421 cubic meters of water, representing a 25.38% decrease compared to the base year (2024). This resulted in an accumulated water consumption over the two-year period (2024-2025) of 8,006 cubic meters.
                     </p>
                 </div>
@@ -94,7 +104,7 @@
                     <table class="data-table" style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; box-shadow: none; border-radius: 0px; overflow: hidden; text-align: center; border: 1px solid #e2e8f0;">
                         <thead>
                             <tr>
-                                <th class="text-body-lg" colspan="2" style="background-color: #ffffff; color: var(--primary, #193f6e); padding: 16px; border-bottom: 2px solid var(--primary, #193f6e); text-align: center; font-weight: 700;">
+                                <th class="text-body-lg" colspan="2" style="background-color: var(--bg-surface);fff; color: var(--primary, #193f6e); padding: 16px; border-bottom: 2px solid var(--primary, #193f6e); text-align: center; font-weight: 700;">
                                     Total Water Consumption (Cubic Meters)
                                 </th>
                             </tr>
@@ -105,8 +115,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: #334155; border: 1px solid #e2e8f0; background-color: #f8fafc; text-align: center;">4,585</td>
-                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: #334155; border: 1px solid #e2e8f0; background-color: #f8fafc; text-align: center;">3,421</td>
+                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid #e2e8f0; background-color: var(--bg-surface); text-align: center;">4,585</td>
+                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid #e2e8f0; background-color: var(--bg-surface); text-align: center;">3,421</td>
                             </tr>
                         </tbody>
                     </table>
@@ -114,7 +124,7 @@
 
                 <div style="margin-top: 40px; margin-bottom: 20px;">
                     <h3 class="sub-header" style="color: var(--primary); font-weight: 700; margin-bottom: 15px; font-size: 18px;">Projects and Activities in 2025</h3>
-                    <p style="color: #475569; line-height: 1.7; font-size: 18px; text-align: justify;">
+                    <p style="color: var(--text-muted); line-height: 1.7; font-size: 18px; text-align: justify;">
                         <strong>Green Workplace Project</strong> “(Ongoing Project) <span style="white-space: nowrap;">Union Petrochemical Public Company Limited</span> is committed to minimizing environmental impacts and enhancing resource efficiency. Therefore, the “Green Workplace Project” was initiated to create an eco-friendly office, promote efficient energy and resource use, and support sustainable development. This includes establishing water conservation activities by promoting mindful water use and displaying posters or warning symbols at various water usage points.
                     </p>
                 </div>
@@ -126,28 +136,28 @@
         </div>
         <div class="content-body">
             <div class="intro-text" style="display: block; margin-bottom: 20px;">
-                <p style="margin-bottom: 15px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 15px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     The petrochemical and chemical distribution business has the potential to generate both hazardous and non-hazardous waste across multiple operational stages, such as chemical storage and transfer, tank and equipment cleaning, wastewater treatment, pollution control, as well as office and warehouse support activities. Consequently, systematic and responsible waste management is a crucial issue reflecting the organization's commitment to sustainable business operations, considering the impacts on the environment, communities, and surrounding ecosystems.
                 </p>
-                <p style="margin-bottom: 25px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 25px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     <span style="white-space: nowrap;">The Company</span> emphasizes waste management at every step, from waste segregation and classification, proper and safe storage, transportation, to disposal or utilization by legally authorized service providers. <span style="white-space: nowrap;">The Company</span> focuses on source reduction (Reduce), reuse (Reuse), and recycling (Recycle), along with selecting appropriate waste management methods to minimize the volume of waste destined for disposal and effectively reduce environmental impacts. <span style="white-space: nowrap;">The Company</span> operates in strict compliance with relevant laws, environmental standards, and regulations to build confidence among all stakeholder groups.
                 </p>
 
                 <h3 class="sub-header" style="color: var(--primary); margin-top: 30px; border: none; padding: 0; font-weight: 700; font-size: 18px;">Management Guidelines</h3>
                 
                 <h4 style="color: var(--secondary); margin-top: 15px; font-weight: 600; font-size: 18px;">1) Academic and Legal Waste Management</h4>
-                <p style="margin-bottom: 15px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 15px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     <span style="white-space: nowrap;">The Company</span> prioritizes waste management to strictly and continuously reduce environmental impacts as mandated by law. It adheres to the 3Rs waste management principles, which align with both domestic and international practices: Reduce (reducing usage), Reuse (reusing waste), and Recycle (bringing back for new use). Most of the waste generated comes from office and hazardous warehouse areas and is classified as general waste, which must comply with relevant rules, laws, and regulations, notably the Public Health Act B.E. 2535. <span style="white-space: nowrap;">The Company</span> does not produce waste from production processes that falls under industrial waste. General waste generated within <span style="white-space: nowrap;">the Company</span> is divided into 4 groups: organic waste, recyclable waste, general waste, and hazardous waste. Current waste management focuses on reducing waste generation at the source, sorting and collecting, and sending it for proper disposal.
                 </p>
 
                 <h4 style="color: var(--secondary); margin-top: 20px; font-weight: 600; font-size: 18px;">2) Waste Management Through Employee Participation</h4>
-                <p style="margin-bottom: 10px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     Sustainable waste management in the industrial sector cannot be achieved solely through technology or environmental measures; it requires the cooperation of personnel at all organizational levels. They play a vital role in promoting behaviors that reduce, separate, and properly manage waste on an ongoing basis.
                 </p>
-                <p style="margin-bottom: 10px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     <span style="white-space: nowrap;">The Company</span> recognizes the importance of employee participation in waste management. It has developed guidelines and activities that encourage personnel to engage in every management step, from source segregation and reducing the use of waste-generating materials, to forwarding waste into proper recycling or disposal processes. This aims to elevate the efficiency of the waste management system and build an environmentally responsible corporate culture.
                 </p>
-                <p style="margin-bottom: 20px; line-height: 1.7; color: #475569; text-align: justify; font-size: 18px;">
+                <p style="margin-bottom: 20px; line-height: 1.7; color: var(--text-muted); text-align: justify; font-size: 18px;">
                     Such operations not only help reduce environmental impacts but also foster a sense of sustainability among employees, increase transparency in waste management, and tangibly support the organization's ESG goals and circular economy. Key processes <span style="white-space: nowrap;">the Company</span> uses to promote personnel participation in waste management include:
                 </p>
 
@@ -155,14 +165,14 @@
                     <div class="stat-card blue" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); ">
                         <div class="stat-title" style="color: #0284c7; font-weight: 600;">Long-term Target</div>
                         <div class="stat-value" style="color: #0369a1; font-size: 24px; font-weight: 800; margin: 8px 0;">Zero Waste to Landfill</div>
-                        <div class="stat-desc" style="color: #475569;">Zero waste or refuse sent to landfill by 2029</div>
+                        <div class="stat-desc" style="color: var(--text-muted);">Zero waste or refuse sent to landfill by 2029</div>
                     </div>
                 </div>
                 <div style="clear: both;"></div>
             </div>
 
             <!-- Management Guidelines Table -->
-            <div style="overflow-x: auto; margin: 30px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: #fff;">
+            <div style="overflow-x: auto; margin: 30px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: var(--bg-surface);">
                 <table class="data-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 18px;">
                     <thead>
                         <tr style="background-color: var(--primary, #193f6e); color: white;">
@@ -173,10 +183,10 @@
                     <tbody>
                         <!-- Row 1 -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 Education and Training on Waste Management
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">Organize training or knowledge-sharing activities on waste types, proper waste segregation, and the environmental impact of waste.</li>
                                     <li>Create PR materials such as vinyl banners, posters, or video clips that are easy to understand and accessible for employees.</li>
@@ -185,10 +195,10 @@
                         </tr>
                         <!-- Row 2 -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 Installing Waste Separation Systems in the Workplace
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">Clearly place segregated waste bins in work areas, complete with labels and usage guidelines.</li>
                                     <li>Set up drop-off points for hazardous waste from employees, such as batteries, light bulbs, or chemical packaging.</li>
@@ -197,10 +207,10 @@
                         </tr>
                         <!-- Row 3 -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 Creating Activities to Promote Participation
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">Organize "Proper Waste Segregation" or "Departmental Waste Reduction" contests with rewards or certificates of recognition.</li>
                                     <li style="margin-bottom: 8px;">Promote corporate recycling activities, such as accepting recyclable waste donations in exchange for prizes, or partnering with external agencies to repurpose waste.</li>
@@ -210,10 +220,10 @@
                         </tr>
                         <!-- Row 4 -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 Integrating Waste Data into the Corporate Information System
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">Involve employees in reporting waste volumes from their departments to analyze and plan waste reduction.</li>
                                     <li>Use digital systems or online forms for employees to report waste reduction methods or actionable ideas.</li>
@@ -222,10 +232,10 @@
                         </tr>
                         <!-- Row 5 -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 Integrating "Zero Waste" Concepts into Daily Behavior
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">Encourage employees to use personal containers and abstain from single-use plastics.</li>
                                     <li style="margin-bottom: 8px;">Campaign for 3Rs behaviors: Reduce, Reuse, Recycle through internal activities.</li>
@@ -235,10 +245,10 @@
                         </tr>
                         <!-- Row 6 -->
                         <tr>
-                            <td style="padding: 20px; color: #334155; vertical-align: top; border-right: 1px solid #f1f5f9; background-color: #f8fafc;">
+                            <td style="padding: 20px; color: var(--text-main); vertical-align: top; border-right: 1px solid #f1f5f9; background-color: var(--bg-surface);">
                                 Communication and Performance Reporting
                             </td>
-                            <td style="padding: 20px; color: #475569;">
+                            <td style="padding: 20px; color: var(--text-muted);">
                                 <ul class="styled-list">
                                     <li style="margin-bottom: 8px;">Communicate successful waste reduction results or managed waste volumes through internal channels like Intranet, E-mail, and bulletin boards.</li>
                                     <li>Link employee participation to ESG targets and feature them in the sustainability report.</li>
@@ -253,7 +263,7 @@
                 Performance Results
             </h3>
             
-            <div style="overflow-x: auto; margin: 20px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: #fff;">
+            <div style="overflow-x: auto; margin: 20px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: var(--bg-surface);">
                 <table class="data-table" style="width: 100%; border-collapse: collapse; text-align: center; font-size: 18px;">
                     <thead>
                         <tr style="background: var(--primary, #193f6e); color: white;">
@@ -266,31 +276,31 @@
                     <tbody>
                         <!-- General Waste -->
                         <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 14px 10px; color: #334155; font-weight: 500; border-right: 1px solid #e2e8f0;">General Waste</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">10.88 Tons</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">8.60 Tons</td>
-                            <td rowspan="3" style="padding: 14px 10px; color: #0f172a; font-weight: 700; background-color: #ffffff; vertical-align: middle;">
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">General Waste</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">10.88 Tons</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">8.60 Tons</td>
+                            <td rowspan="3" style="padding: 14px 10px; color: #0f172a; font-weight: 700; background-color: var(--bg-surface);fff; vertical-align: middle;">
                                 Increase recycling proportion by 5% per year
                             </td>
                         </tr>
                         <!-- Recyclable Waste -->
                         <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 14px 10px; color: #334155; font-weight: 500; border-right: 1px solid #e2e8f0;">Recyclable Waste</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">0.64 Tons</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">0.36 Tons</td>
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">Recyclable Waste</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">0.64 Tons</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">0.36 Tons</td>
                         </tr>
                         <!-- Industrial Waste -->
                         <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 14px 10px; color: #334155; font-weight: 500; border-right: 1px solid #e2e8f0;">Industrial Waste</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">64.76 Tons</td>
-                            <td style="padding: 14px 10px; color: #475569; border-right: 1px solid #e2e8f0;">98.79 Tons</td>
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">Industrial Waste</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">64.76 Tons</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">98.79 Tons</td>
                         </tr>
                         
                         <!-- Total -->
                         <tr style="background-color: #e2e8f0; border-bottom: 1px solid #cbd5e1;">
-                            <td style="padding: 14px 10px; font-weight: 700; color: #334155; border-right: 1px solid #cbd5e1;">Total</td>
-                            <td style="padding: 14px 10px; font-weight: 700; color: #334155; border-right: 1px solid #cbd5e1;">76.28 Tons</td>
-                            <td style="padding: 14px 10px; font-weight: 700; color: #334155; border-right: 1px solid #cbd5e1;">107.75 Tons</td>
+                            <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">Total</td>
+                            <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">76.28 Tons</td>
+                            <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">107.75 Tons</td>
                             <td style="padding: 14px 10px; background-color: #e2e8f0;"></td>
                         </tr>
                         
@@ -311,7 +321,13 @@
         </div>
 
 
-    </div>
+    
+            <!-- ดาวน์โหลดเอกสาร -->
+            <doc-section lang="en">
+                <doc-card title="Biodiversity Policy 2026" url="../../assets/เอกสารต่างๆ/นโยบายความหลากหลายทางชีวภาพ 2569.pdf" meta="PDF"></doc-card>
+            </doc-section>
+        </div>
+
     </main>
     <main-footer depth="2" lang="en"></main-footer>
 </body>
