@@ -22,6 +22,7 @@
     </style>
     
     <script src="../components/DocDownload.js" defer></script>
+    <script src="../components/StatsCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="1" path="สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html" lang="th"></main-nav>
@@ -150,18 +151,11 @@
                     }
                 }
             </style>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-title">เป้าหมายระยะยาว (ปี 2572)</div>
-                    <div class="stat-value green">ลด 15%</div>
-                    <div class="stat-desc">ลดการใช้พลังงานไฟฟ้าเทียบกับปีฐาน หรือ 26,818 กิโลวัตต์-ชั่วโมง</div>
-                </div>
-                <div class="stat-card blue">
-                    <div class="stat-title">ผลการดำเนินงาน ปี 2568</div>
-                    <div class="stat-value">112,982.22</div>
-                    <div class="stat-desc">กิโลวัตต์-ชั่วโมง (ลดลง 36.81% จากปีฐาน 2567)</div>
-                </div>
-            </div>
+            <stats-grid>
+
+                <stat-card title="" value="" desc=""></stat-card>
+                <stat-card title="" value="" desc="" theme="blue"></stat-card>
+            </stats-grid>
 
             <p class="intro-text">
                 จากการดำเนินงานในปี 2568 <span style="white-space: nowrap;">บริษัท</span>มีปริมาณการใช้ไฟฟ้า 112,982.22 กิโลวัตต์-ชั่วโมง ซึ่งลดลงร้อยละ 36.81 เมื่อเทียบกับปีฐาน (2567) ส่งผลให้มียอดการใช้ไฟฟ้าสะสมรวมสองปี (2567-2568) อยู่ที่ 291,769.98 กิโลวัตต์-ชั่วโมง
@@ -205,24 +199,13 @@
                     }
                 }
             </style>
-            <div class="stats-grid-4cols">
-                <div class="stat-card blue">
-                    <div class="stat-title">น้ำมันดีเซล (ลิตร) - ปี 2567</div>
-                    <div class="stat-value">290,456.06</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-title">น้ำมันแก๊สโซฮอล (ลิตร) - ปี 2567</div>
-                    <div class="stat-value green">37,838.23</div>
-                </div>
-                <div class="stat-card blue">
-                    <div class="stat-title">น้ำมันดีเซล (ลิตร) - ปี 2568</div>
-                    <div class="stat-value">188,991.57</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-title">น้ำมันแก๊สโซฮอล (ลิตร) - ปี 2568</div>
-                    <div class="stat-value green">36,799.07</div>
-                </div>
-            </div>
+            <stats-grid>
+
+                <stat-card title="น้ำมันดีเซล (ลิตร) - ปี 2567" value="290,456.06" theme="blue"></stat-card>
+                <stat-card title="น้ำมันแก๊สโซฮอล (ลิตร) - ปี 2567" value="37,838.23" theme="green"></stat-card>
+                <stat-card title="น้ำมันดีเซล (ลิตร) - ปี 2568" value="188,991.57" theme="blue"></stat-card>
+                <stat-card title="น้ำมันแก๊สโซฮอล (ลิตร) - ปี 2568" value="36,799.07" theme="green"></stat-card>
+            </stats-grid>
 
             <p class="intro-text">
                 จากข้อมูลการใช้พลังงานเชื้อเพลิงของ<span style="white-space: nowrap;">บริษัทฯ</span> ในช่วงปี 2567-2568 พบว่า ปริมาณการใช้น้ำมันดีเซลซึ่งเป็นเชื้อเพลิงหลักในการดำเนินงานด้านการขนส่งและโลจิสติกส์ ลดลงอย่างมีนัยสำคัญ จาก 290,456.06 ลิตร ในปี 2567 เหลือ 188,991.57 ลิตร ในปี 2568 ขณะที่การใช้น้ำมันแก๊สโซฮอลมีแนวโน้มลดลงเล็กน้อย สะท้อนถึงประสิทธิภาพในการบริหารจัดการพลังงาน การวางแผนการขนส่งที่เหมาะสม และการใช้ทรัพยากรอย่างคุ้มค่า

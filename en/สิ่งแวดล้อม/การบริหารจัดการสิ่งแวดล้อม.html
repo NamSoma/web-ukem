@@ -22,6 +22,7 @@
         
     </style>
     <script src="../../components/DocDownload.js" defer></script>
+    <script src="../../components/StatsCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html" lang="en"></main-nav>
@@ -161,13 +162,9 @@
                     Such operations not only help reduce environmental impacts but also foster a sense of sustainability among employees, increase transparency in waste management, and tangibly support the organization's ESG goals and circular economy. Key processes <span style="white-space: nowrap;">the Company</span> uses to promote personnel participation in waste management include:
                 </p>
 
-                <div class="stats-grid" style="grid-template-columns: 1fr; margin-top: 20px;">
-                    <div class="stat-card blue" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); ">
-                        <div class="stat-title" style="color: #0284c7; font-weight: 600;">Long-term Target</div>
-                        <div class="stat-value" style="color: #0369a1; font-size: 24px; font-weight: 800; margin: 8px 0;">Zero Waste to Landfill</div>
-                        <div class="stat-desc" style="color: var(--text-muted);">Zero waste or refuse sent to landfill by 2029</div>
-                    </div>
-                </div>
+                <stats-grid cols="1">
+                    <stat-card title="Long-term Target" value="Zero Waste to Landfill" desc="Amount of waste or refuse sent to landfill is zero by the year 2029" theme="blue"></stat-card>
+                </stats-grid>
                 <div style="clear: both;"></div>
             </div>
 

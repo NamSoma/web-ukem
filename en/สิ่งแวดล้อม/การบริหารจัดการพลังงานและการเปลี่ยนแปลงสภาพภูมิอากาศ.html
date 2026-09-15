@@ -22,6 +22,7 @@
     </style>
     
     <script src="../../components/DocDownload.js" defer></script>
+    <script src="../../components/StatsCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html" lang="en"></main-nav>
@@ -150,18 +151,10 @@
                     }
                 }
             </style>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-title">Long-term Target (Year 2029)</div>
-                    <div class="stat-value green">Reduce by 15%</div>
-                    <div class="stat-desc">Reduction in electricity consumption compared to the base year, or 26,818 kWh</div>
-                </div>
-                <div class="stat-card blue">
-                    <div class="stat-title">Operational Performance Year 2025</div>
-                    <div class="stat-value">112,982.22</div>
-                    <div class="stat-desc">kWh (Reduced by 36.81% from the base year 2024)</div>
-                </div>
-            </div>
+            <stats-grid>
+                <stat-card title="Long-term Target (Year 2029)" value="Reduce by 15%" desc="Reduction in electricity consumption compared to the base year, or 26,818 kWh" theme="green"></stat-card>
+                <stat-card title="Operational Performance Year 2025" value="112,982.22" desc="kWh (Reduced by 36.81% from the base year 2024)" theme="blue"></stat-card>
+            </stats-grid>
 
             <p class="intro-text">
                 From the operations in 2025, <span style="white-space: nowrap;">the Company</span> consumed 112,982.22 kWh of electricity, representing a decrease of 36.81% compared to the base year (2024). This resulted in an accumulated electricity consumption over the two-year period (2024-2025) of 291,769.98 kWh.
@@ -205,24 +198,13 @@
                     }
                 }
             </style>
-            <div class="stats-grid-4cols">
-                <div class="stat-card blue">
-                    <div class="stat-title">Diesel Oil (Liters) - Year 2024</div>
-                    <div class="stat-value">290,456.06</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-title">Gasohol (Liters) - Year 2024</div>
-                    <div class="stat-value green">37,838.23</div>
-                </div>
-                <div class="stat-card blue">
-                    <div class="stat-title">Diesel Oil (Liters) - Year 2025</div>
-                    <div class="stat-value">188,991.57</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-title">Gasohol (Liters) - Year 2025</div>
-                    <div class="stat-value green">36,799.07</div>
-                </div>
-            </div>
+            <stats-grid>
+
+                <stat-card title="Diesel Oil (Liters) - Year 2024" value="290,456.06" theme="blue"></stat-card>
+                <stat-card title="Gasohol (Liters) - Year 2024" value="37,838.23" theme="green"></stat-card>
+                <stat-card title="Diesel Oil (Liters) - Year 2025" value="188,991.57" theme="blue"></stat-card>
+                <stat-card title="Gasohol (Liters) - Year 2025" value="36,799.07" theme="green"></stat-card>
+            </stats-grid>
 
             <p class="intro-text">
                 Based on <span style="white-space: nowrap;">the Company's</span> fuel consumption data for 2024-2025, the consumption of diesel oil—the primary fuel for transportation and logistics operations—decreased significantly from 290,456.06 liters in 2024 to 188,991.57 liters in 2025. Meanwhile, the use of gasohol trended slightly downwards, reflecting efficiency in energy management, optimal transportation planning, and cost-effective resource utilization.

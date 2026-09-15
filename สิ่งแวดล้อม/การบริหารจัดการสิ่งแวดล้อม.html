@@ -22,6 +22,7 @@
         
     </style>
     <script src="../components/DocDownload.js" defer></script>
+    <script src="../components/StatsCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="1" path="สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html" lang="th"></main-nav>
@@ -161,13 +162,9 @@
                     การดำเนินงานดังกล่าวไม่เพียงช่วยลดผลกระทบด้านสิ่งแวดล้อม แต่ยังเสริมสร้างจิตสำนึกด้านความยั่งยืนให้กับพนักงาน เพิ่มความโปร่งใสในการจัดการของเสีย และสนับสนุนเป้าหมายด้าน ESG และเศรษฐกิจหมุนเวียนขององค์กรอย่างเป็นรูปธรรม โดยกระบวนสำคัญที่<span style="white-space: nowrap;">บริษัทฯ</span> นำมาใช้เพื่อส่งเสริมกระบวนการมีส่วนร่วมของบุคลากรในการบริหารจัดการของเสีย
                 </p>
 
-                <div class="stats-grid" style="grid-template-columns: 1fr; margin-top: 20px;">
-                    <div class="stat-card blue" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); ">
-                        <div class="stat-title" style="color: #0284c7; font-weight: 600;">เป้าหมายระยะยาว</div>
-                        <div class="stat-value" style="color: #0369a1; font-size: 24px; font-weight: 800; margin: 8px 0;">Zero Waste to Landfill</div>
-                        <div class="stat-desc" style="color: var(--text-muted);">ปริมาณขยะหรือของเสียนำไปฝังกลบเป็นศูนย์ ภายในปี 2572</div>
-                    </div>
-                </div>
+                <stats-grid cols="1">
+                    <stat-card title="เป้าหมายระยะยาว" value="Zero Waste to Landfill" desc="ปริมาณขยะหรือของเสียนำไปฝังกลบเป็นศูนย์ ภายในปี 2572" theme="blue"></stat-card>
+                </stats-grid>
                 <div style="clear: both;"></div>
             </div>
 

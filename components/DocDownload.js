@@ -34,7 +34,16 @@ class DocCard extends HTMLElement {
         const meta = this.getAttribute('meta') || 'PDF • - MB';
         
         const isPlaceholder = url === '#' || url === '';
-        const downloadIcon = isPlaceholder ? '⬇️' : '⬇️';
+        
+        // Use text instead of arrow icon. Check language from parent doc-section if possible, 
+        // but since doc-card doesn't have lang attribute directly, we can check document language or closest doc-section
+        const lang = this.closest('doc-section')?.getAttribute('lang') || document.documentElement.lang || 'th';
+        
+        let downloadText = lang === 'en' ? 'View & Download' : 'ดู & ดาวน์โหลด';
+        
+        if (isPlaceholder) {
+            downloadText = lang === 'en' ? 'Pending' : 'รออัปโหลด';
+        }
         
         this.innerHTML = `
             <a href="${url}" target="_blank" class="doc-card">
@@ -43,7 +52,7 @@ class DocCard extends HTMLElement {
                     <div class="doc-title">${title}</div>
                     <div class="doc-meta">${meta}</div>
                 </div>
-                <div class="doc-download">${downloadIcon}</div>
+                <div class="doc-download" style="font-size: 14px; font-weight: 500; background: var(--primary); color: white; padding: 4px 12px; border-radius: 4px;">${downloadText}</div>
             </a>
         `;
     }
