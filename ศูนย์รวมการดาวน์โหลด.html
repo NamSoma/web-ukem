@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/global.css">
     <script src="components/Navbar.js" defer></script>
     <script src="components/Footer.js" defer></script>
+    <script src="components/DocDownload.js" defer></script>
 </head>
 <body>
     
@@ -106,66 +107,54 @@
         </style>
 
         <div class="container">
-            <div class="download-list">
-                
-                <div>
-                    <h2 class="section-label">รายงานความยั่งยืน / ESG Report</h2>
-                </div>
+    <div class="download-list">
+    <div>
+        <h2 class="section-label" style="margin-top: 20px;">รายงานความยั่งยืน / ESG Report</h2>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="assets/เอกสารภาพรวมความยั่งยืน/ESG_Report_2025.pdf" 
+            title="รายงานผลการดำเนินงานด้าน ESG ประจำปี 2568" 
+            meta="PDF">
+        </doc-card>
+    </div>
 
-                <div class="download-item">
-                    <div class="download-info">
-                        <div class="download-icon">
-                            
-                        </div>
-                        <div>
-                            <div class="download-title">รายงานข้อมูล ESG Data Platform ประจำปี 2568</div>
-                            <div class="download-desc">รูปแบบ PDF (ภาษาไทย) - ขนาด 2.4 MB</div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-download">
-                        
-                        ดาวน์โหลด
-                    </a>
-                </div>
-
-                <div class="download-item">
-                    <div class="download-info">
-                        <div class="download-icon">
-                            
-                        </div>
-                        <div>
-                            <div class="download-title">ESG Data Platform Report 2025</div>
-                            <div class="download-desc">PDF format (English) - Size 2.3 MB</div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-download">
-                        
-                        Download
-                    </a>
-                </div>
-
-                <div>
-                    <h2 class="section-label" style="margin-top: 20px;">รายงานประจำปี / Annual Report</h2>
-                </div>
-
-                <div class="download-item">
-                    <div class="download-info">
-                        <div class="download-icon">
-                            
-                        </div>
-                        <div>
-                            <div class="download-title">แบบแสดงรายการข้อมูลประจำปี (One Report) 2568</div>
-                            <div class="download-desc">รูปแบบ PDF (ภาษาไทย) - ขนาด 7.9 MB</div>
-                        </div>
-                    </div>
-                    <a href="ukem-or-2025-th.pdf" target="_blank" class="btn-download">
-                        
-                        ดาวน์โหลด
-                    </a>
-                </div>
-
-            </div>
-        </div>
+    <div>
+        <h2 class="section-label" style="margin-top: 20px;">นโยบายด้านความยั่งยืน / Sustainability Policies</h2>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="assets/เอกสารสิ่งแวดล้อม/นโยบายการเปลี่ยนแปลงสภาพภูมิอากาศและการลดการปล่อยคาร์บอน.pdf" 
+            title="นโยบายการเปลี่ยนแปลงสภาพภูมิอากาศและการลดการปล่อยคาร์บอน" 
+            meta="PDF">
+        </doc-card>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="assets/เอกสารสิ่งแวดล้อม/นโยบายความหลากหลายทางชีวภาพ 2569.pdf" 
+            title="นโยบายความหลากหลายทางชีวภาพ 2569" 
+            meta="PDF">
+        </doc-card>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="assets/เอกสารสังคม/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf" 
+            title="นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ" 
+            meta="PDF">
+        </doc-card>
+    </div>
+    <div>
+        <h2 class="section-label" style="margin-top: 20px;">รายงานประจำปี / Annual Report</h2>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="#" 
+            title="แบบแสดงรายการข้อมูลประจำปี (One Report) 2568" 
+            meta="PDF">
+        </doc-card>
+    </div>
+</div>
+</div>
     </main>
 
     <main-footer></main-footer>

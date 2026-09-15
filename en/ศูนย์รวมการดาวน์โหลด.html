@@ -18,6 +18,7 @@
     <script src="../components/Navbar.js" defer></script>
     <script src="../components/StatsCard.js" defer></script>
     <script src="../components/Footer.js" defer></script>
+    <script src="../components/DocDownload.js" defer></script>
 </head>
 <body>
     
@@ -107,66 +108,54 @@
         </style>
 
         <div class="container">
-            <div class="download-list">
-                
-                <div>
-                    <h2 class="section-label">Sustainability Report / ESG Report</h2>
-                </div>
+    <div class="download-list">
+    <div>
+        <h2 class="section-label" style="margin-top: 20px;">Sustainability Report / ESG Report</h2>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="../assets/เอกสารภาพรวมความยั่งยืน/ESG_Report_2025.pdf" 
+            title="ESG Performance Report 2025" 
+            meta="PDF">
+        </doc-card>
+    </div>
 
-                <div class="download-item">
-                    <div class="download-info">
-                        <div class="download-icon">
-                            
-                        </div>
-                        <div>
-                            <div class="download-title">ESG Data Platform Report 2025 (Thai Version)</div>
-                            <div class="download-desc">PDF Format (Thai) - Size 2.4 MB</div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-download">
-                        
-                        Download
-                    </a>
-                </div>
-
-                <div class="download-item">
-                    <div class="download-info">
-                        <div class="download-icon">
-                            
-                        </div>
-                        <div>
-                            <div class="download-title">ESG Data Platform Report 2025</div>
-                            <div class="download-desc">PDF format (English) - Size 2.3 MB</div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-download">
-                        
-                        Download
-                    </a>
-                </div>
-
-                <div>
-                    <h2 class="section-label" style="margin-top: 20px;">Annual Report</h2>
-                </div>
-
-                <div class="download-item">
-                    <div class="download-info">
-                        <div class="download-icon">
-                            
-                        </div>
-                        <div>
-                            <div class="download-title">Annual Registration Statement (One Report) 2025</div>
-                            <div class="download-desc">PDF Format (Thai) - Size 7.9 MB</div>
-                        </div>
-                    </div>
-                    <a href="ukem-or-2025-th.pdf" target="_blank" class="btn-download">
-                        
-                        Download
-                    </a>
-                </div>
-
-            </div>
-        </div>
+    <div>
+        <h2 class="section-label" style="margin-top: 20px;">Sustainability Policies</h2>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="../assets/เอกสารสิ่งแวดล้อม/นโยบายการเปลี่ยนแปลงสภาพภูมิอากาศและการลดการปล่อยคาร์บอน.pdf" 
+            title="Climate Change and Carbon Reduction Policy" 
+            meta="PDF">
+        </doc-card>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="../assets/เอกสารสิ่งแวดล้อม/นโยบายความหลากหลายทางชีวภาพ 2569.pdf" 
+            title="Biodiversity Policy 2026" 
+            meta="PDF">
+        </doc-card>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="../assets/เอกสารสังคม/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf" 
+            title="Labor, Human Rights and Non-discrimination Policy" 
+            meta="PDF">
+        </doc-card>
+    </div>
+    <div>
+        <h2 class="section-label" style="margin-top: 20px;">Annual Report</h2>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <doc-card 
+            url="#" 
+            title="Annual Registration Statement (One Report) 2025" 
+            meta="PDF">
+        </doc-card>
+    </div>
+</div>
+</div>
     </main>
 
     <main-footer depth="1" lang="en"></main-footer>

@@ -46,14 +46,14 @@ class DocCard extends HTMLElement {
         }
         
         this.innerHTML = `
-            <a href="${url}" target="_blank" class="doc-card">
+            <div class="doc-card">
                 <div class="doc-icon">📄</div>
                 <div class="doc-info">
                     <div class="doc-title">${title}</div>
                     <div class="doc-meta">${meta}</div>
                 </div>
-                <div class="doc-download" style="font-size: 14px; font-weight: 500; background: var(--primary); color: white; padding: 4px 12px; border-radius: 4px;">${downloadText}</div>
-            </a>
+                <a href="${url}" target="_blank" class="doc-download" style="text-decoration: none; display: inline-block;">${downloadText}</a>
+            </div>
         `;
     }
 }
