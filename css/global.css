@@ -1468,3 +1468,70 @@ main-nav { display: contents; }
 [data-theme="dark"] .nav-logo img {
     /* To keep logo readable, add a subtle filter if needed, but user said 'leave it alone'. We leave it alone */
 }
+/* =========================================
+   ESG ACCORDION (PROGRESSIVE DISCLOSURE)
+========================================= */
+details.esg-accordion {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+details.esg-accordion[open] {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-color: var(--primary-light);
+}
+
+details.esg-accordion > summary {
+    padding: 18px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--primary);
+    background-color: #f8fafc;
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+details.esg-accordion > summary::-webkit-details-marker {
+    display: none;
+}
+
+details.esg-accordion > summary::before {
+    content: '+';
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--primary);
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+details.esg-accordion[open] > summary::before {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+details.esg-accordion > summary:hover {
+    background-color: #f1f5f9;
+}
+
+details.esg-accordion .accordion-content {
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    background: #ffffff;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* Skimmable text styling */
+.skimmable-bold {
+    color: var(--text-main);
+    font-weight: 600;
+}
