@@ -7,8 +7,10 @@
       "**/node_modules/**",
       "**/*.exe",
       "**/*.ps1",
+      "**/*.bat",
       "**/*.pb",
       ".agent/**",
+      "scratch/**",
       "import easyocr.py",
       "sync_github.ps1"
     ]

@@ -160,8 +160,7 @@
             </div>
 
             <!-- ดาวน์โหลดเอกสาร -->
-            <doc-section lang="th">
-            </doc-section>
+            
         </div>
     </main>
 
@@ -178,12 +177,13 @@
                         const isDecimal = counter.getAttribute('data-target').includes('.');
                         const decimalPlaces = isDecimal ? counter.getAttribute('data-target').split('.')[1].length : 0;
                         
+                        let currentCount = 0;
                         const updateCount = () => {
-                            const count = parseFloat(counter.innerText.replace(/,/g, ''));
                             const inc = target / speed;
+                            currentCount += inc;
 
-                            if (count < target) {
-                                counter.innerText = (count + inc).toFixed(decimalPlaces);
+                            if (currentCount < target) {
+                                counter.innerText = currentCount.toFixed(decimalPlaces);
                                 setTimeout(updateCount, 15);
                             } else {
                                 counter.innerText = target.toLocaleString('en-US', { minimumFractionDigits: decimalPlaces, maximumFractionDigits: decimalPlaces });

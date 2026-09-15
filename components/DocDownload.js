@@ -15,7 +15,7 @@ class DocSection extends HTMLElement {
         
         // Wrap children in doc-grid and add section-header
         this.innerHTML = `
-            <section-header title="${title}" style="margin-top: 60px;"></section-header>
+            <section-header title="${title}"></section-header>
             <div class="doc-grid">
                 ${innerContent}
             </div>
@@ -39,7 +39,7 @@ class DocCard extends HTMLElement {
         // but since doc-card doesn't have lang attribute directly, we can check document language or closest doc-section
         const lang = this.closest('doc-section')?.getAttribute('lang') || document.documentElement.lang || 'th';
         
-        let downloadText = lang === 'en' ? 'View & Download' : 'ดู & ดาวน์โหลด';
+        let downloadText = lang === 'en' ? 'Download' : 'ดาวน์โหลด';
         
         if (isPlaceholder) {
             downloadText = lang === 'en' ? 'Pending' : 'รออัปโหลด';
