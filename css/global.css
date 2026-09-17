@@ -859,12 +859,6 @@ main-nav { display: contents; }
     padding: 30px;
     margin-bottom: 40px;
     border: 1px solid var(--border-color); box-shadow: none;
-    
-    transition: transform 0.3s ease;
-}
-.policy-card:hover {
-    transform: translateY(-3px);
-    border: 1px solid var(--border-color); box-shadow: none;
 }
 .policy-card p {
     font-size: 18px;
@@ -1474,9 +1468,9 @@ main-nav { display: contents; }
 details.esg-accordion {
     background: #ffffff;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 0px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    box-shadow: none;
     overflow: hidden;
     transition: all 0.3s ease;
 }

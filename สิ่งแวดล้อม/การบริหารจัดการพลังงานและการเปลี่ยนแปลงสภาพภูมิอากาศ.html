@@ -74,15 +74,15 @@
                 }
                 .mgmt-card {
                     background: white;
-                    border-radius: 12px;
+                    border-radius: 0px;
                     padding: 25px;
-                    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                    box-shadow: none;
                     border: 1px solid #e2e8f0;
                     transition: transform 0.2s ease, box-shadow 0.2s ease;
                 }
                 .mgmt-card:hover {
                     transform: translateY(-5px);
-                    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                    box-shadow: none;
                 }
                 .mgmt-title {
                     color: var(--primary);
@@ -102,55 +102,69 @@
                     margin-bottom: 8px;
                 }
             </style>
-            <div class="mgmt-grid">
-                <div class="mgmt-card">
-                    <div class="mgmt-title">การประเมินและติดตามการใช้พลังงาน</div>
-                    <ul>
+            <div style="margin-bottom: 40px; display: flex; flex-direction: column; text-align: left;">
+                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                    <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">1</span> การประเมินและติดตามการใช้พลังงาน
+                    </h4>
+                    <ul class="styled-list" style="margin: 0; color: #475569;">
                         <li>จัดทำระบบเก็บข้อมูลการใช้พลังงานแบบเรียลไทม์ในกระบวนการหลักและระบบสาธารณูปโภค</li>
                         <li>วิเคราะห์แนวโน้มการใช้พลังงานเพื่อระบุโอกาสในการปรับปรุงประสิทธิภาพ</li>
                         <li>จัดทำ Energy Baseline และ Energy Performance Indicators (EnPIs) เพื่อเปรียบเทียบผลการดำเนินงาน</li>
                     </ul>
                 </div>
-                <div class="mgmt-card">
-                    <div class="mgmt-title">การวางระบบการจัดการพลังงาน<br>(Energy Management System)</div>
-                    <ul>
+                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                    <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">2</span> การวางระบบการจัดการพลังงาน (Energy Management System)
+                    </h4>
+                    <ul class="styled-list" style="margin: 0; color: #475569;">
                         <li>จัดตั้งคณะทำงานด้านพลังงานและกำหนดบทบาทหน้าที่อย่างชัดเจน</li>
                         <li>จัดทำแผนงานและเป้าหมายด้านพลังงานทั้งในระยะสั้นและระยะยาว</li>
                         <li>มีการทบทวนผลการดำเนินงานด้านพลังงานอย่างสม่ำเสมอในระดับผู้บริหาร</li>
                     </ul>
                 </div>
-                <div class="mgmt-card">
-                    <div class="mgmt-title">การปรับปรุงประสิทธิภาพการใช้พลังงานในกระบวนการผลิต</div>
-                    <ul>
+                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                    <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">3</span> การปรับปรุงประสิทธิภาพการใช้พลังงานในกระบวนการผลิต
+                    </h4>
+                    <ul class="styled-list" style="margin: 0; color: #475569;">
                         <li>ปรับปรุงหรือเปลี่ยนมาใช้เครื่องจักรหรืออุปกรณ์ที่มีประสิทธิภาพสูงหรือประหยัดพลังงาน</li>
                         <li>ลดการสูญเสียพลังงานจากฉนวน ความร้อน และการรั่วไหล</li>
                     </ul>
                 </div>
-                <div class="mgmt-card">
-                    <div class="mgmt-title">การส่งเสริมการใช้พลังงานหมุนเวียน</div>
-                    <ul>
+                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                    <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">4</span> การส่งเสริมการใช้พลังงานหมุนเวียน
+                    </h4>
+                    <ul class="styled-list" style="margin: 0; color: #475569;">
                         <li>ศึกษาแนวทางการติดตั้งระบบผลิตไฟฟ้าจากพลังงานแสงอาทิตย์ (Solar PV) ภายในคลังสินค้า</li>
                     </ul>
                 </div>
-                <div class="mgmt-card">
-                    <div class="mgmt-title">การบริหารจัดการอุปกรณ์สนับสนุนและสาธารณูปโภค</div>
-                    <ul>
+                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                    <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">5</span> การบริหารจัดการอุปกรณ์สนับสนุนและสาธารณูปโภค
+                    </h4>
+                    <ul class="styled-list" style="margin: 0; color: #475569;">
                         <li>ปรับเปลี่ยนระบบแสงสว่างเป็น LED และใช้ระบบควบคุมอัตโนมัติ</li>
                         <li>ปรับตั้งอุณหภูมิระบบปรับอากาศให้เหมาะสมและใช้ระบบ VRV หรือ inverter</li>
                         <li>บำรุงรักษาเชิงป้องกัน (Preventive Maintenance) เพื่อลดการสูญเสียจากอุปกรณ์ชำรุด</li>
                     </ul>
                 </div>
-                <div class="mgmt-card">
-                    <div class="mgmt-title">การสร้างวัฒนธรรมด้านการอนุรักษ์พลังงาน</div>
-                    <ul>
+                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                    <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">6</span> การสร้างวัฒนธรรมด้านการอนุรักษ์พลังงาน
+                    </h4>
+                    <ul class="styled-list" style="margin: 0; color: #475569;">
                         <li>จัดอบรมและสื่อสารภายในองค์กรเพื่อสร้างความตระหนักด้านพลังงาน</li>
                         <li>ส่งเสริมการมีส่วนร่วมของพนักงานในการเสนอแนวคิดประหยัดพลังงาน</li>
                         <li>จัดทำกิจกรรมรณรงค์หรือประกวดโครงการลดการใช้พลังงานภายในหน่วยงาน</li>
                     </ul>
                 </div>
-                <div class="mgmt-card">
-                    <div class="mgmt-title">การประเมินผลและรายงานผลการใช้พลังงาน</div>
-                    <ul>
+                <div style="padding: 20px 0;">
+                    <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">7</span> การประเมินผลและรายงานผลการใช้พลังงาน
+                    </h4>
+                    <ul class="styled-list" style="margin: 0; color: #475569;">
                         <li>จัดทำรายงานผลการใช้พลังงานและประสิทธิภาพพลังงานเป็นรายปี</li>
                         <li>ติดตามการบรรลุเป้าหมายของมาตรการที่ดำเนินการอย่างต่อเนื่อง โดยมีการกำหนดตัวชี้วัดและเป้าหมายอย่างชัดเจน</li>
                         <li>ใช้ข้อมูลการใช้พลังงานเป็นปัจจัยประกอบการตัดสินใจทางธุรกิจและการลงทุนด้านสิ่งแวดล้อม</li>
@@ -191,11 +205,11 @@
                 }
                 .elec-card {
                     background: white;
-                    border-radius: 8px;
+                    border-radius: 0px;
                     border: 1px solid #e2e8f0;
                     text-align: center;
                     overflow: hidden;
-                    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                    box-shadow: none;
                 }
                 .elec-card .year {
                     background: #4a74a5;
@@ -323,7 +337,7 @@
             </div>
 
             <!-- 1. Target Banner -->
-            <div class="ghg-target-banner" style="background: linear-gradient(135deg, var(--primary), #1e467a); border-radius: 12px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; color: white; margin: 30px 0;">
+            <div class="ghg-target-banner" style="background: linear-gradient(135deg, var(--primary), #1e467a); border-radius: 0px; padding: 30px; box-shadow: none; text-align: center; color: white; margin: 30px 0;">
                 <div class="text-h3" style="font-weight: 600; margin-bottom: 10px;">เป้าหมาย</div>
                 <div class="text-h3" style="margin-bottom: 20px; opacity: 0.9;">ลดปริมาณการปล่อยก๊าซเรือนกระจก ลง <strong style="color: #facc15;">30%</strong> ภายในปี 2572 (ปีฐาน 2567)</div>
             </div>
@@ -340,9 +354,9 @@
                 }
                 .ghg-card {
                     background: white; 
-                    border-radius: 12px; 
+                    border-radius: 0px; 
                     padding: 25px; 
-                    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+                    box-shadow: none; 
                     text-align: center; 
                     border: 1px solid #e2e8f0;
                     border-top: 4px solid var(--primary); 
@@ -350,23 +364,23 @@
                 }
                 .ghg-card:hover {
                     transform: translateY(-5px);
-                    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                    box-shadow: none;
                 }
                 .ghg-card-highlight {
                     background: #f8fafc; 
-                    border-radius: 12px; 
+                    border-radius: 0px; 
                     padding: 25px; 
                     text-align: center; 
                     border: 1px solid #cbd5e1; 
-                    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                    box-shadow: none;
                 }
                 .ghg-card-premium {
                     background: #f0f9ff; 
-                    border-radius: 12px; 
+                    border-radius: 0px; 
                     padding: 25px; 
                     text-align: center; 
                     border: 1px solid #7dd3fc; 
-                    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                    box-shadow: none;
                 }
                 .ghg-badge-success {
                     color: #059669; font-weight: 600; background: #d1fae5; padding: 6px 12px; border-radius: 20px; display: inline-block; font-size: 0.9rem;
@@ -392,15 +406,15 @@
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 15px;">
                         <div style="text-align: left;">
                             <div class="text-small" style="color: #64748b; margin-bottom: 3px;">ปี 2567</div>
-                            <div class="text-body-lg" style="font-weight: 600; color: #475569;">-</div>
+                            <div class="text-body-lg" style="font-weight: 600; color: #475569;">767.00</div>
                         </div>
                         <div class="ghg-arrow">&rarr;</div>
                         <div style="text-align: right;">
                             <div class="text-small" style="color: var(--primary); margin-bottom: 3px;">ปี 2568</div>
-                            <div class="text-h3" style="font-weight: 700; color: var(--primary);">650.00</div>
+                            <div class="text-h3" style="font-weight: 700; color: var(--primary);">607.00</div>
                         </div>
                     </div>
-                    
+                    <div><span class="ghg-badge-success">&darr; ลดลง 160 tCO<sub>2</sub>eq</span></div>
                 </div>
 
                 <!-- Scope 2 Card -->
@@ -409,15 +423,15 @@
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 15px;">
                         <div style="text-align: left;">
                             <div class="text-small" style="color: #64748b; margin-bottom: 3px;">ปี 2567</div>
-                            <div class="text-body-lg" style="font-weight: 600; color: #475569;">-</div>
+                            <div class="text-body-lg" style="font-weight: 600; color: #475569;">85.00</div>
                         </div>
                         <div class="ghg-arrow">&rarr;</div>
                         <div style="text-align: right;">
                             <div class="text-small" style="color: var(--primary); margin-bottom: 3px;">ปี 2568</div>
-                            <div class="text-h3" style="font-weight: 700; color: var(--primary);">57.00</div>
+                            <div class="text-h3" style="font-weight: 700; color: var(--primary);">54.00</div>
                         </div>
                     </div>
-                    
+                    <div><span class="ghg-badge-success">&darr; ลดลง 31 tCO<sub>2</sub>eq</span></div>
                 </div>
 
                 <!-- Scope 3 Card -->
@@ -426,15 +440,15 @@
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 15px;">
                         <div style="text-align: left;">
                             <div class="text-small" style="color: #64748b; margin-bottom: 3px;">ปี 2567</div>
-                            <div class="text-body-lg" style="font-weight: 600; color: #475569;">-</div>
+                            <div class="text-body-lg" style="font-weight: 600; color: #475569;">2,472.00</div>
                         </div>
                         <div class="ghg-arrow">&rarr;</div>
                         <div style="text-align: right;">
                             <div class="text-small" style="color: var(--primary); margin-bottom: 3px;">ปี 2568</div>
-                            <div class="text-h3" style="font-weight: 700; color: var(--primary);">-</div>
+                            <div class="text-h3" style="font-weight: 700; color: var(--primary);">2,484.00</div>
                         </div>
                     </div>
-                    
+                    <div><span class="ghg-badge-danger">&uarr; เพิ่มขึ้น 12 tCO<sub>2</sub>eq</span></div>
                 </div>
             </div>
 
@@ -445,16 +459,16 @@
                     <div style="display: flex; justify-content: space-around; align-items: center;">
                         <div style="background: white; padding: 15px 20px; border-radius: 8px; border: 1px solid #e2e8f0; width: 42%;">
                             <div class="text-small" style="color: #64748b; margin-bottom: 5px;">ปี 2567</div>
-                            <div class="text-h3" style="font-weight: 600; color: var(--text-muted);">921.00</div>
+                            <div class="text-h3" style="font-weight: 600; color: var(--text-muted);">852.00</div>
                         </div>
                         <div class="ghg-arrow">&rarr;</div>
                         <div style="background: white; padding: 15px 20px; border-radius: 8px; border: 1px solid var(--primary); width: 42%;">
                             <div class="text-small" style="color: var(--primary); margin-bottom: 5px;">ปี 2568</div>
-                            <div class="text-h2" style="font-weight: 700; color: var(--primary);">707.00</div>
+                            <div class="text-h2" style="font-weight: 700; color: var(--primary);">661.00</div>
                         </div>
                     </div>
                     <div style="margin-top: 25px;">
-                        <div class="ghg-badge-success">&darr; ลดลง 214 tCO<sub>2</sub>eq</div>
+                        <div class="ghg-badge-success">&darr; ลดลง 191 tCO<sub>2</sub>eq</div>
                     </div>
                 </div>
 
@@ -464,16 +478,16 @@
                     <div style="display: flex; justify-content: space-around; align-items: center;">
                         <div style="background: white; padding: 15px 20px; border-radius: 8px; border: 1px solid #bae6fd; width: 42%;">
                             <div class="text-small" style="color: #0ea5e9; margin-bottom: 5px;">ปี 2567</div>
-                            <div class="text-h3" style="font-weight: 600; color: #0284c7;">3,102.00</div>
+                            <div class="text-h3" style="font-weight: 600; color: #0284c7;">3,324.00</div>
                         </div>
                         <div class="ghg-arrow">&rarr;</div>
                         <div style="background: white; padding: 15px 20px; border-radius: 8px; border: 1px solid #0284c7; width: 42%;">
                             <div class="text-small" style="color: #0369a1; margin-bottom: 5px;">ปี 2568</div>
-                            <div class="text-h2" style="font-weight: 700; color: #0369a1;">-</div>
+                            <div class="text-h2" style="font-weight: 700; color: #0369a1;">3,145.00</div>
                         </div>
                     </div>
-                    <div style="margin-top: 25px;">
-                        
+                    <div style="margin-top: 25px; text-align: center;">
+                        <div class="ghg-badge-success" style="font-size: 1.1rem; padding: 8px 16px;">✨ ลดลง 179 tCO<sub>2</sub>eq</div>
                     </div>
                 </div>
             </div>
