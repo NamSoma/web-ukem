@@ -24,6 +24,7 @@ class MainFooter extends HTMLElement {
             social: isEn ? "Social" : "สังคม",
             gov: isEn ? "Governance" : "การกำกับดูแล",
             awards: isEn ? "Awards and Successes" : "รางวัลและความสำเร็จ",
+            download: isEn ? "Download Center" : "ศูนย์รวมการดาวน์โหลด",
         };
 
         this.innerHTML = `
@@ -36,7 +37,7 @@ class MainFooter extends HTMLElement {
                 }
                 .footer-col-left {
                     flex: 1 1 50%;
-                    background-color: var(--primary);
+                    background-color: var(--footer-left-bg);
                     padding: 60px 20px;
                     display: flex;
                     justify-content: flex-end;
@@ -45,7 +46,7 @@ class MainFooter extends HTMLElement {
                 }
                 .footer-col-right {
                     flex: 1 1 50%;
-                    background-color: #f1f5f9;
+                    background-color: var(--footer-right-bg);
                     padding: 60px 20px;
                     display: flex;
                     justify-content: flex-start;
@@ -66,7 +67,7 @@ class MainFooter extends HTMLElement {
                     justify-content: center;
                 }
                 .footer-bottom {
-                    background-color: var(--primary);
+                    background-color: var(--footer-bottom-bg);
                     color: rgba(255,255,255,0.9);
                     border-top: 1px solid rgba(255,255,255,0.2);
                 }
@@ -106,11 +107,11 @@ class MainFooter extends HTMLElement {
                     <!-- Right Column: QR Code -->
                     <div class="footer-col-right">
                         <div class="footer-inner-right">
-                            <div style="background-color: white; padding: 15px; border-radius: 0px; margin-bottom: 20px; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                            <div style="background-color: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid var(--footer-qr-border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
                                 <!-- Generated QR Code for @UnionUPC -->
                                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://line.me/R/ti/p/%40unionupc" alt="LINE QR Code" style="width: 160px; height: 160px; object-fit: contain; display: block;" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg'">
                             </div>
-                            <p style="color: #64748b; font-size: 16px; margin: 0; font-weight: 500;">LINE Official Account : @UnionUPC</p>
+                            <p style="color: var(--footer-right-text); font-size: 16px; margin: 0; font-weight: 500;">LINE Official Account : @UnionUPC</p>
                         </div>
                     </div>
                 </div>
@@ -126,7 +127,8 @@ class MainFooter extends HTMLElement {
                             <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html" style="color: rgba(255,255,255,0.9); text-decoration: none; margin: 0 5px; transition: 0.3s;" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">${t.env}</a> | 
                             <a href="${linkBase}สังคม/นโยบายและการปฏิบัติด้านสังคม.html" style="color: rgba(255,255,255,0.9); text-decoration: none; margin: 0 5px; transition: 0.3s;" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">${t.social}</a> | 
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html" style="color: rgba(255,255,255,0.9); text-decoration: none; margin: 0 5px; transition: 0.3s;" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">${t.gov}</a> | 
-                            <a href="${linkBase}รางวัลและความสำเร็จ.html" style="color: rgba(255,255,255,0.9); text-decoration: none; margin: 0 5px; transition: 0.3s;" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">${t.awards}</a>
+                            <a href="${linkBase}รางวัลและความสำเร็จ.html" style="color: rgba(255,255,255,0.9); text-decoration: none; margin: 0 5px; transition: 0.3s;" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">${t.awards}</a> |
+                            <a href="${linkBase}ศูนย์รวมการดาวน์โหลด.html" style="color: rgba(255,255,255,0.9); text-decoration: none; margin: 0 5px; transition: 0.3s;" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">${t.download}</a>
                         </div>
                     </div>
                 </div>

@@ -37,11 +37,11 @@
         }
         .fin-stat-label {
             font-size: 16px;
-            color: #64748b;
+            color: var(--text-muted);
         }
         .fin-comparison {
             font-size: 14px;
-            color: #64748b;
+            color: var(--text-muted);
             margin-top: 15px;
             padding-top: 15px;
             border-top: 1px dashed rgba(0,0,0,0.1);
@@ -81,23 +81,23 @@
             
             <card-grid style="margin-top: 30px; margin-bottom: 40px;">
                 
-                <!-- ยอดขาย (EBITDA) -->
+                <!-- รายได้รวม -->
                 <div class="card-item-blue" style="text-align: center;">
-                    <div class="fin-stat-value"><span class="counter-value" data-target="2631.48">0</span></div>
-                    <div class="fin-stat-label">ยอดขาย (EBITDA) ปี 2568 (ล้านบาท)</div>
+                    <div class="fin-stat-value"><span class="counter-value" data-target="2635.35">0</span></div>
+                    <div class="fin-stat-label">รายได้รวม ปี 2568 (ล้านบาท)</div>
                     <div class="fin-comparison">
-                        <span>ปี 2567: 3,201.95 ลบ.</span>
+                        <span>ปี 2567: 3,206.94 ลบ.</span>
                         <span class="comparison-badge badge-down">▼ 17.82%</span>
                     </div>
                 </div>
 
                 <!-- กำไรสุทธิ -->
                 <div class="card-item" style="text-align: center;">
-                    <div class="fin-stat-value" style="color: var(--secondary);"><span class="counter-value" data-target="55.42">0</span></div>
+                    <div class="fin-stat-value" style="color: var(--secondary);"><span class="counter-value" data-target="54.35">0</span></div>
                     <div class="fin-stat-label">กำไรสุทธิ ปี 2568 (ล้านบาท)</div>
                     <div class="fin-comparison">
-                        <span>ปี 2567: 7.26 ลบ.</span>
-                        <span class="comparison-badge badge-up">▲ 663.09%</span>
+                        <span>ปี 2567: 6.26 ลบ.</span>
+                        <span class="comparison-badge badge-up">▲ 768.21%</span>
                     </div>
                 </div>
 
@@ -114,46 +114,74 @@
             </card-grid>
 
             <div style="margin-top: 50px;">
-                <section-header title="งบแสดงฐานะการเงิน"></section-header>
-                <div style="overflow-x: auto; margin-top: 20px;">
-                    <table class="data-table" style="text-align: right;">
+                <section-header title="ผลประกอบการสำคัญ (อ้างอิงจากตลาดหลักทรัพย์ฯ)"></section-header>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">ข้อมูลสรุปฐานะการเงินและผลการดำเนินงาน (หน่วย: ล้านบาท)</p>
+                <div style="overflow-x: auto;">
+                    <table class="data-table" style="text-align: right; width: 100%;">
                         <thead>
                             <tr>
-                                <th style="text-align: left;">รายการ (หน่วย: ล้านบาท)</th>
-                                <th style="text-align: right;">ณ วันที่ 31 ธันวาคม 2567</th>
-                                <th style="text-align: right;">ณ วันที่ 31 ธันวาคม 2568</th>
-                                <th style="text-align: right;">เปลี่ยนแปลง (%)</th>
+                                <th style="text-align: left;">บัญชีทางการเงินที่สำคัญ</th>
+                                <th style="text-align: right;">งบปี 2566</th>
+                                <th style="text-align: right;">งบปี 2567</th>
+                                <th style="text-align: right;">งบปี 2568</th>
+                                <th style="text-align: right;">งบ 6 เดือน 2569</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td style="text-align: left;"><strong>สินทรัพย์รวม</strong></td>
-                                <td>1,693.21</td>
+                                <td>1,684.41</td>
                                 <td>1,736.58</td>
-                                <td><span style="color: #ef4444;">(2.50%)</span></td>
+                                <td>1,693.21</td>
+                                <td style="color: var(--primary);"><strong>2,115.44</strong></td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><strong>หนี้สินรวม</strong></td>
-                                <td>895.53</td>
+                                <td>864.09</td>
                                 <td>983.72</td>
-                                <td><span style="color: #ef4444;">(8.96%)</span></td>
+                                <td>895.53</td>
+                                <td style="color: var(--primary);"><strong>995.07</strong></td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><strong>ส่วนของผู้ถือหุ้น</strong></td>
-                                <td>797.67</td>
-                                <td>752.86</td>
-                                <td><span style="color: #10b981;">5.95%</span></td>
+                                <td>816.99</td>
+                                <td>748.53</td>
+                                <td>792.28</td>
+                                <td style="color: var(--primary);"><strong>1,114.44</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>รายได้รวม</strong></td>
+                                <td>2,832.53</td>
+                                <td>3,206.94</td>
+                                <td>2,635.35</td>
+                                <td style="color: var(--primary);"><strong>1,783.31</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>กำไรสุทธิ</strong></td>
+                                <td>6.46</td>
+                                <td>6.26</td>
+                                <td>54.35</td>
+                                <td style="color: var(--primary);"><strong>338.41</strong></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
+            <div style="margin-top: 40px; background-color: var(--bg-light); padding: 40px; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                <h3 style="color: var(--primary); margin-bottom: 15px; font-weight: 700;">ข้อมูลงบการเงินฉบับเต็ม (SET)</h3>
+                <p style="color: var(--text-muted); margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">ท่านสามารถเรียกดูข้อมูลงบการเงิน งบกำไรขาดทุน และข้อมูลทางสถิติที่สำคัญของบริษัทได้อย่างครบถ้วนและเป็นปัจจุบันได้ที่เว็บไซต์ตลาดหลักทรัพย์แห่งประเทศไทย (SET)</p>
+                <a href="https://www.set.or.th/th/market/product/stock/quote/UKEM/financial-statement/company-highlights" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; background-color: var(--primary); color: white;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    ดูข้อมูลทางการเงินบนเว็บไซต์ SET
+                </a>
+            </div>
+
             <section-header title="การวิเคราะห์คำอธิบายของฝ่ายจัดการ (MD&A) สรุป" style="margin-top: 50px;"></section-header>
             <div  style="margin-top: 20px;">
                 <ul class="styled-list">
-                    <li><strong style="color: var(--primary);">ยอดขาย (EBITDA):</strong> ในปี 2568 บริษัทมียอดขายรวม 2,631.48 ล้านบาท ลดลงจากปีก่อน 17.82% เนื่องจากปริมาณการขายที่ลดลงของทุกกลุ่มสินค้า (เคมีภัณฑ์ทั่วไป เม็ดพลาสติก และกลุ่มอุตสาหกรรมอื่น) รวมถึงราคาขายเฉลี่ยที่ปรับลดลง</li>
-                    <li><strong style="color: var(--primary);">กำไรสุทธิ:</strong> บริษัทสามารถบริหารจัดการต้นทุนขายและการจัดจำหน่ายได้อย่างมีประสิทธิภาพ ทำให้มีกำไรสุทธิ 55.42 ล้านบาท เพิ่มขึ้นจากปีก่อนถึง 663.09% ซึ่งเกิดจากการปรับแผนมุ่งเน้นกลุ่มลูกค้าที่ทำกำไรได้ดี ประกอบกับต้นทุนเฉลี่ยของสินค้าปรับลดลงมากกว่าราคาขายเฉลี่ย ทำให้กำไรขั้นต้นเพิ่มขึ้น</li>
+                    <li><strong style="color: var(--primary);">รายได้รวม:</strong> ในปี 2568 บริษัทมีรายได้รวม 2,635.35 ล้านบาท ลดลงจากปีก่อน 17.82% เนื่องจากปริมาณการขายที่ลดลงของทุกกลุ่มสินค้า (เคมีภัณฑ์ทั่วไป เม็ดพลาสติก และกลุ่มอุตสาหกรรมอื่น) รวมถึงราคาขายเฉลี่ยที่ปรับลดลง</li>
+                    <li><strong style="color: var(--primary);">กำไรสุทธิ:</strong> บริษัทสามารถบริหารจัดการต้นทุนขายและการจัดจำหน่ายได้อย่างมีประสิทธิภาพ ทำให้มีกำไรสุทธิ 54.35 ล้านบาท เพิ่มขึ้นจากปีก่อนถึง 768.21% ซึ่งเกิดจากการปรับแผนมุ่งเน้นกลุ่มลูกค้าที่ทำกำไรได้ดี ประกอบกับต้นทุนเฉลี่ยของสินค้าปรับลดลงมากกว่าราคาขายเฉลี่ย ทำให้กำไรขั้นต้นเพิ่มขึ้น</li>
                 </ul>
             </div>
 

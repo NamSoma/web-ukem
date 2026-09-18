@@ -30,11 +30,12 @@
         }
         .hr-stat-label {
             font-size: 16px;
-            color: #64748b;
+            color: var(--text-muted);
         }
     </style>
     <script src="../../components/DocDownload.js" defer></script>
     <script src="../../components/StatsCard.js" defer></script>
+    <script src="../../components/AlertCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html" lang="en"></main-nav>
@@ -59,7 +60,7 @@
             <section-header title="Human Resources Management"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Focuses on fair recruitment and employment processes</strong>, adhering to human rights, international labor standards, and ESG principles:
                         <ul class="styled-list" style="margin-top: 10px;">
                             <li><strong style="color: var(--primary);">Equality:</strong> Evaluates applicants equally without discrimination based on gender, age, race, or religion.</li>
@@ -73,7 +74,7 @@
             <section-header title="Personnel Recruitment and Selection"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Recruits personnel fairly, transparently, and auditably:</strong>
                         <ul class="styled-list" style="margin-top: 10px;">
                             <li><strong style="color: var(--primary);">Merit-Based:</strong> Selects candidates based primarily on merit, ability, and suitability for the position.</li>
@@ -87,7 +88,7 @@
             <section-header title="Performance Evaluation"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Evaluates performance fairly and transparently</strong> based on Good HR Practices to promote personnel growth and elevate organizational efficiency.
                     </p>
                 </div>
@@ -96,7 +97,7 @@
             <section-header title="Building Employee Engagement"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Employees are the most valuable resource:</strong> Employee Engagement is crucial for enhancing operational efficiency, stability, and sustainable growth.
                     </p>
                 </div>
@@ -128,7 +129,7 @@
             <section-header title="Termination / Non-Termination of Employment"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Treats employees equally:</strong> No employee will be terminated without reasonable cause unless they commit a severe disciplinary offense or meet other conditions outlined in <span style="white-space: nowrap;">the Company's</span> regulations, executed with transparency, fairness, and legality.
                     </p>
                 </div>
@@ -137,18 +138,18 @@
             <section-header title="Complaint Handling and Whistleblowing"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Secure Complaint Channels:</strong> Provides internal and external channels for complaints and whistleblowing with strict confidentiality and protection measures for complainants to ensure transparency and fairness.
                     </p>
                 </div>
             </div>
             
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">Whistleblowing or Complaint Channels</h3>
                 </div>
-                <p class="text-body" style="color: #475569;  margin-bottom: 25px;">If you discover any suspicious actions causing detrimental effects to <span style="white-space: nowrap;">the Company</span>, you can submit tips or complaints to:</p>
+                <p class="text-body" style="color: var(--text-muted);  margin-bottom: 25px;">If you discover any suspicious actions causing detrimental effects to <span style="white-space: nowrap;">the Company</span>, you can submit tips or complaints to:</p>
                 
                 <card-grid>
                     <!-- Mail -->
@@ -156,7 +157,7 @@
                         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
                             <h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">1. Postal Mail</h4>
                         </div>
-                        <p class="text-body" style="margin: 0; color: #475569;  line-height: 1.6;">
+                        <p class="text-body" style="margin: 0; color: var(--text-muted);  line-height: 1.6;">
                             <strong>Send to:</strong> Chairman of the Audit Committee, Managing Director, Internal Audit Department, or Company Secretary <br>
                             <span style="white-space: nowrap;">Union Petrochemical Public Company Limited</span> <br>
                             728 Union House Building, Borommaratchachonnani Road, Bang Bamru, Bang Phlat, Bangkok 10700
@@ -168,7 +169,7 @@
                         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
                             <h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">2. Email</h4>
                         </div>
-                        <p class="text-body" style="margin: 0; color: #475569;  line-height: 1.6;">
+                        <p class="text-body" style="margin: 0; color: var(--text-muted);  line-height: 1.6;">
                             <strong>Audit Committee:</strong><br>
                             <a class="text-small" href="mailto:auditcommittee@unionpetrochemical.com" style="color: var(--secondary); text-decoration: none;  white-space: nowrap;">auditcommittee@unionpetrochemical.com</a><br><br>
                             <strong>Internal Audit Department:</strong><br>
@@ -181,64 +182,48 @@
                         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
                             <h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">3. Suggestion Box</h4>
                         </div>
-                        <p class="text-body" style="margin: 0; color: #475569;  line-height: 1.6;">
+                        <p class="text-body" style="margin: 0; color: var(--text-muted);  line-height: 1.6;">
                             <span style="white-space: nowrap;">The Company</span> has provided suggestion boxes in open areas within the organization, allowing complainants to easily and safely submit complaints in person.
                         </p>
                     </div>
                 </card-grid>
-            </div>
+            </alert-card>
 
             
             
         
             
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">Respect for Human Rights</h3>
                 </div>
                 <div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         The Company has a policy to be fair to all stakeholders by complying with relevant laws and regulations and adhering to basic human rights principles according to international standards without discrimination based on origin, race, gender, age, skin color, religion, disability, financial status, family background, educational institution, or any other status not directly related to work performance. The Company also maintains a working environment free from personal rights violations, with mutual respect, cooperation, assistance, offering suggestions, and solving problems together at work.
                     </p>
                 </div>
-            </div>
+            </alert-card>
     
 
 
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">Fair Labor Practices</h3>
                 </div>
                 <div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         The Company recognizes that employees are a highly valuable resource of the company. Therefore, the Company aims to support the development of human resource potential for maximum benefit to the Company, as well as encourage employees to participate in creating a good work culture and atmosphere, promote teamwork, equally and equitably listen to opinions and suggestions from employees at all levels, and provide appropriate and fair compensation and welfare benefits.<br><br>The Company promotes employee knowledge, abilities, skills, and experience to lead to efficient performance by providing training for employees in various departments. In addition, the Company sends employees for external training to increase knowledge in various areas related to their work, and bring the knowledge gained from the training back to transfer to their colleagues, such as training on newly issued accounting standards, computer network systems training, etc.
                     </p>
                 </div>
-            </div>
+            </alert-card>
 
             
         
     
         
-            <doc-section lang="en">
-                <doc-card 
-                        url="../../assets/เอกสารสังคม/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf" 
-                        title="Labor, Human Rights, and Non-Discrimination Policy" 
-                        meta="PDF">
-                </doc-card>
-                <doc-card 
-                        url="../../assets/เอกสารสังคม/บันทึกตรวจสอบและรับรองข้อมูลสัดส่วนผู้หญิงในตำแหน่งบริหาร.pdf" 
-                        title="Memo: Audit and Certification of Proportion of Women in Management Positions 2026" 
-                        meta="PDF">
-                </doc-card>
-                <doc-card 
-                        url="../../assets/เอกสารสังคม/บันทึกผลการตรวจสอบแรงงานข้ามชาติ.pdf" 
-                        title="Memo: Audit of Migrant Workers 2026" 
-                        meta="PDF">
-                </doc-card>
-            </doc-section>
+            
 
         </div>
     </main>

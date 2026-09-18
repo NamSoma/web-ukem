@@ -43,7 +43,7 @@
     </section>
 
     <!-- ESG Performance Dashboard -->
-    <section class="dashboard-section" style="padding: 60px 0 20px; background-color: #f8fafc;">
+    <section class="dashboard-section" style="padding: 60px 0 20px; background-color: var(--bg-light);">
         <div class="container">
             <div class="text-center" style="margin-bottom: 40px;">
                 <h2 class="section-title">ESG <span class="highlight-blue">Performance</span> Highlights</h2>
@@ -54,22 +54,22 @@
                 <!-- E Stat -->
                 <div class="stat-card card-item" style="text-align: center;">
                     <div class="stat-number" style="font-size: 48px; font-weight: 700; color: #1e293b; margin-bottom: 5px;">25<span style="font-size: 24px;">%</span></div>
-                    <div class="stat-text" style="color: #64748b; font-size: 16px;">Reduction in water consumption vs base year</div>
+                    <div class="stat-text" style="color: var(--text-muted); font-size: 16px;">Reduction in water consumption vs base year</div>
                 </div>
                 <!-- S Stat -->
                 <div class="stat-card card-item" style="text-align: center;">
                     <div class="stat-number" style="font-size: 48px; font-weight: 700; color: #1e293b; margin-bottom: 5px;">0</div>
-                    <div class="stat-text" style="color: #64748b; font-size: 16px;">Lost Time Injuries (LTI)</div>
+                    <div class="stat-text" style="color: var(--text-muted); font-size: 16px;">Lost Time Injuries (LTI)</div>
                 </div>
                 <!-- G Stat -->
                 <div class="stat-card card-item" style="text-align: center;">
                     <div class="stat-number" style="font-size: 48px; font-weight: 700; color: #1e293b; margin-bottom: 5px;">0</div>
-                    <div class="stat-text" style="color: #64748b; font-size: 16px;">Corruption Complaints</div>
+                    <div class="stat-text" style="color: var(--text-muted); font-size: 16px;">Corruption Complaints</div>
                 </div>
                 <!-- Satisfaction Stat -->
                 <div class="stat-card card-item" style="text-align: center;">
                     <div class="stat-number" style="font-size: 48px; font-weight: 700; color: #1e293b; margin-bottom: 5px;">100<span style="font-size: 24px;">%</span></div>
-                    <div class="stat-text" style="color: #64748b; font-size: 16px;">Customer Satisfaction</div>
+                    <div class="stat-text" style="color: var(--text-muted); font-size: 16px;">Customer Satisfaction</div>
                 </div>
 
             </div>
@@ -77,12 +77,12 @@
             <!-- ESG Report Download -->
             <div style="margin-top: 60px; text-align: center;">
                 <section-header title="ดาวน์โหลดเอกสารที่เกี่ยวข้อง"></section-header>
-                <div style="max-width: 600px; margin: 20px auto 0;">
-                    <doc-download 
-                        file-url="../assets/เอกสารภาพรวมความยั่งยืน/ESG_Report_2025.pdf" 
-                        file-name="ESG Performance Report 2025" 
-                        file-size="PDF">
-                    </doc-download>
+                <div style="max-width: 600px; margin: 20px auto 30px;">
+                    <doc-card 
+                        url="assets/เอกสารภาพรวมความยั่งยืน/ESG_Report_2025.pdf" 
+                        title="ESG Performance Report 2025" 
+                        meta="PDF">
+                    </doc-card>
                 </div>
             </div>
         </div>
@@ -97,44 +97,36 @@
             <div class="pillars-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left;">
                 
                 <!-- Overview -->
-                <a href="ภาพรวมความยั่งยืน/สารจากประธานกรรมการบริษัท.html" class="pillar-card overview-card" style="display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s ease; height: auto !important; min-height: 100%;">
+                <a href="ภาพรวมความยั่งยืน/สารจากประธานกรรมการบริษัท.html" class="pillar-card overview-card" style="display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid var(--border-color); transition: all 0.3s ease; height: auto !important; min-height: 100%;">
                     <h3 style="color: #0f172a; font-size: 24px; margin-bottom: 15px; font-weight: 700;">Sustainability Overview</h3>
-                    <p style="color: #475569; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Business direction, strategy, and value chain driving UKEM towards sustainable growth, with a message from the Chairman.</p>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Business direction, strategy, and value chain driving UKEM towards sustainable growth, with a message from the Chairman.</p>
                     <span class="explore-btn" style="color: #2563eb; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Explore Details <span style="font-size: 18px;">→</span></span>
                 </a>
 
                 <!-- Environment -->
-                <a href="สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html" class="pillar-card env-card" style="display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s ease; height: auto !important; min-height: 100%;">
+                <a href="สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html" class="pillar-card env-card" style="display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid var(--border-color); transition: all 0.3s ease; height: auto !important; min-height: 100%;">
                     <h3 style="color: #0f172a; font-size: 24px; margin-bottom: 15px; font-weight: 700;">Environment</h3>
-                    <p style="color: #475569; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Focusing on energy management, GHG emission reduction, and maximizing water resource efficiency to minimize environmental impact.</p>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Focusing on energy management, GHG emission reduction, and maximizing water resource efficiency to minimize environmental impact.</p>
                     <span class="explore-btn" style="color: #16a34a; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Explore Details <span style="font-size: 18px;">→</span></span>
                 </a>
 
                 <!-- Social -->
-                <a href="สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html" class="pillar-card soc-card" style="display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s ease; height: auto !important; min-height: 100%;">
+                <a href="สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html" class="pillar-card soc-card" style="display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid var(--border-color); transition: all 0.3s ease; height: auto !important; min-height: 100%;">
                     <h3 style="color: #0f172a; font-size: 24px; margin-bottom: 15px; font-weight: 700;">Social</h3>
-                    <p style="color: #475569; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Prioritizing human rights, occupational health, and employee safety, along with CSR and community engagement.</p>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Prioritizing human rights, occupational health, and employee safety, along with CSR and community engagement.</p>
                     <span class="explore-btn" style="color: #d97706; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Explore Details <span style="font-size: 18px;">→</span></span>
                 </a>
 
                 <!-- Governance -->
-                <a href="การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html" class="pillar-card gov-card" style="display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s ease; height: auto !important; min-height: 100%;">
+                <a href="การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html" class="pillar-card gov-card" style="display: flex; flex-direction: column; background: #fff; padding: 40px 30px; border-radius: 16px; text-decoration: none; border: 1px solid var(--border-color); transition: all 0.3s ease; height: auto !important; min-height: 100%;">
                     <h3 style="color: #0f172a; font-size: 24px; margin-bottom: 15px; font-weight: 700;">Governance</h3>
-                    <p style="color: #475569; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Operating transparently with robust internal controls, efficient risk management, and fairness to all stakeholders.</p>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Operating transparently with robust internal controls, efficient risk management, and fairness to all stakeholders.</p>
                     <span class="explore-btn" style="color: #4f46e5; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Explore Details <span style="font-size: 18px;">→</span></span>
                 </a>
 
             </div>
 
-            <!-- Quick Links -->
-            <div style="margin-top: 60px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                <a href="รางวัลและความสำเร็จ.html" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; color: #1e293b; font-weight: 600; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 15px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
-                    🏆 Awards and Successes
-                </a>
-                <a href="ศูนย์รวมการดาวน์โหลด.html" style="display: inline-flex; align-items: center; gap: 10px; background: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; color: #1e293b; font-weight: 600; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 15px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
-                    📥 Download Center
-                </a>
-            </div>
+
 
         </div>
     </section>

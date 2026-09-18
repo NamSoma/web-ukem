@@ -38,6 +38,16 @@ class MainNav extends HTMLElement {
             dropdowns.forEach(d => d.classList.remove('active'));
         });
 
+        // Mobile menu toggle
+        const menuToggle = this.querySelector('.menu-toggle');
+        const navLinks = this.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.toggle('mobile-active');
+            });
+        }
+
         // Theme Toggle Logic
         const themeToggle = this.querySelector('#theme-toggle');
         const moonSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
@@ -60,6 +70,9 @@ class MainNav extends HTMLElement {
                 <a href="${linkBase}index.html" class="nav-logo">
                     <img src="${prefix}components/union-logo.png" alt="UKEM Sustainability">
                 </a>
+                <div class="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </div>
                 
                 <div class="nav-links">
                     <a href="${linkBase}index.html" class="dropdown">หน้าแรก</a>
@@ -103,6 +116,7 @@ class MainNav extends HTMLElement {
                         </div>
                     </div>
                     <a href="${linkBase}รางวัลและความสำเร็จ.html" class="dropdown">รางวัลและความสำเร็จ</a>
+                    <a href="${linkBase}ศูนย์รวมการดาวน์โหลด.html" class="dropdown">ศูนย์รวมการดาวน์โหลด</a>
                 </div>
 
                 <div class="lang-switcher" style="display: flex; gap: 10px; align-items: center; margin-left: 20px; font-weight: bold;">
@@ -125,6 +139,9 @@ class MainNav extends HTMLElement {
                 <a href="${linkBase}index.html" class="nav-logo">
                     <img src="${prefix}components/union-logo.png" alt="UKEM Sustainability">
                 </a>
+                <div class="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </div>
                 
                 <div class="nav-links">
                     <a href="${linkBase}index.html" class="dropdown">Home</a>
@@ -168,6 +185,7 @@ class MainNav extends HTMLElement {
                         </div>
                     </div>
                     <a href="${linkBase}รางวัลและความสำเร็จ.html" class="dropdown">Awards & Successes</a>
+                    <a href="${linkBase}ศูนย์รวมการดาวน์โหลด.html" class="dropdown">Download Center</a>
                 </div>
 
                 <div class="lang-switcher" style="display: flex; gap: 10px; align-items: center; margin-left: 20px; font-weight: bold;">

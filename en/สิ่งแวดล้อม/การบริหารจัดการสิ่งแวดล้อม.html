@@ -24,6 +24,7 @@
     <script src="../../components/DocDownload.js" defer></script>
     <script src="../../components/StatsCard.js" defer></script>
     <script src="../../components/SectionHeader.js" defer></script>
+    <script src="../../components/AlertCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html" lang="en"></main-nav>
@@ -69,7 +70,7 @@
             <div class="intro-text" style="display: block; margin-bottom: 20px;">
                 <img src="../../assets/รูปสิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม/env_water.png" alt="Water Management" style="float: left; width: 100%; max-width: 450px; border-radius: 0px; box-shadow: none; object-fit: cover; margin-right: 40px; margin-bottom: 20px;">
                 <div style="margin-bottom: 20px; overflow: hidden;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Sustainable Water Management</strong> is essential for petrochemical operations, from equipment cleaning to quality control and safety. The Company has established the following measures:
                     </p>
                     <ul class="styled-list" style="margin-top: 10px;">
@@ -78,17 +79,17 @@
                         <li><strong style="color: var(--primary);">Wastewater Treatment:</strong> Maintain treatment systems in compliance with relevant standards and laws.</li>
                     </ul>
                 </div>
-                <div style="margin-top: 30px; border: 1px solid #e2e8f0; border-radius: 0px; overflow: hidden; background: var(--bg-surface); box-shadow: none;">
+                <div style="margin-top: 30px; border: 1px solid var(--border-color); border-radius: 0px; overflow: hidden; background: var(--bg-surface); box-shadow: none;">
                     <div style="background-color: var(--primary, #193f6e); color: white; padding: 15px 20px; font-weight: 700; text-align: center; font-size: 18px;">
                         Water Management Targets
                     </div>
                     <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 18px;">
                         <tbody>
-                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <tr style="border-bottom: 1px solid var(--border-color);">
                                 <td style="background-color: #2a5a9c; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">Target</td>
                                 <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">Reduce water consumption</td>
                             </tr>
-                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <tr style="border-bottom: 1px solid var(--border-color);">
                                 <td style="background-color: #3b71b8; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">Base Year</td>
                                 <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">Year 2024: Water usage <span style="color: #0284c7;">4,585</span> cubic meters</td>
                             </tr>
@@ -108,7 +109,7 @@
                 </div>
 
                 <div style="overflow-x: auto; margin: 20px 0;">
-                    <table class="data-table" style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; box-shadow: none; border-radius: 0px; overflow: hidden; text-align: center; border: 1px solid #e2e8f0;">
+                    <table class="data-table" style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; box-shadow: none; border-radius: 0px; overflow: hidden; text-align: center; border: 1px solid var(--border-color);">
                         <thead>
                             <tr>
                                 <th class="text-body-lg" colspan="2" style="background-color: var(--bg-surface);fff; color: var(--primary, #193f6e); padding: 16px; border-bottom: 2px solid var(--primary, #193f6e); text-align: center; font-weight: 700;">
@@ -116,14 +117,14 @@
                                 </th>
                             </tr>
                             <tr>
-                                <th style="background-color: var(--primary, #193f6e); color: white; padding: 12px; border: 1px solid #e2e8f0; font-weight: 600; width: 50%; text-align: center;">Year 2024</th>
-                                <th style="background-color: var(--primary, #193f6e); color: white; padding: 12px; border: 1px solid #e2e8f0; font-weight: 600; width: 50%; text-align: center;">Year 2025</th>
+                                <th style="background-color: var(--primary, #193f6e); color: white; padding: 12px; border: 1px solid var(--border-color); font-weight: 600; width: 50%; text-align: center;">Year 2024</th>
+                                <th style="background-color: var(--primary, #193f6e); color: white; padding: 12px; border: 1px solid var(--border-color); font-weight: 600; width: 50%; text-align: center;">Year 2025</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid #e2e8f0; background-color: var(--bg-surface); text-align: center;">4,585</td>
-                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid #e2e8f0; background-color: var(--bg-surface); text-align: center;">3,421</td>
+                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid var(--border-color); background-color: var(--bg-surface); text-align: center;">4,585</td>
+                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid var(--border-color); background-color: var(--bg-surface); text-align: center;">3,421</td>
                             </tr>
                         </tbody>
                     </table>
@@ -145,7 +146,7 @@
         <div class="content-body">
             <div class="intro-text" style="display: block; margin-bottom: 20px;">
                 <div style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Focuses on systematic and responsible waste management</strong> for both hazardous and non-hazardous waste to minimize environmental and community impacts. The Company adheres to:
                     </p>
                     <ul class="styled-list" style="margin-top: 10px;">
@@ -165,7 +166,7 @@
             <div class="activities-grid" style="margin-top: 30px;">
                 <div style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">1. Education and Training on Waste Management</h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>Organize training on waste segregation and environmental impacts.</li>
                         <li>Create PR materials such as banners, posters, and video clips.</li>
                     </ul>
@@ -173,7 +174,7 @@
 
                 <div style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">2. Installing Waste Separation Systems in the Workplace</h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>Place clearly labeled segregated waste bins in work areas.</li>
                         <li>Set up drop-off points for hazardous waste (e.g., batteries, light bulbs).</li>
                     </ul>
@@ -181,7 +182,7 @@
 
                 <div style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">3. Creating Activities to Promote Participation</h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>Organize "Proper Waste Segregation" contests with rewards.</li>
                         <li>Host Waste Exchange Day activities for employees.</li>
                     </ul>
@@ -189,7 +190,7 @@
 
                 <div style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">4. Integrating "Zero Waste" Concepts</h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>Encourage the use of personal containers and abstain from single-use plastics.</li>
                         <li>Establish an environmental volunteer network (Green Volunteer / Waste Watcher).</li>
                     </ul>
@@ -197,7 +198,7 @@
                 
                 <div style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">5. Communication and Reporting</h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>Communicate waste reduction results via internal channels (Intranet, E-mail).</li>
                         <li>Link employee participation to ESG targets in sustainability reports.</li>
                     </ul>
@@ -208,7 +209,7 @@
                 Performance Results
             </h3>
             
-            <div style="overflow-x: auto; margin: 20px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: var(--bg-surface);">
+            <div style="overflow-x: auto; margin: 20px 0; border-radius: 0px; box-shadow: none; border: 1px solid var(--border-color); background: var(--bg-surface);">
                 <table class="data-table" style="width: 100%; border-collapse: collapse; text-align: center; font-size: 18px;">
                     <thead>
                         <tr style="background: var(--primary, #193f6e); color: white;">
@@ -220,33 +221,33 @@
                     </thead>
                     <tbody>
                         <!-- General Waste -->
-                        <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">General Waste</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">10.88 Tons</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">8.60 Tons</td>
+                        <tr style="border-bottom: 1px solid var(--bg-light);">
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid var(--border-color);">General Waste</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">10.88 Tons</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">8.60 Tons</td>
                             <td rowspan="3" style="padding: 14px 10px; color: #0f172a; font-weight: 700; background-color: var(--bg-surface);fff; vertical-align: middle;">
                                 Increase recycling proportion by 5% per year
                             </td>
                         </tr>
                         <!-- Recyclable Waste -->
-                        <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">Recyclable Waste</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">0.64 Tons</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">0.36 Tons</td>
+                        <tr style="border-bottom: 1px solid var(--bg-light);">
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid var(--border-color);">Recyclable Waste</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">0.64 Tons</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">0.36 Tons</td>
                         </tr>
                         <!-- Industrial Waste -->
-                        <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">Industrial Waste</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">64.76 Tons</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">98.79 Tons</td>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid var(--border-color);">Industrial Waste</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">64.76 Tons</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">98.79 Tons</td>
                         </tr>
                         
                         <!-- Total -->
-                        <tr style="background-color: #e2e8f0; border-bottom: 1px solid #cbd5e1;">
+                        <tr style="background-color: var(--border-color); border-bottom: 1px solid #cbd5e1;">
                             <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">Total</td>
                             <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">76.28 Tons</td>
                             <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">107.75 Tons</td>
-                            <td style="padding: 14px 10px; background-color: #e2e8f0;"></td>
+                            <td style="padding: 14px 10px; background-color: var(--border-color);"></td>
                         </tr>
                         
                         <!-- Recycling Proportion -->
@@ -259,7 +260,7 @@
                     </tbody>
                 </table>
             </div>
-            <div style="font-size: 12px; color: #64748b; margin-top: -10px; margin-bottom: 30px;">
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">
                 Note: In 2025, <span style="white-space: nowrap;">the Company</span> commenced operations at the Rojana Laem Chabang Warehouse (ULT), resulting in an increase in waste volume.
             </div>
 
@@ -271,13 +272,13 @@
             
         
             
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">Environmental Conservation</h3>
                 </div>
                 <div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         The Company operates a trading business. Therefore, it has a policy to select and purchase products from manufacturers/sellers who meet standards and possess environmental awareness, as well as caring and considering environmental impacts at every stage of the business process. The Company prioritizes environmental changes affecting society as a whole, including impacts on health and safety of employees and the public, valuing these impacts more than business returns. The environmental business policy is defined as follows:
                     </p>
                     <ul class="styled-list" style="margin-top: 10px;">
@@ -288,17 +289,11 @@
                         <li>The Company will efficiently manage the use of natural resources and energy by promoting energy conservation in the Company's activities and striving to mitigate global warming, alongside fostering eco-friendliness.</li>
                     </ul>
                 </div>
-            </div>
+            </alert-card>
 
             
         
-            <doc-section lang="en">
-                <doc-card 
-                        url="../../assets/เอกสารสิ่งแวดล้อม/นโยบายความหลากหลายทางชีวภาพ 2569.pdf" 
-                        title="Biodiversity Policy 2026" 
-                        meta="PDF">
-                    </doc-card>
-            </doc-section>
+            
 
         </div>
     </main>

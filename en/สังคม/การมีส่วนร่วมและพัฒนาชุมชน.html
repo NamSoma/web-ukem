@@ -34,7 +34,7 @@
             line-height: 1.8;
             color: var(--text-muted);
             padding: 30px;
-            background: #f8fafc;
+            background: var(--bg-light);
             border-radius: 0px;
             display: flex;
             flex-direction: column;
@@ -125,6 +125,7 @@
             flex: 1;
         }
     </style>
+    <script src="../../components/AlertCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html" lang="en"></main-nav>
@@ -140,7 +141,7 @@
                 <div class="intro-text-box">
                     <strong style="display: block; margin-bottom: 15px; font-size: 20px; color: var(--primary);">Overview of Corporate Social Responsibility and Community Engagement</strong>
                     <div>
-                        <p style="margin: 0; color: #475569; line-height: 1.7;">
+                        <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                             <strong class="skimmable-bold">Focuses on creating a positive impact on society</strong> to uplift the quality of life for surrounding communities under ESG principles, with the following approaches:
                             <ul class="styled-list" style="margin-top: 10px;">
                                 <li><strong style="color: var(--primary);">Promoting Education:</strong> Providing knowledge on environment and safety.</li>
@@ -279,15 +280,15 @@
             </div>
 
     
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">การร่วมพัฒนาชุมชนและสังคม</h3>
                 </div>
-                <div class="text-body" style="color: #475569; line-height: 1.8;">
+                <div class="text-body" style="color: var(--text-muted); line-height: 1.8;">
                     บริษัทฯ มีนโยบายที่จะร่วมพัฒนาและสร้างสัมพันธ์อันดีต่อชุมชนและสังคม ปฏิบัติตนให้สอดคล้องกับวัฒนธรรมขนบธรรมเนียมประเพณีอันดีของชุมชนใกล้เคียงที่บริษัทประกอบกิจการอยู่ และให้ความร่วมมือกับทุกฝ่ายในชุมชน เพื่อการสร้างสรรค์สังคมให้เติบโตอย่างยั่งยืน
                 </div>
-            </div>
+            </alert-card>
 
     
         </div>

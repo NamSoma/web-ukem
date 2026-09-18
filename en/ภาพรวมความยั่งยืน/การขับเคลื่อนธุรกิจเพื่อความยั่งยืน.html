@@ -63,7 +63,7 @@
         .bg-darkblue { background: #294b7a; }
         .bg-green { background: #229f55; }
         .bg-lightgray { 
-            background: #e2e8f0; 
+            background: var(--border-color); 
             color: #1e3a8a !important; 
         }
         .line-v {
@@ -157,7 +157,7 @@
             font-weight: 700;
             margin-top: 60px;
             margin-bottom: 20px;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 10px;
             font-size: 22px;
         }
@@ -169,14 +169,14 @@
             font-size: 18px;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
             border-radius: 0px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--border-color);
             background: #fff;
         }
         .sh-table th, .sh-table td {
             padding: 20px 24px;
             vertical-align: top;
-            border-bottom: 1px solid #e2e8f0;
-            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
         }
         .sh-table th:last-child, .sh-table td:last-child {
             border-right: none;
@@ -197,7 +197,7 @@
             transition: all 0.3s ease;
         }
         .sh-table tbody tr:hover {
-            background-color: #f8fafc;
+            background-color: var(--bg-light);
         }
         .sh-table td {
             text-align: left;
@@ -210,10 +210,10 @@
             color: #1e3a8a;
             text-align: center;
             vertical-align: middle;
-            background-color: #f1f5f9;
+            background-color: var(--bg-light);
         }
         .sh-table tbody tr:hover td:first-child {
-            background-color: #e2e8f0;
+            background-color: var(--border-color);
         }
         
         .activities-grid {
@@ -257,6 +257,7 @@
     </style>
     <script src="../../components/DocDownload.js" defer></script>
     <script src="../../components/StatsCard.js" defer></script>
+    <script src="../../components/StakeholderCard.js" defer></script>
 </head>
 <body>
 
@@ -353,7 +354,7 @@
             <div style="margin-top: 20px; margin-bottom: 10px;">
                 <div style="background: transparent; border-radius: 0px; padding: 10px 0; text-align: center; box-shadow: none; border: none;">
                     <section-header title="Sustainability Framework"></section-header>
-                    <p class="text-body" style="color: #64748b;  margin-bottom: 30px;">Integrating Environmental, Social, and Governance (ESG) principles into corporate strategy</p>
+                    <p class="text-body" style="color: var(--text-muted);  margin-bottom: 30px;">Integrating Environmental, Social, and Governance (ESG) principles into corporate strategy</p>
                     <div style="display: inline-block; padding: 10px; background-color: transparent; border-radius: 0px; box-shadow: none;">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000" alt="Infographic กรอบการทำงานด้านความยั่งยืน" style="max-width: 100%; height: auto; border-radius: 0px; display: block;">
                     </div>
@@ -361,48 +362,40 @@
             </div>
             <div style="margin-top: 60px;">
                 <section-header title="Summary of the Importance of the Sustainability Governance Structure"></section-header>
-                <table class="sh-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 10%;">No.</th>
-                            <th style="width: 35%;">Key Importance</th>
-                            <th style="width: 55%;">Summary</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Strengthens clear and unified operational direction</td>
-                            <td>Clearly defines the framework, roles, and responsibilities of each management level, aligning sustainability policies, goals, and plans across the organization, reducing redundancy, and increasing operational efficiency.</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Supports strategic decision-making and risk management</td>
-                            <td>Incorporates sustainability issues into strategic decision-making, along with risk management in environmental, social, and governance aspects, to prevent impacts and ensure business continuity.</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Enhances efficiency in monitoring and evaluating performance</td>
-                            <td>Facilitates systematic monitoring, evaluation, and reporting of sustainability progress, enabling management to identify status, issues, and improvement opportunities in a timely manner.</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Builds transparency and trust among stakeholders</td>
-                            <td>Enhances operational transparency and reflects the commitment to responsible business practices, resulting in confidence and trust from all stakeholder groups.</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Supports long-term organizational growth</td>
-                            <td>Integrates sustainability issues into the management structure to create business value alongside social and environmental care, forming the foundation for stable and sustainable long-term growth.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="sh-container">
+    <stakeholder-card title-width="35" title="1. Strengthens clear and unified operational direction" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">Clearly defines the framework, roles, and responsibilities of each management level, aligning sustainability policies, goals, and plans across the organization, reducing redundancy, and increasing operational efficiency.</p>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title-width="35" title="2. Supports strategic decision-making and risk management" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">Incorporates sustainability issues into strategic decision-making, along with risk management in environmental, social, and governance aspects, to prevent impacts and ensure business continuity.</p>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title-width="35" title="3. Enhances efficiency in monitoring and evaluating performance" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">Facilitates systematic monitoring, evaluation, and reporting of sustainability progress, enabling management to identify status, issues, and improvement opportunities in a timely manner.</p>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title-width="35" title="4. Builds transparency and trust among stakeholders" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">Enhances operational transparency and reflects the commitment to responsible business practices, resulting in confidence and trust from all stakeholder groups.</p>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title-width="35" title="5. Supports long-term organizational growth" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">Integrates sustainability issues into the management structure to create business value alongside social and environmental care, forming the foundation for stable and sustainable long-term growth.</p>
+        </div>
+    </stakeholder-card>
+</div>
+
             </div>
 
             <div class="activities-grid" style="margin-top: 40px;">
                 <div  style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">1. Roles and Responsibilities of the Board and Management</h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">The Board of Directors is responsible for overseeing the organization's management</strong> in accordance with laws, regulations, and corporate governance principles, considering the interests of all stakeholder groups equally.<br><br>
                         In addition, the Company clearly separates the roles of the Chairman and the Managing Director, and has appointed an Audit Committee to systematically strengthen internal audit processes and risk management.
                     </p>
@@ -410,42 +403,42 @@
                 
                 <div  style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">2. Sustainability Policy and Framework</h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Focuses on responding to the expectations of both internal and external stakeholders,</strong> strictly complying with environmental regulations and relevant laws to minimize negative impacts and promote the quality of life for communities and society.
                     </p>
                 </div>
 
                 <div  style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">3. Integration of Sustainability with Corporate Strategy</h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Integrates ESG issues into strategic decision-making</strong> at both policy and operational levels to responsibly create long-term value for the organization, while adhering to transparency, anti-corruption principles, and fair stakeholder relations.
                     </p>
                 </div>
 
                 <div  style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">4. Sustainability Risk and Opportunity Management</h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Comprehensively identifies and monitors ESG risks,</strong> integrating them into the Enterprise Risk Management (ERM) system to effectively control, prevent, and respond to situations that may impact the business.
                     </p>
                 </div>
 
                 <div  style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">5. Stakeholder Engagement</h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Establishes comprehensive communication channels and engagement methods</strong> for shareholders, customers, partners, employees, and communities, emphasizing listening to feedback to improve operational processes and build trust.
                     </p>
                 </div>
 
                 <div  style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">6. Monitoring, Evaluation, and Reporting</h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Senior management regularly reports progress to the Board</strong> to evaluate sustainability performance outcomes and ensure they effectively meet defined goals and objectives.
                     </p>
                 </div>
 
                 <div  style="margin-bottom: 20px;">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px;">7. Information Disclosure and Transparency</h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Prioritizes the complete, accurate, and timely disclosure of important information,</strong> including financial, business, and ESG data. The Investor Relations unit ensures equal communication with shareholders and stakeholders to strengthen confidence and sustainable organizational growth.
                     </p>
                 </div>
@@ -456,23 +449,7 @@
         
             
         
-            <doc-section lang="en">
-                <doc-card 
-                        url="../../assets/เอกสารภาพรวมความยั่งยืน/ESG_Report_2025.pdf" 
-                        title="ESG Performance Report 2025" 
-                        meta="PDF">
-                </doc-card>
-                <doc-card 
-                        url="../../assets/เอกสารภาพรวมความยั่งยืน/ประกาศแต่งตั้งคณะทำงานการพัฒนาอย่างยั่งยืน.pdf" 
-                        title="Announcement: Appointment of Sustainable Development Working Group" 
-                        meta="PDF">
-                </doc-card>
-                <doc-card 
-                        url="../../assets/เอกสารภาพรวมความยั่งยืน/ประกาศแก้ไขเพิ่มเติมขอบเขตอำนาจหน้าที่ของคณะทำงานการพัฒนาอย่างยั่งยืน.pdf" 
-                        title="Announcement: Amendment to the Scope of Authority and Duties of the Sustainable Development Working Group" 
-                        meta="PDF">
-                </doc-card>
-            </doc-section>
+            
 
         </div>
     </main>

@@ -30,11 +30,12 @@
         }
         .hr-stat-label {
             font-size: 16px;
-            color: #64748b;
+            color: var(--text-muted);
         }
     </style>
     <script src="../components/DocDownload.js" defer></script>
     <script src="../components/StatsCard.js" defer></script>
+    <script src="../components/AlertCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="1" path="สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html" lang="th"></main-nav>
@@ -59,7 +60,7 @@
             <section-header title="การบริหารจัดการทรัพยากรมนุษย์ (Human Resources Management)"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">มุ่งเน้นกระบวนการสรรหาและว่าจ้างงานที่เป็นธรรม</strong> ยึดมั่นในสิทธิมนุษยชน มาตรฐานแรงงานสากล และหลัก ESG:
                         <ul class="styled-list" style="margin-top: 10px;">
                             <li><strong style="color: var(--primary);">ความเท่าเทียม:</strong> พิจารณาผู้สมัครอย่างเท่าเทียม ไม่แบ่งแยกเพศ อายุ เชื้อชาติ หรือศาสนา</li>
@@ -73,7 +74,7 @@
             <section-header title="การสรรหาและการคัดเลือกบุคลากร"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">สรรหาบุคลากรอย่างเป็นธรรม โปร่งใส และตรวจสอบได้:</strong>
                         <ul class="styled-list" style="margin-top: 10px;">
                             <li><strong style="color: var(--primary);">พิจารณาจากความสามารถ:</strong> คัดเลือกโดยยึดหลักคุณธรรม ความสามารถ และความเหมาะสมเป็นหลัก</li>
@@ -87,7 +88,7 @@
             <section-header title="การประเมินผลการปฏิบัติงาน"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">ประเมินผลอย่างเป็นธรรมและโปร่งใส</strong> ตามหลักการบริหารทรัพยากรบุคคลที่ดี (Good HR Practices) เพื่อส่งเสริมการเติบโตของบุคลากรและยกระดับประสิทธิภาพองค์กร
                     </p>
                 </div>
@@ -96,7 +97,7 @@
             <section-header title="การสร้างความผูกพันกับพนักงาน"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">พนักงานคือทรัพยากรที่มีค่าสูงสุด:</strong> ความผูกพันของพนักงาน (Employee Engagement) ช่วยเสริมสร้างประสิทธิภาพในการดำเนินงาน ความมั่นคง และการเติบโตอย่างยั่งยืน
                     </p>
                 </div>
@@ -128,7 +129,7 @@
             <section-header title="การเลิกจ้าง/ไม่เลิกจ้าง"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">ปฏิบัติต่อพนักงานอย่างเท่าเทียม:</strong> พนักงานจะไม่ถูกเลิกจ้างโดยไม่มีเหตุอันสมควร เว้นแต่กระทำผิดวินัยร้ายแรง หรือมีเหตุตามกฎระเบียบของ<span style="white-space: nowrap;">บริษัทฯ</span> โดยดำเนินการด้วยความโปร่งใส เป็นธรรม และถูกต้องตามกฎหมาย
                     </p>
                 </div>
@@ -137,18 +138,18 @@
             <section-header title="การรับฟังข้อร้องเรียนและการแจ้งเบาะแส (Whistleblowing)"></section-header>
             <div class="intro-text">
                 <div  style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">ช่องทางรับเรื่องร้องเรียนที่ปลอดภัย:</strong> จัดให้มีช่องทางรับข้อร้องเรียนจากทั้งภายในและภายนอก พร้อมมาตรการคุ้มครองและรักษาความลับของผู้ร้องเรียน เพื่อความโปร่งใสและยุติธรรม
                     </p>
                 </div>
             </div>
             
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">ช่องทางการแจ้งเบาะแสหรือข้อร้องเรียน</h3>
                 </div>
-                <p class="text-body" style="color: #475569;  margin-bottom: 25px;">หากพบการกระทำที่ทำให้เกิดความสงสัย และเกิดผลเสียต่อ<span style="white-space: nowrap;">บริษัทฯ</span> สามารถส่งเบาะแสหรือข้อร้องเรียนมาที่:</p>
+                <p class="text-body" style="color: var(--text-muted);  margin-bottom: 25px;">หากพบการกระทำที่ทำให้เกิดความสงสัย และเกิดผลเสียต่อ<span style="white-space: nowrap;">บริษัทฯ</span> สามารถส่งเบาะแสหรือข้อร้องเรียนมาที่:</p>
                 
                 <card-grid>
                     <!-- ไปรษณีย์ -->
@@ -156,7 +157,7 @@
                         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
                             <h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">1. ไปรษณีย์</h4>
                         </div>
-                        <p class="text-body" style="margin: 0; color: #475569;  line-height: 1.6;">
+                        <p class="text-body" style="margin: 0; color: var(--text-muted);  line-height: 1.6;">
                             <strong>นำส่งที่:</strong> ประธานกรรมการตรวจสอบ หรือกรรมการผู้จัดการ หรือฝ่ายตรวจสอบภายใน หรือเลขานุการ<span style="white-space: nowrap;">บริษัท</span> <br>
                             <span style="white-space: nowrap;">บริษัท</span> ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) <br>
                             ที่ 728 อาคารยูเนี่ยนเฮ้าส์ ถนนบรมราชชนนี แขวงบางบำหรุ เขตบางพลัด กรุงเทพมหานคร 10700
@@ -168,7 +169,7 @@
                         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
                             <h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">2. อีเมล</h4>
                         </div>
-                        <p class="text-body" style="margin: 0; color: #475569;  line-height: 1.6;">
+                        <p class="text-body" style="margin: 0; color: var(--text-muted);  line-height: 1.6;">
                             <strong>คณะกรรมการตรวจสอบ:</strong><br>
                             <a class="text-small" href="mailto:auditcommittee@unionpetrochemical.com" style="color: var(--secondary); text-decoration: none;  white-space: nowrap;">auditcommittee@unionpetrochemical.com</a><br><br>
                             <strong>ฝ่ายตรวจสอบภายใน:</strong><br>
@@ -181,64 +182,48 @@
                         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
                             <h4 class="text-body-lg" style="margin: 0;  color: var(--primary);">3. กล่องรับความคิดเห็น</h4>
                         </div>
-                        <p class="text-body" style="margin: 0; color: #475569;  line-height: 1.6;">
+                        <p class="text-body" style="margin: 0; color: var(--text-muted);  line-height: 1.6;">
                             <span style="white-space: nowrap;">บริษัท</span>ได้จัดเตรียมกล่องรับความคิดเห็นไว้ในที่เปิดเผยภายในองค์กร ให้ผู้ร้องเรียนสามารถยื่นร้องเรียนได้สะดวกและปลอดภัยด้วยตนเอง
                         </p>
                     </div>
                 </card-grid>
-            </div>
+            </alert-card>
 
             
             
         
             
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">การเคารพสิทธิมนุษยชน</h3>
                 </div>
                 <div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         บริษัทฯ มีนโยบายที่จะให้ความเป็นธรรมต่อผู้มีส่วนได้เสียทุกราย โดยปฏิบัติตามกฎหมายและข้อบังคับที่เกี่ยวข้องและปฏิบัติตามหลักการเกี่ยวกับสิทธิมนุษยชนขั้นพื้นฐานตามเกณฑ์สากล โดยไม่แบ่งแยกถิ่นกำเนิด เชื้อชาติ เพศ อายุ สีผิว ศาสนา ความพิการ ฐานะทางการเงิน ชาติตระกูล สถานศึกษา หรือสถานะอื่นใดที่มิได้เกี่ยวข้องโดยตรงกับการปฏิบัติงาน รวมทั้งจึงรักษาสภาพแวดล้อมในการทำงานให้ปราศจากการละเมิดสิทธิส่วนบุคคล มีความเคารพซึ่งกันและกัน ตลอดจนให้ความร่วมมือช่วยเหลือ เสนอแนะความคิดเห็นและแก้ไขปัญหาร่วมกันในการทำงาน
                     </p>
                 </div>
-            </div>
+            </alert-card>
     
 
 
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">การปฏิบัติต่อแรงงานอย่างเป็นธรรม</h3>
                 </div>
                 <div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         บริษัทฯ ตระหนักดีว่าพนักงานเป็นทรัพยากรที่มีค่ายิ่งของบริษัท ดังนั้น บริษัทฯ จึงมุ่งให้การสนับสนุนในการพัฒนาศักยภาพของทรัพยากรบุคคล เพื่อให้เกิดประโยชน์สูงสุดแก่ บริษัท รวมทั้งยังส่งเสริมให้พนักงานมีส่วนร่วมในการสร้างวัฒนธรรมและบรรยากาศการทำงานที่ดีและส่งเสริมการทำงานเป็นทีม รับฟังข้อคิดเห็นและข้อเสนอแนะจากพนักงานทุกระดับอย่างเท่าเทียมเสมอภาค ให้ผลตอบแทนและสวัสดิการที่เหมาะสม และเป็นธรรม<br><br>บริษัทฯ ดำเนินการส่งเสริมให้พนักงานมีความรู้ ความสามารถ ทักษะและประสบการณ์ เพื่อนำไปสู่การปฏิบัติงานได้อย่างมีประสิทธิภาพ โดยมีการฝึกอบรมพนักงานในฝ่ายงานต่างๆ นอกจากนี้ บริษัทฯ ยังมีการส่งพนักงานไปอบรมภายนอกเพื่อเพิ่มความรู้ในด้านต่างๆที่เกี่ยวข้องกับการปฏิบัติงาน และนำความรู้ที่ได้จากการอบรมกลับมาถ่ายทอดให้เพื่อนร่วมงานได้รับความรู้ดังกล่าวด้วย เช่น การอบรมมาตรฐานบัญชีที่ออกใหม่ การอบรมเรื่องระบบงานเครือข่ายคอมพิวเตอร์ เป็นต้น
                     </p>
                 </div>
-            </div>
+            </alert-card>
 
             
         
     
         
-            <doc-section lang="th">
-                <doc-card 
-                        url="../assets/เอกสารสังคม/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf" 
-                        title="นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ" 
-                        meta="PDF">
-                </doc-card>
-                <doc-card 
-                        url="../assets/เอกสารสังคม/บันทึกตรวจสอบและรับรองข้อมูลสัดส่วนผู้หญิงในตำแหน่งบริหาร.pdf" 
-                        title="บันทึกตรวจสอบและรับรองข้อมูลสัดส่วนผู้หญิงในตำแหน่งบริหาร ประจำปี 2569" 
-                        meta="PDF">
-                </doc-card>
-                <doc-card 
-                        url="../assets/เอกสารสังคม/บันทึกผลการตรวจสอบแรงงานข้ามชาติ.pdf" 
-                        title="บันทึกผลการตรวจสอบแรงงานข้ามชาติ ประจำปี 2569" 
-                        meta="PDF">
-                </doc-card>
-            </doc-section>
+            
 
         </div>
     </main>

@@ -87,7 +87,7 @@
 
             .sh-table th,
             .sh-table td {
-                border: 1px solid #e2e8f0;
+                border: 1px solid var(--border-color);
                 padding: 18px;
                 vertical-align: top;
             }
@@ -128,33 +128,33 @@
                 font-weight: 700;
                 margin-top: 60px;
                 margin-bottom: 20px;
-                border-bottom: 2px solid #e2e8f0;
+                border-bottom: 2px solid var(--border-color);
                 padding-bottom: 10px;
             }
 
             .activity-img-placeholder {
-                background-color: #e2e8f0;
+                background-color: var(--border-color);
                 width: 100%;
                 aspect-ratio: 1;
                 border-radius: 0px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: #64748b;
+                color: var(--text-muted);
                 font-size: 12px;
                 text-align: center;
                 border: 2px dashed #cbd5e1;
             }
 
             .infographic-placeholder {
-                background-color: #f1f5f9;
+                background-color: var(--bg-light);
                 width: 100%;
                 height: 300px;
                 border-radius: 0px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: #64748b;
+                color: var(--text-muted);
                 font-size: 18px;
                 font-weight: 500;
                 margin-bottom: 30px;
@@ -163,6 +163,7 @@
 
             
     </style>
+    <script src="../components/StakeholderCard.js" defer></script>
 </head>
 
 <body>
@@ -191,7 +192,7 @@
         </div>
 
         <div class="container" style="position: relative; z-index: 1;">
-            <div class="policy-card" style="margin: 40px auto 20px; max-width: 800px; text-align: center;">
+            <div class="policy-card" style="margin: 40px auto 20px; max-width: 800px; text-align: center; background: rgba(220, 38, 38, 0.03); border: 1px solid rgba(220, 38, 38, 0.4);">
                 <p style="color: #193f6e; font-size: 20px; line-height: 1.8; font-weight: 400; margin: 0;">
                     <span style="white-space: nowrap;">บริษัทฯ</span> ดำเนินธุรกิจโดยให้ความสำคัญถึงการมีส่วนร่วมของผู้มีส่วนได้ส่วนเสีย
                     ตลอดจนการบริหารจัดการความยั่งยืนของกิจกรรมตลอดห่วงโซ่คุณค่าของธุรกิจ
@@ -200,25 +201,25 @@
 
             <h3 class="section-title" style="margin-top: 40px;">กิจกรรมหลักและคำอธิบาย</h3>
             <div style="margin-bottom: 40px; display: flex; flex-direction: column; text-align: left;">
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                         <h4 class="text-body" style="margin: 0;  color: var(--primary);">การบริหารปัจจัยการผลิต หรือ
                             โลจิสติกส์ขาเข้า</h4>
                     </div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">ดำเนินการพัฒนาธุรกิจใหม่
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">ดำเนินการพัฒนาธุรกิจใหม่
                         โดยฝ่ายพัฒนาธุรกิจทำหน้าที่ในการศึกษาข้อมูลและสถานการณ์ทางการตลาดสารเคมีทั่วโลกร่วมกับฝ่ายขาย
                         ในการคัดเลือกผลิตภัณฑ์ให้ตรงตามความต้องการของลูกค้า
                         และคัดเลือกคู่ค้าที่มีศักยภาพในการจัดส่งสินค้าให้กับทาง<span
                             style="white-space: nowrap;">บริษัท</span>ทั้งภายในประเทศและต่างประเทศ</p>
                 </div>
 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                         <h4 class="text-body" style="margin: 0;  color: var(--primary);">การปฏิบัติการ (Operations)</h4>
                     </div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">การจัดเตรียมพื้นที่ในการจัดเก็บสินค้าในคลังสินค้าไว้ 2 รูปแบบ คือ 1)
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">การจัดเตรียมพื้นที่ในการจัดเก็บสินค้าในคลังสินค้าไว้ 2 รูปแบบ คือ 1)
                         การจัดเก็บสินค้าไว้ในคลังสินค้าของ<span style="white-space: nowrap;">บริษัทฯ</span>และ 2)
                         การจัดเก็บสินค้าเอาไว้ในคลังสินค้าที่ทาง<span style="white-space: nowrap;">บริษัทฯ</span>
                         เช่าพื้นที่ไว้สำหรับเก็บสินค้า โดยทั้ง 2 รูปแบบ
@@ -232,12 +233,12 @@
                         และการจัดส่งสินค้าให้กับลูกค้า จะถูกตรวจสอบคุณภาพและความถูกต้องก่อนการจัดส่งสินค้าทุกครั้ง</p>
                 </div>
 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                         <h4 class="text-body" style="margin: 0;  color: var(--primary);">การตลาดและการขาย</h4>
                     </div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">เข้าพบปะลูกค้าเพื่อสอบถามความต้องการในการใช้สินค้าของ<span
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">เข้าพบปะลูกค้าเพื่อสอบถามความต้องการในการใช้สินค้าของ<span
                             style="white-space: nowrap;">บริษัทฯ</span>
                         เป็นประจำรวมทั้งมีการนำเสนอข้อมูลของสินค้าและบริการใหม่ของ<span
                             style="white-space: nowrap;">บริษัทฯ</span>
@@ -309,23 +310,16 @@
                 </div>
             </div>
 
-            <div style="margin-top: 60px; overflow-x: auto; padding-bottom: 20px;">
+            <div style="margin-top: 40px; margin-bottom: 40px;">
+                <h3 class="section-title">กระบวนการในห่วงโซ่คุณค่า (Value Chain Process)</h3>
+                <div class="value-chain-container">
 
-                <table class="vc-table">
-                    <tr class="title-row">
-                        <th colspan="6">ห่วงโซ่คุณค่าของธุรกิจ (Value Chain)</th>
-                    </tr>
-                    <tr>
-                        <th>การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า<br>(Inbound logistics)</th>
-                        <th>การปฏิบัติการ<br>(Operations)</th>
-                        <th>การตลาดและการขาย<br>(Marketing and Sales)</th>
-                        <th>การบริการหลังการขาย<br>(Customer services)</th>
-                        <th>การกระจายสินค้า หรือ โลจิสติกส์ขาออก<br>(Outbound logistics)</th>
-                        <th>กิจกรรมสนับสนุน<br>(Support Activities)</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
+    <div class="vc-card">
+        <div class="vc-card-header">
+            <h4>การบริหารปัจจัยการผลิต หรือ โลจิสติกส์ขาเข้า (Inbound logistics)</h4>
+        </div>
+        <div class="vc-card-body">
+            <ul>
                                 <li>การพัฒนาธุรกิจ</li>
                                 <li>การจัดหาและจัดซื้อสารเคมีและวัตถุดิบที่มีคุณภาพและปลอดภัยภายในประเทศและต่างประเทศ
                                 </li>
@@ -335,41 +329,76 @@
                                 <li>การนำเข้าสารเคมีจากต่างประเทศเข้าคลังสินค้าอันตราย</li>
                                 <li>การขนส่งสารเคมีภายในประเทศเข้าคลังสินค้าอันตราย</li>
                             </ul>
-                        </td>
-                        <td>
-                            <ul>
+        </div>
+    </div>
+    <div class="vc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+
+    <div class="vc-card">
+        <div class="vc-card-header">
+            <h4>การปฏิบัติการ (Operations)</h4>
+        </div>
+        <div class="vc-card-body">
+            <ul>
                                 <li>การจัดเก็บสารเคมีเข้าคลังสินค้าของ<span
                                         style="white-space: nowrap;">บริษัท</span>และที่เช่า</li>
                                 <li>การบริหารจัดการพื้นที่คลังสินค้า</li>
                                 <li>การบรรจุสารเคมี</li>
                                 <li>การตรวจสอบคุณภาพตามมาตรฐานสินค้า</li>
                             </ul>
-                        </td>
-                        <td>
-                            <ul>
+        </div>
+    </div>
+    <div class="vc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+
+    <div class="vc-card">
+        <div class="vc-card-header">
+            <h4>การตลาดและการขาย (Marketing and Sales)</h4>
+        </div>
+        <div class="vc-card-body">
+            <ul>
                                 <li>การจัดทำและปรับปรุงฐานข้อมูลลูกค้า</li>
                                 <li>การกำหนดราคาสินค้าและบริการอย่างเหมาะสม</li>
                                 <li>การให้ข้อมูลเกี่ยวกับการใช้งานอย่างถูกต้องและครบถ้วน</li>
                                 <li>การบริหารความสัมพันธ์กับลูกค้า</li>
                             </ul>
-                        </td>
-                        <td>
-                            <ul>
+        </div>
+    </div>
+    <div class="vc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+
+    <div class="vc-card">
+        <div class="vc-card-header">
+            <h4>การบริการหลังการขาย (Customer services)</h4>
+        </div>
+        <div class="vc-card-body">
+            <ul>
                                 <li>การบริหารยอดซื้อขายกับลูกค้า</li>
                                 <li>การประสานงานระหว่างคลังสินค้ากับลูกค้าในการจัดส่งสินค้า</li>
                                 <li>การรับประกันสินค้าและความพึงพอใจ</li>
                                 <li>หน่วยบริการรับฟังความเห็นหรือข้อเสนอแนะเกี่ยวกับการให้บริการ</li>
                             </ul>
-                        </td>
-                        <td>
-                            <ul>
+        </div>
+    </div>
+    <div class="vc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+
+    <div class="vc-card">
+        <div class="vc-card-header">
+            <h4>การกระจายสินค้า หรือ โลจิสติกส์ขาออก (Outbound logistics)</h4>
+        </div>
+        <div class="vc-card-body">
+            <ul>
                                 <li>การบริหารจัดการคลังสินค้า</li>
                                 <li>การบริหารจัดการระบบขนส่ง</li>
                                 <li>การขนส่งสินค้าและบริการที่มีคุณภาพและตรงเวลา</li>
                             </ul>
-                        </td>
-                        <td>
-                            <ul>
+        </div>
+    </div>
+    <div class="vc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+
+    <div class="vc-card">
+        <div class="vc-card-header">
+            <h4>กิจกรรมสนับสนุน (Support Activities)</h4>
+        </div>
+        <div class="vc-card-body">
+            <ul>
                                 <li>บัญชี และการเงิน</li>
                                 <li>การจัดซื้อจัดหา</li>
                                 <li>การบริหารทรัพยากรบุคคล</li>
@@ -378,27 +407,17 @@
                                 <li>อาชีวอนามัยและความปลอดภัย</li>
                                 <li>ระบบเทคโนโลยีสารสนเทศ</li>
                             </ul>
-                        </td>
-                    </tr>
-                </table>
+        </div>
+    </div>
+</div>
             </div>
 
             <h3 class="section-title">การวิเคราะห์ผู้มีส่วนได้เสีย</h3>
             <div>
-                <table class="sh-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 15%;">ผู้มีส่วนได้เสีย</th>
-                            <th style="width: 30%;">ช่องทางการมีส่วนร่วม</th>
-                            <th style="width: 25%;">ประเด็นผู้มีส่วนได้เสีย</th>
-                            <th style="width: 30%;">ประเด็นการพัฒนาที่ยั่งยืนที่เกี่ยวข้อง</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>พนักงาน</td>
-                            <td>
-                                <ul>
+                <div class="sh-container">
+    <stakeholder-card title="พนักงาน">
+        <div slot="col1">
+            <ul>
                                     <li>การสื่อสารภายในองค์กร</li>
                                     <li>การประชุมระหว่างผู้บริหารพบพนักงาน (Town Hall)</li>
                                     <li>การประชุมพนักงานประจำเดือน</li>
@@ -407,9 +426,9 @@
                                     <li>การสำรวจความผูกพันของพนักงานต่อองค์กรประจำปี</li>
                                     <li>การจัดให้มีช่องทางรับข้อร้องเรียน</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>ทิศทางการดำเนินธุรกิจ</li>
                                     <li>ผลการดำเนินงานของ<span style="white-space: nowrap;">บริษัท</span></li>
                                     <li>จริยธรรมทางธุรกิจของ<span style="white-space: nowrap;">บริษัท</span></li>
@@ -419,9 +438,9 @@
                                     <li>การพัฒนาศักยภาพของพนักงาน</li>
                                     <li>การปฏิบัติที่เท่าเทียม ไม่เลือกปฏิบัติ</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>การกำกับดูแลกิจการ</li>
                                     <li>จริยธรรมทางธุรกิจ</li>
                                     <li>การต่อต้านการทุจริตคอร์รัปชั่น</li>
@@ -431,20 +450,19 @@
                                     <li>อาชีวอนามัยและความปลอดภัยในการทำงาน</li>
                                     <li>สิทธิมนุษยชน</li>
                                 </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>ลูกค้า</td>
-                            <td>
-                                <ul>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title="ลูกค้า">
+        <div slot="col1">
+            <ul>
                                     <li>การสำรวจความพึงพอใจของลูกค้าประจำปี</li>
                                     <li>การจัดกิจกรรมลูกค้าสัมพันธ์ / กิจกรรมทางการตลาด</li>
                                     <li>การพบปะและประชุมโดยตรงกับลูกค้า</li>
                                     <li>การสื่อสารออนไลน์/อีเมล</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>การบริหารจัดการความเสี่ยงและภาวะวิกฤต</li>
                                     <li>การบริการหลังการขาย</li>
                                     <li>การบริหารความสัมพันธ์กับลูกค้า</li>
@@ -453,9 +471,9 @@
                                     <li>การรักษาข้อมูลความลับของลูกค้า</li>
                                     <li>การปฏิบัติที่เท่าเทียม ไม่เลือกปฏิบัติ</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>ความรับผิดชอบต่อลูกค้าและผลิตภัณฑ์</li>
                                     <li>นวัตกรรมและการพัฒนาผลิตภัณฑ์</li>
                                     <li>ก๊าซเรือนกระจก</li>
@@ -463,19 +481,18 @@
                                     <li>การปฏิบัติตามกฎหมาย</li>
                                     <li>สิทธิมนุษยชน</li>
                                 </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>คู่ค้า</td>
-                            <td>
-                                <ul>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title="คู่ค้า">
+        <div slot="col1">
+            <ul>
                                     <li>การสื่อสารผ่านสื่อออนไลน์/อีเมล</li>
                                     <li>การพบปะและประชุมโดยตรง</li>
                                     <li>ช่องทางรับข้อเสนอแนะ นำ หรือข้อร้องเรียน</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>การกำกับดูแลกิจการที่ดี</li>
                                     <li>จริยธรรมทางธุรกิจ</li>
                                     <li>ความเสมอภาคในการทำธุรกิจ</li>
@@ -483,9 +500,9 @@
                                     <li>การรักษาข้อมูลความลับของคู่ค้า</li>
                                     <li>การปฏิบัติที่เท่าเทียม ไม่เลือกปฏิบัติ</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>การบริหารจัดการห่วงโซ่อุปทาน</li>
                                     <li>การกำกับดูแลกิจการ</li>
                                     <li>การต่อต้านการทุจริตคอร์รัปชั่น</li>
@@ -493,37 +510,35 @@
                                     <li>อาชีวอนามัยและความปลอดภัยในการทำงาน</li>
                                     <li>การปฏิบัติตามกฎหมาย</li>
                                 </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>ชุมชน</td>
-                            <td>
-                                <ul>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title="ชุมชน">
+        <div slot="col1">
+            <ul>
                                     <li>การจัดกิจกรรมชุมชนสัมพันธ์</li>
                                     <li>การสื่อสารผ่านสื่อออนไลน์/อีเมล</li>
                                     <li>ช่องทางสื่อสารอื่นๆเพื่อรับข้อแนะนำ หรือข้อร้องเรียน</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>ความสัมพันธ์ที่ดีกับชุมชน</li>
                                     <li>การปฏิบัติตามกฎหมายด้านสังคมและสิ่งแวดล้อม</li>
                                     <li>การพัฒนาคุณภาพชีวิตที่ดีขึ้นของชุมชนและสังคม</li>
                                     <li>การสร้างเครือข่ายเพื่อร่วมกันพัฒนาชุมชนและสังคม</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>การมีส่วนร่วมในชุมชน</li>
                                     <li>กิจกรรมเพื่อสังคม</li>
                                     <li>การปฏิบัติตามกฎหมาย</li>
                                 </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>ผู้ถือหุ้น</td>
-                            <td>
-                                <ul>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title="ผู้ถือหุ้น">
+        <div slot="col1">
+            <ul>
                                     <li>การประชุมกรรมการใน<span style="white-space: nowrap;">บริษัท</span>ย่อยและ<span
                                             style="white-space: nowrap;">บริษัท</span>ร่วม</li>
                                     <li>การนำเสนอข้อมูลเพื่อการลงทุนที่ตลาดหลักทรัพย์แห่งประเทศไทย</li>
@@ -531,93 +546,90 @@
                                             style="white-space: nowrap;">บริษัทฯ</span></li>
                                     <li>การสื่อสารผ่านสื่อออนไลน์/อีเมล</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>มีการปฏิบัติต่อผู้ถือหุ้นที่เป็นธรรมและเท่าเทียม</li>
                                     <li>มีการเปิดเผยข้อมูลที่ถูกต้อง ครบถ้วน และทันต่อเหตุการณ์</li>
                                     <li>มีการกำกับดูแลกิจการที่ดี รวมถึงการต่อต้านการทุจริตและคอร์รัปชั่น</li>
                                     <li>มีผลการดำเนินงานที่ดีและการเติบโตทางธุรกิจอย่างยั่งยืน</li>
                                     <li>มีการบริหารจัดการความเสี่ยงในการดำเนินธุรกิจ</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>การกำกับดูแลกิจการ</li>
                                     <li>การสร้างมูลค่าทางเศรษฐกิจ</li>
                                     <li>การบริหารจัดการความเสี่ยงและการบริหารความต่อเนื่องทางธุรกิจ</li>
                                     <li>การปฏิบัติตามกฎหมาย</li>
                                 </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>คู่ธุรกิจ</td>
-                            <td>
-                                <ul>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title="คู่ธุรกิจ">
+        <div slot="col1">
+            <ul>
                                     <li>การประชุมกรรมการใน<span style="white-space: nowrap;">บริษัท</span>ย่อยและ<span
                                             style="white-space: nowrap;">บริษัท</span>ร่วม</li>
                                     <li>การประชุมร่วมกับ<span
                                             style="white-space: nowrap;">บริษัท</span>คู่ธุรกิจ/ผู้ร่วมลงทุน</li>
                                     <li>การประชุมผ่านระบบออนไลน์</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>การดำเนินธุรกิจอย่างซื่อสัตย์ เป็นธรรม และโปร่งใส</li>
                                     <li>ความร่วมมือในการพัฒนาธุรกิจและเติบโตไปด้วยกัน</li>
                                     <li>การพัฒนาธุรกิจใหม่อย่างต่อเนื่อง</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>การสร้างมูลค่าทางเศรษฐกิจแก่ผู้มีส่วนได้ส่วนเสีย</li>
                                     <li>การบริหารจัดการความเสี่ยงและการบริหารความต่อเนื่องทางธุรกิจ</li>
                                 </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>เจ้าหนี้</td>
-                            <td>
-                                <ul>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title="เจ้าหนี้">
+        <div slot="col1">
+            <ul>
                                     <li>การประชุมนักวิเคราะห์</li>
                                     <li>การประชุมร่วมกับเจ้าหนี้</li>
                                     <li>การเยี่ยมชมกิจการ</li>
                                     <li>การสื่อสารผ่านสื่อออนไลน์/อีเมล</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>การปฏิบัติตามเงื่อนไขของการกู้เงินและหุ้นกู้</li>
                                     <li>การบริหารจัดการความเสี่ยง</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>จริยธรรมทางธุรกิจ</li>
                                     <li>การสร้างมูลค่าทางเศรษฐกิจ</li>
                                     <li>การบริหารจัดการความเสี่ยงและการบริหารความต่อเนื่องทางธุรกิจ</li>
                                 </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>หน่วยงานราชการและรัฐวิสาหกิจ</td>
-                            <td>
-                                <ul>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title="หน่วยงานราชการและรัฐวิสาหกิจ">
+        <div slot="col1">
+            <ul>
                                     <li>การร่วมสนับสนุนโครงการที่จัดขึ้นโดยภาครัฐ</li>
                                     <li>การเข้าร่วมในคณะทำงานของหน่วยงานภาครัฐ</li>
                                     <li>การเยี่ยมชมกิจการ</li>
                                     <li>การเปิดเผยข้อมูลหรือรายงานตามที่ต้องการ</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>การปฏิบัติตามกฎหมายและระเบียบที่เกี่ยวข้อง</li>
                                     <li>การเปิดเผยข้อมูลอย่างโปร่งใส</li>
                                     <li>การสร้างคุณค่าทางเศรษฐกิจ</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>การมีส่วนร่วมในชุมชน</li>
                                     <li>กิจกรรมเพื่อสังคม</li>
                                     <li>การปฏิบัติตามกฎหมาย</li>
@@ -625,58 +637,56 @@
                                     <li>การต่อต้านการทุจริตคอร์รัปชั่น</li>
                                     <li>อาชีวอนามัยและความปลอดภัยในการทำงาน</li>
                                 </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>สื่อมวลชน</td>
-                            <td>
-                                <ul>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title="สื่อมวลชน">
+        <div slot="col1">
+            <ul>
                                     <li>ข่าวประชาสัมพันธ์/การแถลงข่าว</li>
                                     <li>การสัมภาษณ์พิเศษตามที่สื่อต้องการ</li>
                                     <li>การเปิดเผยข้อมูลหรือรายงานตามที่ต้องการ</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>การได้รับข้อมูลครบถ้วน ถูกต้อง และรวดเร็วทันต่อเหตุการณ์</li>
                                     <li>เปิดเผยข้อมูลข่าวสารที่เท็จจริง</li>
                                     <li>การปฏิบัติต่อสื่อมวลชนที่ดี</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>การกำกับดูแลกิจการ</li>
                                     <li>การต่อต้านการทุจริตคอร์รัปชั่น</li>
                                     <li>การมีส่วนร่วมในชุมชน</li>
                                     <li>กิจกรรมเพื่อสังคม</li>
                                 </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>คู่แข่งขันทางการค้า</td>
-                            <td>
-                                <ul>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title="คู่แข่งขันทางการค้า">
+        <div slot="col1">
+            <ul>
                                     <li>การประชุมร่วมกับองค์กรต่างๆที่เกี่ยวข้องกับในอุตสาหกรรม</li>
                                     <li>การร่วมกันทำงานเป็นเครือข่ายตามนโยบายภาครัฐ</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col2">
+            <ul>
                                     <li>การแข่งขันที่เป็นธรรม</li>
                                     <li>การปฏิบัติตามกฎหมาย</li>
                                 </ul>
-                            </td>
-                            <td>
-                                <ul>
+        </div>
+        <div slot="col3">
+            <ul>
                                     <li>การกำกับดูแลกิจการ</li>
                                     <li>ความท้าทายและโอกาส</li>
                                     <li>จริยธรรมทางธุรกิจ</li>
                                     <li>การต่อต้านการทุจริตคอร์รัปชั่น</li>
                                 </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        </div>
+    </stakeholder-card>
+</div>
+
             </div>
 
             <div style="height: 60px;"></div>

@@ -107,6 +107,7 @@
         }
 
     </style>
+    <script src="../components/AlertCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="1" path="สังคม/อาชีวอนามัยและความปลอดภัย.html" lang="th"></main-nav>
@@ -159,7 +160,7 @@
                 }
                 .safety-stat-label {
                     font-size: 16px;
-                    color: #64748b;
+                    color: var(--text-muted);
                 }
             </style>
             <card-grid style="margin-top: 40px; margin-bottom: 40px;">
@@ -235,13 +236,13 @@
             </div>
 
     
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">การดำเนินงานด้านความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงาน</h3>
                 </div>
                 <div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         บริษัทฯ ได้มีการดำเนินธุรกิจโดยคำนึงถึงความปลอดภัยในการทำงานและสภาพแวดล้อมทั้งภายในและรอบๆ สถานประกอบการอย่างเคร่งครัด บริษัทฯ จึงได้นําหลักการบริหารจัดการอาชีวอนามัยและความปลอดภัย มาเป็นส่วนหนึ่งในแนวทางการดำเนินงาน เพื่อให้เกิดประสิทธิภาพ โดยได้กำหนดนโยบายด้านความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงานดังนี้
                         <ul class="styled-list" style="margin-top: 10px;">
                             <li>บริษัทฯ จะดำเนินการและพัฒนาระบบการจัดการด้านอาชีวอนามัยและความปลอดภัยอย่างเหมาะสมโดยสอดคล้องกับกฎหมาย และข้อกำหนดอื่นๆ ที่บริษัท กำหนดไว้</li>
@@ -252,7 +253,7 @@
                         </ul>
                     </p>
                 </div>
-            </div>
+            </alert-card>
 
     
         </div>

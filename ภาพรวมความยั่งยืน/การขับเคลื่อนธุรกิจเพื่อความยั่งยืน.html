@@ -63,7 +63,7 @@
         .bg-darkblue { background: #294b7a; }
         .bg-green { background: #229f55; }
         .bg-lightgray { 
-            background: #e2e8f0; 
+            background: var(--border-color); 
             color: #1e3a8a !important; 
         }
         .line-v {
@@ -157,7 +157,7 @@
             font-weight: 700;
             margin-top: 60px;
             margin-bottom: 20px;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 10px;
             font-size: 22px;
         }
@@ -169,14 +169,14 @@
             font-size: 18px;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
             border-radius: 0px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--border-color);
             background: #fff;
         }
         .sh-table th, .sh-table td {
             padding: 20px 24px;
             vertical-align: top;
-            border-bottom: 1px solid #e2e8f0;
-            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
         }
         .sh-table th:last-child, .sh-table td:last-child {
             border-right: none;
@@ -197,7 +197,7 @@
             transition: all 0.3s ease;
         }
         .sh-table tbody tr:hover {
-            background-color: #f8fafc;
+            background-color: var(--bg-light);
         }
         .sh-table td {
             text-align: left;
@@ -210,10 +210,10 @@
             color: #1e3a8a;
             text-align: center;
             vertical-align: middle;
-            background-color: #f1f5f9;
+            background-color: var(--bg-light);
         }
         .sh-table tbody tr:hover td:first-child {
-            background-color: #e2e8f0;
+            background-color: var(--border-color);
         }
         
         .activities-grid {
@@ -257,6 +257,7 @@
     </style>
     <script src="../components/DocDownload.js" defer></script>
     <script src="../components/StatsCard.js" defer></script>
+    <script src="../components/StakeholderCard.js" defer></script>
 </head>
 <body>
 
@@ -353,7 +354,7 @@
             <div style="margin-top: 20px; margin-bottom: 10px;">
                 <div style="background: transparent; border-radius: 0px; padding: 10px 0; text-align: center; box-shadow: none; border: none;">
                     <section-header title="กรอบการทำงานด้านความยั่งยืน (Sustainability Framework)"></section-header>
-                    <p class="text-body" style="color: #64748b;  margin-bottom: 30px;">บูรณาการแนวคิดด้านสิ่งแวดล้อม สังคม และการกำกับดูแล (ESG) เข้ากับกลยุทธ์ขององค์กร</p>
+                    <p class="text-body" style="color: var(--text-muted);  margin-bottom: 30px;">บูรณาการแนวคิดด้านสิ่งแวดล้อม สังคม และการกำกับดูแล (ESG) เข้ากับกลยุทธ์ขององค์กร</p>
                     <div style="display: inline-block; padding: 10px; background-color: transparent; border-radius: 0px; box-shadow: none;">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000" alt="Infographic กรอบการทำงานด้านความยั่งยืน" style="max-width: 100%; height: auto; border-radius: 0px; display: block;">
                     </div>
@@ -361,96 +362,88 @@
             </div>
             <div style="margin-top: 60px;">
                 <section-header title="ตารางสรุปความสำคัญของโครงสร้างการกำกับดูแลด้านความยั่งยืน"></section-header>
-                <table class="sh-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 10%;">ลำดับ</th>
-                            <th style="width: 35%;">ประเด็นความสำคัญ</th>
-                            <th style="width: 55%;">สาระสำคัญโดยสรุป</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>เสริมสร้างทิศทางการดำเนินงานที่ชัดเจนและเป็นเอกภาพ</td>
-                            <td>กำหนดกรอบการทำงาน บทบาท และความรับผิดชอบของแต่ละระดับการบริหารอย่างชัดเจน ทำให้การกำหนดนโยบาย เป้าหมาย และแผนงานด้านความยั่งยืนเป็นไปในทิศทางเดียวกันทั้งองค์กร ลดความซ้ำซ้อน และเพิ่มประสิทธิภาพในการขับเคลื่อนงาน</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>สนับสนุนการตัดสินใจเชิงกลยุทธ์และการบริหารจัดการความเสี่ยง</td>
-                            <td>นำประเด็นด้านความยั่งยืนมาใช้เป็นข้อมูลประกอบการตัดสินใจเชิงกลยุทธ์ ควบคู่กับการบริหารจัดการความเสี่ยงจากการดำเนินงานในมิติสิ่งแวดล้อม สังคม และธรรมาภิบาล เพื่อป้องกันผลกระทบและรักษาความต่อเนื่องทางธุรกิจ</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>เพิ่มประสิทธิภาพในการติดตามและประเมินผลการดำเนินงาน</td>
-                            <td>เอื้อต่อการติดตาม ประเมินผล และรายงานความก้าวหน้าการดำเนินงานด้านความยั่งยืนอย่างเป็นระบบ ทำให้ผู้บริหารสามารถรับทราบสถานะ ปัญหา และโอกาสในการปรับปรุงได้อย่างทันท่วงที</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>สร้างความโปร่งใสและความเชื่อมั่นแก่ผู้มีส่วนได้ส่วนเสีย</td>
-                            <td>เสริมสร้างความโปร่งใสในการดำเนินงาน และสะท้อนถึงความมุ่งมั่นในการดำเนินธุรกิจอย่างมีความรับผิดชอบ ส่งผลให้เกิดความเชื่อมั่นและความไว้วางใจจากผู้มีส่วนได้ส่วนเสียทุกกลุ่ม</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>สนับสนุนการเติบโตขององค์กรในระยะยาว</td>
-                            <td>บูรณาการประเด็นด้านความยั่งยืนเข้ากับโครงสร้างการบริหารจัดการเพื่อสร้างคุณค่าทางธุรกิจควบคู่กับการดูแลสังคมและสิ่งแวดล้อมอันเป็นรากฐานของการเติบโตอย่างมั่นคงและยั่งยืนในระยะยาว</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="sh-container">
+    <stakeholder-card title-width="35" title="1. เสริมสร้างทิศทางการดำเนินงานที่ชัดเจนและเป็นเอกภาพ" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">กำหนดกรอบการทำงาน บทบาท และความรับผิดชอบของแต่ละระดับการบริหารอย่างชัดเจน ทำให้การกำหนดนโยบาย เป้าหมาย และแผนงานด้านความยั่งยืนเป็นไปในทิศทางเดียวกันทั้งองค์กร ลดความซ้ำซ้อน และเพิ่มประสิทธิภาพในการขับเคลื่อนงาน</p>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title-width="35" title="2. สนับสนุนการตัดสินใจเชิงกลยุทธ์และการบริหารจัดการความเสี่ยง" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">นำประเด็นด้านความยั่งยืนมาใช้เป็นข้อมูลประกอบการตัดสินใจเชิงกลยุทธ์ ควบคู่กับการบริหารจัดการความเสี่ยงจากการดำเนินงานในมิติสิ่งแวดล้อม สังคม และธรรมาภิบาล เพื่อป้องกันผลกระทบและรักษาความต่อเนื่องทางธุรกิจ</p>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title-width="35" title="3. เพิ่มประสิทธิภาพในการติดตามและประเมินผลการดำเนินงาน" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">เอื้อต่อการติดตาม ประเมินผล และรายงานความก้าวหน้าการดำเนินงานด้านความยั่งยืนอย่างเป็นระบบ ทำให้ผู้บริหารสามารถรับทราบสถานะ ปัญหา และโอกาสในการปรับปรุงได้อย่างทันท่วงที</p>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title-width="35" title="4. สร้างความโปร่งใสและความเชื่อมั่นแก่ผู้มีส่วนได้ส่วนเสีย" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">เสริมสร้างความโปร่งใสในการดำเนินงาน และสะท้อนถึงความมุ่งมั่นในการดำเนินธุรกิจอย่างมีความรับผิดชอบ ส่งผลให้เกิดความเชื่อมั่นและความไว้วางใจจากผู้มีส่วนได้ส่วนเสียทุกกลุ่ม</p>
+        </div>
+    </stakeholder-card>
+    <stakeholder-card title-width="35" title="5. สนับสนุนการเติบโตขององค์กรในระยะยาว" col1-title="">
+        <div slot="col1">
+            <p style="margin:0;">บูรณาการประเด็นด้านความยั่งยืนเข้ากับโครงสร้างการบริหารจัดการเพื่อสร้างคุณค่าทางธุรกิจควบคู่กับการดูแลสังคมและสิ่งแวดล้อมอันเป็นรากฐานของการเติบโตอย่างมั่นคงและยั่งยืนในระยะยาว</p>
+        </div>
+    </stakeholder-card>
+</div>
+
             </div>
 
             <div style="margin-bottom: 40px; display: flex; flex-direction: column; margin-top: 40px; text-align: left;">
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">1</span> บทบาทและความรับผิดชอบของคณะกรรมการและผู้บริหาร
                     </h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">คณะกรรมการบริษัทมีหน้าที่กำกับดูแลการบริหารจัดการองค์กร</strong> ให้เป็นไปตามกฎหมาย ข้อบังคับ และหลักธรรมาภิบาล โดยคำนึงถึงผลประโยชน์ของผู้มีส่วนได้ส่วนเสียทุกกลุ่มอย่างเท่าเทียมกัน<br><br>
                         นอกจากนี้ บริษัทฯ ได้แยกบทบาทระหว่างประธานกรรมการและกรรมการผู้จัดการอย่างชัดเจน พร้อมแต่งตั้งคณะกรรมการตรวจสอบเพื่อกำกับดูแลกระบวนการตรวจสอบภายในและการบริหารความเสี่ยงอย่างเป็นระบบ
                     </p>
                 </div>
                 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">2</span> นโยบายและกรอบการดำเนินงานด้านความยั่งยืน
                     </h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">มุ่งเน้นการตอบสนองความคาดหวังของผู้มีส่วนได้ส่วนเสีย</strong> ทั้งภายในและภายนอก ควบคู่กับการปฏิบัติตามข้อกำหนดด้านสิ่งแวดล้อมและกฎหมายที่เกี่ยวข้อง เพื่อลดผลกระทบเชิงลบและส่งเสริมคุณภาพชีวิตของชุมชนและสังคม
                     </p>
                 </div>
 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">3</span> การบูรณาการความยั่งยืนกับกลยุทธ์องค์กร
                     </h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">นำประเด็น ESG มาเป็นส่วนหนึ่งในการตัดสินใจเชิงกลยุทธ์</strong> ทั้งในระดับนโยบายและการปฏิบัติงาน เพื่อสร้างคุณค่าระยะยาวให้แก่องค์กรอย่างรับผิดชอบ พร้อมยึดมั่นในหลักความโปร่งใส ต่อต้านการทุจริต และจัดการความสัมพันธ์กับผู้มีส่วนได้ส่วนเสียอย่างเป็นธรรม
                     </p>
                 </div>
 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">4</span> การบริหารความเสี่ยงและโอกาสด้านความยั่งยืน
                     </h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">ระบุและติดตามความเสี่ยงด้าน ESG อย่างรอบด้าน</strong> โดยผสานเข้ากับระบบบริหารความเสี่ยงองค์กร (ERM) เพื่อให้สามารถควบคุม ป้องกัน และตอบสนองต่อสถานการณ์ที่อาจส่งผลกระทบต่อธุรกิจได้อย่างทันท่วงที
                     </p>
                 </div>
 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">5</span> การมีส่วนร่วมของผู้มีส่วนได้ส่วนเสีย
                     </h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">สร้างช่องทางการสื่อสารและการมีส่วนร่วมที่ครอบคลุม</strong> ตั้งแต่ผู้ถือหุ้น ลูกค้า คู่ค้า พนักงาน ไปจนถึงชุมชน โดยให้ความสำคัญกับการรับฟังความคิดเห็นเพื่อนำมาปรับปรุงกระบวนการทำงานและสร้างความเชื่อมั่น
                     </p>
                 </div>
 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">6</span> การติดตาม ประเมินผล และรายงานผล
                     </h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">ฝ่ายบริหารรายงานความคืบหน้าต่อคณะกรรมการอย่างสม่ำเสมอ</strong> เพื่อประเมินผลลัพธ์การดำเนินงานด้านความยั่งยืนให้บรรลุตามเป้าหมายและวัตถุประสงค์ที่กำหนดไว้อย่างมีประสิทธิภาพ
                     </p>
                 </div>
@@ -459,7 +452,7 @@
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">7</span> การเปิดเผยข้อมูลและความโปร่งใส
                     </h4>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">ให้ความสำคัญกับการเปิดเผยข้อมูลที่สำคัญอย่างครบถ้วน ถูกต้อง และทันเวลา</strong> ทั้งข้อมูลทางการเงิน ข้อมูลธุรกิจ และข้อมูล ESG โดยมีหน่วยงานนักลงทุนสัมพันธ์คอยสื่อสารกับผู้ถือหุ้นและผู้มีส่วนได้ส่วนเสียอย่างเท่าเทียมกัน เพื่อเสริมสร้างความมั่นใจและการเติบโตอย่างยั่งยืนขององค์กร
                     </p>
                 </div>
@@ -470,23 +463,7 @@
         
             
         
-            <doc-section lang="th">
-                <doc-card 
-                        url="../assets/เอกสารภาพรวมความยั่งยืน/ESG_Report_2025.pdf" 
-                        title="รายงานผลการดำเนินงานด้าน ESG ประจำปี 2568" 
-                        meta="PDF">
-                </doc-card>
-                <doc-card 
-                        url="../assets/เอกสารภาพรวมความยั่งยืน/ประกาศแต่งตั้งคณะทำงานการพัฒนาอย่างยั่งยืน.pdf" 
-                        title="ประกาศ เรื่อง แต่งตั้งคณะทำงานการพัฒนาอย่างยั่งยืน" 
-                        meta="PDF">
-                </doc-card>
-                <doc-card 
-                        url="../assets/เอกสารภาพรวมความยั่งยืน/ประกาศแก้ไขเพิ่มเติมขอบเขตอำนาจหน้าที่ของคณะทำงานการพัฒนาอย่างยั่งยืน.pdf" 
-                        title="ประกาศ เรื่อง แก้ไขเพิ่มเติมขอบเขตอำนาจหน้าที่ของคณะทำงานการพัฒนาอย่างยั่งยืน" 
-                        meta="PDF">
-                </doc-card>
-            </doc-section>
+            
 
         </div>
     </main>

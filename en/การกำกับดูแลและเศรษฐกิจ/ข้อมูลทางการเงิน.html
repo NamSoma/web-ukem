@@ -37,11 +37,11 @@
         }
         .fin-stat-label {
             font-size: 16px;
-            color: #64748b;
+            color: var(--text-muted);
         }
         .fin-comparison {
             font-size: 14px;
-            color: #64748b;
+            color: var(--text-muted);
             margin-top: 15px;
             padding-top: 15px;
             border-top: 1px dashed rgba(0,0,0,0.1);
@@ -81,23 +81,23 @@
             
             <card-grid style="margin-top: 30px; margin-bottom: 40px;">
                 
-                <!-- ยอดขาย (EBITDA) -->
+                <!-- รายได้รวม -->
                 <div class="card-item-blue" style="text-align: center;">
-                    <div class="fin-stat-value"><span class="counter-value" data-target="2631.48">0</span></div>
-                    <div class="fin-stat-label">Sales (EBITDA) Year 2568 (M.Baht)</div>
+                    <div class="fin-stat-value"><span class="counter-value" data-target="2635.35">0</span></div>
+                    <div class="fin-stat-label">Total Revenue Year 2025 (M.Baht)</div>
                     <div class="fin-comparison">
-                        <span>Year 2024: 3,201.95 M.Baht</span>
+                        <span>Year 2024: 3,206.94 M.Baht</span>
                         <span class="comparison-badge badge-down">▼ 17.82%</span>
                     </div>
                 </div>
 
                 <!-- กำไรสุทธิ -->
                 <div class="card-item" style="text-align: center;">
-                    <div class="fin-stat-value" style="color: var(--secondary);"><span class="counter-value" data-target="55.42">0</span></div>
-                    <div class="fin-stat-label">Net Profit Year 2568 (M.Baht)</div>
+                    <div class="fin-stat-value" style="color: var(--secondary);"><span class="counter-value" data-target="54.35">0</span></div>
+                    <div class="fin-stat-label">Net Profit Year 2025 (M.Baht)</div>
                     <div class="fin-comparison">
-                        <span>Year 2024: 7.26 M.Baht</span>
-                        <span class="comparison-badge badge-up">▲ 663.09%</span>
+                        <span>Year 2024: 6.26 M.Baht</span>
+                        <span class="comparison-badge badge-up">▲ 768.21%</span>
                     </div>
                 </div>
 
@@ -114,46 +114,74 @@
             </card-grid>
 
             <div style="margin-top: 50px;">
-                <section-header title="Statement of Financial Position"></section-header>
-                <div style="overflow-x: auto; margin-top: 20px;">
-                    <table class="data-table" style="text-align: right;">
+                <section-header title="Financial Highlights (Ref: SET)"></section-header>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Financial Position and Operating Performance (Unit: Million Baht)</p>
+                <div style="overflow-x: auto;">
+                    <table class="data-table" style="text-align: right; width: 100%;">
                         <thead>
                             <tr>
-                                <th style="text-align: left;">Items (Unit: Million Baht)</th>
-                                <th style="text-align: right;">As of Dec 31, 2024</th>
-                                <th style="text-align: right;">As of Dec 31, 2025</th>
-                                <th style="text-align: right;">Change (%)</th>
+                                <th style="text-align: left;">Key Financial Data</th>
+                                <th style="text-align: right;">FY 2023</th>
+                                <th style="text-align: right;">FY 2024</th>
+                                <th style="text-align: right;">FY 2025</th>
+                                <th style="text-align: right;">6M 2026</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td style="text-align: left;"><strong>Total Assets</strong></td>
-                                <td>1,693.21</td>
+                                <td>1,684.41</td>
                                 <td>1,736.58</td>
-                                <td><span style="color: #ef4444;">(2.50%)</span></td>
+                                <td>1,693.21</td>
+                                <td style="color: var(--primary);"><strong>2,115.44</strong></td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><strong>Total Liabilities</strong></td>
-                                <td>895.53</td>
+                                <td>864.09</td>
                                 <td>983.72</td>
-                                <td><span style="color: #ef4444;">(8.96%)</span></td>
+                                <td>895.53</td>
+                                <td style="color: var(--primary);"><strong>995.07</strong></td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><strong>Total Equity</strong></td>
-                                <td>797.67</td>
-                                <td>752.86</td>
-                                <td><span style="color: #10b981;">5.95%</span></td>
+                                <td>816.99</td>
+                                <td>748.53</td>
+                                <td>792.28</td>
+                                <td style="color: var(--primary);"><strong>1,114.44</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>Total Revenue</strong></td>
+                                <td>2,832.53</td>
+                                <td>3,206.94</td>
+                                <td>2,635.35</td>
+                                <td style="color: var(--primary);"><strong>1,783.31</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>Net Profit</strong></td>
+                                <td>6.46</td>
+                                <td>6.26</td>
+                                <td>54.35</td>
+                                <td style="color: var(--primary);"><strong>338.41</strong></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
+            <div style="margin-top: 40px; background-color: var(--bg-light); padding: 40px; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                <h3 style="color: var(--primary); margin-bottom: 15px; font-weight: 700;">Full Financial Statements (SET)</h3>
+                <p style="color: var(--text-muted); margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">You can view comprehensive and up-to-date financial statements, income statements, and key statistical data of the company directly on the Stock Exchange of Thailand (SET) website.</p>
+                <a href="https://www.set.or.th/en/market/product/stock/quote/UKEM/financial-statement/company-highlights" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; background-color: var(--primary); color: white;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    View Financial Data on SET
+                </a>
+            </div>
+
             <section-header title="Management Discussion and Analysis (MD&A) Summary" style="margin-top: 50px;"></section-header>
             <div  style="margin-top: 20px;">
                 <ul class="styled-list">
-                    <li><strong style="color: var(--primary);">Sales (EBITDA):</strong> In 2025, total sales were 2,631.48 million baht, a 17.82% decrease from the previous year due to lower sales volumes across all product groups (General Solvents, Plastics, and Other Industries) and a lower average selling price.</li>
-                    <li><strong style="color: var(--primary);">Net Profit:</strong> Efficient cost management resulted in a net profit of 55.42 million baht, a 663.09% increase from the previous year. This was driven by a strategic shift to focus on high-profit customer segments and a sharper decline in average product costs compared to selling prices, leading to an increased gross profit.</li>
+                    <li><strong style="color: var(--primary);">Total Revenue:</strong> In 2025, total revenue was 2,635.35 million baht, a 17.82% decrease from the previous year due to lower sales volumes across all product groups (General Solvents, Plastics, and Other Industries) and a lower average selling price.</li>
+                    <li><strong style="color: var(--primary);">Net Profit:</strong> Efficient cost management resulted in a net profit of 54.35 million baht, a 768.21% increase from the previous year. This was driven by a strategic shift to focus on high-profit customer segments and a sharper decline in average product costs compared to selling prices, leading to an increased gross profit.</li>
                 </ul>
             </div>
 

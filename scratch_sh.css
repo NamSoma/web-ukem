@@ -1,0 +1,99 @@
+
+/* --- Stakeholder Analysis Redesign --- */
+stakeholder-card {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.sh-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sh-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.sh-card-header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 25px;
+    border-bottom: 4px solid var(--secondary);
+}
+
+.sh-card-header h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.sh-card-body {
+    padding: 0;
+}
+
+.sh-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.sh-col {
+    padding: 25px;
+    border-right: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.sh-col:last-child {
+    border-right: none;
+}
+
+.sh-col-title {
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #cbd5e1;
+    display: none; /* Hidden on desktop since it's obvious from context, wait... */
+}
+
+/* Actually, the original table had headers at the very top. In card layout, we should probably show the headers in each column, or just show them on mobile. Let's show them everywhere for clarity! */
+.sh-col-title {
+    display: block;
+}
+
+.sh-col-content ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.sh-col-content ul li {
+    margin-bottom: 8px;
+}
+
+.sh-col-content ul li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+    .sh-grid {
+        grid-template-columns: 1fr;
+    }
+    .sh-col {
+        border-right: none;
+        border-bottom: 1px solid #f1f5f9;
+    }
+    .sh-col:last-child {
+        border-bottom: none;
+    }
+}

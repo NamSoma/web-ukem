@@ -48,7 +48,7 @@ class DocCard extends HTMLElement {
         this.innerHTML = `
             <div class="doc-card">
                 <div class="doc-icon">📄</div>
-                <div class="doc-info">
+                <div class="doc-info" style="text-align: left;">
                     <div class="doc-title">${title}</div>
                     <div class="doc-meta">${meta}</div>
                 </div>

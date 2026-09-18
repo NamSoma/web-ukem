@@ -20,24 +20,8 @@
     <script src="../components/InnerHero.js" defer></script>
     <script src="../components/SectionHeader.js" defer></script>
     <script src="../components/CardGrid.js" defer></script>
+    <script src="../components/FooterNote.js" defer></script>
     <style>
-
-
-        .footer-note {
-            margin-top: 40px;
-            padding: 20px;
-            background: #ffffff; border: 1px solid #e5e7eb;
-            border-radius: 0px;
-            border: 1px dashed rgba(76, 175, 80, 0.4);
-            text-align: center;
-            font-size: 18px;
-            color: var(--text-muted);
-        }
-        .footer-note a {
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: underline;
-        }
     </style>
     <script src="../components/DocDownload.js" defer></script>
     <script src="../components/StatsCard.js" defer></script>
@@ -54,7 +38,7 @@
     <main style="position: relative; overflow: hidden; padding-bottom: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px;">
             <div class="intro-container" style="display: flex; gap: 30px; margin-bottom: 40px; flex-wrap: wrap;">
-                <div class="intro-text" style="flex: 1; font-size: 18px; line-height: 1.8; color: var(--text-muted); padding: 30px; background: #f8fafc; border-radius: 0px; display: flex; flex-direction: column; justify-content: center; border: 1px solid #e2e8f0;">
+                <div class="intro-text" style="flex: 1; font-size: 18px; line-height: 1.8; color: var(--text-muted); padding: 30px; background: var(--bg-light); border-radius: 0px; display: flex; flex-direction: column; justify-content: center; border: 1px solid var(--border-color);">
                     <strong class="text-h3" style="display: block; margin-bottom: 15px; color: var(--primary);">ภาพรวมของนโยบายและแนวปฏิบัติการกำกับดูแลกิจการ</strong>
                     <ul class="styled-list">
                         <li><strong style="color: var(--primary);">ส่งเสริมการกำกับดูแลกิจการที่ดี:</strong> ดำเนินธุรกิจด้วยมาตรฐาน โปร่งใส และสร้างความเท่าเทียมต่อผู้มีส่วนได้เสียทุกฝ่าย เพื่อให้องค์กรเติบโตอย่างยั่งยืน</li>
@@ -66,7 +50,7 @@
             <section-header title="นโยบายการกำกับดูแลกิจการที่ดี"></section-header>
                 <div class="intro-text">
                     <div  style="margin-bottom: 20px;">
-                        <p style="margin: 0; color: #475569; line-height: 1.7;">
+                        <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                             <strong class="skimmable-bold">กำหนดนโยบายเพื่อเป็นแนวปฏิบัติที่ดี</strong> สอดคล้องกับการเปลี่ยนแปลงทางเศรษฐกิจและสังคม โดยอ้างอิงหลักการกำกับดูแลกิจการที่ดีสำหรับบริษัทจดทะเบียน (สำนักงาน ก.ล.ต.) และหลักเกณฑ์ของตลาดหลักทรัพย์ฯ (ตลท.) รวมถึงสมาคมส่งเสริมสถาบันกรรมการบริษัทไทย (IOD) ทั้งนี้ กรรมการ ผู้บริหาร และพนักงานทุกระดับต้องยึดถือและปฏิบัติตาม
                         </p>
                     </div>
@@ -84,9 +68,9 @@
                     <card-item>คณะกรรมการจัดให้มีระบบการสรรหาบุคลากรในตำแหน่งผู้บริหารที่สำคัญทุกระดับอย่างเหมาะสม โปร่งใส และเป็นธรรม</card-item>
                 </card-grid>
 
-                <div class="footer-note">
+                <footer-note>
                     <span style="white-space: nowrap;">บริษัทฯ</span> ได้เผยแพร่นโยบายการกำกับดูแลกิจการที่ดี จริยธรรม และจรรยาบรรณในการดำเนินธุรกิจของ<span style="white-space: nowrap;">บริษัทฯ</span> บนเว็บไซต์ของ<span style="white-space: nowrap;">บริษัทฯ</span> ที่ <a href="http://www.unionpetrochemical.com" target="_blank">www.unionpetrochemical.com</a> เพื่อให้นักลงทุนและผู้สนใจ รวมถึงผู้มีส่วนได้เสียสามารถเข้าไปอ่านได้
-                </div>
+                </footer-note>
 
             <!-- ดาวน์โหลดเอกสาร -->
             
@@ -97,7 +81,7 @@
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">การประกอบกิจการด้วยความเป็นธรรม</h3>
                 </div>
-                <div class="text-body" style="color: #475569; line-height: 1.8;">
+                <div class="text-body" style="color: var(--text-muted); line-height: 1.8;">
                     <span style="white-space: nowrap;">บริษัทฯ</span> ปฏิบัติต่อคู่แข่งทางการค้าภายใต้กฎหมายที่เกี่ยวข้อง และจริยธรรมทางธุรกิจตามกรอบกติกาการแข่งขันที่เป็นธรรม
                     <ul class="styled-list" style="margin-top: 15px;">
                         <li><strong style="color: var(--primary);">ไม่เอาเปรียบคู่แข่ง:</strong> ไม่บิดเบือนข้อมูลทางธุรกิจที่อาจกระทบต่อชื่อเสียงของคู่แข่ง</li>
@@ -114,7 +98,7 @@
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">แนวทางปฏิบัติเกี่ยวกับการป้องกันการมีส่วนเกี่ยวข้องกับการคอร์รัปชั่น</h3>
                 </div>
-                <div class="text-body" style="color: #475569; line-height: 1.8;">
+                <div class="text-body" style="color: var(--text-muted); line-height: 1.8;">
                     <strong class="skimmable-bold">ประกาศเจตนารมณ์ในการต่อต้านการทุจริตและคอร์รัปชั่นทุกรูปแบบ:</strong> <span style="white-space: nowrap;">บริษัทฯ</span> มุ่งมั่นดำเนินธุรกิจภายใต้หลักธรรมาภิบาลและความโปร่งใส โดยกำหนดนโยบายและแนวทางปฏิบัติที่ชัดเจน เพื่อเป็นกรอบในการดำเนินงานให้แก่กรรมการ ผู้บริหาร และพนักงานทุกคน
                 </div>
             </div>
@@ -123,22 +107,7 @@
             
         
         
-            <doc-section lang="th">
-                <doc-card title="นโยบายกำกับดูแลกิจการที่ดี" url="https://www.unionpetrochemical.com/wp-content/uploads/2022/06/1.-นโยบายกำกับดูแลกิจการที่ดี.pdf" meta="PDF"></doc-card>
-                <doc-card title="จรรยาบรรณธุรกิจ" url="https://www.unionpetrochemical.com/wp-content/uploads/2022/06/2.-จรรยาบรรณธุรกิจ.pdf" meta="PDF"></doc-card>
-                <doc-card title="นโยบายต่อต้านคอร์รัปชัน" url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-02-นโยบายต่อต้านคอร์รัปชัน-26-2-68.pdf" meta="PDF"></doc-card>
-                <doc-card title="คู่มือมาตรการต่อต้านคอร์รัปชัน" url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-02-คู่มือมาตรการต่อต้านคอร์รัปชัน-26-2-68.pdf" meta="PDF"></doc-card>
-                <doc-card title="แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ" url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-1-แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ-26-2-68.pdf" meta="PDF"></doc-card>
-                <doc-card title="กฎบัตรคณะกรรมการตรวจสอบ" url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-2-กฎบัตรคณะกรรมการตรวจสอบ-14-11-67.pdf" meta="PDF"></doc-card>
-                <doc-card title="ข้อบังคับบริษัทฯ" url="https://www.unionpetrochemical.com/wp-content/uploads/2024/06/ข้อบังคับบริษัทฯ-ณ-07-พ.ค.2562.pdf" meta="PDF"></doc-card>
-                <doc-card title="นโยบายคุ้มครองข้อมูลส่วนบุคคล (PDPA)" url="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/PDPA.pdf" meta="PDF"></doc-card>
-                <doc-card title="Take Down Notice & Complaint" url="https://www.unionpetrochemical.com/wp-content/uploads/2021/12/Take-down-Complaint-Form.pdf" meta="PDF"></doc-card>
-                            <doc-card 
-                    url="../assets/เอกสารกำกับดูแล/ESG_Report_2025_Governance.pdf" 
-                    title="รายงาน ESG ประจำปี 2568 (หมวดกำกับดูแลกิจการ)" 
-                    meta="PDF">
-                </doc-card>
-            </doc-section>
+            
 
         </div>
     </main>

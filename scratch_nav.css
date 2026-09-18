@@ -1,0 +1,79 @@
+
+/* --- Mobile Navbar Overrides --- */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: var(--primary);
+    margin-left: auto; /* Push to the right */
+}
+
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Make the nav-logo stay on the left, but only take necessary space */
+    .nav-logo {
+        margin-right: 0;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px; /* Height of the navbar */
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        padding-bottom: 20px;
+    }
+    
+    .nav-links.mobile-active {
+        display: flex;
+    }
+    
+    .dropdown {
+        width: 100%;
+        height: auto;
+        padding: 15px 20px;
+        border-bottom: 1px solid #f1f5f9;
+        justify-content: flex-start;
+        flex-wrap: wrap; /* Allow dropdown content to wrap */
+    }
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        display: none;
+        box-shadow: none;
+        padding: 10px 0 0 20px;
+        border: none;
+        border-left: 2px solid var(--primary);
+        margin-top: 10px;
+        background: transparent;
+    }
+    
+    .dropdown.active .dropdown-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Move lang switcher inside the mobile menu or handle it nicely */
+    .lang-switcher {
+        display: none !important; 
+    }
+    /* Wait, we shouldn't hide the language switcher completely on mobile, it should be moved inside nav-links or placed next to hamburger menu.
+       Since we can't easily move it in JS, let's just let it show on mobile by overriding .lang-switcher */
+}
+
+/* Fix lang switcher on mobile */
+@media (max-width: 992px) {
+    .lang-switcher {
+        display: flex !important;
+        margin-left: 10px !important;
+        margin-right: 15px; /* Before hamburger */
+    }
+}

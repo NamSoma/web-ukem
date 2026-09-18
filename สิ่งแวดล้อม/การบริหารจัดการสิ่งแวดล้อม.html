@@ -24,6 +24,7 @@
     <script src="../components/DocDownload.js" defer></script>
     <script src="../components/StatsCard.js" defer></script>
     <script src="../components/SectionHeader.js" defer></script>
+    <script src="../components/AlertCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="1" path="สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html" lang="th"></main-nav>
@@ -71,7 +72,7 @@
                     <img src="../assets/รูปสิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม/env_water.png" alt="การจัดการน้ำ" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0px;">
                 </div>
                 <div style="flex: 2; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7; font-size: 16px;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7; font-size: 16px;">
                         <strong class="skimmable-bold">การบริหารจัดการน้ำใช้และน้ำเสียอย่างยั่งยืน</strong> เป็นสิ่งจำเป็นสำหรับกระบวนการดำเนินงานของธุรกิจปิโตรเคมี ทั้งในด้านการทำความสะอาดอุปกรณ์ การควบคุมคุณภาพ การจัดการคลังสินค้า รวมถึงการดูแลสภาพแวดล้อมและความปลอดภัยภายในสถานประกอบการ การใช้น้ำอย่างมีประสิทธิภาพและการบริหารจัดการน้ำเสียอย่างเหมาะสมจึงเป็นองค์ประกอบสำคัญในการลดผลกระทบต่อทรัพยากรธรรมชาติ ควบคู่กับการรับมือกับความท้าทายด้านสภาพภูมิอากาศ
                     </p>
                 </div>
@@ -79,29 +80,29 @@
 
             <!-- Management Guidelines Cards for Water -->
             <div style="margin-bottom: 40px; display: flex; flex-direction: column;">
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">1</span> การจัดการทรัพยากรน้ำอย่างยั่งยืน
                     </h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>สำรวจและประเมินแหล่งน้ำดิบ เพื่อเลือกใช้อย่างเหมาะสม</li>
                         <li>กำหนดเป้าหมายลดการใช้น้ำต่อหน่วยการผลิต และจัดทำแผนอนุรักษ์น้ำอย่างเป็นระบบ</li>
                     </ul>
                 </div>
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">2</span> การบำบัดน้ำเสียอย่างมีประสิทธิภาพ
                     </h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>ออกแบบระบบบำบัดน้ำเสียให้เหมาะสมกับลักษณะของน้ำเสียจากกระบวนการผลิต เช่น ระบบบำบัดทางชีวภาพ ระบบเคมี-ฟิสิกส์ ฯลฯ</li>
                         <li>ปรับปรุงประสิทธิภาพของระบบบำบัดน้ำเสียอย่างต่อเนื่อง เพื่อให้สามารถบำบัดได้ตามค่ามาตรฐานที่กฎหมายกำหนด</li>
                     </ul>
                 </div>
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">3</span> การลดปริมาณน้ำเสีย
                     </h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>ปรับเปลี่ยนกระบวนการผลิตให้เกิดน้ำเสียปริมาณน้อยลง เช่น การใช้เทคโนโลยีแบบปิด (Closed-loop system)</li>
                         <li>ปรับเปลี่ยนวัตถุดิบหรือสารเคมีให้ลดการเกิดของเสียในกระบวนการ</li>
                     </ul>
@@ -110,7 +111,7 @@
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">4</span> การปฏิบัติตามกฎหมายและมาตรฐาน
                     </h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>ปฏิบัติตามข้อกำหนดของกฎหมายว่าด้วยการควบคุมน้ำเสียจากโรงงานอุตสาหกรรมอย่างเคร่งครัด</li>
                         <li>รายงานข้อมูลการใช้น้ำและการปล่อยน้ำเสียต่อหน่วยงานที่เกี่ยวข้อง และจัดทำแผนฉุกเฉินกรณีระบบบำบัดขัดข้อง</li>
                     </ul>
@@ -118,17 +119,17 @@
             </div>
 
             <div class="content-body" style="margin-top: 0px;">
-                <div style="margin-top: 0px; border: 1px solid #e2e8f0; border-radius: 0px; overflow: hidden; background: var(--bg-surface); box-shadow: none;">
+                <div style="margin-top: 0px; border: 1px solid var(--border-color); border-radius: 0px; overflow: hidden; background: var(--bg-surface); box-shadow: none;">
                     <div style="background-color: var(--primary, #193f6e); color: white; padding: 15px 20px; font-weight: 700; text-align: center; font-size: 18px;">
                         เป้าหมายการดำเนินการบริหารจัดการน้ำ
                     </div>
                     <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 18px;">
                         <tbody>
-                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <tr style="border-bottom: 1px solid var(--border-color);">
                                 <td style="background-color: #2a5a9c; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">เป้าหมาย</td>
                                 <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">ลดการใช้น้ำ</td>
                             </tr>
-                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <tr style="border-bottom: 1px solid var(--border-color);">
                                 <td style="background-color: #3b71b8; color: white; padding: 16px 20px; width: 30%; font-weight: 600; font-size: 18px;">ปีฐาน</td>
                                 <td style="padding: 16px 20px; color: var(--text-main); font-weight: 600; font-size: 18px; background-color: var(--bg-surface);">ปี 2567: ใช้น้ำ <span style="color: #0284c7;">4,585</span> ลูกบาศก์เมตร</td>
                             </tr>
@@ -148,7 +149,7 @@
                 </div>
 
                 <div style="overflow-x: auto; margin: 20px 0;">
-                    <table class="data-table" style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; box-shadow: none; border-radius: 0px; overflow: hidden; text-align: center; border: 1px solid #e2e8f0;">
+                    <table class="data-table" style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; box-shadow: none; border-radius: 0px; overflow: hidden; text-align: center; border: 1px solid var(--border-color);">
                         <thead>
                             <tr>
                                 <th class="text-body-lg" colspan="2" style="background-color: var(--bg-surface);fff; color: var(--primary, #193f6e); padding: 16px; border-bottom: 2px solid var(--primary, #193f6e); text-align: center; font-weight: 700;">
@@ -156,14 +157,14 @@
                                 </th>
                             </tr>
                             <tr>
-                                <th style="background-color: var(--primary, #193f6e); color: white; padding: 12px; border: 1px solid #e2e8f0; font-weight: 600; width: 50%; text-align: center;">ปี 2567</th>
-                                <th style="background-color: var(--primary, #193f6e); color: white; padding: 12px; border: 1px solid #e2e8f0; font-weight: 600; width: 50%; text-align: center;">ปี 2568</th>
+                                <th style="background-color: var(--primary, #193f6e); color: white; padding: 12px; border: 1px solid var(--border-color); font-weight: 600; width: 50%; text-align: center;">ปี 2567</th>
+                                <th style="background-color: var(--primary, #193f6e); color: white; padding: 12px; border: 1px solid var(--border-color); font-weight: 600; width: 50%; text-align: center;">ปี 2568</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid #e2e8f0; background-color: var(--bg-surface); text-align: center;">4,585</td>
-                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid #e2e8f0; background-color: var(--bg-surface); text-align: center;">3,421</td>
+                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid var(--border-color); background-color: var(--bg-surface); text-align: center;">4,585</td>
+                                <td class="text-h2" style="padding: 20px 12px; font-weight: bold; color: var(--text-main); border: 1px solid var(--border-color); background-color: var(--bg-surface); text-align: center;">3,421</td>
                             </tr>
                         </tbody>
                     </table>
@@ -185,7 +186,7 @@
         <div class="content-body">
             <div class="intro-text" style="display: block; margin-bottom: 20px;">
                 <div style="margin-bottom: 20px;">
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">มุ่งเน้นการจัดการของเสียอย่างเป็นระบบและรับผิดชอบ</strong> ทั้งของเสียอันตรายและไม่อันตราย เพื่อลดผลกระทบต่อสิ่งแวดล้อมและชุมชน โดยยึดหลัก:
                     </p>
                     <ul class="styled-list" style="margin-top: 10px;">
@@ -203,41 +204,41 @@
 
             <!-- Management Guidelines Cards -->
             <div style="margin-bottom: 40px; display: flex; flex-direction: column; margin-top: 30px; text-align: left;">
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">1</span> การให้ความรู้และอบรมด้านการจัดการของเสีย
                     </h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>จัดการฝึกอบรมให้ความรู้เรื่องการแยกขยะ และผลกระทบต่อสิ่งแวดล้อม</li>
                         <li>จัดทำสื่อประชาสัมพันธ์ เช่น ป้าย โปสเตอร์ และวิดีโอ</li>
                     </ul>
                 </div>
 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">2</span> การติดตั้งระบบแยกขยะในสถานที่ทำงาน
                     </h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>จัดวางถังขยะแยกประเภทชัดเจน พร้อมป้ายกำกับ</li>
                         <li>ตั้งจุดรับคืนของเสียอันตราย เช่น ถ่านไฟฉาย หลอดไฟ</li>
                     </ul>
                 </div>
 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">3</span> การสร้างกิจกรรมส่งเสริมการมีส่วนร่วม
                     </h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>จัดประกวดลด/แยกขยะ มอบรางวัลและประกาศเกียรติคุณ</li>
                         <li>กิจกรรมแลกเปลี่ยนขยะเป็นของใช้ (Waste Exchange Day)</li>
                     </ul>
                 </div>
 
-                <div style="padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="padding: 20px 0; border-bottom: 1px solid var(--border-color);">
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">4</span> การบูรณาการแนวคิด "Zero Waste"
                     </h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>งดใช้พลาสติกแบบใช้ครั้งเดียว (Single-use plastic)</li>
                         <li>สร้างเครือข่ายอาสาสมัครพนักงาน (Green Volunteer)</li>
                     </ul>
@@ -247,7 +248,7 @@
                     <h4 style="color: var(--primary); margin-top: 0; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;">
                         <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">5</span> การสื่อสารและรายงานผลการดำเนินงาน
                     </h4>
-                    <ul class="styled-list" style="margin: 0; color: #475569;">
+                    <ul class="styled-list" style="margin: 0; color: var(--text-muted);">
                         <li>สื่อสารผลการลดของเสียสำเร็จผ่านช่องทางภายใน (Intranet, E-mail)</li>
                         <li>เชื่อมโยงการมีส่วนร่วมกับเป้าหมาย ESG และแสดงในรายงานความยั่งยืน</li>
                     </ul>
@@ -258,7 +259,7 @@
                 ผลการดำเนินงาน
             </h3>
             
-            <div style="overflow-x: auto; margin: 20px 0; border-radius: 0px; box-shadow: none; border: 1px solid #e2e8f0; background: var(--bg-surface);">
+            <div style="overflow-x: auto; margin: 20px 0; border-radius: 0px; box-shadow: none; border: 1px solid var(--border-color); background: var(--bg-surface);">
                 <table class="data-table" style="width: 100%; border-collapse: collapse; text-align: center; font-size: 18px;">
                     <thead>
                         <tr style="background: var(--primary, #193f6e); color: white;">
@@ -270,33 +271,33 @@
                     </thead>
                     <tbody>
                         <!-- ขยะทั่วไป -->
-                        <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">ขยะทั่วไป</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">10.88 ตัน</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">8.60 ตัน</td>
+                        <tr style="border-bottom: 1px solid var(--bg-light);">
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid var(--border-color);">ขยะทั่วไป</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">10.88 ตัน</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">8.60 ตัน</td>
                             <td rowspan="3" style="padding: 14px 10px; color: #0f172a; font-weight: 700; background-color: var(--bg-surface);fff; vertical-align: middle;">
                                 เพิ่มสัดส่วน<br>รีไซเคิล 5% ต่อปี
                             </td>
                         </tr>
                         <!-- ขยะรีไซเคิล -->
-                        <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">ขยะรีไซเคิล</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">0.64 ตัน</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">0.36 ตัน</td>
+                        <tr style="border-bottom: 1px solid var(--bg-light);">
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid var(--border-color);">ขยะรีไซเคิล</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">0.64 ตัน</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">0.36 ตัน</td>
                         </tr>
                         <!-- ขยะอุตสาหกรรม -->
-                        <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid #e2e8f0;">ขยะอุตสาหกรรม</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">64.76 ตัน</td>
-                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid #e2e8f0;">98.79 ตัน</td>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 14px 10px; color: var(--text-main); font-weight: 500; border-right: 1px solid var(--border-color);">ขยะอุตสาหกรรม</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">64.76 ตัน</td>
+                            <td style="padding: 14px 10px; color: var(--text-muted); border-right: 1px solid var(--border-color);">98.79 ตัน</td>
                         </tr>
                         
                         <!-- รวม -->
-                        <tr style="background-color: #e2e8f0; border-bottom: 1px solid #cbd5e1;">
+                        <tr style="background-color: var(--border-color); border-bottom: 1px solid #cbd5e1;">
                             <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">รวม</td>
                             <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">76.28 ตัน</td>
                             <td style="padding: 14px 10px; font-weight: 700; color: var(--text-main); border-right: 1px solid #cbd5e1;">107.75 ตัน</td>
-                            <td style="padding: 14px 10px; background-color: #e2e8f0;"></td>
+                            <td style="padding: 14px 10px; background-color: var(--border-color);"></td>
                         </tr>
                         
                         <!-- ร้อยละสัดส่วนรีไซเคิล -->
@@ -309,7 +310,7 @@
                     </tbody>
                 </table>
             </div>
-            <div style="font-size: 12px; color: #64748b; margin-top: -10px; margin-bottom: 30px;">
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">
                 หมายเหตุ: ในปี 2568 <span style="white-space: nowrap;">บริษัท</span>ได้เริ่มดำเนินธุรกิจคลังสินค้าโรจนะแหลมฉบัง (ULT) จึงส่งผลให้มีปริมาณขยะที่เพิ่มขึ้น
             </div>
 
@@ -317,13 +318,13 @@
             
         
             
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">การดูแลรักษาสิ่งแวดล้อม</h3>
                 </div>
                 <div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         บริษัทฯ ประกอบธุรกิจแบบซื้อมาและจำหน่ายไป (Trading) ดังนั้น บริษัทฯ จึงมีนโยบายในการพิจารณาคัดเลือกและสั่งซื้อสินค้าจากผู้ผลิต/ผู้ขายที่ได้มาตรฐาน และมีจิตสำนึกด้านสิ่งแวดล้อม รวมถึงมีความใส่ใจและคำนึงถึงผลกระทบต่อสิ่งแวดล้อมในทุกขั้นตอนของกระบวนการทางธุรกิจ โดยบริษัทฯ ให้ความสำคัญต่อสิ่งแวดล้อมที่มีการเปลี่ยนแปลงต่อสังคมโดยรวม ทั้งที่มีผลต่อสุขภาพอนามัย และความปลอดภัยของพนักงานและคนในสังคม โดยคำนึงถึงผลกระทบที่เกิดมากกว่าผลตอบแทนทางธุรกิจ จึงได้มีการกำหนดนโยบายในการประกอบธุรกิจโดยคำนึงถึงสิ่งแวดล้อม ดังนี้
                     </p>
                     <ul class="styled-list" style="margin-top: 10px;">
@@ -334,20 +335,14 @@
                         <li>บริษัทจะบริหารจัดการการใช้ทรัพยากรทางธรรมชาติและพลังงานอย่างมีประสิทธิภาพ โดยส่งเสริมการประหยัดพลังงานในกิจกรรมของบริษัท และพยายามบรรเทาปัญหาภาวะโลกร้อน ควบคู่ไปกับการสร้างความเป็นมิตรต่อสิ่งแวดล้อม</li>
                     </ul>
                 </div>
-            </div>
+            </alert-card>
 
             
         </div>
 
 
     
-            <doc-section lang="th">
-                <doc-card 
-                        url="../assets/เอกสารสิ่งแวดล้อม/นโยบายความหลากหลายทางชีวภาพ 2569.pdf" 
-                        title="นโยบายความหลากหลายทางชีวภาพ 2569" 
-                        meta="PDF">
-                    </doc-card>
-            </doc-section>
+            
 
         </div>
     </main>

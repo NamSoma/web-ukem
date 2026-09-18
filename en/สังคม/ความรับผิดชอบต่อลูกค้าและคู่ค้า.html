@@ -55,6 +55,7 @@
         }
     </style>
     <script src="../../components/DocDownload.js" defer></script>
+    <script src="../../components/AlertCard.js" defer></script>
 </head>
 <body>
     <main-nav depth="2" path="สังคม/ความรับผิดชอบต่อลูกค้าและคู่ค้า.html" lang="en"></main-nav>
@@ -122,20 +123,20 @@
             </div>
             
             <div  style="margin-bottom: 40px;">
-                <p style="margin: 0; color: #475569; line-height: 1.7;">
+                <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                     <strong style="color: var(--primary);">Establishing a Supplier Code of Conduct:</strong> In 2025, <span style="white-space: nowrap;">the Company</span> is in the process of studying and formulating a Supplier Code of Conduct as a guideline for practices and evaluating partners. Progress will be reported next year.
                 </p>
             </div>
 
             <!-- ดาวน์โหลดเอกสาร -->
             
-            <div class="alert-card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 0px; padding: 30px; margin-top: 30px; box-shadow: none;">
+            <alert-card>
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); flex-shrink: 0;"></div>
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">Responsibility to Customers and Consumers</h3>
                 </div>
                 <div>
-                    <p style="margin: 0; color: #475569; line-height: 1.7;">
+                    <p style="margin: 0; color: var(--text-muted); line-height: 1.7;">
                         <strong class="skimmable-bold">Committed to delivering standardized, safe, and high-quality products</strong> to achieve maximum customer satisfaction, guided by:
                         <ul class="styled-list" style="margin-top: 10px;">
                             <li><strong style="color: var(--primary);">Professional Ethics:</strong> Conducting business with honesty and integrity, as part of our employee code of conduct.</li>
@@ -144,15 +145,13 @@
                         </ul>
                     </p>
                 </div>
-            </div>
+            </alert-card>
 
             
         
 
         
-            <doc-section lang="en">
-                <doc-card title="Sustainable Procurement Policy" url="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/นโยบายจัดซื้อจัดจ้างอย่างยั่งยืน.pdf" meta="PDF"></doc-card>
-            </doc-section>
+            
 
         </div>
     </main>

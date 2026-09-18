@@ -21,6 +21,28 @@
     <script src="../components/InnerHero.js" defer></script>
     <script src="../components/SectionHeader.js" defer></script>
     <script src="../components/DocDownload.js" defer></script>
+    <style>
+        .styled-list {
+            padding-left: 20px;
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.6;
+            text-align: left !important;
+        }
+        .styled-list li {
+            margin-bottom: 10px;
+        }
+        .risk-card, .risk-card * {
+            text-align: left !important;
+        }
+        .risk-card ul.risk-measures {
+            padding-left: 20px;
+            text-align: left !important;
+        }
+        .risk-card h4, .risk-section-title {
+            text-align: left !important;
+        }
+    </style>
 </head>
 <body>
     
@@ -32,12 +54,12 @@
     </inner-hero>
 
     <main class="main-content-wrapper" style="position: relative; overflow: hidden; padding-bottom: 60px;">
-    <div class="container content-wrapper" id="content-start" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px;">
+    <div class="container content-wrapper" id="content-start" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px; text-align: left;">
         <section-header title="นโยบายและแผนการบริหารความเสี่ยง"></section-header>
 
         
         <div  style="margin-bottom: 30px;">
-            <p style="margin: 0 0 15px 0; color: #475569; line-height: 1.7;">
+            <p style="margin: 0 0 15px 0; color: var(--text-muted); line-height: 1.7;">
                 <span style="white-space: nowrap;">บริษัทฯ</span> ตระหนักถึงความสำคัญของการบริหารจัดการความเสี่ยง เพื่อขับเคลื่อนองค์กรให้เติบโตอย่างยั่งยืน ท่ามกลางภาวะการแข่งขันและการเปลี่ยนแปลงทั้งปัจจัยภายในและภายนอก จึงกำหนดนโยบายบริหารความเสี่ยงตามมาตรฐานสากล <strong class="skimmable-bold">(COSO-ERM)</strong> ดังนี้:
             </p>
             <ul class="styled-list">
@@ -262,10 +284,7 @@
             
         
         
-            <doc-section lang="th">
-                <doc-card title="กฎบัตรคณะกรรมการบริหารความเสี่ยง" url="https://www.unionpetrochemical.com/wp-content/uploads/2026/03/กฎบัตรคณะกรรมการบริหารความเสี่ยง.pdf" meta="PDF"></doc-card>
-                <doc-card title="คู่มือการบริหารความเสี่ยง" url="https://www.unionpetrochemical.com/wp-content/uploads/2024/05/RiskManagementTH.pdf" meta="PDF"></doc-card>
-            </doc-section>
+            
 
         </div>
     </main>
