@@ -1379,8 +1379,8 @@ main-nav { display: contents; }
     --secondary: #f87171;
     --accent: #f87171;
     --highlight: #fca5a5;
-    --text-main: #f3f4f6;
-    --text-muted: #9ca3af;
+    --text-main: #e0f2fe;
+    --text-muted: var(--text-main);
     --bg-light: #111827; 
     --white: #1f2937; 
     --border-color: #374151;
@@ -1395,6 +1395,31 @@ main-nav { display: contents; }
     --footer-bottom-bg: #020617;
     --footer-right-text: #94a3b8;
     --footer-qr-border: rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .bg-lightgray {
+    color: var(--text-main) !important;
+    background: #1f2937; /* slightly darker/better contrast if needed, but var(--border-color) is fine. let's just fix text */
+}
+
+[data-theme="dark"] .vc-card-body ul {
+    color: var(--text-main);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .section-title {
+    color: var(--primary) !important;
+}
+
+/* Fix for Value Chain Card Headers: since background is var(--primary) (light blue), text must be dark */
+[data-theme="dark"] .vc-card-header h4,
+[data-theme="dark"] .vc-card-header {
+    color: var(--bg-light) !important;
 }
 
 [data-theme="dark"] .nav-logo img {

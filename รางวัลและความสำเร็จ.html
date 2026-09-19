@@ -29,7 +29,8 @@
         }
 
         .award-card {
-            background: #ffffff;
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
             border-radius: 0px;
             overflow: hidden;
             box-shadow: none;
@@ -155,7 +156,10 @@
             color: white;
         }
 
-    </style>
+        [data-theme="dark"] .award-card {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+</style>
 </head>
 <body>
 
