@@ -1,6 +1,7 @@
 class InnerHero extends HTMLElement {
     connectedCallback() {
         const title = this.getAttribute('title') || '';
+        this.removeAttribute('title');
         const bgImage = this.getAttribute('bg-image') || this.getAttribute('image-url') || '';
         
         this.innerHTML = `

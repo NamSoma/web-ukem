@@ -5,6 +5,7 @@ class ValueChainCard extends HTMLElement {
         this.setAttribute('rendered', 'true');
 
         const title = this.getAttribute('title') || '';
+        this.removeAttribute('title');
         const content = this.innerHTML.trim();
         
         this.innerHTML = `

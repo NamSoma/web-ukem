@@ -95,7 +95,9 @@ main-nav { display: contents; }
     display: flex;
     align-items: center;
     padding: 0 5%;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     
     height: 80px;
     border: 1px solid var(--border-color); box-shadow: none;
@@ -141,13 +143,14 @@ main-nav { display: contents; }
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 10px;
     cursor: pointer;
     color: var(--text-main);
     font-weight: 500;
     height: 100%;
     transition: 0.3s;
     font-size: 16px;
+    white-space: nowrap;
 }
 
 .dropdown:hover {
@@ -271,8 +274,9 @@ main-nav { display: contents; }
 
 .hero-subtitle {
     font-size: 20px;
-    font-weight: 300;
-    opacity: 0.9;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 /* =========================================
@@ -508,12 +512,14 @@ main-nav { display: contents; }
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     z-index: 1;
 }
 .inner-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 1200px;
 }
 .inner-hero h1 {
     font-size: 48px;
@@ -566,7 +572,7 @@ main-nav { display: contents; }
 }
 .matrix-subtitle {
     font-size: 16px;
-    color: #666;
+    color: var(--text-muted, #666);
     text-align: center;
     margin-bottom: 30px;
 }
@@ -618,7 +624,7 @@ main-nav { display: contents; }
 }
 .legend-number {
     font-weight: bold;
-    color: #555;
+    color: var(--text-muted, #555);
 }
 
 .matrix-grid-wrapper {
@@ -629,11 +635,11 @@ main-nav { display: contents; }
 }
 .y-axis-label {
     position: absolute;
-    left: -80px;
+    left: 10px;
     top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(-90deg);
     font-weight: 600;
-    color: #555;
+    color: var(--text-muted, #555);
     white-space: nowrap;
 }
 .zone-labels {
@@ -641,14 +647,14 @@ main-nav { display: contents; }
     justify-content: space-between;
     margin-bottom: 10px;
     font-weight: 600;
-    color: #555;
+    color: var(--text-muted, #555);
 }
 .axis-indicators {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
     font-weight: 600;
-    color: #555;
+    color: var(--text-muted, #555);
     font-size: 14px;
 }
 .matrix-grid {
@@ -689,8 +695,8 @@ main-nav { display: contents; }
 
 @media (max-width: 768px) {
     .matrix-layout { flex-direction: column; }
-    .matrix-grid-wrapper { padding-left: 20px; }
-    .y-axis-label { left: -30px; font-size: 12px; }
+    .matrix-grid-wrapper { padding-left: 30px; margin-left: 10px; }
+    .y-axis-label { left: 10px; font-size: 12px; }
 }
 
 .inner-breadcrumb span {
@@ -811,7 +817,7 @@ main-nav { display: contents; }
 
 .data-table td strong {
     font-size: 16px;
-    color: #0f172a;
+    color: inherit;
     font-weight: 600;
 }
 
@@ -1397,6 +1403,10 @@ main-nav { display: contents; }
     --footer-qr-border: rgba(255,255,255,0.1);
 }
 
+[data-theme="dark"] .main-nav {
+    background: rgba(31, 41, 55, 0.3);
+}
+
 [data-theme="dark"] .bg-lightgray {
     color: var(--text-main) !important;
     background: #1f2937; /* slightly darker/better contrast if needed, but var(--border-color) is fine. let's just fix text */
@@ -1423,7 +1433,7 @@ main-nav { display: contents; }
 }
 
 [data-theme="dark"] .nav-logo img {
-    /* To keep logo readable, add a subtle filter if needed, but user said 'leave it alone'. We leave it alone */
+    /* filter: drop-shadow removed as requested */
 }
 /* =========================================
    ESG ACCORDION (PROGRESSIVE DISCLOSURE)
@@ -1519,7 +1529,7 @@ details.esg-accordion .accordion-content {
 
 .vc-card {
     background: #ffffff;
-    border-radius: 8px;
+    border-radius: 0px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border: 1px solid var(--border-color);
     display: flex;
@@ -1537,7 +1547,7 @@ details.esg-accordion .accordion-content {
     background: var(--primary);
     color: white;
     padding: 20px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0px;
     text-align: center;
     min-height: 100px;
     display: flex;
@@ -1557,7 +1567,7 @@ details.esg-accordion .accordion-content {
     padding: 20px;
     flex-grow: 1;
     background: var(--bg-light);
-    border-radius: 0 0 8px 8px;
+    border-radius: 0px;
 }
 
 .vc-card-body ul {

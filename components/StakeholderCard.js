@@ -1,6 +1,7 @@
 class StakeholderCard extends HTMLElement {
     connectedCallback() {
         const title = this.getAttribute('title') || 'Stakeholder';
+        this.removeAttribute('title');
         
         // Extract content from slots BEFORE overwriting innerHTML
         const col1Content = this.querySelector('[slot="col1"]')?.innerHTML.trim() || '';

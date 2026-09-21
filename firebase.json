@@ -13,6 +13,7 @@
       "scratch/**",
       "import easyocr.py",
       "sync_github.ps1"
-    ]
+    ],
+    "max_releases": 5
   }
 }

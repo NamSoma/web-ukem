@@ -30,6 +30,7 @@ class DocCard extends HTMLElement {
         this.setAttribute('rendered', 'true');
 
         const title = this.getAttribute('title') || 'ชื่อเอกสารที่ (รออัปโหลด)';
+        this.removeAttribute('title');
         const url = this.getAttribute('url') || '#';
         const meta = this.getAttribute('meta') || 'PDF • - MB';
         

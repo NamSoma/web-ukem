@@ -1,6 +1,7 @@
 class SectionHeader extends HTMLElement {
     connectedCallback() {
         const title = this.getAttribute('title') || '';
+        this.removeAttribute('title');
         const id = this.getAttribute('id') || '';
         
         this.innerHTML = `

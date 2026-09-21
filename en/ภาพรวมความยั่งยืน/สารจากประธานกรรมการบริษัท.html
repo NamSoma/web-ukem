@@ -117,17 +117,21 @@
         }
 
         .signature-box p {
-            color: #193f6e;
+            color: var(--primary, #193f6e);
             margin: 0 0 10px 0;
             font-weight: 600;
             font-size: 18px;
         }
 
         .signature-box span {
-            color: #555;
+            color: var(--text-muted, #555);
             font-size: 18px;
             line-height: 1.5;
             display: inline-block;
+        }
+        
+        [data-theme="dark"] .signature-box img {
+            filter: invert(1) hue-rotate(180deg) brightness(1.2);
         }
         
         @media (max-width: 768px) {

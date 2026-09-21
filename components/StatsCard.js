@@ -33,6 +33,7 @@ class StatCard extends HTMLElement {
         this.setAttribute('rendered', 'true');
 
         const title = this.getAttribute('title') || '';
+        this.removeAttribute('title');
         const value = this.getAttribute('value') || '';
         const desc = this.getAttribute('desc') || '';
         const theme = this.getAttribute('theme') || ''; // 'blue', 'green'

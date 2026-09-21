@@ -1,6 +1,7 @@
 class HeroBanner extends HTMLElement {
     connectedCallback() {
         const title = this.getAttribute('title') || 'Title';
+        this.removeAttribute('title');
         const bgImage = this.getAttribute('bg-image') || '';
         
         this.innerHTML = `
