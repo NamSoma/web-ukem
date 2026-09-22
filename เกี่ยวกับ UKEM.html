@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <title>UKEM - Sustainability</title>
+    <!-- Use Google Fonts (Kanit & Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="components/Navbar.js" defer></script>
+    <script src="components/Footer.js" defer></script>
+</head>
+<body>
+
+    <main-nav path="index.html" lang="th"></main-nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <ul class="bg-slideshow">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in-up" style="animation-delay: 0.2s;">
+                Enhancing Sustainable Success<br>
+                <span class="highlight">มุ่งมั่นดำเนินธุรกิจอย่างยั่งยืนเพื่อสังคมและสิ่งแวดล้อม</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up" style="animation-delay: 0.4s;"><span style="white-space: nowrap;">บริษัท</span> ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน)</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" style="padding: 80px 0; background-color: var(--white);">
+        <div class="container">
+            <div class="text-center" style="margin: 0 auto;">
+                <h2 class="section-title">นโยบายและภาพรวมการประกอบธุรกิจ</h2>
+                <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 40px;"></div>
+                <p style="color: var(--text-muted); font-size: 18px; line-height: 1.8; text-align: left; text-indent: 50px;">
+                    บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) เป็นหนึ่งในผู้นำด้านการนำเข้าและจัดจำหน่ายเคมีภัณฑ์และสารละลาย (Solvents) บริษัทดำเนินธุรกิจอย่างยาวนานก้าวเข้าสู่ปีที่ 45 ด้วยความสามารถในการปรับตัวทางธุรกิจของสารละลายตามมาตรฐานทั่วไป และเคมีภัณฑ์ชนิดพิเศษให้เหมาะสมกับอุตสาหกรรมเฉพาะด้าน โดยบริษัทยึดถือแนวทางการดำเนินธุรกิจที่มุ่งเน้นการเติบโตอย่างยั่งยืน ความหลากหลายของผลิตภัณฑ์อย่างครบวงจร เพื่อตอบสนองความต้องการของลูกค้าในกลุ่มอุตสาหกรรม การบริหารจัดการคลังสินค้าและโลจิสติกส์ระบบการจัดเก็บที่ได้มาตรฐาน และการขนส่งที่รวดเร็ว มุ่งเน้นคุณภาพและมาตรฐานของการจัดหาแหล่งผลิตภัณฑ์ที่น่าเชื่อถือ รวมทั้งการสร้างความสัมพันธ์ทางธุรกิจกับทั้งผู้จัดจำหน่าย และลูกค้า
+                </p>
+            </div>
+            
+            <div class="vision-mission-section" style="margin-top: 60px; text-align: left;">
+                    <!-- Vision -->
+                    <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 6px solid var(--primary);">
+                        <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            วิสัยทัศน์ (Vision)
+                        </h3>
+                        <p style="font-size: 18px; line-height: 1.6; color: var(--text-color, #333); font-weight: 500;">
+                            มุ่งสู่การเป็นผู้นํา ในการให้บริการจัดจําหน่ายเคมีภัณฑ์อย่างครบวงจร ด้วยความหลากหลายของผลิตภัณฑ์และบริการด้านเคมีภัณฑ์ครอบคลุมห่วงโซ่อุปทานของลูกค้าในทุกกลุ่มอุตสาหกรรม
+                        </p>
+                        <p style="font-size: 16px; color: var(--text-muted, #666); margin-top: 10px; font-style: italic;">
+                            "Integration Beyond A Chemical Distributor with Diverse Services for Sustainability"
+                        </p>
+                    </div>
+
+                    <!-- Mission -->
+                    <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 6px solid #2ecc71;">
+                        <h3 style="color: #2ecc71; font-size: 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path></svg>
+                            พันธกิจ (Mission)
+                        </h3>
+                        <ol style="font-size: 16px; line-height: 1.8; color: var(--text-color, #333); padding-left: 20px; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                            <li>สร้างเครือข่ายทางธุรกิจด้านเคมีภัณฑ์ที่หลากหลายให้ครอบคลุมห่วงโซ่อุปทานในธุรกิจที่มีการผลิตและใช้สารเคมี</li>
+                            <li>พัฒนาธุรกิจและบริการใหม่เพื่อสร้างโซลูชั่นด้านบริการเคมีภัณฑ์ที่ครบวงจรสามารถตอบสนองความต้องการของตลาดได้อย่างรวดเร็ว</li>
+                            <li>ส่งเสริมการใช้นวัตกรรมและเทคโนโลยีในการเพิ่มประสิทธิภาพการส่งมอบคุณค่าของสินค้าและบริการของบริษัทฯ</li>
+                            <li>พัฒนาและเพิ่มศักยภาพของบุคลากรทั้งในรูปแบบการยกระดับทักษะการทํางาน (Reskill) และการสร้างทักษะการทํางานใหม่ที่ตอบรับต่อการเปลี่ยนแปลงใหม่ของธุรกิจ (Upskill) เพื่อให้เกิดประสิทธิภาพในการทํางานและคุณภาพชีวิตที่ดีขึ้น</li>
+                            <li>สร้างความตระหนักในการใช้ทรัพยากรให้เกิดประโยชน์สูงสุดให้ครอบคลุมกิจกรรมในห่วงโซ่ธุรกิจของบริษัทฯ และขับเคลื่อนแนวปฏิบัติในระดับพนักงานและผู้บริหาร เพื่อสร้างวัฒนธรรมองค์กรที่เป็นมิตรกับสิ่งแวดล้อม</li>
+                            <li>บริหารองค์กรตามหลักการกํากับดูแลกิจการที่ดี และปฏิบัติตามกฎหมายที่เกี่ยวข้องกับการประกอบกิจการในมิติเศรษฐกิจ มิติสังคม และมิติสิ่งแวดล้อม เพื่อสร้างความเชื่อมั่นให้กับผู้มีส่วนได้เสีย และเพื่อการเติบโตอย่างยั่งยืน</li>
+                        </ol>
+                    </div>
+
+                    <!-- Core Values -->
+                    <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 6px solid #e74c3c;">
+                        <h3 style="color: #e74c3c; font-size: 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                            ค่านิยม (Core Values) - UKEMS
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">U - Unity for Sustainability</strong> <span style="color: var(--text-color, #333);">(ความสามัคคีเพื่อความยั่งยืน)</span><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">ด้วยการส่งเสริมความร่วมมือระหว่างพนักงาน คู่ค้า ชุมชน และผู้มีส่วนได้เสีย เพื่อบรรลุเป้าหมายการพัฒนาที่ยั่งยืนอย่างเป็นรูปธรรม</span>
+                            </div>
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">K - Knowledge & Innovation for Green Chemistry</strong> <span style="color: var(--text-color, #333);">(องค์ความรู้และนวัตกรรมเพื่อเคมีภัณฑ์สีเขียว)</span><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">มุ่งเน้นการพัฒนาองค์ความรู้ด้านเคมีที่เป็นมิตรต่อสิ่งแวดล้อม วิจัยและนํานวัตกรรมมาปรับใช้เพื่อลดผลกระทบต่อธรรมชาติและสังคม</span>
+                            </div>
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">E - Environmental & Social Responsibility</strong> <span style="color: var(--text-color, #333);">(ความรับผิดชอบต่อสิ่งแวดล้อมและสังคม)</span><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">ดําเนินธุรกิจโดยให้ความสําคัญกับการลดมลพิษ การจัดการทรัพยากรอย่างมีประสิทธิภาพ และการมีส่วนร่วมในการพัฒนาชุมชนอย่างยั่งยืน</span>
+                            </div>
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">M - Moral, Ethics & Governance</strong> <span style="color: var(--text-color, #333);">(จริยธรรม ธรรมาภิบาล และความโปร่งใส)</span><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">ยึดมั่นในหลักการดําเนินธุรกิจอย่างมีจริยธรรม โปร่งใส และตรวจสอบได้ ปฏิบัติตามมาตรฐาน ESG และส่งเสริมแนวทางการดําเนินงานที่เป็นธรรมและยั่งยืน</span>
+                            </div>
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">S - Safety</strong> <span style="color: var(--text-color, #333);">(ความปลอดภัย)</span><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">ส่งเสริมความปลอดภัยของพนักงานและผู้เกี่ยวข้อง โดยจัดให้มีมาตรการป้องกันความเสี่ยง ฝึกอบรมด้านความปลอดภัยอย่างสมํ่าเสมอ และส่งเสริมวัฒนธรรมความปลอดภัยในทุกระดับ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section" style="padding: 80px 0; background-color: var(--bg-light);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2 class="section-title">คณะกรรมการบริษัท</h2>
+                <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 20px;"></div>
+                <p style="color: var(--text-muted); font-size: 18px;">คณะกรรมการผู้ทรงคุณวุฒิที่ร่วมผลักดันองค์กรสู่ความยั่งยืน</p>
+            </div>
+            
+            <style>
+                .leader-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                    gap: 30px;
+                }
+                .leader-card {
+                    background: var(--white);
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    text-align: center;
+                    border: 1px solid var(--border-color);
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                .leader-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+                    border-color: var(--primary);
+                }
+                .leader-img-container {
+                    width: 100%;
+                    aspect-ratio: 4/3;
+                    background: #e2e8f0;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .leader-img-container img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+                .leader-card:hover .leader-img-container img {
+                    transform: scale(1.08);
+                }
+                .leader-info {
+                    padding: 25px 20px;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .leader-name {
+                    color: var(--primary);
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                .leader-role {
+                    color: var(--text-muted);
+                    font-size: 15px;
+                    line-height: 1.5;
+                }
+            </style>
+
+            <div class="leader-grid">
+                <!-- 1 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="assets/กรรมการ/phala.png" alt="นายพละ สุขเวช">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">นายพละ สุขเวช</div>
+                        <div class="leader-role">ประธานกรรมการ และกรรมการอิสระ</div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="assets/กรรมการ/poonsak_sharp.png" alt="นายพูลศักดิ์ ต้นสิทธิพันธ์">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">นายพูลศักดิ์ ต้นสิทธิพันธ์</div>
+                        <div class="leader-role">รองประธานกรรมการ, กรรมการอิสระ <br>และประธานกรรมการตรวจสอบ</div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="assets/กรรมการ/peerapol_sharp.png" alt="นายพีรพล สุวรรณนภาศรี">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">นายพีรพล สุวรรณนภาศรี</div>
+                        <div class="leader-role">กรรมการ และกรรมการผู้จัดการ</div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="assets/กรรมการ/kanchana_sharp.png" alt="นางกัญจนา สุวรรณนภาศรี">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">นางกาญจนา สุวรรณนภาศรี</div>
+                        <div class="leader-role">กรรมการ</div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="assets/กรรมการ/virach_sharp.png" alt="นายวิรัช สุวรรณนภาศรี">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">นายวิรัช สุวรรณนภาศรี</div>
+                        <div class="leader-role">กรรมการ</div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="assets/กรรมการ/somjate_sharp.png" alt="นายสมเจตน์ สายฝน">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">นายสมเจตน์ สายฝน</div>
+                        <div class="leader-role">กรรมการ</div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="assets/กรรมการ/suthida_sharp.png" alt="นางสาวสุธิดา สุวรรณนภาศรี">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">นางสาวสุธิดา สุวรรณนภาศรี</div>
+                        <div class="leader-role">กรรมการ</div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="assets/กรรมการ/tharaphong_sharp.png" alt="นายธราพงษ์ วิทิตศานต์">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">นายธราพงษ์ วิทิตศานต์</div>
+                        <div class="leader-role">กรรมการอิสระ <br>และกรรมการตรวจสอบ</div>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="assets/กรรมการ/worapoj_sharp.png" alt="นายวรพจน์ อุชุไพบูลย์วงศ์">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">นายวรพจน์ อุชุไพบูลย์วงศ์</div>
+                        <div class="leader-role">กรรมการอิสระ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <style>
+        .pillar-card:hover {
+            transform: translateY(-10px) !important;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+            border-color: transparent !important;
+        }
+        .stat-card {
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+
+    <main-footer></main-footer>
+</body>
+</html>
+

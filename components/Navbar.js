@@ -67,7 +67,7 @@ class MainNav extends HTMLElement {
     getThNav(linkBase, thUrl, enUrl, prefix) {
         return `
             <nav class="main-nav">
-                <a href="${linkBase}index.html" class="nav-logo">
+                <a href="${linkBase}เกี่ยวกับ UKEM.html" class="nav-logo">
                     <img src="${prefix}components/union-logo.png" alt="UKEM Sustainability">
                 </a>
                 <div class="menu-toggle">
@@ -75,8 +75,8 @@ class MainNav extends HTMLElement {
                 </div>
                 
                 <div class="nav-links">
-                    <a href="${linkBase}index.html" class="dropdown">หน้าแรก</a>
                     <a href="https://www.unionpetrochemical.com/th/" target="_blank" class="dropdown">กลับไปที่เว็บไซต์หลัก</a>
+                    <a href="${linkBase}เกี่ยวกับ UKEM.html" class="dropdown">เกี่ยวกับ UKEM</a>
                     
                     <div class="dropdown">
                         ภาพรวมความยั่งยืน
@@ -136,7 +136,7 @@ class MainNav extends HTMLElement {
     getEnNav(linkBase, thUrl, enUrl, prefix) {
         return `
             <nav class="main-nav">
-                <a href="${linkBase}index.html" class="nav-logo">
+                <a href="${linkBase}About UKEM.html" class="nav-logo">
                     <img src="${prefix}components/union-logo.png" alt="UKEM Sustainability">
                 </a>
                 <div class="menu-toggle">
@@ -144,8 +144,8 @@ class MainNav extends HTMLElement {
                 </div>
                 
                 <div class="nav-links">
-                    <a href="${linkBase}index.html" class="dropdown">Home</a>
                     <a href="https://www.unionpetrochemical.com/en/" target="_blank" class="dropdown">Back to Main Website</a>
+                    <a href="${linkBase}About UKEM.html" class="dropdown">About UKEM</a>
                     
                     <div class="dropdown">
                         Sustainability Overview

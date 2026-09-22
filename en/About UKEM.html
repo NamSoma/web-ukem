@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <title>UKEM - Sustainability</title>
+    <!-- Use Google Fonts (Kanit & Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../components/Navbar.js" defer></script>
+    <script src="../components/StatsCard.js" defer></script>
+    <script src="../components/Footer.js" defer></script>
+</head>
+<body>
+
+    <main-nav depth="1" path="index.html" lang="en"></main-nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <ul class="bg-slideshow">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in-up" style="animation-delay: 0.2s;">
+                Enhancing Sustainable Success<br>
+                <span class="highlight">Committed to Sustainable Business for Society and Environment</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up" style="animation-delay: 0.4s;"><span style="white-space: nowrap;">Union Petrochemical Public Company Limited</span></p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" style="padding: 80px 0; background-color: var(--white);">
+        <div class="container">
+            <div class="text-center" style="margin: 0 auto;">
+                <h2 class="section-title">Business Policy and Overview</h2>
+                <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 40px;"></div>
+                <p style="color: var(--text-muted); font-size: 18px; line-height: 1.8; text-align: left; text-indent: 50px;">
+                    Union Petrochemical Public Company Limited is one of the leaders in importing and distributing chemicals and solvents. The company has a long history of operation, stepping into its 45th year with the ability to adapt its general standard solvents and specialty chemicals to suit specific industries. The company adheres to a business approach that focuses on sustainable growth, a comprehensive variety of products to meet the needs of customers in various industries, standardized warehouse and logistics management, and fast transportation. We emphasize quality and standards in sourcing from reliable product origins, as well as building strong business relationships with both suppliers and customers.
+                </p>
+            </div>
+            
+            <div class="vision-mission-section" style="margin-top: 60px; text-align: left;">
+                    <!-- Vision -->
+                    <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 6px solid var(--primary);">
+                        <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            Vision
+                        </h3>
+                        <p style="font-size: 18px; line-height: 1.6; color: var(--text-color, #333); font-weight: 500;">
+                            To be a leader in providing comprehensive chemical distribution services with a variety of products and chemical services covering the supply chain of customers in all industries.
+                        </p>
+                        <p style="font-size: 16px; color: var(--text-muted, #666); margin-top: 10px; font-style: italic;">
+                            "Integration Beyond A Chemical Distributor with Diverse Services for Sustainability"
+                        </p>
+                    </div>
+
+                    <!-- Mission -->
+                    <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 6px solid #2ecc71;">
+                        <h3 style="color: #2ecc71; font-size: 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path></svg>
+                            Mission
+                        </h3>
+                        <ol style="font-size: 16px; line-height: 1.8; color: var(--text-color, #333); padding-left: 20px; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                            <li>Build a diverse chemical business network to cover the supply chain in businesses that produce and use chemicals.</li>
+                            <li>Develop new businesses and services to create comprehensive chemical service solutions that can quickly respond to market demands.</li>
+                            <li>Promote the use of innovation and technology to increase the efficiency of delivering value in the company's products and services.</li>
+                            <li>Develop and enhance the potential of personnel in both the form of upgrading work skills (Reskill) and creating new work skills that respond to new business changes (Upskill) to achieve work efficiency and better quality of life.</li>
+                            <li>Create awareness of maximizing resource utilization to cover activities in the company's business chain and drive practices at the employee and management levels to build an environmentally friendly corporate culture.</li>
+                            <li>Manage the organization according to good corporate governance principles and comply with laws related to business operations in the economic, social, and environmental dimensions to build confidence among stakeholders and for sustainable growth.</li>
+                        </ol>
+                    </div>
+
+                    <!-- Core Values -->
+                    <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 6px solid #e74c3c;">
+                        <h3 style="color: #e74c3c; font-size: 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                            Core Values - UKEMS
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">U - Unity for Sustainability</strong><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">By promoting cooperation among employees, partners, communities, and stakeholders to achieve sustainable development goals tangibly.</span>
+                            </div>
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">K - Knowledge & Innovation for Green Chemistry</strong><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">Focus on developing environmentally friendly chemical knowledge, researching and adopting innovations to reduce impacts on nature and society.</span>
+                            </div>
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">E - Environmental & Social Responsibility</strong><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">Conduct business by prioritizing pollution reduction, efficient resource management, and participation in sustainable community development.</span>
+                            </div>
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">M - Moral, Ethics & Governance</strong><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">Adhere to ethical, transparent, and auditable business principles, comply with ESG standards, and promote fair and sustainable operations.</span>
+                            </div>
+                            <div style="padding: 15px; background: var(--bg-color, white); border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <strong style="color: var(--primary); font-size: 18px;">S - Safety</strong><br>
+                                <span style="font-size: 15px; color: var(--text-muted, #666); margin-top: 5px; display: block;">Promote the safety of employees and related parties by providing risk prevention measures, regular safety training, and promoting a safety culture at all levels.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section" style="padding: 80px 0; background-color: var(--bg-light);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2 class="section-title">Board of Directors</h2>
+                <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 20px;"></div>
+                <p style="color: var(--text-muted); font-size: 18px;">Our qualified leaders driving the organization towards sustainability.</p>
+            </div>
+            
+            <style>
+                .leader-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                    gap: 30px;
+                }
+                .leader-card {
+                    background: var(--white);
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    text-align: center;
+                    border: 1px solid var(--border-color);
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                .leader-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+                    border-color: var(--primary);
+                }
+                .leader-img-container {
+                    width: 100%;
+                    aspect-ratio: 4/3;
+                    background: #e2e8f0;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .leader-img-container img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+                .leader-card:hover .leader-img-container img {
+                    transform: scale(1.08);
+                }
+                .leader-info {
+                    padding: 25px 20px;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .leader-name {
+                    color: var(--primary);
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                .leader-role {
+                    color: var(--text-muted);
+                    font-size: 15px;
+                    line-height: 1.5;
+                }
+            </style>
+
+            <div class="leader-grid">
+                <!-- 1 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/phala.png" alt="Mr. Phala Sukawesh">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Phala Sukawesh</div>
+                        <div class="leader-role">Chairman of the Board and Independent Director</div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/poonsak_sharp.png" alt="Mr. Poonsak Tonsitipan">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Poonsak Tonsitipan</div>
+                        <div class="leader-role">Vice Chairman, Independent Director <br>and Chairman of the Audit Committee</div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/peerapol_sharp.png" alt="Mr. Peerapol Suwannapasri">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Peerapol Suwannapasri</div>
+                        <div class="leader-role">Director and Managing Director</div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/kanchana_sharp.png" alt="Mrs. Kanchana Suwannapasri">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mrs. Kanchana Suwannapasri</div>
+                        <div class="leader-role">Director</div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/virach_sharp.png" alt="Mr. Virach Suwannapasri">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Virach Suwannapasri</div>
+                        <div class="leader-role">Director</div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/somjate_sharp.png" alt="Mr. Somjate Saifon">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Somjate Saifon</div>
+                        <div class="leader-role">Director</div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/suthida_sharp.png" alt="Miss Suthida Suwannapasri">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Miss Suthida Suwannapasri</div>
+                        <div class="leader-role">Director</div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/tharaphong_sharp.png" alt="Mr. Terapong Vititsant">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Terapong Vititsant</div>
+                        <div class="leader-role">Independent Director <br>and Audit Committee Member</div>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/worapoj_sharp.png" alt="Mr. Worapot Uchupaiboonvong">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Worapot Uchupaiboonvong</div>
+                        <div class="leader-role">Independent Director</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <style>
+        .pillar-card:hover {
+            transform: translateY(-10px) !important;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+            border-color: transparent !important;
+        }
+        .stat-card {
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+
+    <main-footer depth="1" lang="en"></main-footer>
+</body>
+</html>
+
