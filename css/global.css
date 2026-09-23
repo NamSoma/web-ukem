@@ -110,12 +110,12 @@ main-nav { display: contents; }
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 90px;
     background-color: transparent;
     border-radius: 0px;
     border: none;
     box-shadow: none;
-    padding: 8px 15px;
+    padding: 0 15px;
     margin-right: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

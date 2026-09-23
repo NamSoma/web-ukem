@@ -42,6 +42,16 @@
         .risk-card h4, .risk-section-title {
             text-align: left !important;
         }
+        /* Custom gradient for org chart */
+        .bg-risk-1 { background: #312e81; color: white; }
+        .bg-risk-2 { background: #4338ca; color: white; }
+        .bg-risk-3 { background: #4f46e5; color: white; }
+        .bg-risk-4 { background: #6366f1; color: white; }
+        .bg-risk-5 { background: #818cf8; color: white; }
+        .bg-risk-6 { background: #e0e7ff; color: #312e81 !important; }
+        
+        /* Override connecting line color for departments */
+        .dep-col::before { background: #312e81 !important; }
     </style>
 </head>
 <body>
@@ -78,64 +88,64 @@
                 <div class="org-chart-wrapper">
                     <!-- 1 -->
                     <div class="org-node">
-                        <div class="org-box-pill bg-darkblue">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></div>
-                        <div class="line-v"></div>
+                        <div class="org-box-pill bg-risk-1">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></div>
+                        <div class="line-v" style="background-color: #312e81;"></div>
                     
                     
                     <!-- 2 -->
                     <div class="org-node">
-                        <div class="org-box-pill bg-lightblue">คณะกรรมการบริหารความเสี่ยง</div>
-                        <div class="line-v"></div>
+                        <div class="org-box-pill bg-risk-2">คณะกรรมการบริหารความเสี่ยง</div>
+                        <div class="line-v" style="background-color: #312e81;"></div>
                     </div>
                     
                     <!-- 3 -->
                     <div class="org-node">
-                        <div class="org-box-pill bg-gold">ประธาน<br>คณะทำงานบริหารความเสี่ยง</div>
-                        <div class="line-v"></div>
+                        <div class="org-box-pill bg-risk-3">ประธานคณะทำงานบริหารความเสี่ยง</div>
+                        <div class="line-v" style="background-color: #312e81;"></div>
                     </div>
                     
                     <!-- 4 (VP only) -->
                     <div class="org-node">
-                        <div class="org-box-pill bg-orange">รองประธาน<br>คณะทำงานบริหารความเสี่ยง</div>
+                        <div class="org-box-pill bg-risk-4">รองประธานคณะทำงานบริหารความเสี่ยง</div>
                     </div>
                     
                     <!-- Line below VP with Sec to the right -->
                     <div class="org-node" style="height: 90px; justify-content: flex-start; flex-direction: row; position: relative;">
-                        <div class="line-v" style="height: 90px;"></div>
+                        <div class="line-v" style="background-color: #312e81; height: 90px;"></div>
                         <div style="position: absolute; left: 50%; top: 20px; display: flex; align-items: center; z-index: 10;">
-                            <div class="line-h-connect"></div>
-                            <div class="org-box-pill bg-green" style="min-width: auto; padding: 12px 20px; white-space: nowrap; font-size: 18px;">เลขานุการคณะทำงาน</div>
+                            <div class="line-h-connect" style="background-color: #312e81;"></div>
+                            <div class="org-box-pill bg-risk-5" style="min-width: auto; padding: 12px 20px; white-space: nowrap; font-size: 18px;">เลขานุการคณะทำงาน</div>
                         </div>
                     </div>
                     
                     <!-- Departments -->
                     <div class="deps-items">
                         <div class="dep-col">
-                            <div class="line-v-small"></div>
+                            <div class="line-v-small" style="background-color: #312e81;"></div>
                             <div class="org-box-dep bg-lightgray">ฝ่ายขาย</div>
                         </div>
                         <div class="dep-col">
-                            <div class="line-v-small"></div>
+                            <div class="line-v-small" style="background-color: #312e81;"></div>
                             <div class="org-box-dep bg-lightgray">ฝ่ายคลัง</div>
                         </div>
                         <div class="dep-col">
-                            <div class="line-v-small"></div>
+                            <div class="line-v-small" style="background-color: #312e81;"></div>
                             <div class="org-box-dep bg-lightgray">ฝ่ายบัญชีการเงิน</div>
                         </div>
                         <div class="dep-col">
-                            <div class="line-v-small"></div>
+                            <div class="line-v-small" style="background-color: #312e81;"></div>
                             <div class="org-box-dep bg-lightgray">ฝ่ายจัดซื้อ</div>
                         </div>
                         <div class="dep-col">
-                            <div class="line-v-small"></div>
+                            <div class="line-v-small" style="background-color: #312e81;"></div>
                             <div class="org-box-dep bg-lightgray">ฝ่ายบุคคล</div>
                         </div>
                         <div class="dep-col">
-                            <div class="line-v-small"></div>
+                            <div class="line-v-small" style="background-color: #312e81;"></div>
                             <div class="org-box-dep bg-lightgray">ฝ่ายไอที</div>
                         </div>
                         <div class="dep-col">
-                            <div class="line-v-small"></div>
+                            <div class="line-v-small" style="background-color: #312e81;"></div>
                             <div class="org-box-dep bg-lightgray">ฝ่ายบริหารกลาง</div>
                         </div>
                     </div>
