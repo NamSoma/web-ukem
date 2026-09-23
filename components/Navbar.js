@@ -76,10 +76,19 @@ class MainNav extends HTMLElement {
                 
                 <div class="nav-links">
                     <a href="https://www.unionpetrochemical.com/th/" target="_blank" class="dropdown">กลับไปที่เว็บไซต์หลัก</a>
-                    <a href="${linkBase}เกี่ยวกับ UKEM.html" class="dropdown">เกี่ยวกับ UKEM</a>
+                    <div class="dropdown">
+                        เกี่ยวกับ UKEM
+                        <div class="dropdown-content">
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#about">นโยบายและภาพรวมการประกอบธุรกิจ</a>
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#leadership">คณะกรรมการบริษัท</a>
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#organization">โครงสร้างองค์กร</a>
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#business-groups">กลุ่มธุรกิจ</a>
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#milestones">การเปลี่ยนแปลงและพัฒนาการที่สำคัญ</a>
+                        </div>
+                    </div>
                     
                     <div class="dropdown">
-                        ภาพรวมความยั่งยืน
+                        การพัฒนาสู่ความยั่งยืน
                         <div class="dropdown-content">
                             <a href="${linkBase}ภาพรวมความยั่งยืน/สารจากประธานกรรมการบริษัท.html">สารจากประธานกรรมการบริษัท</a>
                             <a href="${linkBase}ภาพรวมความยั่งยืน/การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html">การขับเคลื่อนธุรกิจเพื่อความยั่งยืน</a>
@@ -89,34 +98,27 @@ class MainNav extends HTMLElement {
                     </div>
 
                     <div class="dropdown">
-                        สิ่งแวดล้อม
+                        การกำกับดูแลกิจการ
                         <div class="dropdown-content">
+                            <div class="dropdown-header">สิ่งแวดล้อม</div>
                             <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ</a>
                             <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html">การบริหารจัดการสิ่งแวดล้อม</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        สังคม
-                        <div class="dropdown-content">
+                            <div class="dropdown-header">สังคม</div>
                             <a href="${linkBase}สังคม/นโยบายและการปฏิบัติด้านสังคม.html">นโยบายและการปฏิบัติด้านสังคม</a>
                             <a href="${linkBase}สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html">สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน</a>
                             <a href="${linkBase}สังคม/อาชีวอนามัยและความปลอดภัย.html">อาชีวอนามัยและความปลอดภัย</a>
                             <a href="${linkBase}สังคม/ความรับผิดชอบต่อลูกค้าและคู่ค้า.html">ความรับผิดชอบต่อลูกค้าและคู่ค้า</a>
                             <a href="${linkBase}สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html">กิจกรรมเพื่อสังคมและการมีส่วนร่วมในชุมชน</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        การกำกับดูแล
-                        <div class="dropdown-content">
+                            <div class="dropdown-header">การกำกับดูแลกิจการ</div>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">นโยบายการกำกับดูแลกิจการ</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/โครงสร้างการกำกับดูแลกิจการ.html">โครงสร้างการกำกับดูแลกิจการ</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">การบริหารจัดการความเสี่ยง</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">การควบคุมภายใน</a>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html">ข้อมูลทางการเงิน</a>
                         </div>
                     </div>
+                    <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html" class="dropdown">ข้อมูลทางการเงิน</a>
                     <a href="${linkBase}รางวัลและความสำเร็จ.html" class="dropdown">รางวัลและความสำเร็จ</a>
-                    <a href="${linkBase}ศูนย์รวมการดาวน์โหลด.html" class="dropdown">ศูนย์รวมการดาวน์โหลด</a>
+                    <a href="${linkBase}ศูนย์รวมการดาวน์โหลด.html" class="dropdown">ข้อมูลดาวน์โหลด</a>
                 </div>
 
                 <div class="lang-switcher" style="display: flex; gap: 10px; align-items: center; margin-left: 20px; font-weight: bold;">
@@ -145,10 +147,19 @@ class MainNav extends HTMLElement {
                 
                 <div class="nav-links">
                     <a href="https://www.unionpetrochemical.com/en/" target="_blank" class="dropdown">Back to Main Website</a>
-                    <a href="${linkBase}About UKEM.html" class="dropdown">About UKEM</a>
+                    <div class="dropdown">
+                        About UKEM
+                        <div class="dropdown-content">
+                            <a href="${linkBase}About UKEM.html#about">Policy and Business Overview</a>
+                            <a href="${linkBase}About UKEM.html#leadership">Board of Directors</a>
+                            <a href="${linkBase}About UKEM.html#organization">Organization Structure</a>
+                            <a href="${linkBase}About UKEM.html#business-groups">Business Groups</a>
+                            <a href="${linkBase}About UKEM.html#milestones">Milestones</a>
+                        </div>
+                    </div>
                     
                     <div class="dropdown">
-                        Sustainability Overview
+                        Sustainable Development
                         <div class="dropdown-content">
                             <a href="${linkBase}ภาพรวมความยั่งยืน/สารจากประธานกรรมการบริษัท.html">Message from Chairman</a>
                             <a href="${linkBase}ภาพรวมความยั่งยืน/การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html">Sustainability Strategy</a>
@@ -158,32 +169,25 @@ class MainNav extends HTMLElement {
                     </div>
 
                     <div class="dropdown">
-                        Environment
+                        Corporate Governance
                         <div class="dropdown-content">
+                            <div class="dropdown-header">Environment</div>
                             <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">Energy & Climate Change</a>
                             <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html">Environmental Management</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        Social
-                        <div class="dropdown-content">
+                            <div class="dropdown-header">Social</div>
                             <a href="${linkBase}สังคม/นโยบายและการปฏิบัติด้านสังคม.html">Social Policies & Practices</a>
                             <a href="${linkBase}สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html">Human Rights & Labor Practices</a>
                             <a href="${linkBase}สังคม/อาชีวอนามัยและความปลอดภัย.html">Occupational Health & Safety</a>
                             <a href="${linkBase}สังคม/ความรับผิดชอบต่อลูกค้าและคู่ค้า.html">Responsibility to Customers & Partners</a>
                             <a href="${linkBase}สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html">CSR & Community Engagement</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        Governance
-                        <div class="dropdown-content">
+                            <div class="dropdown-header">Corporate Governance</div>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">Corporate Governance Policy</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/โครงสร้างการกำกับดูแลกิจการ.html">Governance Structure</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">Risk Management</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">Internal Control</a>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html">Financial Information</a>
                         </div>
                     </div>
+                    <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html" class="dropdown">Financial Information</a>
                     <a href="${linkBase}รางวัลและความสำเร็จ.html" class="dropdown">Awards & Successes</a>
                     <a href="${linkBase}ศูนย์รวมการดาวน์โหลด.html" class="dropdown">Download Center</a>
                 </div>
