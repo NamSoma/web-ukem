@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Activities - UKEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../components/Navbar.js" defer></script>
+    <script src="../components/Footer.js" defer></script>
+    <script src="../components/InnerHero.js" defer></script>
+    
+    <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+        .news-card {
+            background: var(--white);
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+        /* Hover effects removed as requested by user */
+        .news-img {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        /* Image hover effects removed */
+        .news-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .news-category {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        .news-category.csr { color: var(--primary); }
+        .news-category.welfare { color: var(--secondary); }
+        .news-title {
+            color: var(--text-main);
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .news-desc {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin: 0;
+            font-size: 16px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <main-nav depth="1" path="ข่าวสารและกิจกรรม.html" lang="en"></main-nav>
+
+    <inner-hero 
+        title="News & Activities" 
+        image-url="../assets/รูปสังคม/ชุมชน.png">
+    </inner-hero>
+
+    <main style="padding-bottom: 100px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
+                <h2 class="text-h2" style="color: var(--primary);">CSR & Employee Engagement</h2>
+                <p style="color: var(--text-muted); font-size: 18px; margin-top: 10px;">Keep up with our latest community and employee activities</p>
+            </div>
+            
+            <div class="filter-tabs" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="csr">CSR</button>
+                <button class="filter-btn" data-filter="welfare">Employee Welfare</button>
+            </div>
+            
+            <div class="news-grid">
+                <!-- Activity 1 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img">
+                        <img src="../assets/รูปกิจกรรม/crab_release.jpg" alt="Crab Release Activity">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">CSR</div>
+                        <h3 class="news-title">Blue Swimming Crab Release to Nature Project</h3>
+                        <p class="news-desc">
+                            Join in nursing and releasing crabs back to nature to promote the restoration of marine resources.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img">
+                        <img src="../assets/รูปกิจกรรม/saturday_lunch.jpg" alt="Employee Lunch">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">Employee Welfare</div>
+                        <h3 class="news-title">Happy Meal, Happy Team Lunch Project</h3>
+                        <p class="news-desc">
+                            Organizing lunch for employees who work on Saturdays to boost morale and promote good relationships within the team.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="../assets/รูปกิจกรรม/cny_activity.jpg" alt="Chinese New Year Celebration" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">Employee Welfare</div>
+                        <h3 class="news-title">Chinese New Year Celebration</h3>
+                        <p class="news-desc">
+                            Jointly preserving culture and fostering good relationships within the organization during the Chinese New Year.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="../assets/รูปกิจกรรม/luangtanoi.jpg" alt="Donation to Luang Ta Noi Foundation" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">CSR</div>
+                        <h3 class="news-title">Donation to Luang Ta Noi Foundation</h3>
+                        <p class="news-desc">
+                            Supporting the Luang Ta Noi Foundation to help and promote the quality of life of people with disabilities.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 5 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="../assets/รูปกิจกรรม/childrens_day.jpg" alt="Sponsoring National Children's Day at Wat Khum Thong School" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">CSR</div>
+                        <h3 class="news-title">Sponsoring National Children's Day at Wat Khum Thong School</h3>
+                        <p class="news-desc">
+                            Donating money, food, beverages, and snacks to support the 2026 National Children's Day activities at Wat Khum Thong School in Watthana District, Bangkok.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 6 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="../assets/รูปกิจกรรม/medicine_donation.jpg" alt="Passing on Medicine, Passing on Life Project" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">CSR</div>
+                        <h3 class="news-title">"Passing on Medicine, Passing on Life" Project</h3>
+                        <p class="news-desc">
+                            Donating essential medicines and medical supplies to those in need to reduce medicine waste and promote equitable access to healthcare.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 7 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="../assets/รูปกิจกรรม/beach_cleanup.jpg" alt="Jomtien Beach Cleanup Activity" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">CSR</div>
+                        <h3 class="news-title">Jomtien Beach Cleanup Activity</h3>
+                        <p class="news-desc">
+                            Employees joined together to clean up trash along Jomtien Beach to promote environmental conservation and foster a shared responsibility for public spaces.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 8 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="../assets/รูปกิจกรรม/xmas_newyear.jpg" alt="Christmas and New Year Celebration" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">Employee Welfare</div>
+                        <h3 class="news-title">Christmas and New Year Celebration</h3>
+                        <p class="news-desc">
+                            Celebrating Christmas and New Year together as a company to build happiness, good relationships, and unity within the organization.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 9 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="../assets/รูปกิจกรรม/energy_saving_training.jpg" alt="Office Energy Saving Training" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">CSR</div>
+                        <h3 class="news-title">Office Energy Saving Training</h3>
+                        <p class="news-desc">
+                            Organizing a training session for employees on office energy saving to promote efficient resource use and reduce environmental impact.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">2026</div>
+                    </div>
+
+                <!-- Activity 10 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img">
+                        <img src="../assets/รูปสังคม/ประชุมคุณพล.jpg" alt="Internal Communication" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">Employee Welfare</div>
+                        <h3 class="news-title">Internal Communication</h3>
+                        <p class="news-desc">
+                            The Company engages employees at all levels by establishing the Occupational Safety, Health and Environment Committee. This committee comprises representatives from management and employees to jointly survey unsafe working conditions, consider safety policies and plans, monitor legal compliance, and communicate preventive measures.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">Year 2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 11 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img">
+                        <img src="../assets/รูปสังคม/2ตรวจสุขภาพประจำปี 2568.jpg" alt="Organizing Health Promotion Activities" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">Employee Welfare</div>
+                        <h3 class="news-title">Organizing Health Promotion Activities</h3>
+                        <p class="news-desc">
+                            The Company arranges health check-ups for new employees and annual health check-ups for all employees based on occupational risk factors, monitoring potential impacts from operations. This includes lung function tests, hearing tests, occupational vision tests, and heavy metal screening, managed under the employee health and illness database system. Additionally, health promotion activities are conducted in accordance with Happy Workplace principles.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">Year 2026</div>
+                    </div>
+                </div>
+
+                <!-- Activity 12 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img">
+                        <img src="../assets/รูปสังคม/ซ้อมดับเพลิง.jpg" alt="Building Corporate Safety Awareness and Culture" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>Waiting for image</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">Employee Welfare</div>
+                        <h3 class="news-title">Building Corporate Safety Awareness and Culture</h3>
+                        <p class="news-desc">
+                            Building corporate safety awareness and culture is a core element of operating in the chemical industry. The Company places great importance on instilling the concept of "Safety is Everyone's Responsibility" through continuous training, proactive preventive measures, and promoting employee participation at all levels. Furthermore, international standards and technologies are adopted to enhance a safe working environment and reduce operational risks.
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">Year 2026</div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                const newsCards = document.querySelectorAll('.news-card');
+
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+
+                        const filter = this.getAttribute('data-filter');
+                        newsCards.forEach(card => {
+                            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                                card.style.display = 'flex';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
+    </main>
+
+    <main-footer depth="1"></main-footer>
+</body>
+</html>

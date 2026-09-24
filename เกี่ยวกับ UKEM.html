@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/global.css">
     <script src="components/Navbar.js" defer></script>
     <script src="components/Footer.js" defer></script>
+    <script src="components/DocDownload.js" defer></script>
 </head>
 <body>
 
@@ -42,7 +43,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section" style="padding: 80px 0; background-color: var(--white);">
+    <section id="about" class="about-section" style="padding: 80px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin: 0 auto;">
                 <h2 class="section-title">นโยบายและภาพรวมการประกอบธุรกิจ</h2>
@@ -53,7 +54,7 @@
             </div>
             
             <div class="company-info-section" style="margin-top: 40px; text-align: left;">
-                <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                <div class="vm-card" style="background: transparent; padding: 0 0 20px 0; border-radius: 0; box-shadow: none;">
                     <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block;">
                         ข้อมูลทั่วไปของบริษัท
                     </h3>
@@ -148,7 +149,7 @@
                     </div>
 
                     <!-- Core Values -->
-                    <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                    <div class="vm-card" style="background: transparent; padding: 0 0 20px 0; border-radius: 0; box-shadow: none;">
                         <h3 style="color: #e74c3c; font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; display: inline-block;">
                             ค่านิยม (Core Values) - UKEMS
                         </h3>
@@ -196,7 +197,7 @@
 
 
     <!-- Leadership Section -->
-    <section id="leadership" class="leadership-section" style="padding: 80px 0; background-color: var(--white);">
+    <section id="leadership" class="leadership-section" style="padding: 80px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin-bottom: 50px;">
                 <h2 class="section-title">คณะกรรมการบริษัท</h2>
@@ -225,7 +226,6 @@
                     height: 100%;
                 }
                 .leader-card:hover {
-                    transform: translateY(-10px);
                     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
                     border-color: var(--primary);
                 }
@@ -243,7 +243,7 @@
                     transition: transform 0.5s ease;
                 }
                 .leader-card:hover .leader-img-container img {
-                    transform: scale(1.08);
+                    /* Removed scale animation */
                 }
                 .leader-info {
                     padding: 25px 20px;
@@ -363,7 +363,7 @@
 
 
     <!-- Organization Structure Section -->
-    <section id="organization" class="org-section" style="padding: 80px 0; background-color: var(--white); overflow: hidden;">
+    <section id="organization" class="org-section" style="padding: 80px 0; background-color: transparent; overflow: hidden;">
         <div class="container">
             <div class="text-center" style="margin-bottom: 50px;">
                 <h2 class="section-title">โครงสร้างองค์กร</h2>
@@ -387,13 +387,19 @@
                 .org-title {
                     background: linear-gradient(135deg, #0070c0, #005a9e);
                     color: #fff;
-                    padding: 12px 40px;
-                    border-radius: 50px;
-                    font-size: 24px;
+                    width: 260px;
+                    min-height: 60px;
+                    padding: 12px 15px;
+                    border-radius: 8px;
+                    font-size: 20px;
                     font-weight: 600;
-                    box-shadow: 0 4px 15px rgba(0, 112, 192, 0.3);
+                    text-align: center;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                     position: relative;
                     z-index: 2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 .org-box {
                     padding: 12px 15px;
@@ -595,8 +601,49 @@
         </div>
     </section>
 
+    
+    <!-- Corporate Governance Section -->
+    <section id="corporate-governance" class="cg-section" style="padding: 80px 0; background-color: transparent;">
+        <div class="container">
+
+            
+            <div style="margin-bottom: 30px; background: transparent; padding: 0 0 20px 0; border-radius: 0; box-shadow: none;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <h3 class="text-h3" style="margin: 0; color: var(--primary);">อำนาจหน้าที่ของคณะกรรมการบริษัท</h3>
+                </div>
+                <ul class="styled-list" style="font-size: 16px; line-height: 1.8; color: var(--text-color, #333);">
+                    <li><strong style="color: var(--primary);">การเลือกตั้งและมอบหมาย:</strong> เลือกตั้งประธานกรรมการ รองประธานกรรมการ และมอบหมายหน้าที่</li>
+                    <li><strong style="color: var(--primary);">การจัดการทั่วไป:</strong> จัดการบริษัทให้เป็นไปตามวัตถุประสงค์ ข้อบังคับ และมติที่ประชุมผู้ถือหุ้น</li>
+                    <li><strong style="color: var(--primary);">การแต่งตั้งคณะกรรมการชุดย่อย:</strong> แต่งตั้งกรรมการตรวจสอบ กรรมการบริหาร กรรมการผู้จัดการ พร้อมกำหนดอำนาจหน้าที่และค่าตอบแทน</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 30px; background: transparent; padding: 0 0 20px 0; border-radius: 0; box-shadow: none;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <h3 class="text-h3" style="margin: 0; color: var(--primary);">บทบาทหน้าที่และความรับผิดชอบของคณะกรรมการ</h3>
+                </div>
+                <ul class="styled-list" style="font-size: 16px; line-height: 1.8; color: var(--text-color, #333);">
+                    <li><strong style="color: var(--primary);">กำกับดูแลตามกฎหมาย:</strong> ดูแลบริษัทให้เป็นไปตามกฎหมาย ข้อบังคับ และมติผู้ถือหุ้น</li>
+                    <li><strong style="color: var(--primary);">กำหนดทิศทางองค์กร:</strong> กำหนดวิสัยทัศน์ กลยุทธ์ นโยบายหลัก และอนุมัติงบประมาณ/โครงการลงทุน</li>
+                    <li><strong style="color: var(--primary);">ติดตามและควบคุม:</strong> ควบคุมให้การดำเนินงานเป็นไปตามแผน และจัดให้มีระบบควบคุมภายใน/ตรวจสอบภายใน</li>
+                    <li><strong style="color: var(--primary);">บริหารความเสี่ยงและความขัดแย้ง:</strong> ดูแลเรื่องความขัดแย้งทางผลประโยชน์ และกำหนดแนวทางบริหารความเสี่ยง</li>
+                    <li><strong style="color: var(--primary);">ความโปร่งใสและเป็นผู้นำ:</strong> เปิดเผยข้อมูลอย่างถูกต้อง โปร่งใส เป็นแบบอย่างที่ดี และแต่งตั้งเลขานุการบริษัท</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 40px; background: transparent; padding: 20px 0 0 0; border-radius: 0; box-shadow: none;">
+                <h3 class="text-h3" style="color: var(--primary); margin-bottom: 20px; text-align: center;">เอกสารดาวน์โหลดที่เกี่ยวข้อง</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/1.-โครงสร้างองค์กรBoard-Skill-Matrix-2569-Th.-ผสาน.pdf" title="โครงสร้างองค์กรและ Board Skill Matrix" meta="PDF"></doc-card>
+                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-1-แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ-26-2-68.pdf" title="แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ" meta="PDF"></doc-card>
+                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-2-กฎบัตรคณะกรรมการตรวจสอบ-14-11-67.pdf" title="กฎบัตรคณะกรรมการตรวจสอบ" meta="PDF"></doc-card>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Business Groups Section -->
-    <section id="business-groups" class="business-groups-section" style="padding: 80px 0; background-color: var(--white);">
+    <section id="business-groups" class="business-groups-section" style="padding: 80px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin: 0 auto;">
                 <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8; text-align: left; font-weight: 500;">
@@ -851,7 +898,7 @@
         </div>
     </section>
     <!-- Milestones Section -->
-    <section id="milestones" class="milestones-section" style="padding: 80px 0 120px 0; background-color: var(--white);">
+    <section id="milestones" class="milestones-section" style="padding: 80px 0 120px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin-bottom: 50px;">
                 <h2 class="section-title">การเปลี่ยนแปลงและพัฒนาการที่สำคัญ</h2>
@@ -859,7 +906,7 @@
                 <p style="color: var(--text-muted); font-size: 18px;">ก้าวสำคัญที่ผลักดันความสำเร็จและการเติบโตอย่างยั่งยืนของ UKEM</p>
             </div>
             
-            <div class="timeline-container" style="max-width: 900px; margin: 0 auto; position: relative;">
+            <div class="timeline-container" style="max-width: 1100px; margin: 0 auto; position: relative;">
                 <!-- Vertical Line -->
                 <div class="timeline-line" style="position: absolute; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background: var(--border-color); top: 0; border-radius: 2px;"></div>
                 
@@ -870,7 +917,7 @@
                         <div style="background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; display: inline-block; border-right: 4px solid var(--primary);">
                             <ul style="color: var(--text-muted); font-size: 16px; padding-left: 20px; margin: 0; line-height: 1.6;">
                                 <li style="margin-bottom: 8px;"><strong>23 พ.ค. 68:</strong> ผ่านการทวนสอบและรับรองรายงานปริมาณก๊าซเรือนกระจกตามมาตรฐาน ISO 14064-1 โดย สถาบันรับรองมาตรฐานไอเอสโอ</li>
-                                <li><strong>24 มิ.ย. 68:</strong> ได้รับการรับรองเครื่องหมายคาร์บอนฟุตพริ้นท์ขององค์กร (CFO) จากองค์การบริหารจัดการก๊าซเรือนกระจก</li>
+                                <li><strong>24 มิ.ย. 68:</strong> ได้รับการรับรองเครื่องหมายคาร์บอนฟุตพริ้นท์ขององค์กร (Carbon Footprint for Organization: CFO) จากองค์การบริหารจัดการก๊าซเรือนกระจก (องค์การมหาชน) สะท้อนความมุ่งมั่นในการวัดผลและบริหารจัดการการปล่อยก๊าซเรือนกระจกอย่างมีมาตรฐานในระดับสากล</li>
                             </ul>
                         </div>
                     </div>
@@ -884,7 +931,7 @@
                         <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 10px;">ปี 2567</h3>
                         <div style="background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: inline-block; width: 100%; border-left: 4px solid var(--secondary);">
                             <ul style="color: var(--text-muted); font-size: 16px; padding-left: 20px; margin: 0; line-height: 1.6;">
-                                <li><strong>5 มิ.ย. 67:</strong> โครงการซื้อหุ้นคืนสิ้นสุดลง โดยรวมสะสมแล้วจำนวน 78.15 ล้านหุ้น คิดเป็น 6.73%</li>
+                                <li><strong>5 มิ.ย. 67:</strong> โครงการซื้อหุ้นคืนสิ้นสุดลง โดยบริษัทได้ดำเนินการซื้อหุ้นสามัญคืนจำนวน 75.14 ล้านหุ้น รวมเป็นจำนวนเงิน 63.50 ล้านบาท รวมสะสมแล้วจำนวน 78.15 ล้านหุ้น คิดเป็นอัตราร้อยละ 6.73 ของจำนวนหุ้นสามัญที่ออกชำระแล้ว มูลค่ารวมต้นทุนการซื้อคืนมีจำนวน 65.92 ล้านบาท และได้จัดสรรกำไรสะสมเป็นสำรองสำหรับหุ้นทุนซื้อคืน จำนวน 65.92 ล้านบาท โดยได้แสดงอยู่ในงบฐานะการเงินภายใต้หัวข้อ "กำไรสะสมจัดสรรแล้ว - สำรองหุ้นทุนซื้อคืน"</li>
                             </ul>
                         </div>
                     </div>

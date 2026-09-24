@@ -11,6 +11,7 @@
       "**/*.pb",
       ".agent/**",
       "scratch/**",
+      "scratch_*.py",
       "import easyocr.py",
       "sync_github.ps1"
     ],

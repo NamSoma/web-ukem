@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข่าวสารและกิจกรรม - UKEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="components/Navbar.js" defer></script>
+    <script src="components/Footer.js" defer></script>
+    <script src="components/InnerHero.js" defer></script>
+    
+    <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+        .news-card {
+            background: var(--white);
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+        /* Hover effects removed as requested by user */
+        .news-img {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        /* Image hover effects removed */
+        .news-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .news-category {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .news-category.csr { color: var(--primary); }
+        .news-category.welfare { color: var(--secondary); }
+        .news-title {
+            color: var(--text-main);
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .news-desc {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin: 0;
+            font-size: 16px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <main-nav depth="0" path="ข่าวสารและกิจกรรม.html" lang="th"></main-nav>
+
+    <!-- Inner Hero is missing a dedicated image for news, so we will use a fallback or color -->
+    <inner-hero 
+        title="ข่าวสารและกิจกรรม" 
+        image-url="assets/รูปสังคม/ชุมชน.png">
+    </inner-hero>
+
+    <main style="padding-bottom: 100px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="text-center" style="margin-top: 60px; margin-bottom: 20px;">
+                <h2 class="text-h2" style="color: var(--primary);">กิจกรรมเพื่อสังคมและพนักงาน</h2>
+                <p style="color: var(--text-muted); font-size: 18px; margin-top: 10px;">ติดตามความเคลื่อนไหว กิจกรรม CSR และสวัสดิการของบริษัทฯ</p>
+            </div>
+            
+            <div class="filter-tabs" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+                <button class="filter-btn" data-filter="csr">กิจกรรมเพื่อสังคม (CSR)</button>
+                <button class="filter-btn" data-filter="welfare">สวัสดิการพนักงาน</button>
+            </div>
+            
+            <div class="news-grid">
+                <!-- Activity 1 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img">
+                        <img src="assets/รูปกิจกรรม/crab_release.jpg" alt="กิจกรรมปล่อยปูม้าคืนสู่ธรรมชาติ">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">กิจกรรมเพื่อสังคม (CSR)</div>
+                        <h3 class="news-title">โครงการปล่อยปูม้าคืนสู่ธรรมชาติ</h3>
+                        <p class="news-desc">
+                            โครงการอนุรักษ์พันธุ์ปูและฟื้นฟูระบบนิเวศชายฝั่ง ร่วมอนุบาลและปล่อยปูคืนสู่ธรรมชาติ เพื่อส่งเสริมการฟื้นฟูทรัพยากรทางทะเล 
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img">
+                        <img src="assets/รูปกิจกรรม/saturday_lunch.jpg" alt="เลี้ยงอาหารกลางวันพนักงาน">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">สวัสดิการพนักงาน</div>
+                        <h3 class="news-title">โครงการอาหารกลางวัน Happy Meal, Happy Team</h3>
+                        <p class="news-desc">
+                            จัดเลี้ยงอาหารกลางวันสำหรับพนักงานที่มาปฏิบัติงานในวันเสาร์ เพื่อสร้างขวัญกำลังใจและส่งเสริมความสัมพันธ์ที่ดีภายในทีม
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/รูปกิจกรรม/cny_activity.jpg" alt="กิจกรรมเฉลิมฉลองเทศกาลตรุษจีน" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">สวัสดิการพนักงาน</div>
+                        <h3 class="news-title">กิจกรรมเฉลิมฉลองเทศกาลตรุษจีน</h3>
+                        <p class="news-desc">
+                            ร่วมสืบสานวัฒนธรรมและสร้างความสัมพันธ์อันดีภายในองค์กร เนื่องในเทศกาลตรุษจีน
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/รูปกิจกรรม/luangtanoi.jpg" alt="มอบเงินสนับสนุนมูลนิธิหลวงตาน้อย" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">กิจกรรมเพื่อสังคม (CSR)</div>
+                        <h3 class="news-title">มอบเงินสนับสนุนมูลนิธิหลวงตาน้อย</h3>
+                        <p class="news-desc">
+                            ร่วมสนับสนุนมูลนิธิหลวงตาน้อย เพื่อช่วยเหลือและส่งเสริมคุณภาพชีวิตของผู้พิการ
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 5 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/รูปกิจกรรม/childrens_day.jpg" alt="สนับสนุนกิจกรรมวันเด็กแห่งชาติ โรงเรียนวัดขุมทอง" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">กิจกรรมเพื่อสังคม (CSR)</div>
+                        <h3 class="news-title">สนับสนุนกิจกรรมวันเด็กแห่งชาติ โรงเรียนวัดขุมทอง</h3>
+                        <p class="news-desc">
+                            ร่วมบริจาคเงิน อาหาร เครื่องดื่ม และขนม เพื่อสนับสนุนกิจกรรมวันเด็กแห่งชาติ ประจำปี 2569 ของโรงเรียนวัดขุมทอง เขตวัฒนา กรุงเทพมหานคร
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 6 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/รูปกิจกรรม/medicine_donation.jpg" alt="โครงการ ส่งต่อยา ส่งต่อชีวิต" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">กิจกรรมเพื่อสังคม (CSR)</div>
+                        <h3 class="news-title">โครงการ “ส่งต่อยา ส่งต่อชีวิต”</h3>
+                        <p class="news-desc">
+                            ร่วมส่งต่อยาและเวชภัณฑ์ที่จำเป็นให้แก่ผู้ที่ต้องการ เพื่อลดการสูญเสียยาที่ยังมีประโยชน์และส่งเสริมการเข้าถึงยาที่จำเป็นอย่างทั่วถึง
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 7 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/รูปกิจกรรม/beach_cleanup.jpg" alt="กิจกรรมเก็บขยะชายหาดจอมเทียน" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">กิจกรรมเพื่อสังคม (CSR)</div>
+                        <h3 class="news-title">กิจกรรมเก็บขยะชายหาดจอมเทียน</h3>
+                        <p class="news-desc">
+                            พนักงานร่วมกันเก็บขยะบริเวณชายหาดจอมเทียน เพื่อส่งเสริมการอนุรักษ์สิ่งแวดล้อมและสร้างจิตสำนึกในการดูแลพื้นที่สาธารณะร่วมกัน 
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 8 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/รูปกิจกรรม/xmas_newyear.jpg" alt="กิจกรรมเลี้ยงฉลองเทศกาลคริสต์มาสและวันขึ้นปีใหม่" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">สวัสดิการพนักงาน</div>
+                        <h3 class="news-title">กิจกรรมเลี้ยงฉลองเทศกาลคริสต์มาสและวันขึ้นปีใหม่</h3>
+                        <p class="news-desc">
+                            ร่วมเฉลิมฉลองเทศกาลคริสต์มาสและวันขึ้นปีใหม่ร่วมกันทั้งบริษัท เพื่อสร้างความสุข ความสัมพันธ์ที่ดี และความสามัคคีภายในองค์กร
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 9 -->
+                <div class="news-card" data-category="csr">
+                    <div class="news-img" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/รูปกิจกรรม/energy_saving_training.jpg" alt="อบรมประหยัดพลังงานในสำนักงาน" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category csr">กิจกรรมเพื่อสังคม (CSR)</div>
+                        <h3 class="news-title">อบรมประหยัดพลังงานในสำนักงาน</h3>
+                        <p class="news-desc">
+                            จัดอบรมให้ความรู้พนักงานเกี่ยวกับการประหยัดพลังงานในสำนักงาน เพื่อส่งเสริมการใช้ทรัพยากรอย่างคุ้มค่าและลดผลกระทบต่อสิ่งแวดล้อม
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 10 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img">
+                        <img src="assets/รูปสังคม/ประชุมคุณพล.jpg" alt="การสื่อสารภายในองค์กร" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">สวัสดิการพนักงาน</div>
+                        <h3 class="news-title">การสื่อสารภายในองค์กร</h3>
+                        <p class="news-desc">
+                            บริษัทฯ ได้สร้างการมีส่วนร่วมในการปฏิบัติงานทุกระดับด้วยการจัดตั้งคณะกรรมการความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงาน ซึ่งประกอบด้วยผู้แทนในระดับบังคับบัญชาและผู้แทนลูกจ้าง เพื่อร่วมกันสำรวจสภาพการทำงานที่ไม่ปลอดภัย พิจารณาแผนงานและนโยบายด้านความปลอดภัย อาชีวอนามัย และสิ่งแวดล้อม การติดตามการดำเนินงานให้สอดคล้องกับกฎหมาย รวมถึงการสื่อสารเพื่อป้องกัน
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 11 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img">
+                        <img src="assets/รูปสังคม/2ตรวจสุขภาพประจำปี 2568.jpg" alt="การจัดกิจกรรมส่งเสริมสุขภาพ" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">สวัสดิการพนักงาน</div>
+                        <h3 class="news-title">การจัดกิจกรรมส่งเสริมสุขภาพ</h3>
+                        <p class="news-desc">
+                            บริษัทฯ จัดให้มีการตรวจสุขภาพสำหรับพนักงานเข้าใหม่ การตรวจสุขภาพประจำปีให้กับพนักงานทุกคนตามปัจจัยเสี่ยงในงานและเฝ้าระวังผลกระทบที่อาจเกิดจากการปฏิบัติงาน เช่นการตรวจสมรรถภาพปอด การตรวจสมรรถภาพการได้ยิน การตรวจสายตาอาชีวอนามัย และการตรวจหาสารโลหะหนักในร่างกาย ภายใต้ระบบฐานข้อมูลด้านสุขภาพและการเจ็บป่วยของพนักงาน นอกจากนี้ ยังดำเนินกิจกรรมส่งเสริมสุขภาพตามหลัก Happy Workplace
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                <!-- Activity 12 -->
+                <div class="news-card" data-category="welfare">
+                    <div class="news-img">
+                        <img src="assets/รูปสังคม/ซ้อมดับเพลิง.jpg" alt="การสร้างความตระหนักและวัฒนธรรมด้านความปลอดภัยขององค์กร" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#999; font-weight: 500;\'>รอรูปภาพ</span>';">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category welfare">สวัสดิการพนักงาน</div>
+                        <h3 class="news-title">การสร้างความตระหนักและวัฒนธรรมด้านความปลอดภัยขององค์กร</h3>
+                        <p class="news-desc">
+                            การสร้างความตระหนักและวัฒนธรรมด้านความปลอดภัยเป็นหัวใจสำคัญของการดำเนินธุรกิจในอุตสาหกรรมเคมีภัณฑ์ บริษัทฯ จึงให้ความสำคัญกับการปลูกฝังแนวคิด “ความปลอดภัยเป็นหน้าที่ของทุกคน” ผ่านการฝึกอบรมอย่างต่อเนื่อง มาตรการป้องกันเชิงรุก และการส่งเสริมการมีส่วนร่วมของพนักงานในทุกระดับ นอกจากนี้ ยังนำเทคโนโลยีและมาตรฐานสากลมาปรับใช้ เพื่อเสริมสร้างสภาพแวดล้อมการทำงานที่ปลอดภัยและลดความเสี่ยงในการปฏิบัติงาน
+                        </p>
+                        <div style="margin-top: 20px; font-size: 14px; color: #888;">ปี 2569</div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                const newsCards = document.querySelectorAll('.news-card');
+
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+
+                        const filter = this.getAttribute('data-filter');
+                        newsCards.forEach(card => {
+                            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                                card.style.display = 'flex';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
+    </main>
+
+    <main-footer depth="0"></main-footer>
+</body>
+</html>

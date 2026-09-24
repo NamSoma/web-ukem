@@ -20,6 +20,7 @@
     <script src="../components/Navbar.js" defer></script>
     <script src="../components/StatsCard.js" defer></script>
     <script src="../components/Footer.js" defer></script>
+    <script src="../components/DocDownload.js" defer></script>
 </head>
 <body>
 
@@ -43,7 +44,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section" style="padding: 80px 0; background-color: var(--white);">
+    <section id="about" class="about-section" style="padding: 80px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin: 0 auto;">
                 <h2 class="section-title">Business Policy and Overview</h2>
@@ -54,7 +55,7 @@
             </div>
             
             <div class="company-info-section" style="margin-top: 40px; text-align: left;">
-                <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                <div class="vm-card" style="background: transparent; padding: 0 0 20px 0; border-radius: 0; box-shadow: none;">
                     <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block;">
                         General Information
                     </h3>
@@ -145,7 +146,7 @@
                     </div>
 
                     <!-- Core Values -->
-                    <div class="vm-card" style="background: var(--card-bg, #f8f9fa); padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                    <div class="vm-card" style="background: transparent; padding: 0 0 20px 0; border-radius: 0; box-shadow: none;">
                         <h3 style="color: #e74c3c; font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; display: inline-block;">
                             Core Values - UKEMS
                         </h3>
@@ -191,10 +192,456 @@
             </div>
     </section>
 
+    <!-- Leadership Section -->
+    <section id="leadership" class="leadership-section" style="padding: 80px 0; background-color: transparent;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2 class="section-title">Board of Directors</h2>
+                <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 20px;"></div>
+                <p style="color: var(--text-muted); font-size: 18px;">Our qualified leaders driving the organization towards sustainability.</p>
+            </div>
+            
+            <style>
+                .leader-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                    gap: 30px;
+                }
+                .leader-card {
+                    background: var(--white);
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    text-align: center;
+                    border: 1px solid var(--border-color);
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                .leader-card:hover {
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+                    border-color: var(--primary);
+                }
+                .leader-img-container {
+                    width: 100%;
+                    aspect-ratio: 4/3;
+                    background: #e2e8f0;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .leader-img-container img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+                .leader-card:hover .leader-img-container img {
+                    /* Removed scale animation */
+                }
+                .leader-info {
+                    padding: 25px 20px;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .leader-name {
+                    color: var(--primary);
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                .leader-role {
+                    color: var(--text-muted);
+                    font-size: 15px;
+                    line-height: 1.5;
+                }
+            </style>
+
+            <div class="leader-grid">
+                <!-- 1 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/phala.png" alt="Mr. Phala Sukawesh">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Phala Sukawesh</div>
+                        <div class="leader-role">Chairman of the Board and Independent Director</div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/poonsak_sharp.png" alt="Mr. Poonsak Tonsitipan">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Poonsak Tonsitipan</div>
+                        <div class="leader-role">Vice Chairman, Independent Director <br>and Chairman of the Audit Committee</div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/peerapol_sharp.png" alt="Mr. Peerapol Suwannapasri">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Peerapol Suwannapasri</div>
+                        <div class="leader-role">Director and Managing Director</div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/kanchana_sharp.png" alt="Mrs. Kanchana Suwannapasri">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mrs. Kanchana Suwannapasri</div>
+                        <div class="leader-role">Director</div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/virach_sharp.png" alt="Mr. Virach Suwannapasri">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Virach Suwannapasri</div>
+                        <div class="leader-role">Director</div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/somjate_sharp.png" alt="Mr. Somjate Saifon">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Somjate Saifon</div>
+                        <div class="leader-role">Director</div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/suthida_sharp.png" alt="Miss Suthida Suwannapasri">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Miss Suthida Suwannapasri</div>
+                        <div class="leader-role">Director</div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/tharaphong_sharp.png" alt="Mr. Terapong Vititsant">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Terapong Vititsant</div>
+                        <div class="leader-role">Independent Director <br>and Audit Committee Member</div>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="leader-card">
+                    <div class="leader-img-container">
+                        <img src="../assets/กรรมการ/worapoj_sharp.png" alt="Mr. Worapot Uchupaiboonvong">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Mr. Worapot Uchupaiboonvong</div>
+                        <div class="leader-role">Independent Director</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organization Structure Section -->
+    <section id="organization" class="org-section" style="padding: 80px 0; background-color: transparent; overflow: hidden;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2 class="section-title">Organization Structure</h2>
+                <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 20px;"></div>
+            </div>
+
+            <style>
+                .org-wrapper {
+                    width: 100%;
+                    overflow-x: auto;
+                    padding-bottom: 20px;
+                }
+                .org-container {
+                    display: flex; 
+                    flex-direction: column; 
+                    align-items: center; 
+                    min-width: 1020px;
+                    margin: 0 auto;
+                    font-family: 'Prompt', sans-serif;
+                }
+                .org-title {
+                    background: linear-gradient(135deg, #0070c0, #005a9e);
+                    color: #fff;
+                    width: 260px;
+                    min-height: 60px;
+                    padding: 12px 15px;
+                    border-radius: 8px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    text-align: center;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .org-box {
+                    padding: 12px 15px;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-align: center;
+                    position: relative;
+                    z-index: 2;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 1.4;
+                }
+                .org-dark-blue {
+                    background: #1f4e79;
+                    color: #fff;
+                }
+                .org-brown {
+                    background: #833c0c;
+                    color: #fff;
+                }
+                .org-green-outline {
+                    background: #fff;
+                    color: #333;
+                    border: 3px solid #548235;
+                    border-radius: 20px;
+                    font-weight: 600;
+                }
+                .org-dept {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 150px;
+                }
+                .org-dept .org-box {
+                    width: 100%;
+                    min-height: 60px;
+                    font-size: 16px;
+                }
+                .org-sub-box {
+                    width: 90%;
+                    padding: 10px 5px;
+                    background: #fff;
+                    color: #1f4e79;
+                    border: 2px solid #1f4e79;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-align: center;
+                    position: relative;
+                    z-index: 2;
+                    line-height: 1.3;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                }
+                .line-v {
+                    width: 2px;
+                    background-color: #a6a6a6;
+                    margin: 0 auto;
+                    z-index: 1;
+                }
+                .line-h {
+                    height: 2px;
+                    background-color: #a6a6a6;
+                    z-index: 1;
+                }
+                /* Sub box connector trick */
+                .sub-connector {
+                    width: 2px;
+                    height: 15px;
+                    background-color: #a6a6a6;
+                }
+            </style>
+
+            <div class="org-wrapper">
+                <div class="org-container">
+                    
+                    <!-- Level 0: Title -->
+                    <div class="org-title">Organization Structure</div>
+                    <div class="line-v" style="height: 30px;"></div>
+                    
+                    <!-- Level 1: Chairman -->
+                    <div class="org-box org-dark-blue" style="width: 260px;">Chairman of the Board</div>
+                    
+                    <!-- Level 2: Committees & Exec Comm -->
+                    <div style="position: relative; width: 960px; display: flex; justify-content: center; margin-top: 20px;">
+                        <!-- Horizontal line connecting Audit, Center, Risk -->
+                        <div class="line-h" style="position: absolute; top: 0; left: 165px; width: 645px;"></div>
+                        <!-- Vertical line from Chairman down to Exec Comm -->
+                        <div class="line-v" style="position: absolute; top: -20px; height: 20px; left: 50%; margin-left: -1px;"></div>
+                        <div class="line-v" style="position: absolute; top: 0; height: 20px; left: 50%; margin-left: -1px;"></div>
+
+                        <!-- Audit (Left) -->
+                        <div style="position: absolute; left: 0; top: -25px;">
+                            <div class="org-box org-green-outline" style="width: 300px; padding: 15px;">Audit Committee<br>& Internal Audit</div>
+                        </div>
+                        
+                        <!-- Risk (Right) -->
+                        <div style="position: absolute; right: 0; top: -15px;">
+                            <div class="org-box org-green-outline" style="width: 260px; padding: 15px;">Risk Management Committee</div>
+                        </div>
+
+                        <!-- Exec Comm (Center) -->
+                        <div style="margin-top: 20px;">
+                            <div class="org-box org-dark-blue" style="width: 260px;">Executive Committee</div>
+                        </div>
+                    </div>
+
+                    <div class="line-v" style="height: 40px;"></div>
+                    
+                    <!-- Level 3: Chairman of Exec Comm -->
+                    <div class="org-box org-brown" style="width: 260px;">Chairman of Executive Committee</div>
+                    <div class="line-v" style="height: 40px;"></div>
+                    
+                    <!-- Level 4: MD -->
+                    <div class="org-box org-brown" style="width: 260px;">Managing Director</div>
+
+                    <!-- Level 5: Deputy MD & Departments -->
+                    <div style="position: relative; width: 1020px; display: flex; justify-content: center; margin-top: 40px;">
+                        <!-- Horizontal line to Deputy MD -->
+                        <div class="line-h" style="position: absolute; top: 0; left: 400px; width: 110px;"></div>
+                        
+                        <!-- Vertical line from MD down to the main horizontal branch -->
+                        <div class="line-v" style="position: absolute; top: -40px; height: 40px; left: 50%; margin-left: -1px;"></div>
+                        <div class="line-v" style="position: absolute; top: 0; height: 40px; left: 50%; margin-left: -1px;"></div>
+
+                        <!-- Deputy MD -->
+                        <div style="position: absolute; left: 200px; top: -25px;">
+                            <div class="org-box org-green-outline" style="width: 200px;">รองManaging Director</div>
+                        </div>
+
+                        <!-- Horizontal line for Departments -->
+                        <div class="line-h" style="position: absolute; top: 40px; left: 75px; width: 870px;"></div>
+
+                        <!-- Departments Row -->
+                        <div style="display: flex; width: 100%; justify-content: space-between; margin-top: 80px;">
+                            <!-- Dept 1 -->
+                            <div class="org-dept">
+                                <div class="line-v" style="height: 40px; margin-top: -40px;"></div>
+                                <div class="org-box org-dark-blue">Marketing &<br>Procurement<br>Dept.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">Sales Div.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">Marketing &<br>Procurement Div.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">Customer<br>Relations Div.</div>
+                            </div>
+
+                            <!-- Dept 2 -->
+                            <div class="org-dept">
+                                <div class="line-v" style="height: 40px; margin-top: -40px;"></div>
+                                <div class="org-box org-dark-blue">Accounting &<br>Finance Dept.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">Accounting &<br>Finance Div.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">Credit Div.</div>
+                            </div>
+
+                            <!-- Dept 3 -->
+                            <div class="org-dept">
+                                <div class="line-v" style="height: 40px; margin-top: -40px;"></div>
+                                <div class="org-box org-dark-blue">Business<br>Development Dept.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">Business<br>Development Div.</div>
+                            </div>
+
+                            <!-- Dept 4 -->
+                            <div class="org-dept">
+                                <div class="line-v" style="height: 40px; margin-top: -40px;"></div>
+                                <div class="org-box org-dark-blue">Human<br>Resources Dept.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">HR Div.</div>
+                            </div>
+
+                            <!-- Dept 5 -->
+                            <div class="org-dept">
+                                <div class="line-v" style="height: 40px; margin-top: -40px;"></div>
+                                <div class="org-box org-dark-blue">Warehouse &<br>Transport Dept.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">Warehouse Div.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">Transport Div.</div>
+                            </div>
+
+                            <!-- Dept 6 -->
+                            <div class="org-dept">
+                                <div class="line-v" style="height: 40px; margin-top: -40px;"></div>
+                                <div class="org-box org-dark-blue">IT & Digital<br>Business Dept.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">IT Div.</div>
+                                <div class="sub-connector"></div>
+                                <div class="org-sub-box">Digital Systems Div.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+    <!-- Corporate Governance Section -->
+    <section id="corporate-governance" class="cg-section" style="padding: 80px 0; background-color: transparent;">
+        <div class="container">
+
+            
+            <div style="margin-bottom: 30px; background: transparent; padding: 0 0 20px 0; border-radius: 0; box-shadow: none;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <h3 class="text-h3" style="margin: 0; color: var(--primary);">Authority and Duties of the Board of Directors</h3>
+                </div>
+                <ul class="styled-list" style="font-size: 16px; line-height: 1.8; color: var(--text-color, #333);">
+                    <li><strong style="color: var(--primary);">Election and Assignment:</strong> Elect the Chairman, Vice Chairmen, and assign duties.</li>
+                    <li><strong style="color: var(--primary);">General Management:</strong> Manage the company in accordance with its objectives, Articles of Association, and shareholder resolutions.</li>
+                    <li><strong style="color: var(--primary);">Sub-committee Appointment:</strong> Appoint Audit, Executive, and Managing Directors, and define their authority and remuneration.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 30px; background: transparent; padding: 0 0 20px 0; border-radius: 0; box-shadow: none;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <h3 class="text-h3" style="margin: 0; color: var(--primary);">Roles, Duties, and Responsibilities of the Board</h3>
+                </div>
+                <ul class="styled-list" style="font-size: 16px; line-height: 1.8; color: var(--text-color, #333);">
+                    <li><strong style="color: var(--primary);">Legal Compliance:</strong> Supervise the company in compliance with laws, Articles of Association, and shareholder resolutions.</li>
+                    <li><strong style="color: var(--primary);">Strategic Direction:</strong> Define vision, strategy, main policies, and approve budgets/investment projects.</li>
+                    <li><strong style="color: var(--primary);">Monitoring and Control:</strong> Oversee implementation of plans and ensure effective internal control/audit systems.</li>
+                    <li><strong style="color: var(--primary);">Risk & Conflict Management:</strong> Supervise conflict of interest matters and ensure comprehensive risk management systems.</li>
+                    <li><strong style="color: var(--primary);">Transparency and Leadership:</strong> Ensure accurate information disclosure, act as role models, and appoint the Company Secretary.</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 40px; background: transparent; padding: 20px 0 0 0; border-radius: 0; box-shadow: none;">
+                <h3 class="text-h3" style="color: var(--primary); margin-bottom: 20px; text-align: center;">Download Documents</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/1.-โครงสร้างองค์กรBoard-Skill-Matrix-2569-Th.-ผสาน.pdf" title="โครงสร้างองค์กรและ Board Skill Matrix (Organization Structure and Board Skill Matrix)" meta="PDF"></doc-card>
+                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-1-แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ-26-2-68.pdf" title="แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ (Audit Committee Practice Guidelines)" meta="PDF"></doc-card>
+                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-2-กฎบัตรคณะกรรมการตรวจสอบ-14-11-67.pdf" title="กฎบัตรคณะกรรมการตรวจสอบ (Audit Committee Charter)" meta="PDF"></doc-card>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Business Groups Section -->
-    <section id="business-groups" class="business-groups-section" style="padding: 80px 0; background-color: var(--white);">
+    <section id="business-groups" class="business-groups-section" style="padding: 80px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin: 0 auto;">
+                <h2 class="section-title">4 Main Business Groups</h2>
+                <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 40px;"></div>
                 <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8; text-align: left; font-weight: 500;">
                     Currently, the company operates in 4 main business groups:
                 </p>
@@ -447,170 +894,113 @@
         </div>
     </section>
 
-    <!-- Leadership Section -->
-    <section id="leadership" class="leadership-section" style="padding: 80px 0; background-color: var(--bg-light);">
+    <!-- Milestones Section -->
+    <section id="milestones" class="milestones-section" style="padding: 80px 0 120px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin-bottom: 50px;">
-                <h2 class="section-title">Board of Directors</h2>
+                <h2 class="section-title">Key Milestones & Developments</h2>
                 <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 20px;"></div>
-                <p style="color: var(--text-muted); font-size: 18px;">Our qualified leaders driving the organization towards sustainability.</p>
+                <p style="color: var(--text-muted); font-size: 18px;">Significant steps driving UKEM's success and sustainable growth</p>
             </div>
             
-            <style>
-                .leader-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-                    gap: 30px;
-                }
-                .leader-card {
-                    background: var(--white);
-                    border-radius: 16px;
-                    overflow: hidden;
-                    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                    text-align: center;
-                    border: 1px solid var(--border-color);
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                }
-                .leader-card:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-                    border-color: var(--primary);
-                }
-                .leader-img-container {
-                    width: 100%;
-                    aspect-ratio: 4/3;
-                    background: #e2e8f0;
-                    overflow: hidden;
-                    position: relative;
-                }
-                .leader-img-container img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: transform 0.5s ease;
-                }
-                .leader-card:hover .leader-img-container img {
-                    transform: scale(1.08);
-                }
-                .leader-info {
-                    padding: 25px 20px;
-                    flex-grow: 1;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-                .leader-name {
-                    color: var(--primary);
-                    font-size: 20px;
-                    font-weight: 600;
-                    margin-bottom: 10px;
-                }
-                .leader-role {
-                    color: var(--text-muted);
-                    font-size: 15px;
-                    line-height: 1.5;
-                }
-            </style>
+            <div class="timeline-container" style="max-width: 1100px; margin: 0 auto; position: relative;">
+                <!-- Vertical Line -->
+                <div class="timeline-line" style="position: absolute; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background: var(--border-color); top: 0; border-radius: 2px;"></div>
+                
+                <!-- 2568 -->
+                <div class="timeline-item" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; position: relative; width: 100%;">
+                    <div class="timeline-content left" style="width: 45%; text-align: right; padding-right: 30px;">
+                        <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 10px;">2025</h3>
+                        <div style="background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; display: inline-block; border-right: 4px solid var(--primary);">
+                            <ul style="color: var(--text-muted); font-size: 16px; padding-left: 20px; margin: 0; line-height: 1.6;">
+                                <li style="margin-bottom: 8px;"><strong>May 23, 2025:</strong> Verified and certified greenhouse gas emissions report according to ISO 14064-1 standard by MASCI</li>
+                                <li><strong>Jun 24, 2025:</strong> Received Carbon Footprint of Organization (CFO) certification from Thailand Greenhouse Gas Management Organization (TGO). This reflects our commitment to standardizing the measurement and management of greenhouse gas emissions at an international level.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-dot" style="position: absolute; left: 50%; transform: translate(-50%, 0); width: 24px; height: 24px; background: var(--white); border-radius: 50%; border: 5px solid var(--primary); box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); z-index: 2; top: 15px;"></div>
+                    <div class="timeline-empty" style="width: 45%;"></div>
+                </div>
 
-            <div class="leader-grid">
-                <!-- 1 -->
-                <div class="leader-card">
-                    <div class="leader-img-container">
-                        <img src="../assets/กรรมการ/phala.png" alt="Mr. Phala Sukawesh">
+                <!-- 2567 -->
+                <div class="timeline-item" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; position: relative; width: 100%; flex-direction: row-reverse;">
+                    <div class="timeline-content right" style="width: 45%; text-align: left; padding-left: 30px;">
+                        <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 10px;">2024</h3>
+                        <div style="background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: inline-block; width: 100%; border-left: 4px solid var(--secondary);">
+                            <ul style="color: var(--text-muted); font-size: 16px; padding-left: 20px; margin: 0; line-height: 1.6;">
+                                <li><strong>Jun 5, 2024:</strong> The share repurchase program ended. The company repurchased 75.14 million ordinary shares totaling 63.50 million baht, with an accumulated total of 78.15 million shares, representing 6.73% of the total issued and paid-up shares. The total cost value was 65.92 million baht, and retained earnings were allocated as a reserve for treasury shares amounting to 65.92 million baht, shown in the statement of financial position under "Appropriated retained earnings - reserve for treasury shares".</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="leader-info">
-                        <div class="leader-name">Mr. Phala Sukawesh</div>
-                        <div class="leader-role">Chairman of the Board and Independent Director</div>
-                    </div>
+                    <div class="timeline-dot" style="position: absolute; left: 50%; transform: translate(-50%, 0); width: 24px; height: 24px; background: var(--white); border-radius: 50%; border: 5px solid var(--secondary); box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1); z-index: 2; top: 15px;"></div>
+                    <div class="timeline-empty" style="width: 45%;"></div>
                 </div>
-                <!-- 2 -->
-                <div class="leader-card">
-                    <div class="leader-img-container">
-                        <img src="../assets/กรรมการ/poonsak_sharp.png" alt="Mr. Poonsak Tonsitipan">
+
+                <!-- 2566 -->
+                <div class="timeline-item" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; position: relative; width: 100%;">
+                    <div class="timeline-content left" style="width: 45%; text-align: right; padding-right: 30px;">
+                        <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 10px;">2023</h3>
+                        <div style="background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; display: inline-block; border-right: 4px solid var(--primary);">
+                            <ul style="color: var(--text-muted); font-size: 16px; padding-left: 20px; margin: 0; line-height: 1.6;">
+                                <li style="margin-bottom: 8px;"><strong>Feb 20, 2023:</strong> The EGM resolved to approve the sale of all ordinary shares in GIFT</li>
+                                <li><strong>Nov 30, 2023:</strong> Approved a share repurchase program for financial management with a maximum limit of 66 million baht</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="leader-info">
-                        <div class="leader-name">Mr. Poonsak Tonsitipan</div>
-                        <div class="leader-role">Vice Chairman, Independent Director <br>and Chairman of the Audit Committee</div>
-                    </div>
+                    <div class="timeline-dot" style="position: absolute; left: 50%; transform: translate(-50%, 0); width: 24px; height: 24px; background: var(--white); border-radius: 50%; border: 5px solid var(--primary); box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); z-index: 2; top: 15px;"></div>
+                    <div class="timeline-empty" style="width: 45%;"></div>
                 </div>
-                <!-- 3 -->
-                <div class="leader-card">
-                    <div class="leader-img-container">
-                        <img src="../assets/กรรมการ/peerapol_sharp.png" alt="Mr. Peerapol Suwannapasri">
+
+                <!-- 2565 -->
+                <div class="timeline-item" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; position: relative; width: 100%; flex-direction: row-reverse;">
+                    <div class="timeline-content right" style="width: 45%; text-align: left; padding-left: 30px;">
+                        <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 10px;">2022</h3>
+                        <div style="background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: inline-block; width: 100%; border-left: 4px solid var(--secondary);">
+                            <ul style="color: var(--text-muted); font-size: 16px; padding-left: 20px; margin: 0; line-height: 1.6;">
+                                <li><strong>Dec 31, 2022:</strong> The Board of Directors approved the sale of investment in Gratitude Infinite Public Company Limited (GIFT)</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="leader-info">
-                        <div class="leader-name">Mr. Peerapol Suwannapasri</div>
-                        <div class="leader-role">Director and Managing Director</div>
-                    </div>
+                    <div class="timeline-dot" style="position: absolute; left: 50%; transform: translate(-50%, 0); width: 24px; height: 24px; background: var(--white); border-radius: 50%; border: 5px solid var(--secondary); box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1); z-index: 2; top: 15px;"></div>
+                    <div class="timeline-empty" style="width: 45%;"></div>
                 </div>
-                <!-- 4 -->
-                <div class="leader-card">
-                    <div class="leader-img-container">
-                        <img src="../assets/กรรมการ/kanchana_sharp.png" alt="Mrs. Kanchana Suwannapasri">
+
+                <!-- 2564 -->
+                <div class="timeline-item" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; position: relative; width: 100%;">
+                    <div class="timeline-content left" style="width: 45%; text-align: right; padding-right: 30px;">
+                        <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 10px;">2021</h3>
+                        <div style="background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; display: inline-block; border-right: 4px solid var(--primary);">
+                            <ul style="color: var(--text-muted); font-size: 16px; padding-left: 20px; margin: 0; line-height: 1.6;">
+                                <li style="margin-bottom: 8px;"><strong>Sep 30, 2021:</strong> Accumulated share repurchase of 74.23 million shares</li>
+                                <li><strong>Dec 20, 2021:</strong> Registered a decrease in paid-up capital for unsold repurchased shares</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="leader-info">
-                        <div class="leader-name">Mrs. Kanchana Suwannapasri</div>
-                        <div class="leader-role">Director</div>
-                    </div>
+                    <div class="timeline-dot" style="position: absolute; left: 50%; transform: translate(-50%, 0); width: 24px; height: 24px; background: var(--white); border-radius: 50%; border: 5px solid var(--primary); box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); z-index: 2; top: 15px;"></div>
+                    <div class="timeline-empty" style="width: 45%;"></div>
                 </div>
-                <!-- 5 -->
-                <div class="leader-card">
-                    <div class="leader-img-container">
-                        <img src="../assets/กรรมการ/virach_sharp.png" alt="Mr. Virach Suwannapasri">
+
+                <!-- 2563 -->
+                <div class="timeline-item" style="display: flex; justify-content: space-between; align-items: center; position: relative; width: 100%; flex-direction: row-reverse;">
+                    <div class="timeline-content right" style="width: 45%; text-align: left; padding-left: 30px;">
+                        <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 10px;">2020</h3>
+                        <div style="background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: inline-block; width: 100%; border-left: 4px solid var(--secondary);">
+                            <ul style="color: var(--text-muted); font-size: 16px; padding-left: 20px; margin: 0; line-height: 1.6;">
+                                <li style="margin-bottom: 8px;"><strong>Mar 24, 2020:</strong> Registered capital increase from the offering of UKEM-W2 warrants</li>
+                                <li style="margin-bottom: 8px;"><strong>Nov 12, 2020:</strong> Approved a share repurchase program of 123 million shares for financial management</li>
+                                <li><strong>Dec 25, 2020:</strong> Certified for ISO 9001:2015 Quality Management Standard by SGS (Thailand) Ltd.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="leader-info">
-                        <div class="leader-name">Mr. Virach Suwannapasri</div>
-                        <div class="leader-role">Director</div>
-                    </div>
+                    <div class="timeline-dot" style="position: absolute; left: 50%; transform: translate(-50%, 0); width: 24px; height: 24px; background: var(--white); border-radius: 50%; border: 5px solid var(--secondary); box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1); z-index: 2; top: 15px;"></div>
+                    <div class="timeline-empty" style="width: 45%;"></div>
                 </div>
-                <!-- 6 -->
-                <div class="leader-card">
-                    <div class="leader-img-container">
-                        <img src="../assets/กรรมการ/somjate_sharp.png" alt="Mr. Somjate Saifon">
-                    </div>
-                    <div class="leader-info">
-                        <div class="leader-name">Mr. Somjate Saifon</div>
-                        <div class="leader-role">Director</div>
-                    </div>
-                </div>
-                <!-- 7 -->
-                <div class="leader-card">
-                    <div class="leader-img-container">
-                        <img src="../assets/กรรมการ/suthida_sharp.png" alt="Miss Suthida Suwannapasri">
-                    </div>
-                    <div class="leader-info">
-                        <div class="leader-name">Miss Suthida Suwannapasri</div>
-                        <div class="leader-role">Director</div>
-                    </div>
-                </div>
-                <!-- 8 -->
-                <div class="leader-card">
-                    <div class="leader-img-container">
-                        <img src="../assets/กรรมการ/tharaphong_sharp.png" alt="Mr. Terapong Vititsant">
-                    </div>
-                    <div class="leader-info">
-                        <div class="leader-name">Mr. Terapong Vititsant</div>
-                        <div class="leader-role">Independent Director <br>and Audit Committee Member</div>
-                    </div>
-                </div>
-                <!-- 9 -->
-                <div class="leader-card">
-                    <div class="leader-img-container">
-                        <img src="../assets/กรรมการ/worapoj_sharp.png" alt="Mr. Worapot Uchupaiboonvong">
-                    </div>
-                    <div class="leader-info">
-                        <div class="leader-name">Mr. Worapot Uchupaiboonvong</div>
-                        <div class="leader-role">Independent Director</div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
-
+    
 
     <style>
         .pillar-card:hover {

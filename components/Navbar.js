@@ -75,7 +75,7 @@ class MainNav extends HTMLElement {
                 </div>
                 
                 <div class="nav-links">
-                    <a href="https://www.unionpetrochemical.com/th/" target="_blank" class="dropdown">กลับไปที่เว็บไซต์หลัก</a>
+                    <a href="https://www.unionpetrochemical.com/" target="_blank" class="dropdown">กลับไปที่เว็บไซต์หลัก</a>
                     <div class="dropdown">
                         เกี่ยวกับ UKEM
                         <div class="dropdown-content">
@@ -111,13 +111,13 @@ class MainNav extends HTMLElement {
                             <a href="${linkBase}สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html">กิจกรรมเพื่อสังคมและการมีส่วนร่วมในชุมชน</a>
                             <div class="dropdown-header">การกำกับดูแลกิจการ</div>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">นโยบายการกำกับดูแลกิจการ</a>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/โครงสร้างการกำกับดูแลกิจการ.html">โครงสร้างการกำกับดูแลกิจการ</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">การบริหารจัดการความเสี่ยง</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">การควบคุมภายใน</a>
                         </div>
                     </div>
                     <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html" class="dropdown">ข้อมูลทางการเงิน</a>
                     <a href="${linkBase}รางวัลและความสำเร็จ.html" class="dropdown">รางวัลและความสำเร็จ</a>
+                    <a href="${linkBase}ข่าวสารและกิจกรรม.html" class="dropdown">ข่าวสารและกิจกรรม</a>
                     <a href="${linkBase}ศูนย์รวมการดาวน์โหลด.html" class="dropdown">ข้อมูลดาวน์โหลด</a>
                 </div>
 
@@ -146,7 +146,7 @@ class MainNav extends HTMLElement {
                 </div>
                 
                 <div class="nav-links">
-                    <a href="https://www.unionpetrochemical.com/en/" target="_blank" class="dropdown">Back to Main Website</a>
+                    <a href="https://www.unionpetrochemical.com/" target="_blank" class="dropdown">Back to Main Website</a>
                     <div class="dropdown">
                         About UKEM
                         <div class="dropdown-content">
@@ -182,13 +182,13 @@ class MainNav extends HTMLElement {
                             <a href="${linkBase}สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html">CSR & Community Engagement</a>
                             <div class="dropdown-header">Corporate Governance</div>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">Corporate Governance Policy</a>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/โครงสร้างการกำกับดูแลกิจการ.html">Governance Structure</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">Risk Management</a>
                             <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">Internal Control</a>
                         </div>
                     </div>
                     <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html" class="dropdown">Financial Information</a>
                     <a href="${linkBase}รางวัลและความสำเร็จ.html" class="dropdown">Awards & Successes</a>
+                    <a href="${linkBase}ข่าวสารและกิจกรรม.html" class="dropdown">News & Activities</a>
                     <a href="${linkBase}ศูนย์รวมการดาวน์โหลด.html" class="dropdown">Download Center</a>
                 </div>
 
