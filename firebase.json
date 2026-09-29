@@ -13,8 +13,12 @@
       "scratch/**",
       "scratch_*.py",
       "import easyocr.py",
-      "sync_github.ps1"
+      "sync_github.ps1",
+      "node/**",
+      "node22/**",
+      "**/*.zip",
+      "firebase.exe"
     ],
-    "max_releases": 5
+    "max_releases": 1
   }
 }

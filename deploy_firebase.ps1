@@ -1,11 +1,11 @@
 # Update PATH for this session so we can find Node and Firebase
-$env:Path = "C:\Program Files\nodejs;C:\Users\UNIONIT\AppData\Roaming\npm;" + $env:Path
+$env:Path = "C:\Users\Admin\.gemini\antigravity-ide\scratch\web-ukem\node22\node-v22.14.0-win-x64;" + $env:Path
 
 Write-Host "=== Starting Firebase Deployment ===" -ForegroundColor Cyan
 Write-Host "Deploying to project 'union-esg'..."
 
 # Run deploy command
-firebase.cmd deploy --project union-esg
+firebase.cmd deploy --project union-esg --debug
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "`n[Error] It looks like you are not logged in." -ForegroundColor Red

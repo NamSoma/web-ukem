@@ -6,3 +6,7 @@ scratch.txt
 files.txt
 b64.txt
 checklist_dump.json
+
+node/
+node22/
+*.zip
