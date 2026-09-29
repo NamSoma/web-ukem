@@ -1,0 +1,69 @@
+Found mentions:
+File: checklist_dump.json
+Keyword: ประเมินผลการปฏิบัติงาน
+Snippet: "ชั่วโมงฝึกอบรมเฉลี่ยต่อคน",       "แผนพัฒนาทักษะ/Reskilling",       "การประเมินผลการปฏิบัติงานอย่างเป็นธรรม",       "ความผูกพันพนักงาน Employee Engagement",       "ช่องทางร้อ
+
+File: checklist_dump.json
+Keyword: ประเมินผล
+Snippet: ากหลายทางชีวภาพ",       "การระบุพื้นที่ดำเนินงานใกล้พื้นที่อนุรักษ์",       "การประเมินผลกระทบต่อระบบนิเวศ",       "การจัดทำแผน Biodiversity Action Plan",       "หลักการ
+
+File: checklist_dump.json
+Keyword: อย่างเป็นธรรม
+Snippet: เฉลี่ยต่อคน",       "แผนพัฒนาทักษะ/Reskilling",       "การประเมินผลการปฏิบัติงานอย่างเป็นธรรม",       "ความผูกพันพนักงาน Employee Engagement",       "ช่องทางร้องเรียนพนักงาน
+
+File: checklist_dump.json
+Keyword: การปฏิบัติงานอย่างเป็นธรรม
+Snippet: ั่วโมงฝึกอบรมเฉลี่ยต่อคน",       "แผนพัฒนาทักษะ/Reskilling",       "การประเมินผลการปฏิบัติงานอย่างเป็นธรรม",       "ความผูกพันพนักงาน Employee Engagement",       "ช่องทางร้องเรียนพนักงาน
+
+File: reskill_results.txt
+Keyword: ประเมินผลการปฏิบัติงาน
+Snippet: ippet: "ชั่วโมงฝึกอบรมเฉลี่ยต่อคน",       "แผนพัฒนาทักษะ/Reskilling",       "การประเมินผลการปฏิบัติงานอย่างเป็นธรร  File: เกี่ยวกับ UKEM.html Keyword: reskill Snippet: าพของบุคลากรทั
+
+File: reskill_results.txt
+Keyword: ประเมินผล
+Snippet: ippet: "ชั่วโมงฝึกอบรมเฉลี่ยต่อคน",       "แผนพัฒนาทักษะ/Reskilling",       "การประเมินผลการปฏิบัติงานอย่างเป็นธรร  File: เกี่ยวกับ UKEM.html Keyword: reskill Snippet: า
+
+File: การกำกับดูแลและเศรษฐกิจ\การควบคุมภายใน.html
+Keyword: ประเมินผล
+Snippet: ถ่วงดุลอำนาจ รวมถึงมีแผนพัฒนาบุคลากร สรรหาผู้สืบทอดตำแหน่ง (Succession Plan) และประเมินผลปฏิบัติงานอย่างเป็นระบบ</li>                         </ul>                     <
+
+File: การกำกับดูแลและเศรษฐกิจ\การบริหารจัดการความเสี่ยง.html
+Keyword: ประเมินผล
+Snippet: ">                         <li>จัดทำแผนการลงทุน ต้องทำการวิเคราะห์ความเสี่ยง และประเมินผลตอบแทนการลงทุน โดยนำเสนอแผนการลงทุนต่อคณะกรรมการบริหารความเสี่ยง เพื่อพิจารณาและ
+
+File: ภาพรวมความยั่งยืน\การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html
+Keyword: ประเมินผล
+Snippet: <stakeholder-card title-width="35" title="3. เพิ่มประสิทธิภาพในการติดตามและประเมินผลการดำเนินงาน" col1-title="">         <div slot="col1">             <p style="mar
+
+File: ภาพรวมความยั่งยืน\การขับเคลื่อนธุรกิจเพื่อความยั่งยืน.html
+Keyword: อย่างเป็นธรรม
+Snippet: นในหลักความโปร่งใส ต่อต้านการทุจริต และจัดการความสัมพันธ์กับผู้มีส่วนได้ส่วนเสียอย่างเป็นธรรม                     </p>                 </div>                  <div style="pa
+
+File: สังคม\การมีส่วนร่วมและพัฒนาชุมชน.html
+Keyword: ประเมินผล
+Snippet: size: 22px; font-weight: 700; margin-top: 0; margin-bottom: 25px;">3. ตรวจสอบและประเมินผล (Check)</h4>                         <p><strong>3.1 ติดตามความคืบหน้าและตรวจสอบ
+
+File: สังคม\ความรับผิดชอบต่อลูกค้าและคู่ค้า.html
+Keyword: อย่างเป็นธรรม
+Snippet: trong style="color: var(--primary);">คู่แข่ง:</strong> ดำเนินการแข่งขันทางธุรกิจอย่างเป็นธรรม ไม่ใช้วิธีกลั่นแกล้ง กีดกัน หรือกระทำการใดๆ ที่ผิดกฎหมายเพื่อสร้างการแข่งขันที่
+
+File: สังคม\นโยบายและการปฏิบัติด้านสังคม.html
+Keyword: อย่างเป็นธรรม
+Snippet: </div>                  <section-header id="sec4" title="การปฏิบัติต่อแรงงานอย่างเป็นธรรม"></section-header>                 <div style="margin: 25px 0; border-radius: 0
+
+File: สังคม\สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html
+Keyword: ประเมินผลการปฏิบัติงาน
+Snippet: </div>             </div>              <section-header title="การประเมินผลการปฏิบัติงาน"></section-header>             <div class="intro-text">                 <div  s
+
+File: สังคม\สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html
+Keyword: ประเมินผล
+Snippet: </div>             </div>              <section-header title="การประเมินผลการปฏิบัติงาน"></section-header>             <div class="intro-text">
+
+File: สังคม\สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html
+Keyword: อย่างเป็นธรรม
+Snippet: style="margin: 0; color: var(--primary);  font-weight: 700;">การปฏิบัติต่อแรงงานอย่างเป็นธรรม</h2>             </div>                          <p class="intro-text" style="m
+
+File: สิ่งแวดล้อม\การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html
+Keyword: ประเมินผล
+Snippet: ex; align-items: center; justify-content: center; font-size: 14px;">7</span> การประเมินผลและรายงานผลการใช้พลังงาน                     </h4>                     <ul class
+

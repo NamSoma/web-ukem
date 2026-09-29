@@ -1,0 +1,86 @@
+=== ESG GAP ANALYSIS (Based on Excel Data) ===
+
+Pillar: สิ่งแวดล้อม | Theme: ความมั่นคงด้านน้ำ
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 0
+  - Marked as 'On Website': 3
+  - 🔴 NOT STARTED (Missing): 23 (100.0% of this theme)
+----------------------------------------
+Pillar: สิ่งแวดล้อม | Theme: ห่วงโซ่อุปทานด้านสิ่งแวดล้อม
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 0
+  - Marked as 'On Website': 3
+  - 🔴 NOT STARTED (Missing): 23 (100.0% of this theme)
+----------------------------------------
+Pillar: สิ่งแวดล้อม | Theme: ความหลากหลายทางชีวภาพ
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 1
+  - Marked as 'On Website': 1
+  - 🔴 NOT STARTED (Missing): 22 (95.7% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: ห่วงโซ่อุปทานด้านสังคม
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 4
+  - Marked as 'On Website': 1
+  - 🔴 NOT STARTED (Missing): 16 (69.6% of this theme)
+----------------------------------------
+Pillar: สิ่งแวดล้อม | Theme: มลพิษและการใช้ทรัพยากร
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 10
+  - Marked as 'On Website': 2
+  - 🔴 NOT STARTED (Missing): 13 (56.5% of this theme)
+----------------------------------------
+Pillar: บรรษัทภิบาล | Theme: การบริหารความเสี่ยง
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 10
+  - Marked as 'On Website': 11
+  - 🔴 NOT STARTED (Missing): 12 (52.2% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: ความรับผิดชอบต่อลูกค้า
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 10
+  - Marked as 'On Website': 3
+  - 🔴 NOT STARTED (Missing): 10 (43.5% of this theme)
+----------------------------------------
+Pillar: บรรษัทภิบาล | Theme: ความโปร่งใสด้านภาษี
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 14
+  - Marked as 'On Website': 1
+  - 🔴 NOT STARTED (Missing): 9 (39.1% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: สิทธิมนุษยชนและชุมชน
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 14
+  - Marked as 'On Website': 8
+  - 🔴 NOT STARTED (Missing): 9 (39.1% of this theme)
+----------------------------------------
+Pillar: สิ่งแวดล้อม | Theme: การเปลี่ยนแปลงสภาพภูมิอากาศ
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 11
+  - Marked as 'On Website': 8
+  - 🔴 NOT STARTED (Missing): 8 (34.8% of this theme)
+----------------------------------------
+Pillar: บรรษัทภิบาล | Theme: การต่อต้านคอร์รัปชัน
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 17
+  - Marked as 'On Website': 7
+  - 🔴 NOT STARTED (Missing): 6 (26.1% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: อาชีวอนามัยและความปลอดภัย
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 18
+  - Marked as 'On Website': 5
+  - 🔴 NOT STARTED (Missing): 5 (21.7% of this theme)
+----------------------------------------
+Pillar: บรรษัทภิบาล | Theme: บรรษัทภิบาล
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 21
+  - Marked as 'On Website': 10
+  - 🔴 NOT STARTED (Missing): 1 (4.3% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: มาตรฐานแรงงาน
+  - Total Checklist Items: 23
+  - Marked as 'Done' internally: 22
+  - Marked as 'On Website': 18
+  - 🔴 NOT STARTED (Missing): 1 (4.3% of this theme)
+----------------------------------------

@@ -1,0 +1,73 @@
+=== ESG GAP ANALYSIS (ONLY FOR ITEMS REQUIRING 'ONE REPORT') ===
+Total Checklist Items related to One Report: 102
+
+Pillar: สิ่งแวดล้อม | Theme: ความมั่นคงด้านน้ำ
+  - Total Items for One Report: 5
+  - Marked as 'Done' internally: 0
+  - 🔴 NOT STARTED (Missing): 5 (100.0% of this theme)
+----------------------------------------
+Pillar: บรรษัทภิบาล | Theme: ความโปร่งใสด้านภาษี
+  - Total Items for One Report: 11
+  - Marked as 'Done' internally: 9
+  - 🔴 NOT STARTED (Missing): 2 (18.2% of this theme)
+----------------------------------------
+Pillar: สิ่งแวดล้อม | Theme: การเปลี่ยนแปลงสภาพภูมิอากาศ
+  - Total Items for One Report: 10
+  - Marked as 'Done' internally: 6
+  - 🔴 NOT STARTED (Missing): 2 (20.0% of this theme)
+----------------------------------------
+Pillar: สิ่งแวดล้อม | Theme: ห่วงโซ่อุปทานด้านสิ่งแวดล้อม
+  - Total Items for One Report: 2
+  - Marked as 'Done' internally: 0
+  - 🔴 NOT STARTED (Missing): 2 (100.0% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: มาตรฐานแรงงาน
+  - Total Items for One Report: 20
+  - Marked as 'Done' internally: 19
+  - 🔴 NOT STARTED (Missing): 1 (5.0% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: สิทธิมนุษยชนและชุมชน
+  - Total Items for One Report: 13
+  - Marked as 'Done' internally: 12
+  - 🔴 NOT STARTED (Missing): 1 (7.7% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: ความรับผิดชอบต่อลูกค้า
+  - Total Items for One Report: 2
+  - Marked as 'Done' internally: 1
+  - 🔴 NOT STARTED (Missing): 1 (50.0% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: ห่วงโซ่อุปทานด้านสังคม
+  - Total Items for One Report: 2
+  - Marked as 'Done' internally: 1
+  - 🔴 NOT STARTED (Missing): 1 (50.0% of this theme)
+----------------------------------------
+Pillar: สังคม | Theme: อาชีวอนามัยและความปลอดภัย
+  - Total Items for One Report: 2
+  - Marked as 'Done' internally: 1
+  - 🔴 NOT STARTED (Missing): 1 (50.0% of this theme)
+----------------------------------------
+Pillar: สิ่งแวดล้อม | Theme: ความหลากหลายทางชีวภาพ
+  - Total Items for One Report: 1
+  - Marked as 'Done' internally: 0
+  - 🔴 NOT STARTED (Missing): 1 (100.0% of this theme)
+----------------------------------------
+Pillar: บรรษัทภิบาล | Theme: บรรษัทภิบาล
+  - Total Items for One Report: 17
+  - Marked as 'Done' internally: 17
+  - 🔴 NOT STARTED (Missing): 0 (0.0% of this theme)
+----------------------------------------
+Pillar: บรรษัทภิบาล | Theme: การบริหารความเสี่ยง
+  - Total Items for One Report: 9
+  - Marked as 'Done' internally: 9
+  - 🔴 NOT STARTED (Missing): 0 (0.0% of this theme)
+----------------------------------------
+Pillar: บรรษัทภิบาล | Theme: การต่อต้านคอร์รัปชัน
+  - Total Items for One Report: 5
+  - Marked as 'Done' internally: 5
+  - 🔴 NOT STARTED (Missing): 0 (0.0% of this theme)
+----------------------------------------
+Pillar: สิ่งแวดล้อม | Theme: มลพิษและการใช้ทรัพยากร
+  - Total Items for One Report: 3
+  - Marked as 'Done' internally: 3
+  - 🔴 NOT STARTED (Missing): 0 (0.0% of this theme)
+----------------------------------------

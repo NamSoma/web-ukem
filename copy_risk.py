@@ -1,0 +1,6 @@
+import os
+
+filepath = r'f:\Back up อีก HDD\งาน\ลองทำ\การกำกับดูแลและเศรษฐกิจ\การบริหารจัดการความเสี่ยง.html'
+with open(filepath, 'r', encoding='utf-8') as f_in:
+    with open('temp_risk.txt', 'w', encoding='utf-8') as f_out:
+        f_out.write(f_in.read())

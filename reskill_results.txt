@@ -1,0 +1,17 @@
+Found mentions:
+File: checklist_dump.json
+Keyword: reskill
+Snippet: "ชั่วโมงฝึกอบรมเฉลี่ยต่อคน",       "แผนพัฒนาทักษะ/Reskilling",       "การประเมินผลการปฏิบัติงานอย่างเป็นธรร
+
+File: เกี่ยวกับ UKEM.html
+Keyword: reskill
+Snippet: าพของบุคลากรทั้งในรูปแบบการยกระดับทักษะการทํางาน (Reskill) และการสร้างทักษะการทํางานใหม่ที่ตอบรับต่อการเปลี
+
+File: scratch_pdf_toc.txt
+Keyword: reskill
+Snippet: าพของบุคลากรทั้งในรูปแบบการยกระดับทักษะการทํางาน (Reskill) และการสร้างทักษะการทํา งาน ใหม่ที่ตอบรับต่อการเป
+
+File: en\About UKEM.html
+Keyword: reskill
+Snippet: sonnel in both the form of upgrading work skills (Reskill) and creating new work skills that respond to new
+

@@ -13,6 +13,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>การบริหารจัดการความเสี่ยง - UKEM</title>
+    <meta property="og:site_name" content="Union Petrochemical Public Company Limited">
+    <meta property="og:title" content="UKEM Sustainability">
+
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/global.css">
     <script src="../components/Navbar.js" defer></script>
@@ -53,6 +56,8 @@
         /* Override connecting line color for departments */
         .dep-col::before { background: #312e81 !important; }
     </style>
+
+    <link rel="icon" type="image/png" href="../components/union-logo.png">
 </head>
 <body>
     
@@ -288,6 +293,23 @@
                     </ul>
                 </div>
             </div>
+            <h3 class="text-h4" style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
+                ความเสี่ยงด้านระบบสารสนเทศและการปฏิบัติงาน (IT & Operational Risk)
+            </h3>
+            
+            <div class="risk-grid">
+                <div class="risk-card">
+                    <h4>ความเสี่ยงด้านความปลอดภัยทางไซเบอร์และระบบไอที (Cybersecurity & IT Risk)</h4>
+                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
+                    <p class="risk-desc">ในยุคดิจิทัล การพึ่งพาระบบสารสนเทศในการดำเนินธุรกิจมีมากขึ้น ทำให้บริษัทเผชิญกับความเสี่ยงจากการโจมตีทางไซเบอร์ (Cyberattacks) ข้อมูลรั่วไหล หรือระบบเครือข่ายขัดข้อง ซึ่งอาจส่งผลกระทบต่อความต่อเนื่องในการดำเนินงาน และความน่าเชื่อถือของบริษัท</p>
+                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
+                    <ul class="risk-measures">
+                        <li>ประกาศใช้นโยบายการรักษาความปลอดภัยด้านไอที และนโยบายการควบคุมการปฏิบัติงานอย่างเคร่งครัด</li>
+                        <li>จัดทำแนวปฏิบัติแผนรองรับและแนวทางป้องกันกรณีฉุกเฉิน (Incident Response Plan) เพื่อรับมือกับเหตุการณ์ที่ไม่คาดคิด</li>
+                        <li>ติดตั้งระบบรักษาความปลอดภัยเครือข่าย สำรองข้อมูลอย่างสม่ำเสมอ และจำกัดสิทธิ์การเข้าถึงข้อมูลสำคัญ</li>
+                    </ul>
+                </div>
+            </div>
             </div>
 
             <!-- ดาวน์โหลดเอกสาร -->
@@ -304,6 +326,15 @@
             </div>
             <div style="margin-bottom: 15px;">
                 <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2024/05/RiskManagementTH.pdf" title="คู่มือการบริหารความเสี่ยง" meta="PDF"></doc-card>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <doc-card url="../assets/เอกสารกำกับดูแล/นโยบายการรักษาความปลอดภัยด้านไอที.pdf" title="นโยบายการรักษาความปลอดภัยด้านไอที" meta="PDF"></doc-card>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <doc-card url="../assets/เอกสารกำกับดูแล/แนวปฏิบัติแผนรองรับและแนวทางป้องกัน.pdf" title="แนวปฏิบัติแผนรองรับและแนวทางป้องกันกรณีระบบไอที" meta="PDF"></doc-card>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <doc-card url="../assets/เอกสารกำกับดูแล/ประกาศนโยบายการควบคุมการปฏิบัติงาน.pdf" title="ประกาศนโยบายการควบคุมการปฏิบัติงาน" meta="PDF"></doc-card>
             </div>
         </div>
     </section>

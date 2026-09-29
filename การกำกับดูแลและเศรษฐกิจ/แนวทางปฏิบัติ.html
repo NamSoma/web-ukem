@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนวทางปฏิบัติและคู่มือ - UKEM</title>
+    <meta property="og:site_name" content="Union Petrochemical Public Company Limited">
+    <meta property="og:title" content="UKEM Sustainability">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../components/Navbar.js" defer></script>
+    <script src="../components/Footer.js" defer></script>
+    <script src="../components/InnerHero.js" defer></script>
+    <script src="../components/SectionHeader.js" defer></script>
+    <script src="../components/DocDownload.js" defer></script>
+    <link rel="icon" type="image/png" href="../components/union-logo.png">
+</head>
+<body>
+    <main-nav depth="1" path="การกำกับดูแลและเศรษฐกิจ/แนวทางปฏิบัติ.html" lang="th"></main-nav>
+    <inner-hero title="แนวทางปฏิบัติและคู่มือ" image-url="../assets/การกำกับดูแล/corporate_governance_hero.png"></inner-hero>
+    <main style="position: relative; overflow: hidden; padding-bottom: 60px;">
+
+        <div class="container content-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px;">
+            <section-header title="แนวทางปฏิบัติและคู่มือการดำเนินงาน (Guidelines & Manuals)"></section-header>
+            <div class="text-body" style="color: var(--text-muted); line-height: 1.8; margin-bottom: 40px;">
+                คู่มือและแนวทางปฏิบัติที่กำหนดขั้นตอนและกระบวนการดำเนินงานของบริษัท เพื่อส่งเสริมประสิทธิภาพในการปฏิบัติงาน การบริหารความเสี่ยง และการกำกับดูแลกิจการให้เป็นไปอย่างมีประสิทธิผล และสอดคล้องกับนโยบายหลักขององค์กร
+            </div>
+            
+            <section style="padding: 20px 0; background-color: transparent;">
+                <h2 class="section-title">เอกสารดาวน์โหลด</h2>
+                <div style="margin-bottom: 15px;">
+                    <doc-card url="../assets/เอกสารกำกับดูแล/แนวทางปฎิบัติ.pdf" title="แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ" meta="PDF"></doc-card>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-02-คู่มือมาตรการต่อต้านคอร์รัปชัน-26-2-68.pdf" title="คู่มือมาตรการต่อต้านคอร์รัปชัน" meta="PDF"></doc-card>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <doc-card url="../assets/เอกสารกำกับดูแล/แนวปฏิบัติแผนรองรับและแนวทางป้องกัน.pdf" title="แนวปฏิบัติแผนรองรับและแนวทางป้องกันกรณีระบบไอที" meta="PDF"></doc-card>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+    <main-footer depth="1"></main-footer>
+</body>
+</html>

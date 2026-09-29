@@ -79,11 +79,11 @@ class MainNav extends HTMLElement {
                     <div class="dropdown">
                         เกี่ยวกับ UKEM
                         <div class="dropdown-content">
-                            <a href="${linkBase}เกี่ยวกับ UKEM.html#about">นโยบายและภาพรวมการประกอบธุรกิจ</a>
-                            <a href="${linkBase}เกี่ยวกับ UKEM.html#leadership">คณะกรรมการบริษัท</a>
-                            <a href="${linkBase}เกี่ยวกับ UKEM.html#organization">โครงสร้างองค์กร</a>
-                            <a href="${linkBase}เกี่ยวกับ UKEM.html#business-groups">กลุ่มธุรกิจ</a>
-                            <a href="${linkBase}เกี่ยวกับ UKEM.html#milestones">การเปลี่ยนแปลงและพัฒนาการที่สำคัญ</a>
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#about">ข้อมูลบริษัท</a>
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#leadership">ผู้นำองค์กร</a>
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#organization">โครงสร้างการจัดการองค์กร</a>
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#business-groups">ลักษณะการประกอบธุรกิจ</a>
+                            <a href="${linkBase}เกี่ยวกับ UKEM.html#milestones">การเปลี่ยนแปลงและพัฒนาที่สำคัญ</a>
                         </div>
                     </div>
                     
@@ -99,20 +99,37 @@ class MainNav extends HTMLElement {
 
                     <div class="dropdown">
                         การกำกับดูแลกิจการ
-                        <div class="dropdown-content">
-                            <div class="dropdown-header">สิ่งแวดล้อม</div>
-                            <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ</a>
-                            <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html">การบริหารจัดการสิ่งแวดล้อม</a>
-                            <div class="dropdown-header">สังคม</div>
-                            <a href="${linkBase}สังคม/นโยบายและการปฏิบัติด้านสังคม.html">นโยบายและการปฏิบัติด้านสังคม</a>
-                            <a href="${linkBase}สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html">สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน</a>
-                            <a href="${linkBase}สังคม/อาชีวอนามัยและความปลอดภัย.html">อาชีวอนามัยและความปลอดภัย</a>
-                            <a href="${linkBase}สังคม/ความรับผิดชอบต่อลูกค้าและคู่ค้า.html">ความรับผิดชอบต่อลูกค้าและคู่ค้า</a>
-                            <a href="${linkBase}สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html">กิจกรรมเพื่อสังคมและการมีส่วนร่วมในชุมชน</a>
-                            <div class="dropdown-header">การกำกับดูแลกิจการ</div>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">นโยบายการกำกับดูแลกิจการ</a>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">การบริหารจัดการความเสี่ยง</a>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">การควบคุมภายใน</a>
+                        <div class="dropdown-content mega-menu" style="right: 0; left: auto; padding: 20px 30px;">
+                            <div class="mega-col">
+                                <div class="dropdown-header">สิ่งแวดล้อม</div>
+                                <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ</a>
+                                <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html">การบริหารจัดการสิ่งแวดล้อม</a>
+                                
+                                <div class="dropdown-header" style="margin-top: 20px;">สังคม</div>
+                                <a href="${linkBase}สังคม/นโยบายและการปฏิบัติด้านสังคม.html">นโยบายและการปฏิบัติด้านสังคม</a>
+                                <a href="${linkBase}สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html">สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน</a>
+                                <a href="${linkBase}สังคม/อาชีวอนามัยและความปลอดภัย.html">อาชีวอนามัยและความปลอดภัย</a>
+                                <a href="${linkBase}สังคม/ความรับผิดชอบต่อลูกค้าและคู่ค้า.html">ความรับผิดชอบต่อลูกค้าและคู่ค้า</a>
+                                <a href="${linkBase}สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html">กิจกรรมเพื่อสังคมและการมีส่วนร่วมในชุมชน</a>
+                            </div>
+                            
+                            <div class="mega-col">
+                                <div class="dropdown-header">การกำกับดูแลกิจการ</div>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">นโยบายการกำกับดูแลกิจการ</a>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">การบริหารจัดการความเสี่ยง</a>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">การควบคุมภายใน</a>
+                                
+                                <div class="dropdown-header" style="margin-top: 20px;">จรรยาบรรณ</div>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/จรรยาบรรณธุรกิจ.html">จรรยาบรรณธุรกิจ</a>
+                            </div>
+                            
+                            <div class="mega-col">
+                                <div class="dropdown-header">กฎบัตร</div>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/กฎบัตร.html">กฎบัตรคณะกรรมการ</a>
+                                
+                                <div class="dropdown-header" style="margin-top: 20px;">แนวทางปฏิบัติต่างๆ</div>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/แนวทางปฏิบัติ.html">แนวทางปฏิบัติและคู่มือ</a>
+                            </div>
                         </div>
                     </div>
                     <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html" class="dropdown">ข้อมูลทางการเงิน</a>
@@ -170,20 +187,37 @@ class MainNav extends HTMLElement {
 
                     <div class="dropdown">
                         Corporate Governance
-                        <div class="dropdown-content">
-                            <div class="dropdown-header">Environment</div>
-                            <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">Energy & Climate Change</a>
-                            <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html">Environmental Management</a>
-                            <div class="dropdown-header">Social</div>
-                            <a href="${linkBase}สังคม/นโยบายและการปฏิบัติด้านสังคม.html">Social Policies & Practices</a>
-                            <a href="${linkBase}สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html">Human Rights & Labor Practices</a>
-                            <a href="${linkBase}สังคม/อาชีวอนามัยและความปลอดภัย.html">Occupational Health & Safety</a>
-                            <a href="${linkBase}สังคม/ความรับผิดชอบต่อลูกค้าและคู่ค้า.html">Responsibility to Customers & Partners</a>
-                            <a href="${linkBase}สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html">CSR & Community Engagement</a>
-                            <div class="dropdown-header">Corporate Governance</div>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">Corporate Governance Policy</a>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">Risk Management</a>
-                            <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">Internal Control</a>
+                        <div class="dropdown-content mega-menu" style="right: 0; left: auto; padding: 20px 30px;">
+                            <div class="mega-col">
+                                <div class="dropdown-header">Environment</div>
+                                <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">Energy & Climate Change</a>
+                                <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการสิ่งแวดล้อม.html">Environmental Management</a>
+                                
+                                <div class="dropdown-header" style="margin-top: 20px;">Social</div>
+                                <a href="${linkBase}สังคม/นโยบายและการปฏิบัติด้านสังคม.html">Social Policies & Practices</a>
+                                <a href="${linkBase}สังคม/สิทธิมนุษยชนและการปฏิบัติต่อแรงงาน.html">Human Rights & Labor Practices</a>
+                                <a href="${linkBase}สังคม/อาชีวอนามัยและความปลอดภัย.html">Occupational Health & Safety</a>
+                                <a href="${linkBase}สังคม/ความรับผิดชอบต่อลูกค้าและคู่ค้า.html">Responsibility to Customers & Partners</a>
+                                <a href="${linkBase}สังคม/การมีส่วนร่วมและพัฒนาชุมชน.html">CSR & Community Engagement</a>
+                            </div>
+                            
+                            <div class="mega-col">
+                                <div class="dropdown-header">Corporate Governance</div>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">Corporate Governance Policy</a>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">Risk Management</a>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">Internal Control</a>
+                                
+                                <div class="dropdown-header" style="margin-top: 20px;">Code of Conduct</div>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/จรรยาบรรณธุรกิจ.html">Business Code of Conduct</a>
+                            </div>
+                            
+                            <div class="mega-col">
+                                <div class="dropdown-header">Charters</div>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/กฎบัตร.html">Committee Charters</a>
+                                
+                                <div class="dropdown-header" style="margin-top: 20px;">Guidelines</div>
+                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/แนวทางปฏิบัติ.html">Guidelines & Manuals</a>
+                            </div>
                         </div>
                     </div>
                     <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/ข้อมูลทางการเงิน.html" class="dropdown">Financial Information</a>
