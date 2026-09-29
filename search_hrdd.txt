@@ -1,0 +1,25 @@
+Found mentions:
+File: checklist_dump.json
+Keyword: Human Rights Due Diligence
+Snippet: ity (สิทธิมนุษยชนและชุมชน)": [       "นโยบายสิทธิมนุษยชนตาม UNGP",       "การทำ Human Rights Due Diligence",       "การประเมินความเสี่ยงสิทธิมนุษยชนระดับองค์กร",       "การประเมินสิทธิมน
+
+File: checklist_dump.json
+Keyword: Due Diligence
+Snippet: ษยชนและชุมชน)": [       "นโยบายสิทธิมนุษยชนตาม UNGP",       "การทำ Human Rights Due Diligence",       "การประเมินความเสี่ยงสิทธิมนุษยชนระดับองค์กร",       "การประเมินสิทธิมน
+
+File: สังคม\ความรับผิดชอบต่อลูกค้าและคู่ค้า.html
+Keyword: Human Rights Due Diligence
+Snippet: <li><strong style="color: var(--primary);">05. สิทธิมนุษยชน (Human Rights Due Diligence):</strong> ประเมินความเสี่ยงด้านสิทธิมนุษยชนจากการดำเนินงานของคู่ค้ารายสำคัญ</l
+
+File: สังคม\ความรับผิดชอบต่อลูกค้าและคู่ค้า.html
+Keyword: Due Diligence
+Snippet: <li><strong style="color: var(--primary);">05. สิทธิมนุษยชน (Human Rights Due Diligence):</strong> ประเมินความเสี่ยงด้านสิทธิมนุษยชนจากการดำเนินงานของคู่ค้ารายสำคัญ</l
+
+File: en\สังคม\ความรับผิดชอบต่อลูกค้าและคู่ค้า.html
+Keyword: Human Rights Due Diligence
+Snippet: diness.</li>                     <li><strong style="color: var(--primary);">05. Human Rights Due Diligence:</strong> Planning Human Rights Due Diligence assessments for key partners' ope
+
+File: en\สังคม\ความรับผิดชอบต่อลูกค้าและคู่ค้า.html
+Keyword: Due Diligence
+Snippet: <li><strong style="color: var(--primary);">05. Human Rights Due Diligence:</strong> Planning Human Rights Due Diligence assessments for key partners' ope
+

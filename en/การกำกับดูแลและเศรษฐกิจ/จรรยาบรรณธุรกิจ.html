@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Code of Conduct - UKEM</title>
+    <meta property="og:site_name" content="Union Petrochemical Public Company Limited">
+    <meta property="og:title" content="UKEM Sustainability">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/global.css">
+    <script src="../../components/Navbar.js" defer></script>
+    <script src="../../components/Footer.js" defer></script>
+    <script src="../../components/InnerHero.js" defer></script>
+    <script src="../../components/SectionHeader.js" defer></script>
+    <script src="../../components/DocDownload.js" defer></script>
+    <link rel="icon" type="image/png" href="../../components/union-logo.png">
+</head>
+<body>
+    <main-nav depth="2" path="การกำกับดูแลและเศรษฐกิจ/จรรยาบรรณธุรกิจ.html" lang="en"></main-nav>
+    <inner-hero title="Business Code of Conduct" image-url="../../assets/การกำกับดูแล/corporate_governance_hero.png"></inner-hero>
+    <main style="position: relative; overflow: hidden; padding-bottom: 60px;">
+
+        <div class="container content-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px;">
+            <section-header title="Business Code of Conduct"></section-header>
+            <div class="text-body" style="color: var(--text-muted); line-height: 1.8; margin-bottom: 40px;">
+                The Company is committed to advancing its business based on good ethics and morality, taking responsibility for all stakeholders. The Business Code of Conduct is established to provide clear standards and practical guidelines for directors, executives, and employees in performing their duties and conducting business transparently and fairly.
+            </div>
+            
+            <section style="padding: 20px 0; background-color: transparent;">
+                <h2 class="section-title">Download Documents</h2>
+                <div style="margin-bottom: 15px;">
+                    <doc-card url="../../assets/เอกสารกำกับดูแล/จรรยาบรรณธุรกิจ.pdf" title="Business Code of Conduct" meta="PDF"></doc-card>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+    <main-footer depth="2" lang="en"></main-footer>
+</body>
+</html>

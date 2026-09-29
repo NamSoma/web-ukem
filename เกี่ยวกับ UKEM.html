@@ -12,6 +12,9 @@
 
     <meta charset="UTF-8">
     <title>UKEM - Sustainability</title>
+    <meta property="og:site_name" content="Union Petrochemical Public Company Limited">
+    <meta property="og:title" content="UKEM Sustainability">
+
     <!-- Use Google Fonts (Kanit & Outfit) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +23,18 @@
     <script src="components/Navbar.js" defer></script>
     <script src="components/Footer.js" defer></script>
     <script src="components/DocDownload.js" defer></script>
+
+    <link rel="icon" type="image/png" href="components/union-logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Union Petrochemical Public Company Limited",
+      "alternateName" : ["UKEM", "บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน)"],
+      "url" : "https://union-esg.web.app/"
+    }
+    </script>
 </head>
 <body>
 
@@ -46,7 +61,7 @@
     <section id="about" class="about-section" style="padding: 80px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin: 0 auto;">
-                <h2 class="section-title">นโยบายและภาพรวมการประกอบธุรกิจ</h2>
+                <h2 class="section-title">ข้อมูลบริษัท</h2>
                 <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 40px;"></div>
                 <p style="color: var(--text-muted); font-size: 18px; line-height: 1.8; text-align: left; text-indent: 50px;">
                     บริษัท ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน) เป็นหนึ่งในผู้นำด้านการนำเข้าและจัดจำหน่ายเคมีภัณฑ์และสารละลาย (Solvents) บริษัทดำเนินธุรกิจอย่างยาวนานก้าวเข้าสู่ปีที่ 45 ด้วยความสามารถในการปรับตัวทางธุรกิจของสารละลายตามมาตรฐานทั่วไป และเคมีภัณฑ์ชนิดพิเศษให้เหมาะสมกับอุตสาหกรรมเฉพาะด้าน โดยบริษัทยึดถือแนวทางการดำเนินธุรกิจที่มุ่งเน้นการเติบโตอย่างยั่งยืน ความหลากหลายของผลิตภัณฑ์อย่างครบวงจร เพื่อตอบสนองความต้องการของลูกค้าในกลุ่มอุตสาหกรรม การบริหารจัดการคลังสินค้าและโลจิสติกส์ระบบการจัดเก็บที่ได้มาตรฐาน และการขนส่งที่รวดเร็ว มุ่งเน้นคุณภาพและมาตรฐานของการจัดหาแหล่งผลิตภัณฑ์ที่น่าเชื่อถือ รวมทั้งการสร้างความสัมพันธ์ทางธุรกิจกับทั้งผู้จัดจำหน่าย และลูกค้า
@@ -200,7 +215,7 @@
     <section id="leadership" class="leadership-section" style="padding: 80px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin-bottom: 50px;">
-                <h2 class="section-title">คณะกรรมการบริษัท</h2>
+                <h2 class="section-title">ผู้นำองค์กร</h2>
                 <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 20px;"></div>
                 <p style="color: var(--text-muted); font-size: 18px;">คณะกรรมการผู้ทรงคุณวุฒิที่ร่วมผลักดันองค์กรสู่ความยั่งยืน</p>
             </div>
@@ -366,7 +381,7 @@
     <section id="organization" class="org-section modern-org" style="padding: 20px 0 80px; background-color: transparent; overflow: hidden;">
         <div class="container">
             <div class="text-center" style="margin-bottom: 40px;">
-                <h2 class="section-title">โครงสร้างองค์กร</h2>
+                <h2 class="section-title">โครงสร้างการจัดการองค์กร</h2>
                 <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 10px;"></div>
             </div>
 
@@ -445,9 +460,19 @@
 
                 .tier-depts {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    grid-template-columns: repeat(3, 1fr);
                     gap: 25px;
                     width: 100%;
+                }
+                @media (max-width: 992px) {
+                    .tier-depts {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+                @media (max-width: 768px) {
+                    .tier-depts {
+                        grid-template-columns: 1fr;
+                    }
                 }
 
                 /* Cards */
@@ -547,11 +572,12 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-content: center;
+                    min-height: 90px;
                     gap: 10px;
                 }
                 .dept-header i {
-                    font-size: 28px;
-                    color: var(--primary);
+                    display: none;
                 }
                 .dept-header h4 {
                     margin: 0;
@@ -567,7 +593,7 @@
                     gap: 8px;
                     justify-content: center;
                     flex-grow: 1;
-                    align-content: flex-start;
+                    align-content: center;
                 }
                 .div-tag {
                     background: var(--bg-light);
@@ -585,6 +611,9 @@
                     color: #fff;
                     border-color: var(--primary);
                 }
+                .tier-board > div {
+                    min-width: 0;
+                }
                 /* Desktop Only lines */
                 .desktop-only { display: block; }
                 @media (max-width: 768px) {
@@ -596,7 +625,6 @@
                 <!-- Tier 1: Board -->
                 <div class="org-tier">
                     <div class="org-card main-card primary-card" style="z-index: 2;">
-                        <div class="card-icon"><i class="fas fa-users-cog"></i></div>
                         <h3>ประธานกรรมการบริษัท</h3>
                     </div>
                 </div>
@@ -614,7 +642,6 @@
                         <div class="desktop-only" style="width: 2px; height: 20px; background: #ccc; margin: 0 auto;"></div>
                         
                         <div class="org-card side-card outline-card" style="width: 100%;">
-                            <div class="card-icon" style="margin-bottom: 5px;"><i class="fas fa-search-dollar"></i></div>
                             <h4>คณะกรรมการตรวจสอบ<br>และส่วนงานตรวจสอบภายใน</h4>
                         </div>
                     </div>
@@ -642,7 +669,6 @@
                         <div class="desktop-only" style="width: 2px; height: 20px; background: #ccc; margin: 0 auto;"></div>
                         
                         <div class="org-card side-card outline-card" style="width: 100%;">
-                            <div class="card-icon" style="margin-bottom: 5px;"><i class="fas fa-shield-alt"></i></div>
                             <h4>คณะกรรมการบริหารความเสี่ยง</h4>
                         </div>
                     </div>
@@ -686,7 +712,6 @@
                     <!-- Dept 1 -->
                     <div class="dept-card">
                         <div class="dept-header">
-                            <i class="fas fa-chart-line"></i>
                             <h4>ฝ่ายวางแผนการตลาด<br>และจัดซื้อ</h4>
                         </div>
                         <div class="dept-body">
@@ -699,7 +724,6 @@
                     <!-- Dept 2 -->
                     <div class="dept-card">
                         <div class="dept-header">
-                            <i class="fas fa-file-invoice-dollar"></i>
                             <h4>ฝ่ายบัญชี<br>และการเงิน</h4>
                         </div>
                         <div class="dept-body">
@@ -711,7 +735,6 @@
                     <!-- Dept 3 -->
                     <div class="dept-card">
                         <div class="dept-header">
-                            <i class="fas fa-briefcase"></i>
                             <h4>ฝ่ายพัฒนาธุรกิจ</h4>
                         </div>
                         <div class="dept-body">
@@ -722,7 +745,6 @@
                     <!-- Dept 4 -->
                     <div class="dept-card">
                         <div class="dept-header">
-                            <i class="fas fa-users"></i>
                             <h4>ฝ่ายบริหาร<br>งานบุคคล</h4>
                         </div>
                         <div class="dept-body">
@@ -733,7 +755,6 @@
                     <!-- Dept 5 -->
                     <div class="dept-card">
                         <div class="dept-header">
-                            <i class="fas fa-truck-loading"></i>
                             <h4>ฝ่ายคลังสินค้า<br>และขนส่ง</h4>
                         </div>
                         <div class="dept-body">
@@ -792,8 +813,7 @@
                 <h3 class="text-h3" style="color: var(--primary); margin-bottom: 20px; text-align: center;">เอกสารดาวน์โหลดที่เกี่ยวข้อง</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
                     <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/1.-โครงสร้างองค์กรBoard-Skill-Matrix-2569-Th.-ผสาน.pdf" title="โครงสร้างองค์กรและ Board Skill Matrix" meta="PDF"></doc-card>
-                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-1-แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ-26-2-68.pdf" title="แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ" meta="PDF"></doc-card>
-                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-2-กฎบัตรคณะกรรมการตรวจสอบ-14-11-67.pdf" title="กฎบัตรคณะกรรมการตรวจสอบ" meta="PDF"></doc-card>
+
                 </div>
             </div>
         </div>
@@ -1058,7 +1078,7 @@
     <section id="milestones" class="milestones-section" style="padding: 80px 0 120px 0; background-color: transparent;">
         <div class="container">
             <div class="text-center" style="margin-bottom: 50px;">
-                <h2 class="section-title">การเปลี่ยนแปลงและพัฒนาการที่สำคัญ</h2>
+                <h2 class="section-title">การเปลี่ยนแปลงและพัฒนาที่สำคัญ</h2>
                 <div style="width: 60px; height: 3px; background: var(--primary); margin: 20px auto 20px;"></div>
                 <p style="color: var(--text-muted); font-size: 18px;">ก้าวสำคัญที่ผลักดันความสำเร็จและการเติบโตอย่างยั่งยืนของ UKEM</p>
             </div>

@@ -12,6 +12,9 @@
 
     <meta charset="UTF-8">
     <title>UKEM - Sustainability</title>
+    <meta property="og:site_name" content="Union Petrochemical Public Company Limited">
+    <meta property="og:title" content="UKEM Sustainability">
+
     <!-- Use Google Fonts (Kanit & Outfit) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +24,18 @@
     <script src="../components/StatsCard.js" defer></script>
     <script src="../components/Footer.js" defer></script>
     <script src="../components/DocDownload.js" defer></script>
+
+    <link rel="icon" type="image/png" href="../components/union-logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Union Petrochemical Public Company Limited",
+      "alternateName" : "UKEM",
+      "url" : "https://union-esg.web.app/en/"
+    }
+    </script>
 </head>
 <body>
 
@@ -577,6 +592,9 @@
                     color: #fff;
                     border-color: var(--primary);
                 }
+                .tier-board > div {
+                    min-width: 0;
+                }
                 /* Desktop Only lines */
                 .desktop-only { display: block; }
                 @media (max-width: 768px) {
@@ -588,7 +606,6 @@
                 <!-- Tier 1: Board -->
                 <div class="org-tier">
                     <div class="org-card main-card primary-card" style="z-index: 2;">
-                        <div class="card-icon"><i class="fas fa-users-cog"></i></div>
                         <h3>Chairman of the Board</h3>
                     </div>
                 </div>
@@ -606,7 +623,6 @@
                         <div class="desktop-only" style="width: 2px; height: 20px; background: #ccc; margin: 0 auto;"></div>
                         
                         <div class="org-card side-card outline-card" style="width: 100%;">
-                            <div class="card-icon" style="margin-bottom: 5px;"><i class="fas fa-search-dollar"></i></div>
                             <h4>Audit Committee<br>& Internal Audit</h4>
                         </div>
                     </div>
@@ -634,7 +650,6 @@
                         <div class="desktop-only" style="width: 2px; height: 20px; background: #ccc; margin: 0 auto;"></div>
                         
                         <div class="org-card side-card outline-card" style="width: 100%;">
-                            <div class="card-icon" style="margin-bottom: 5px;"><i class="fas fa-shield-alt"></i></div>
                             <h4>Risk Management Committee</h4>
                         </div>
                     </div>
@@ -786,8 +801,7 @@
                 <h3 class="text-h3" style="color: var(--primary); margin-bottom: 20px; text-align: center;">Download Documents</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
                     <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/1.-โครงสร้างองค์กรBoard-Skill-Matrix-2569-Th.-ผสาน.pdf" title="โครงสร้างองค์กรและ Board Skill Matrix (Organization Structure and Board Skill Matrix)" meta="PDF"></doc-card>
-                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-1-แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ-26-2-68.pdf" title="แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ (Audit Committee Practice Guidelines)" meta="PDF"></doc-card>
-                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2025/05/ฉบับที่-2-กฎบัตรคณะกรรมการตรวจสอบ-14-11-67.pdf" title="กฎบัตรคณะกรรมการตรวจสอบ (Audit Committee Charter)" meta="PDF"></doc-card>
+
                 </div>
             </div>
         </div>
