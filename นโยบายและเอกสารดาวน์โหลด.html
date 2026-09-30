@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>นโยบายบริษัทและเอกสารดาวน์โหลด - UKEM</title>
@@ -225,6 +233,16 @@
                         </div>
                         <a href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/ฉบับที่-02-นโยบายต่อต้านคอร์รัปชัน-26-2-68.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
                     </div>
+                    <div class="doc-item">
+                        <div class="doc-info">
+                            <div class="doc-icon"><i data-feather="file-text"></i></div>
+                            <div class="doc-text">
+                                <h4>นโยบายการลงทุนและแนวปฏิบัติการลงทุน</h4>
+                                <p>ไฟล์ PDF</p>
+                            </div>
+                        </div>
+                        <a href="assets/เอกสารกำกับดูแล/นโยบายการลงทุนและแนวปฏิบัติการลงทุน.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
+                    </div>
                 </div>
 
                 <div id="gov_risk" class="category-section">
@@ -286,6 +304,7 @@
                     <div class="org-node">
                         <div class="org-box-pill bg-risk-1">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></div>
                         <div class="line-v" style="background-color: #312e81;"></div>
+                    </div>
                     
                     
                     <!-- 2 -->
@@ -348,6 +367,7 @@
                 </div>
             </div>
 
+            </div>
             <div  style="margin-top: 30px;">
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <h3 class="text-h3" style="margin: 0; color: var(--primary);">บทบาทหน้าที่หลัก</h3>
@@ -502,8 +522,7 @@
                 </div>
             </div>
             </div>
-
-            <!-- ดาวน์โหลดเอกสาร --></div></div></div>
+            <!-- ดาวน์โหลดเอกสาร --></div>
                     <h3 style="margin-top:40px; color:var(--primary);">เอกสารดาวน์โหลด</h3>
                     <div class="doc-item">
                         <div class="doc-info">
@@ -730,6 +749,16 @@
                         </div>
                         <a href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/นโยบายความยั่งยืนด้านผลิตภัณฑ์ ลูกค้า และ.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
                     </div>
+                    <div class="doc-item">
+                        <div class="doc-info">
+                            <div class="doc-icon"><i data-feather="file-text"></i></div>
+                            <div class="doc-text">
+                                <h4>นโยบายการจัดการสิ่งแวดล้อม การป้องกันมลพิษ และการใช้ทรัพยากรอย่างมีประสิทธิภาพ</h4>
+                                <p>ไฟล์ PDF</p>
+                            </div>
+                        </div>
+                        <a href="assets/เอกสารสิ่งแวดล้อม/นโยบายการจัดการสิ่งแวดล้อม การป้องกันมลพิษ และการใช้ทรัพยากรอย่างมีประสิทธิภาพ.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
+                    </div>
 
                     <div class="doc-item">
                         <div class="doc-info">
@@ -740,6 +769,17 @@
                             </div>
                         </div>
                         <a href="assets/เอกสารสิ่งแวดล้อม/นโยบายการเปลี่ยนแปลงสภาพภูมิอากาศและการลดการปล่อยคาร์บอน.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
+                    </div>
+
+                    <div class="doc-item">
+                        <div class="doc-info">
+                            <div class="doc-icon"><i data-feather="file-text"></i></div>
+                            <div class="doc-text">
+                                <h4>นโยบายอนุรักษ์พลังงาน</h4>
+                                <p>ไฟล์ PDF</p>
+                            </div>
+                        </div>
+                        <a href="assets/เอกสารสิ่งแวดล้อม/นโยบายอนุรักษ์พลังงาน.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
                     </div>
                 </div>
 
@@ -754,6 +794,17 @@
                             </div>
                         </div>
                         <a href="assets/เอกสารสังคม/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
+                    </div>
+
+                    <div class="doc-item">
+                        <div class="doc-info">
+                            <div class="doc-icon"><i data-feather="file-text"></i></div>
+                            <div class="doc-text">
+                                <h4>นโยบายอาชีวอนามัยและความปลอดภัย</h4>
+                                <p>ไฟล์ PDF</p>
+                            </div>
+                        </div>
+                        <a href="assets/เอกสารสังคม/นโยบายอาชีวอนามัยและความปลอดภัย.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
                     </div>
                 </div>
 
