@@ -1695,8 +1695,9 @@ details.esg-accordion .accordion-content {
 
 @media (max-width: 992px) {
     .main-nav {
-        /* Force a new stacking context */
-        transform: translateZ(0);
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background-color: var(--white) !important;
         z-index: 99999 !important;
     }
 
@@ -1720,20 +1721,26 @@ details.esg-accordion .accordion-content {
     
     .nav-links {
         display: none;
-        position: absolute;
-        top: 80px; 
+        position: fixed;
+        top: 60px; /* Match new navbar height */
+        bottom: 0;
         left: 0;
         width: 100%;
         background-color: var(--white);
-        flex-direction: column;
         border-top: 1px solid var(--border-color);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         z-index: 99999 !important;
         padding-bottom: 20px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .nav-links.mobile-active {
-        display: flex;
+        display: block !important;
+    }
+    
+    .nav-links > * {
+        display: block !important;
     }
     
     .dropdown {
@@ -1759,8 +1766,7 @@ details.esg-accordion .accordion-content {
     }
     
     .dropdown.active .dropdown-content {
-        display: flex;
-        flex-direction: column;
+        display: block !important;
     }
 }
 
@@ -1897,5 +1903,24 @@ stakeholder-card {
     .sh-grid {
         grid-template-columns: 1fr;
         gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        height: 60px !important;
+        padding: 0 15px !important;
+    }
+    .nav-logo {
+        height: 50px !important;
+        padding: 0 !important;
+    }
+    .nav-logo img {
+        height: 100% !important;
+        width: auto !important;
+    }
+    .menu-toggle {
+        display: flex !important;
+        align-items: center !important;
     }
 }

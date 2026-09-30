@@ -11,6 +11,7 @@
     </script>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UKEM - Sustainability</title>
     <meta property="og:site_name" content="Union Petrochemical Public Company Limited">
     <meta property="og:title" content="UKEM Sustainability">
@@ -18,7 +19,7 @@
     <!-- Use Google Fonts (Kanit & Outfit) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/global.css">
     <script src="../components/Navbar.js" defer></script>
     <script src="../components/StatsCard.js" defer></script>
@@ -448,6 +449,7 @@
                 .tier-exec {
                     flex-direction: column;
                     width: 100%;
+                    gap: 15px;
                 }
 
                 .tier-depts {
@@ -597,8 +599,26 @@
                 }
                 /* Desktop Only lines */
                 .desktop-only { display: block; }
+                .mobile-only { display: none; }
+                
                 @media (max-width: 768px) {
                     .desktop-only { display: none !important; }
+                    .mobile-only { display: block !important; }
+                    .mobile-connector {
+                        width: 2px;
+                        height: 30px;
+                        background: #ccc;
+                        margin: 0 auto;
+                    }
+                    
+                    .org-card { width: 100% !important; max-width: 100% !important; }
+                    .deputy-container { justify-content: center !important; }
+                    .tier-board { gap: 0 !important; }
+                    .tier-exec { gap: 0 !important; }
+                    .tier-depts { gap: 15px !important; }
+                    
+                    /* Wrap each mobile org-card in a container with bottom margin, except when using explicit connectors */
+                    .org-tier { gap: 0 !important; }
                 }
             </style>
 
@@ -612,6 +632,7 @@
 
                 <!-- Connector -->
                 <div class="desktop-only" style="width: 2px; height: 30px; background: #ccc; margin: 0 auto;"></div>
+                <div class="mobile-only mobile-connector"></div>
 
                 <!-- Tier 2: Committees -->
                 <div class="org-tier tier-board" style="align-items: stretch; padding-top: 0;">
@@ -625,6 +646,7 @@
                         <div class="org-card side-card outline-card" style="width: 100%;">
                             <h4>Audit Committee<br>& Internal Audit</h4>
                         </div>
+                        <div class="mobile-only mobile-connector"></div>
                     </div>
                     
                     <!-- Exec Comm -->
@@ -640,6 +662,7 @@
                         
                         <!-- Bridge line to fill the height difference inside the grid -->
                         <div class="desktop-only" style="width: 2px; flex-grow: 1; background: var(--primary); margin: 0 auto;"></div>
+                        <div class="mobile-only mobile-connector"></div>
                     </div>
 
                     <!-- Risk Comm -->
@@ -663,20 +686,23 @@
                         <h3>Chairman of Executive Committee</h3>
                     </div>
                     <div class="desktop-only" style="width: 2px; height: 20px; background: #ccc; margin: 0 auto;"></div>
+                    <div class="mobile-only mobile-connector"></div>
                     <div class="org-card main-card dark-card">
                         <h3>Managing Director</h3>
                     </div>
+                    <div class="mobile-only mobile-connector"></div>
                 </div>
 
                 <!-- Deputy MD Level -->
-                <div class="org-tier tier-board" style="align-items: center; margin-top: 0; gap: 0;">
+                <div class="org-tier tier-board" style="align-items: center; margin-top: 0;">
                     <!-- Left: Deputy MD -->
-                    <div style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
+                    <div class="deputy-container" style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
                         <div class="org-card sub-card outline-green" style="margin: 0;">
                             <h4>Deputy Managing Director</h4>
                         </div>
                         <div class="desktop-only" style="width: 30px; height: 2px; background: #ccc;"></div>
                     </div>
+                    <div class="mobile-only mobile-connector"></div>
 
                     <!-- Center: Vertical Line -->
                     <div class="desktop-only" style="width: 2px; height: 80px; background: #ccc; margin: 0 auto;"></div>
@@ -800,7 +826,7 @@
             <div style="margin-top: 40px; background: transparent; padding: 20px 0 0 0; border-radius: 0; box-shadow: none;">
                 <h3 class="text-h3" style="color: var(--primary); margin-bottom: 20px; text-align: center;">Download Documents</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
-                    <doc-card url="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/1.-โครงสร้างองค์กรBoard-Skill-Matrix-2569-Th.-ผสาน.pdf" title="โครงสร้างองค์กรและ Board Skill Matrix (Organization Structure and Board Skill Matrix)" meta="PDF"></doc-card>
+                    <doc-card url="../assets/เอกสารดาวน์โหลด/1.-โครงสร้างองค์กรBoard-Skill-Matrix-2569-Th.-ผสาน.pdf" title="โครงสร้างองค์กรและ Board Skill Matrix (Organization Structure and Board Skill Matrix)" meta="PDF"></doc-card>
 
                 </div>
             </div>

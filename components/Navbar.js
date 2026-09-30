@@ -99,7 +99,7 @@ class MainNav extends HTMLElement {
 
                     <div class="dropdown">
                         การกำกับดูแลกิจการ
-                        <div class="dropdown-content mega-menu" style="right: 0; left: auto; padding: 20px 30px;">
+                        <div class="dropdown-content mega-menu" style="left: 50%; margin-left: -380px; padding: 20px 30px;">
                             <div class="mega-col">
                                 <div class="dropdown-header">สิ่งแวดล้อม</div>
                                 <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ</a>
@@ -116,8 +116,7 @@ class MainNav extends HTMLElement {
                             <div class="mega-col">
                                 <div class="dropdown-header">การกำกับดูแลกิจการ</div>
                                 <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">นโยบายการกำกับดูแลกิจการ</a>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">การบริหารจัดการความเสี่ยง</a>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">การควบคุมภายใน</a>
+                                <a href="${linkBase}นโยบายและเอกสารดาวน์โหลด.html">นโยบายบริษัทและเอกสารดาวน์โหลด</a>
                                 
                                 <div class="dropdown-header" style="margin-top: 20px;">จรรยาบรรณ</div>
                                 <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/จรรยาบรรณธุรกิจ.html">จรรยาบรรณธุรกิจ</a>
@@ -187,7 +186,7 @@ class MainNav extends HTMLElement {
 
                     <div class="dropdown">
                         Corporate Governance
-                        <div class="dropdown-content mega-menu" style="right: 0; left: auto; padding: 20px 30px;">
+                        <div class="dropdown-content mega-menu" style="left: 50%; margin-left: -380px; padding: 20px 30px;">
                             <div class="mega-col">
                                 <div class="dropdown-header">Environment</div>
                                 <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">Energy & Climate Change</a>
@@ -204,8 +203,7 @@ class MainNav extends HTMLElement {
                             <div class="mega-col">
                                 <div class="dropdown-header">Corporate Governance</div>
                                 <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">Corporate Governance Policy</a>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การบริหารจัดการความเสี่ยง.html">Risk Management</a>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/การควบคุมภายใน.html">Internal Control</a>
+                                <a href="${linkBase}นโยบายและเอกสารดาวน์โหลด.html">Company Policies & Download Center</a>
                                 
                                 <div class="dropdown-header" style="margin-top: 20px;">Code of Conduct</div>
                                 <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/จรรยาบรรณธุรกิจ.html">Business Code of Conduct</a>
