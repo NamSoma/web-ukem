@@ -99,7 +99,7 @@ class MainNav extends HTMLElement {
 
                     <div class="dropdown">
                         การกำกับดูแลกิจการ
-                        <div class="dropdown-content mega-menu" style="left: 50%; margin-left: -380px; padding: 20px 30px;">
+                        <div class="dropdown-content mega-menu" style="left: 50%; margin-left: -300px; padding: 20px 30px; grid-template-columns: 1fr 1fr;">
                             <div class="mega-col">
                                 <div class="dropdown-header">สิ่งแวดล้อม</div>
                                 <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ</a>
@@ -117,17 +117,6 @@ class MainNav extends HTMLElement {
                                 <div class="dropdown-header">การกำกับดูแลกิจการ</div>
                                 <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">นโยบายการกำกับดูแลกิจการ</a>
                                 <a href="${linkBase}นโยบายและเอกสารดาวน์โหลด.html">นโยบายบริษัทและเอกสารดาวน์โหลด</a>
-                                
-                                <div class="dropdown-header" style="margin-top: 20px;">จรรยาบรรณ</div>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/จรรยาบรรณธุรกิจ.html">จรรยาบรรณธุรกิจ</a>
-                            </div>
-                            
-                            <div class="mega-col">
-                                <div class="dropdown-header">กฎบัตร</div>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/กฎบัตร.html">กฎบัตรคณะกรรมการ</a>
-                                
-                                <div class="dropdown-header" style="margin-top: 20px;">แนวทางปฏิบัติต่างๆ</div>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/แนวทางปฏิบัติ.html">แนวทางปฏิบัติและคู่มือ</a>
                             </div>
                         </div>
                     </div>
@@ -186,7 +175,7 @@ class MainNav extends HTMLElement {
 
                     <div class="dropdown">
                         Corporate Governance
-                        <div class="dropdown-content mega-menu" style="left: 50%; margin-left: -380px; padding: 20px 30px;">
+                        <div class="dropdown-content mega-menu" style="left: 50%; margin-left: -300px; padding: 20px 30px; grid-template-columns: 1fr 1fr;">
                             <div class="mega-col">
                                 <div class="dropdown-header">Environment</div>
                                 <a href="${linkBase}สิ่งแวดล้อม/การบริหารจัดการพลังงานและการเปลี่ยนแปลงสภาพภูมิอากาศ.html">Energy & Climate Change</a>
@@ -204,17 +193,6 @@ class MainNav extends HTMLElement {
                                 <div class="dropdown-header">Corporate Governance</div>
                                 <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/นโยบายการกำกับดูแลกิจการ.html">Corporate Governance Policy</a>
                                 <a href="${linkBase}นโยบายและเอกสารดาวน์โหลด.html">Company Policies & Download Center</a>
-                                
-                                <div class="dropdown-header" style="margin-top: 20px;">Code of Conduct</div>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/จรรยาบรรณธุรกิจ.html">Business Code of Conduct</a>
-                            </div>
-                            
-                            <div class="mega-col">
-                                <div class="dropdown-header">Charters</div>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/กฎบัตร.html">Committee Charters</a>
-                                
-                                <div class="dropdown-header" style="margin-top: 20px;">Guidelines</div>
-                                <a href="${linkBase}การกำกับดูแลและเศรษฐกิจ/แนวทางปฏิบัติ.html">Guidelines & Manuals</a>
                             </div>
                         </div>
                     </div>

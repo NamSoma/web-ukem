@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+
 <html lang="th">
 <head>
-    <script>
+<script>
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             document.documentElement.setAttribute('data-theme', savedTheme);
@@ -9,27 +10,24 @@
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>นโยบายบริษัทและเอกสารดาวน์โหลด - UKEM</title>
-    <link rel="icon" type="image/png" href="components/union-logo.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/global.css">
-    
-    <script src="components/Navbar.js" defer></script>
-    <script src="components/Footer.js" defer></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>นโยบายบริษัทและเอกสารดาวน์โหลด - UKEM</title>
+<link href="components/union-logo.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/global.css" rel="stylesheet"/>
+<script defer="" src="components/Navbar.js"></script>
+<script defer="" src="components/Footer.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<style>
         .page-header {
             background: linear-gradient(135deg, var(--primary) 0%, #122d50 100%);
             padding: 80px 0 60px;
             text-align: center;
             color: white;
-            margin-top: 70px;
+            margin-top: 0;
         }
         .doc-layout {
             display: flex;
@@ -179,75 +177,132 @@
     </style>
 </head>
 <body>
-
-    <main-nav depth="0" path="นโยบายและเอกสารดาวน์โหลด.html" lang="th"></main-nav>
-
-    <header class="page-header">
-        <div class="container">
-            <h1 style="margin-bottom: 15px; font-size: 36px; color: white;">นโยบายบริษัทและเอกสารดาวน์โหลด</h1>
-            <p style="font-size: 18px; color: #e2e8f0; max-width: 700px; margin: 0 auto;">
+<main-nav depth="0" lang="th" path="นโยบายและเอกสารดาวน์โหลด.html"></main-nav>
+<header class="page-header">
+<div class="container">
+<h1 style="margin-bottom: 15px; font-size: 36px; color: white;">นโยบายบริษัทและเอกสารดาวน์โหลด</h1>
+<p style="font-size: 18px; color: #e2e8f0; max-width: 700px; margin: 0 auto;">
                 รวบรวมนโยบายการดำเนินธุรกิจ รายงาน และเอกสารสำคัญต่างๆ ของบริษัท เพื่อความโปร่งใสและตรวจสอบได้
             </p>
-        </div>
-    </header>
-
-    <main class="container">
-        <div class="doc-layout">
-            
-            <aside class="doc-sidebar">
-                <div style="padding: 25px 0 0 0;">
-                    <div class="sidebar-group">
-                        <ul class="sidebar-menu">
-                            <li><button class="sidebar-btn active" data-target="gov_policy">นโยบายการกำกับดูแลกิจการ</button></li>
-                            <li><button class="sidebar-btn" data-target="gov_risk">นโยบายบริหารจัดการความเสี่ยง</button></li>
-                            <li><button class="sidebar-btn" data-target="gov_control">นโยบายการควบคุมภายใน</button></li>
-                            <li><button class="sidebar-btn" data-target="sustainability">นโยบายด้านความยั่งยืน (ESG)</button></li>
-                            <li><button class="sidebar-btn" data-target="hr">นโยบายด้านพนักงาน</button></li>
-                            <li><button class="sidebar-btn" data-target="partner">นโยบายคู่ค้าและธุรกิจ</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
-
-            <div class="doc-content">
-                
-                <div id="gov_policy" class="category-section active">
-                    <h2 class="section-title">นโยบายการกำกับดูแลกิจการ</h2>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายการกำกับดูแลกิจการที่ดี</h4>
-                                <p>อัปเดตล่าสุด: ปี 2567 | ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/1.-นโยบายกำกับดูแลกิจการที่ดี.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายต่อต้านการทุจริตคอร์รัปชัน</h4>
-                                <p>อัปเดตล่าสุด: ปี 2567 | ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/ฉบับที่-02-นโยบายต่อต้านคอร์รัปชัน-26-2-68.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายการลงทุนและแนวปฏิบัติการลงทุน</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="assets/เอกสารกำกับดูแล/นโยบายการลงทุนและแนวปฏิบัติการลงทุน.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                </div>
-
-                <div id="gov_risk" class="category-section">
-                    <h2 class="section-title">นโยบายบริหารจัดการความเสี่ยง</h2>
-                    <div class="policy-content-wrapper"><style>
+</div>
+</header>
+<main class="container">
+<div class="doc-layout">
+<aside class="doc-sidebar">
+<div style="padding: 25px 0 0 0;">
+<div class="sidebar-group">
+<ul class="sidebar-menu">
+<li><button class="sidebar-btn active" data-target="gov_policy">นโยบายการกำกับดูแลกิจการ</button></li>
+<li><button class="sidebar-btn" data-target="code_of_conduct">จรรยาบรรณธุรกิจ</button></li>
+<li><button class="sidebar-btn" data-target="charters">กฎบัตรคณะกรรมการ</button></li>
+<li><button class="sidebar-btn" data-target="guidelines">แนวทางปฏิบัติและคู่มือ</button></li>
+<li><button class="sidebar-btn" data-target="gov_risk">นโยบายบริหารจัดการความเสี่ยง</button></li>
+<li><button class="sidebar-btn" data-target="gov_control">นโยบายการควบคุมภายใน</button></li>
+<li><button class="sidebar-btn" data-target="sustainability">นโยบายด้านความยั่งยืน (ESG)</button></li>
+<li><button class="sidebar-btn" data-target="hr">นโยบายด้านพนักงาน</button></li>
+<li><button class="sidebar-btn" data-target="hr_reports">บันทึกและรายงานด้านบุคลากร</button></li>
+<li><button class="sidebar-btn" data-target="partner">นโยบายคู่ค้า ลูกค้า และการตลาด</button></li>
+<li><button class="sidebar-btn" data-target="pdpa">นโยบายคุ้มครองข้อมูลส่วนบุคคล</button></li>
+</ul>
+</div>
+</div>
+</aside>
+<div class="doc-content">
+<div class="category-section active" id="gov_policy">
+<h2 class="section-title">นโยบายการกำกับดูแลกิจการ</h2>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายการกำกับดูแลกิจการที่ดี</h4>
+<p>อัปเดตล่าสุด: ปี 2567 | ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/1.-นโยบายกำกับดูแลกิจการที่ดี.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายต่อต้านการทุจริตคอร์รัปชัน</h4>
+<p>อัปเดตล่าสุด: ปี 2567 | ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/ฉบับที่-02-นโยบายต่อต้านคอร์รัปชัน-26-2-68.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายการลงทุนและแนวปฏิบัติการลงทุน</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/นโยบายการลงทุนและแนวปฏิบัติการลงทุน.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="code_of_conduct">
+<h2 class="section-title">จรรยาบรรณธุรกิจ</h2><div class="intro-text-merged" style="margin-bottom: 30px;"><div class="text-body" style="color: var(--text-muted); line-height: 1.8;">บริษัทฯ มุ่งมั่นดำเนินธุรกิจให้เจริญก้าวหน้าบนพื้นฐานของจริยธรรมและคุณธรรมอันดี พร้อมรับผิดชอบต่อผู้มีส่วนได้เสียทุกฝ่าย โดยกำหนดจรรยาบรรณธุรกิจเพื่อเป็นกรอบมาตรฐานและแนวปฏิบัติที่ชัดเจนให้แก่กรรมการ ผู้บริหาร และพนักงาน ในการปฏิบัติหน้าที่และดำเนินธุรกิจให้บรรลุเป้าหมายอย่างโปร่งใสและเป็นธรรม</div></div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>จรรยาบรรณธุรกิจ</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/จรรยาบรรณธุรกิจ.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="charters">
+<h2 class="section-title">กฎบัตรคณะกรรมการ</h2><div class="intro-text-merged" style="margin-bottom: 30px;"><div class="text-body" style="color: var(--text-muted); line-height: 1.8;">กฎบัตรคณะกรรมการจัดทำขึ้นเพื่อกำหนดองค์ประกอบ คุณสมบัติ วาระการดำรงตำแหน่ง ขอบเขตอำนาจหน้าที่ และความรับผิดชอบของคณะกรรมการชุดต่างๆ เพื่อเป็นกลไกสำคัญในการกำกับดูแลกิจการที่ดี สร้างความมั่นใจแก่ผู้มีส่วนได้เสียว่าบริษัทมีการบริหารงานและการตรวจสอบที่มีประสิทธิภาพ โปร่งใส และตรวจสอบได้</div></div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>กฎบัตรคณะกรรมการตรวจสอบ</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/กฎบัตรและแนวทางปฎิบัติคณะกรรมการตรวจสอบ.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>กฎบัตรคณะกรรมการบริหารความเสี่ยง</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารดาวน์โหลด/กฎบัตรคณะกรรมการบริหารความเสี่ยง.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="guidelines">
+<h2 class="section-title">แนวทางปฏิบัติและคู่มือ</h2><div class="intro-text-merged" style="margin-bottom: 30px;"><div class="text-body" style="color: var(--text-muted); line-height: 1.8;">คู่มือและแนวทางปฏิบัติที่กำหนดขั้นตอนและกระบวนการดำเนินงานของบริษัท เพื่อส่งเสริมประสิทธิภาพในการปฏิบัติงาน การบริหารความเสี่ยง และการกำกับดูแลกิจการให้เป็นไปอย่างมีประสิทธิผล และสอดคล้องกับนโยบายหลักขององค์กร</div></div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>แนวทางปฏิบัติสำหรับคณะกรรมการตรวจสอบ</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/แนวทางปฎิบัติ.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>คู่มือมาตรการต่อต้านคอร์รัปชัน</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารดาวน์โหลด/ฉบับที่-02-คู่มือมาตรการต่อต้านคอร์รัปชัน-26-2-68.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="gov_risk">
+<h2 class="section-title">นโยบายบริหารจัดการความเสี่ยง</h2>
+<div class="policy-content-wrapper"><style>
         .styled-list {
             padding-left: 20px;
             margin: 0;
@@ -280,265 +335,239 @@
         .dep-col::before { background: #312e81 !important; }
     </style>
 <section-header title="นโยบายและแผนการบริหารความเสี่ยง"></section-header>
-
-        
-        <div  style="margin-bottom: 30px;">
-            <p style="margin: 0 0 15px 0; color: var(--text-muted); line-height: 1.7;">
-                <span style="white-space: nowrap;">บริษัทฯ</span> ตระหนักถึงความสำคัญของการบริหารจัดการความเสี่ยง เพื่อขับเคลื่อนองค์กรให้เติบโตอย่างยั่งยืน ท่ามกลางภาวะการแข่งขันและการเปลี่ยนแปลงทั้งปัจจัยภายในและภายนอก จึงกำหนดนโยบายบริหารความเสี่ยงตามมาตรฐานสากล <strong class="skimmable-bold">(COSO-ERM)</strong> ดังนี้:
+<div style="margin-bottom: 30px;">
+<p style="margin: 0 0 15px 0; color: var(--text-muted); line-height: 1.7;">
+<span style="white-space: nowrap;">บริษัทฯ</span> ตระหนักถึงความสำคัญของการบริหารจัดการความเสี่ยง เพื่อขับเคลื่อนองค์กรให้เติบโตอย่างยั่งยืน ท่ามกลางภาวะการแข่งขันและการเปลี่ยนแปลงทั้งปัจจัยภายในและภายนอก จึงกำหนดนโยบายบริหารความเสี่ยงตามมาตรฐานสากล <strong class="skimmable-bold">(COSO-ERM)</strong> ดังนี้:
             </p>
-            <ul class="styled-list">
-                <li><strong style="color: var(--primary);">การมีส่วนร่วมและจิตสำนึก:</strong> กรรมการ ผู้บริหาร และพนักงานทุกคนมีหน้าที่รับผิดชอบประเมิน ติดตาม และสื่อสารการบริหารความเสี่ยง เพื่อสร้างความเข้าใจร่วมกันในฐานะเจ้าของความเสี่ยง (Risk Owner)</li>
-                <li><strong style="color: var(--primary);">การบูรณาการกับกลยุทธ์:</strong> กำหนดให้การบริหารความเสี่ยงเป็นส่วนหนึ่งของการตัดสินใจ การวางกลยุทธ์ แผนงาน และการดำเนินงานของบริษัท</li>
-                <li><strong style="color: var(--primary);">การบริหารจัดการให้อยู่ในระดับที่ยอมรับได้:</strong> กำหนดมาตรการลดโอกาสและผลกระทบจากความเสี่ยง ทั้งระดับบริษัทและหน่วยงาน เพื่อหลีกเลี่ยงความเสียหาย</li>
-                <li><strong style="color: var(--primary);">การประเมินและทบทวนอย่างต่อเนื่อง:</strong> ประเมินและติดตามความเสี่ยงที่มีผลกระทบต่อเป้าหมายอย่างเป็นระบบ พร้อมทบทวนปรับปรุงกระบวนการอย่างสม่ำเสมอ</li>
-                <li><strong style="color: var(--primary);">การรายงานผล:</strong> รายงานการบริหารความเสี่ยง โอกาส ผลกระทบ และแนวทางการจัดการต่อคณะกรรมการบริษัทและผู้บริหารอย่างสม่ำเสมอ</li>
-            </ul>
-        </div>
-
-            <div style="margin-top: 60px;">
-                <section-header title="โครงสร้างและบทบาทหน้าที่ในการบริหารความเสี่ยง"></section-header>
-            
-            <div class="chart-container-p28">
-                <div class="org-chart-wrapper">
-                    <!-- 1 -->
-                    <div class="org-node">
-                        <div class="org-box-pill bg-risk-1">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></div>
-                        <div class="line-v" style="background-color: #312e81;"></div>
-                    </div>
-                    
-                    
-                    <!-- 2 -->
-                    <div class="org-node">
-                        <div class="org-box-pill bg-risk-2">คณะกรรมการบริหารความเสี่ยง</div>
-                        <div class="line-v" style="background-color: #312e81;"></div>
-                    </div>
-                    
-                    <!-- 3 -->
-                    <div class="org-node">
-                        <div class="org-box-pill bg-risk-3">ประธานคณะทำงานบริหารความเสี่ยง</div>
-                        <div class="line-v" style="background-color: #312e81;"></div>
-                    </div>
-                    
-                    <!-- 4 (VP only) -->
-                    <div class="org-node">
-                        <div class="org-box-pill bg-risk-4">รองประธานคณะทำงานบริหารความเสี่ยง</div>
-                    </div>
-                    
-                    <!-- Line below VP with Sec to the right -->
-                    <div class="org-node" style="height: 90px; justify-content: flex-start; flex-direction: row; position: relative;">
-                        <div class="line-v" style="background-color: #312e81; height: 90px;"></div>
-                        <div style="position: absolute; left: 50%; top: 20px; display: flex; align-items: center; z-index: 10;">
-                            <div class="line-h-connect" style="background-color: #312e81;"></div>
-                            <div class="org-box-pill bg-risk-5" style="min-width: auto; padding: 12px 20px; white-space: nowrap; font-size: 18px;">เลขานุการคณะทำงาน</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Departments -->
-                    <div class="deps-items">
-                        <div class="dep-col">
-                            <div class="line-v-small" style="background-color: #312e81;"></div>
-                            <div class="org-box-dep bg-lightgray">ฝ่ายขาย</div>
-                        </div>
-                        <div class="dep-col">
-                            <div class="line-v-small" style="background-color: #312e81;"></div>
-                            <div class="org-box-dep bg-lightgray">ฝ่ายคลัง</div>
-                        </div>
-                        <div class="dep-col">
-                            <div class="line-v-small" style="background-color: #312e81;"></div>
-                            <div class="org-box-dep bg-lightgray">ฝ่ายบัญชีการเงิน</div>
-                        </div>
-                        <div class="dep-col">
-                            <div class="line-v-small" style="background-color: #312e81;"></div>
-                            <div class="org-box-dep bg-lightgray">ฝ่ายจัดซื้อ</div>
-                        </div>
-                        <div class="dep-col">
-                            <div class="line-v-small" style="background-color: #312e81;"></div>
-                            <div class="org-box-dep bg-lightgray">ฝ่ายบุคคล</div>
-                        </div>
-                        <div class="dep-col">
-                            <div class="line-v-small" style="background-color: #312e81;"></div>
-                            <div class="org-box-dep bg-lightgray">ฝ่ายไอที</div>
-                        </div>
-                        <div class="dep-col">
-                            <div class="line-v-small" style="background-color: #312e81;"></div>
-                            <div class="org-box-dep bg-lightgray">ฝ่ายบริหารกลาง</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            </div>
-            <div  style="margin-top: 30px;">
-                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                    <h3 class="text-h3" style="margin: 0; color: var(--primary);">บทบาทหน้าที่หลัก</h3>
-                </div>
-                <ul class="styled-list">
-                    <li><strong style="color: var(--primary);">คณะกรรมการบริหารความเสี่ยง:</strong> ประกอบด้วยกรรมการ 4 ท่าน ทำหน้าที่กำกับดูแล ให้คำแนะนำ และพิจารณาร่างนโยบาย ประเมินความเสี่ยง และมาตรการจัดการ เพื่อให้ความเสี่ยงอยู่ในระดับที่ยอมรับได้ (Risk Appetite) พร้อมรายงานต่อคณะกรรมการบริษัท</li>
-                    <li><strong style="color: var(--primary);">คณะทำงานบริหารความเสี่ยง:</strong> ประกอบด้วยหัวหน้าฝ่ายทั้ง 7 ฝ่าย ทำหน้าที่วิเคราะห์ ติดตาม จัดทำแผนบริหารจัดการ และประเมินความเสี่ยงระดับปฏิบัติการ พร้อมรายงานต่อคณะกรรมการบริหารความเสี่ยง</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 60px;">
-                <section-header title="ปัจจัยเสี่ยงต่อการดำเนินธุรกิจ"></section-header>
-            
-            <h3 class="text-h4" style="margin-top: 30px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
+<ul class="styled-list">
+<li><strong style="color: var(--primary);">การมีส่วนร่วมและจิตสำนึก:</strong> กรรมการ ผู้บริหาร และพนักงานทุกคนมีหน้าที่รับผิดชอบประเมิน ติดตาม และสื่อสารการบริหารความเสี่ยง เพื่อสร้างความเข้าใจร่วมกันในฐานะเจ้าของความเสี่ยง (Risk Owner)</li>
+<li><strong style="color: var(--primary);">การบูรณาการกับกลยุทธ์:</strong> กำหนดให้การบริหารความเสี่ยงเป็นส่วนหนึ่งของการตัดสินใจ การวางกลยุทธ์ แผนงาน และการดำเนินงานของบริษัท</li>
+<li><strong style="color: var(--primary);">การบริหารจัดการให้อยู่ในระดับที่ยอมรับได้:</strong> กำหนดมาตรการลดโอกาสและผลกระทบจากความเสี่ยง ทั้งระดับบริษัทและหน่วยงาน เพื่อหลีกเลี่ยงความเสียหาย</li>
+<li><strong style="color: var(--primary);">การประเมินและทบทวนอย่างต่อเนื่อง:</strong> ประเมินและติดตามความเสี่ยงที่มีผลกระทบต่อเป้าหมายอย่างเป็นระบบ พร้อมทบทวนปรับปรุงกระบวนการอย่างสม่ำเสมอ</li>
+<li><strong style="color: var(--primary);">การรายงานผล:</strong> รายงานการบริหารความเสี่ยง โอกาส ผลกระทบ และแนวทางการจัดการต่อคณะกรรมการบริษัทและผู้บริหารอย่างสม่ำเสมอ</li>
+</ul>
+</div>
+<div style="margin-top: 60px;">
+<section-header title="โครงสร้างและบทบาทหน้าที่ในการบริหารความเสี่ยง"></section-header>
+<div class="chart-container-p28">
+<div class="org-chart-wrapper">
+<!-- 1 -->
+<div class="org-node">
+<div class="org-box-pill bg-risk-1">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></div>
+<div class="line-v" style="background-color: #312e81;"></div>
+</div>
+<!-- 2 -->
+<div class="org-node">
+<div class="org-box-pill bg-risk-2">คณะกรรมการบริหารความเสี่ยง</div>
+<div class="line-v" style="background-color: #312e81;"></div>
+</div>
+<!-- 3 -->
+<div class="org-node">
+<div class="org-box-pill bg-risk-3">ประธานคณะทำงานบริหารความเสี่ยง</div>
+<div class="line-v" style="background-color: #312e81;"></div>
+</div>
+<!-- 4 (VP only) -->
+<div class="org-node">
+<div class="org-box-pill bg-risk-4">รองประธานคณะทำงานบริหารความเสี่ยง</div>
+</div>
+<!-- Line below VP with Sec to the right -->
+<div class="org-node" style="height: 90px; justify-content: flex-start; flex-direction: row; position: relative;">
+<div class="line-v" style="background-color: #312e81; height: 90px;"></div>
+<div style="position: absolute; left: 50%; top: 20px; display: flex; align-items: center; z-index: 10;">
+<div class="line-h-connect" style="background-color: #312e81;"></div>
+<div class="org-box-pill bg-risk-5" style="min-width: auto; padding: 12px 20px; white-space: nowrap; font-size: 18px;">เลขานุการคณะทำงาน</div>
+</div>
+</div>
+<!-- Departments -->
+<div class="deps-items">
+<div class="dep-col">
+<div class="line-v-small" style="background-color: #312e81;"></div>
+<div class="org-box-dep bg-lightgray">ฝ่ายขาย</div>
+</div>
+<div class="dep-col">
+<div class="line-v-small" style="background-color: #312e81;"></div>
+<div class="org-box-dep bg-lightgray">ฝ่ายคลัง</div>
+</div>
+<div class="dep-col">
+<div class="line-v-small" style="background-color: #312e81;"></div>
+<div class="org-box-dep bg-lightgray">ฝ่ายบัญชีการเงิน</div>
+</div>
+<div class="dep-col">
+<div class="line-v-small" style="background-color: #312e81;"></div>
+<div class="org-box-dep bg-lightgray">ฝ่ายจัดซื้อ</div>
+</div>
+<div class="dep-col">
+<div class="line-v-small" style="background-color: #312e81;"></div>
+<div class="org-box-dep bg-lightgray">ฝ่ายบุคคล</div>
+</div>
+<div class="dep-col">
+<div class="line-v-small" style="background-color: #312e81;"></div>
+<div class="org-box-dep bg-lightgray">ฝ่ายไอที</div>
+</div>
+<div class="dep-col">
+<div class="line-v-small" style="background-color: #312e81;"></div>
+<div class="org-box-dep bg-lightgray">ฝ่ายบริหารกลาง</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 30px;">
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+<h3 class="text-h3" style="margin: 0; color: var(--primary);">บทบาทหน้าที่หลัก</h3>
+</div>
+<ul class="styled-list">
+<li><strong style="color: var(--primary);">คณะกรรมการบริหารความเสี่ยง:</strong> ประกอบด้วยกรรมการ 4 ท่าน ทำหน้าที่กำกับดูแล ให้คำแนะนำ และพิจารณาร่างนโยบาย ประเมินความเสี่ยง และมาตรการจัดการ เพื่อให้ความเสี่ยงอยู่ในระดับที่ยอมรับได้ (Risk Appetite) พร้อมรายงานต่อคณะกรรมการบริษัท</li>
+<li><strong style="color: var(--primary);">คณะทำงานบริหารความเสี่ยง:</strong> ประกอบด้วยหัวหน้าฝ่ายทั้ง 7 ฝ่าย ทำหน้าที่วิเคราะห์ ติดตาม จัดทำแผนบริหารจัดการ และประเมินความเสี่ยงระดับปฏิบัติการ พร้อมรายงานต่อคณะกรรมการบริหารความเสี่ยง</li>
+</ul>
+</div>
+<div style="margin-top: 60px;">
+<section-header title="ปัจจัยเสี่ยงต่อการดำเนินธุรกิจ"></section-header>
+<h3 class="text-h4" style="margin-top: 30px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
                 ความเสี่ยงด้านกลยุทธ์<span style="white-space: nowrap;">บริษัท</span> (Strategic Risk)
             </h3>
-            
-            <div class="risk-grid">
-                <div class="risk-card">
-                    <h4>ความเสี่ยงจากการมีคู่ค้าน้อยรายและการเปลี่ยนแปลงนโยบายของคู่ค้า</h4>
-                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
-                    <p class="risk-desc"><span style="white-space: nowrap;">บริษัทฯ</span> เป็นตัวแทนจำหน่ายสินค้าเคมีภัณฑ์ให้กับ<span style="white-space: nowrap;">บริษัท</span>ชั้นนำทั้งในและต่างประเทศ ที่เป็นสินค้าเคมีภัณฑ์ประเภทสารทำละลาย (Solvents) ซึ่งในปี 2568 ได้มีการเปลี่ยนแปลงทั้งด้านผู้ผลิตที่เป็นโรงกลั่นและมีการเปลี่ยนแปลงด้านนโยบายของคู่ค้า เช่น การเพิ่มตัวแทนจัดจำหน่ายในทุกประเทศ ซึ่งอาจทำให้<span style="white-space: nowrap;">บริษัท</span>มีคู่แข่งทางการค้าเพิ่มขึ้นและเสียส่วนแบ่งทางการตลาด</p>
-                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
-                    <ul class="risk-measures">
-                        <li><strong>การขยายฐานตลาด:</strong> จัดสรรงบประมาณเชิงรุกเพื่อเข้าถึงกลุ่มเป้าหมายใหม่และเพิ่มส่วนแบ่งการตลาด</li>
-                        <li><strong>การสร้างความสัมพันธ์ที่ดีกับลูกค้า:</strong> โดยการเสนอผลิตภัณฑ์ตามความต้องการของลูกค้า</li>
-                        <li><strong>การบูรณาการความร่วมมือภายใน:</strong> ประสานงานร่วมกับฝ่ายขาย บริการ และโลจิสติกส์ เพื่อพัฒนาขีดความสามารถในการส่งมอบผลิตภัณฑ์</li>
-                        <li><strong>การจัดการความพึงพอใจเชิงรุก:</strong> ให้ความสำคัญกับการแก้ไขข้อร้องเรียนทันที พร้อมระบบประเมินความพึงพอใจเพื่อการปรับปรุงอย่างต่อเนื่อง</li>
-                    </ul>
-                </div>
-
-                <div class="risk-card">
-                    <h4>ความเสี่ยงด้านการลงทุน (Capital Projects Risk)</h4>
-                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
-                    <p class="risk-desc"><span style="white-space: nowrap;">บริษัทฯ</span> มีการลงทุนอย่างต่อเนื่อง เพื่อขยายการเติบโตในอนาคต และเพื่อความได้เปรียบในการแข่งขัน ซึ่งในบางครั้งอาจทำให้<span style="white-space: nowrap;">บริษัทฯ</span> มีความเสี่ยงที่ผลตอบแทนจากการลงทุนไม่อาจเป็นไปตามเป้าหมาย รวมทั้งการดำเนินการของโครงการหรือแผนงานอาจเกิดความล่าช้า</p>
-                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
-                    <ul class="risk-measures">
-                        <li>จัดทำแผนการลงทุน ต้องทำการวิเคราะห์ความเสี่ยง และประเมินผลตอบแทนการลงทุน โดยนำเสนอแผนการลงทุนต่อคณะกรรมการบริหารความเสี่ยง เพื่อพิจารณาและให้ความเห็นแผนธุรกิจ และเสนอต่อที่ประชุมคณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></li>
-                        <li>กำหนดและมอบหมายผู้รับผิดชอบโครงการทำหน้าที่ในการติดตาม ประเมิน และแก้ไขปัญหา และรายงานต่อคณะกรรมการบริหาร คณะกรรมการบริหารความเสี่ยง และคณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></li>
-                        <li>ทำการประเมินผลการลงทุนอย่างต่อเนื่องเพื่อให้สามารถประเมินผลการลงทุนและแก้ไขปัญหาได้ทันเวลา</li>
-                        <li>การจัดตั้งคณะทำงานการลงทุน เพื่อทบทวนแผนการลงทุนของ<span style="white-space: nowrap;">บริษัท</span> และ<span style="white-space: nowrap;">บริษัท</span>ย่อย</li>
-                    </ul>
-                </div>
-
-                <div class="risk-card">
-                    <h4>ความเสี่ยงจากการพึ่งพาลูกค้ารายสำคัญ (Dependency on Major Customers)</h4>
-                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
-                    <p class="risk-desc"><span style="white-space: nowrap;">บริษัทฯ</span> เผชิญความท้าทายจากการพึ่งพาลูกค้ารายใหญ่ ท่ามกลางปัจจัยเสี่ยงระดับมหภาค ทั้งจากผลกระทบของสงครามและนโยบายกำแพงภาษีที่ส่งผลโดยตรงต่อกำลังซื้อของคู่ค้า นอกจากนี้ การมีคู่แข่งรายใหม่เข้ามาในอุตสาหกรรมเคมีภัณฑ์มากขึ้น ทำให้เกิดการแข่งขันด้านราคาที่รุนแรงขึ้น <span style="white-space: nowrap;">บริษัทฯ</span> จึงมีความเสี่ยงหากลูกค้ารายสำคัญปรับลดปริมาณการสั่งซื้อหรือเปลี่ยนไปใช้บริการคู่แข่ง</p>
-                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
-                    <ul class="risk-measures">
-                        <li>การขยายฐานตลาด จัดสรรงบประมาณเชิงรุกเพื่อเข้าถึงกลุ่มเป้าหมายใหม่และเพิ่มส่วนแบ่งการตลาด</li>
-                        <li>การสร้างความสัมพันธ์ที่ดีกับลูกค้า โดยการเสนอผลิตภัณฑ์ตามความต้องการของลูกค้า</li>
-                        <li>การบูรณาการความร่วมมือภายใน ประสานงานร่วมกับฝ่ายขาย บริการ และโลจิสติกส์ เพื่อพัฒนาขีดความสามารถในการส่งมอบผลิตภัณฑ์</li>
-                        <li>การจัดการความพึงพอใจเชิงรุก ให้ความสำคัญกับการแก้ไขข้อร้องเรียนทันที พร้อมระบบประเมินความพึงพอใจเพื่อการปรับปรุงอย่างต่อเนื่อง</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3 class="text-h4" style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
+<div class="risk-grid">
+<div class="risk-card">
+<h4>ความเสี่ยงจากการมีคู่ค้าน้อยรายและการเปลี่ยนแปลงนโยบายของคู่ค้า</h4>
+<span class="risk-section-title">ลักษณะความเสี่ยง:</span>
+<p class="risk-desc"><span style="white-space: nowrap;">บริษัทฯ</span> เป็นตัวแทนจำหน่ายสินค้าเคมีภัณฑ์ให้กับ<span style="white-space: nowrap;">บริษัท</span>ชั้นนำทั้งในและต่างประเทศ ที่เป็นสินค้าเคมีภัณฑ์ประเภทสารทำละลาย (Solvents) ซึ่งในปี 2568 ได้มีการเปลี่ยนแปลงทั้งด้านผู้ผลิตที่เป็นโรงกลั่นและมีการเปลี่ยนแปลงด้านนโยบายของคู่ค้า เช่น การเพิ่มตัวแทนจัดจำหน่ายในทุกประเทศ ซึ่งอาจทำให้<span style="white-space: nowrap;">บริษัท</span>มีคู่แข่งทางการค้าเพิ่มขึ้นและเสียส่วนแบ่งทางการตลาด</p>
+<span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span>
+<ul class="risk-measures">
+<li><strong>การขยายฐานตลาด:</strong> จัดสรรงบประมาณเชิงรุกเพื่อเข้าถึงกลุ่มเป้าหมายใหม่และเพิ่มส่วนแบ่งการตลาด</li>
+<li><strong>การสร้างความสัมพันธ์ที่ดีกับลูกค้า:</strong> โดยการเสนอผลิตภัณฑ์ตามความต้องการของลูกค้า</li>
+<li><strong>การบูรณาการความร่วมมือภายใน:</strong> ประสานงานร่วมกับฝ่ายขาย บริการ และโลจิสติกส์ เพื่อพัฒนาขีดความสามารถในการส่งมอบผลิตภัณฑ์</li>
+<li><strong>การจัดการความพึงพอใจเชิงรุก:</strong> ให้ความสำคัญกับการแก้ไขข้อร้องเรียนทันที พร้อมระบบประเมินความพึงพอใจเพื่อการปรับปรุงอย่างต่อเนื่อง</li>
+</ul>
+</div>
+<div class="risk-card">
+<h4>ความเสี่ยงด้านการลงทุน (Capital Projects Risk)</h4>
+<span class="risk-section-title">ลักษณะความเสี่ยง:</span>
+<p class="risk-desc"><span style="white-space: nowrap;">บริษัทฯ</span> มีการลงทุนอย่างต่อเนื่อง เพื่อขยายการเติบโตในอนาคต และเพื่อความได้เปรียบในการแข่งขัน ซึ่งในบางครั้งอาจทำให้<span style="white-space: nowrap;">บริษัทฯ</span> มีความเสี่ยงที่ผลตอบแทนจากการลงทุนไม่อาจเป็นไปตามเป้าหมาย รวมทั้งการดำเนินการของโครงการหรือแผนงานอาจเกิดความล่าช้า</p>
+<span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span>
+<ul class="risk-measures">
+<li>จัดทำแผนการลงทุน ต้องทำการวิเคราะห์ความเสี่ยง และประเมินผลตอบแทนการลงทุน โดยนำเสนอแผนการลงทุนต่อคณะกรรมการบริหารความเสี่ยง เพื่อพิจารณาและให้ความเห็นแผนธุรกิจ และเสนอต่อที่ประชุมคณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></li>
+<li>กำหนดและมอบหมายผู้รับผิดชอบโครงการทำหน้าที่ในการติดตาม ประเมิน และแก้ไขปัญหา และรายงานต่อคณะกรรมการบริหาร คณะกรรมการบริหารความเสี่ยง และคณะกรรมการ<span style="white-space: nowrap;">บริษัท</span></li>
+<li>ทำการประเมินผลการลงทุนอย่างต่อเนื่องเพื่อให้สามารถประเมินผลการลงทุนและแก้ไขปัญหาได้ทันเวลา</li>
+<li>การจัดตั้งคณะทำงานการลงทุน เพื่อทบทวนแผนการลงทุนของ<span style="white-space: nowrap;">บริษัท</span> และ<span style="white-space: nowrap;">บริษัท</span>ย่อย</li>
+</ul>
+</div>
+<div class="risk-card">
+<h4>ความเสี่ยงจากการพึ่งพาลูกค้ารายสำคัญ (Dependency on Major Customers)</h4>
+<span class="risk-section-title">ลักษณะความเสี่ยง:</span>
+<p class="risk-desc"><span style="white-space: nowrap;">บริษัทฯ</span> เผชิญความท้าทายจากการพึ่งพาลูกค้ารายใหญ่ ท่ามกลางปัจจัยเสี่ยงระดับมหภาค ทั้งจากผลกระทบของสงครามและนโยบายกำแพงภาษีที่ส่งผลโดยตรงต่อกำลังซื้อของคู่ค้า นอกจากนี้ การมีคู่แข่งรายใหม่เข้ามาในอุตสาหกรรมเคมีภัณฑ์มากขึ้น ทำให้เกิดการแข่งขันด้านราคาที่รุนแรงขึ้น <span style="white-space: nowrap;">บริษัทฯ</span> จึงมีความเสี่ยงหากลูกค้ารายสำคัญปรับลดปริมาณการสั่งซื้อหรือเปลี่ยนไปใช้บริการคู่แข่ง</p>
+<span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span>
+<ul class="risk-measures">
+<li>การขยายฐานตลาด จัดสรรงบประมาณเชิงรุกเพื่อเข้าถึงกลุ่มเป้าหมายใหม่และเพิ่มส่วนแบ่งการตลาด</li>
+<li>การสร้างความสัมพันธ์ที่ดีกับลูกค้า โดยการเสนอผลิตภัณฑ์ตามความต้องการของลูกค้า</li>
+<li>การบูรณาการความร่วมมือภายใน ประสานงานร่วมกับฝ่ายขาย บริการ และโลจิสติกส์ เพื่อพัฒนาขีดความสามารถในการส่งมอบผลิตภัณฑ์</li>
+<li>การจัดการความพึงพอใจเชิงรุก ให้ความสำคัญกับการแก้ไขข้อร้องเรียนทันที พร้อมระบบประเมินความพึงพอใจเพื่อการปรับปรุงอย่างต่อเนื่อง</li>
+</ul>
+</div>
+</div>
+<h3 class="text-h4" style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
                 ความเสี่ยงด้านการเงิน (Financial Risk)
             </h3>
-            
-            <div class="risk-grid">
-                <div class="risk-card">
-                    <h4>ความเสี่ยงด้านความผันผวนของอัตราดอกเบี้ย</h4>
-                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
-                    <p class="risk-desc">เนื่องจากการขยายตัวทางธุรกิจและการลงทุนในโครงการเชิงกลยุทธ์อย่างต่อเนื่อง <span style="white-space: nowrap;">บริษัทฯ</span> ยังคงเผชิญกับความท้าทายจากสภาวะดอกเบี้ยที่ทรงตัวอยู่ และความผันผวนของตลาดการเงินโลก เพื่อเสริมสร้างความแข็งแกร่งทางการเงินในปี 2568</p>
-                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
-                    <ul class="risk-measures">
-                        <li>ติดตามข่าวสาร และนโยบายของสถาบันการเงินอย่างใกล้ชิด โดยฝ่ายการเงินดำเนินการประสานงานกับสถาบันการเงินเพื่อประเมินและเปลี่ยนรูปแบบอัตราดอกเบี้ยในจังหวะที่เหมาะสม เพื่อล็อกต้นทุนทางการเงินและลดความเสี่ยงในช่วงดอกเบี้ยขาขึ้น</li>
-                        <li>การบริหารจัดการสมดุลระหว่างกระแสเงินสดรับและกระแสเงินสดจ่าย รวมถึงการปรับปรุงระยะเวลาการให้และรับสินเชื่อ (Credit Term) ให้สอดคล้องกัน และมุ่งเน้นการหมุนเวียนของเงินทุนหมุนเวียน (Working Capital) อย่างเหมาะสม เพื่อลดความจำเป็นในการก่อหนี้เพิ่มและลดผลกระทบจากการปรับตัวของอัตราดอกเบี้ย</li>
-                        <li>การทำสัญญาดอกเบี้ยเงินกู้ยืมระยะสั้น ในกรณีที่ดอกเบี้ยขาขึ้น พิจารณาจัดทำสัญญาเงินกู้ระยะสั้นโดยล็อกระยะเวลาเครดิตเทอมให้ยาวขึ้น เพื่อคงอัตราดอกเบี้ยเดิมให้นานที่สุด</li>
-                    </ul>
-                </div>
-
-                <div class="risk-card">
-                    <h4>ความเสี่ยงด้านความผันผวนของอัตราแลกเปลี่ยน</h4>
-                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
-                    <p class="risk-desc">เนื่องจาก<span style="white-space: nowrap;">บริษัท</span>มีการประกอบธุรกิจที่เชื่อมโยงกับตลาดต่างประเทศ <span style="white-space: nowrap;">บริษัท</span>จึงมีความเสี่ยงจากการเปลี่ยนแปลงของอัตราแลกเปลี่ยนอย่างหลีกเลี่ยงไม่ได้ โดยเฉพาะในสภาวะเศรษฐกิจโลกที่มีความไม่แน่นอนสูงจากการดำเนินนโยบายทางการเงินของธนาคารกลางในประเทศมหาอำนาจ</p>
-                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
-                    <ul class="risk-measures">
-                        <li>กำหนดผู้รับผิดชอบในการติดตามข่าวสารและความเคลื่อนไหวของอัตราแลกเปลี่ยนอย่างใกล้ชิดเป็นประจำทุกวัน เพื่อประเมินทิศทางค่าเงินได้อย่างแม่นยำ และดำเนินการประสานงานและหารือร่วมกับธนาคารพันธมิตร เพื่อรับทราบมุมมองและบทวิเคราะห์แนวโน้มค่าเงินประกอบการตัดสินใจ</li>
-                        <li>การแสวงหาเครื่องมือทางการเงินใหม่ๆ ศึกษาและวิเคราะห์ผลิตภัณฑ์ทางการเงินที่หลากหลายเพิ่มเติม เพื่อเพิ่มทางเลือกในการบริหารความเสี่ยงให้มีความยืดหยุ่นสูงขึ้น</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3 class="text-h4" style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
+<div class="risk-grid">
+<div class="risk-card">
+<h4>ความเสี่ยงด้านความผันผวนของอัตราดอกเบี้ย</h4>
+<span class="risk-section-title">ลักษณะความเสี่ยง:</span>
+<p class="risk-desc">เนื่องจากการขยายตัวทางธุรกิจและการลงทุนในโครงการเชิงกลยุทธ์อย่างต่อเนื่อง <span style="white-space: nowrap;">บริษัทฯ</span> ยังคงเผชิญกับความท้าทายจากสภาวะดอกเบี้ยที่ทรงตัวอยู่ และความผันผวนของตลาดการเงินโลก เพื่อเสริมสร้างความแข็งแกร่งทางการเงินในปี 2568</p>
+<span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span>
+<ul class="risk-measures">
+<li>ติดตามข่าวสาร และนโยบายของสถาบันการเงินอย่างใกล้ชิด โดยฝ่ายการเงินดำเนินการประสานงานกับสถาบันการเงินเพื่อประเมินและเปลี่ยนรูปแบบอัตราดอกเบี้ยในจังหวะที่เหมาะสม เพื่อล็อกต้นทุนทางการเงินและลดความเสี่ยงในช่วงดอกเบี้ยขาขึ้น</li>
+<li>การบริหารจัดการสมดุลระหว่างกระแสเงินสดรับและกระแสเงินสดจ่าย รวมถึงการปรับปรุงระยะเวลาการให้และรับสินเชื่อ (Credit Term) ให้สอดคล้องกัน และมุ่งเน้นการหมุนเวียนของเงินทุนหมุนเวียน (Working Capital) อย่างเหมาะสม เพื่อลดความจำเป็นในการก่อหนี้เพิ่มและลดผลกระทบจากการปรับตัวของอัตราดอกเบี้ย</li>
+<li>การทำสัญญาดอกเบี้ยเงินกู้ยืมระยะสั้น ในกรณีที่ดอกเบี้ยขาขึ้น พิจารณาจัดทำสัญญาเงินกู้ระยะสั้นโดยล็อกระยะเวลาเครดิตเทอมให้ยาวขึ้น เพื่อคงอัตราดอกเบี้ยเดิมให้นานที่สุด</li>
+</ul>
+</div>
+<div class="risk-card">
+<h4>ความเสี่ยงด้านความผันผวนของอัตราแลกเปลี่ยน</h4>
+<span class="risk-section-title">ลักษณะความเสี่ยง:</span>
+<p class="risk-desc">เนื่องจาก<span style="white-space: nowrap;">บริษัท</span>มีการประกอบธุรกิจที่เชื่อมโยงกับตลาดต่างประเทศ <span style="white-space: nowrap;">บริษัท</span>จึงมีความเสี่ยงจากการเปลี่ยนแปลงของอัตราแลกเปลี่ยนอย่างหลีกเลี่ยงไม่ได้ โดยเฉพาะในสภาวะเศรษฐกิจโลกที่มีความไม่แน่นอนสูงจากการดำเนินนโยบายทางการเงินของธนาคารกลางในประเทศมหาอำนาจ</p>
+<span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span>
+<ul class="risk-measures">
+<li>กำหนดผู้รับผิดชอบในการติดตามข่าวสารและความเคลื่อนไหวของอัตราแลกเปลี่ยนอย่างใกล้ชิดเป็นประจำทุกวัน เพื่อประเมินทิศทางค่าเงินได้อย่างแม่นยำ และดำเนินการประสานงานและหารือร่วมกับธนาคารพันธมิตร เพื่อรับทราบมุมมองและบทวิเคราะห์แนวโน้มค่าเงินประกอบการตัดสินใจ</li>
+<li>การแสวงหาเครื่องมือทางการเงินใหม่ๆ ศึกษาและวิเคราะห์ผลิตภัณฑ์ทางการเงินที่หลากหลายเพิ่มเติม เพื่อเพิ่มทางเลือกในการบริหารความเสี่ยงให้มีความยืดหยุ่นสูงขึ้น</li>
+</ul>
+</div>
+</div>
+<h3 class="text-h4" style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
                 ความเสี่ยงด้านห่วงโซ่อุปทาน (Supply Chain Risk)
             </h3>
-            
-            <div class="risk-grid">
-                <div class="risk-card">
-                    <h4>ความเสี่ยงความผันผวนของราคาผลิตภัณฑ์ (ต้นทุนสูง)</h4>
-                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
-                    <p class="risk-desc">ในปี 2568 คาดการณ์ว่าเศรษฐกิจไทยจะขยายตัวโดยมีปัจจัยสนับสนุนหลักจากการบริโภคภายในประเทศและการลงทุนภาครัฐที่ขยายตัวได้ดี อย่างไรก็ตาม ภาคธุรกิจยังคงต้องเผชิญกับความท้าทายจากปัจจัยภายนอก เช่น สงครามการค้า ทิศทางนโยบายการเงินของประเทศมหาอำนาจ และความผันผวนของราคาพลังงานในตลาดโลก</p>
-                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
-                    <ul class="risk-measures">
-                        <li>ติดตาม วิเคราะห์ และประเมินสถานการณ์ของปัจจัยที่มีผลกระทบต่อความผันผวนของราคาผลิตภัณฑ์ ได้แก่ ราคาน้ำมันตลาดโลก ภาวะเศรษฐกิจ การเปลี่ยนแปลงอุปสงค์และอุปทาน และการเปลี่ยนแปลงของสภาพภูมิอากาศโลก เพื่อวางแผนการซื้อขายสินค้า</li>
-                        <li>การทำสัญญาซื้อขายสินค้าล่วงหน้าแบบประกันราคาระยะยาวระหว่าง<span style="white-space: nowrap;">บริษัท</span>คู่ค้า โดยมีการกำหนดเป้าหมายของราคา ปริมาณ และระยะเวลาในการบริหารความเสี่ยงอย่างเหมาะสมให้สอดคล้องกับแผนธุรกิจของ<span style="white-space: nowrap;">บริษัทฯ</span></li>
-                        <li>การบริหารจัดการสินค้าคงเหลือให้เหมาะสม และการวางแผนการสั่งซื้อให้สอดคล้องกับแผนการขาย เพื่อลดผลกระทบจากความผันผวนของราคาที่มีต่อผลตอบแทนและผลประกอบการของ<span style="white-space: nowrap;">บริษัท</span></li>
-                    </ul>
-                </div>
-
-                <div class="risk-card">
-                    <h4>ความเสี่ยงธุรกิจหยุดชะงักของห่วงโซ่อุปทาน (Supply Chain Disruption Risk)</h4>
-                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
-                    <p class="risk-desc"><span style="white-space: nowrap;">บริษัท</span>ประเมินว่าในปี 2568 ความผันผวนจากการเปลี่ยนแปลงของสภาพภูมิอากาศ (Climate Change) และอุบัติภัยทางธรณีวิทยาอย่างเหตุการณ์แผ่นดินไหวในประเทศไทย เป็นปัจจัยสำคัญที่อาจนำไปสู่ ความเสี่ยงต่อการหยุดชะงักของห่วงโซ่อุปทาน (Supply Chain Disruption) อย่างรุนแรง ซึ่งจะส่งผลกระทบต่อเนื่องเป็นทอดๆ ต่อกระบวนการทางธุรกิจได้</p>
-                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
-                    <ul class="risk-measures">
-                        <li>การบริหารจัดการสินค้าคงคลังปรับปรุงนโยบายการสำรองสินค้าและวัตถุดิบ (Safety Stock) ให้สามารถบริหารจัดการการขนส่งได้อย่างมีประสิทธิภาพ</li>
-                        <li>การจัดทำแผนฉุกเฉินรองรับวิกฤตการณ์ให้ครอบคลุมทั้งห่วงโซ่อุปทาน และการฝึกซ้อมรับมือ</li>
-                        <li>ติดตั้งโปรแกรมการทำงานบนอุปกรณ์พกพาเพื่อให้สามารถรองรับดำเนินงานภายนอกได้</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3 class="text-h4" style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
+<div class="risk-grid">
+<div class="risk-card">
+<h4>ความเสี่ยงความผันผวนของราคาผลิตภัณฑ์ (ต้นทุนสูง)</h4>
+<span class="risk-section-title">ลักษณะความเสี่ยง:</span>
+<p class="risk-desc">ในปี 2568 คาดการณ์ว่าเศรษฐกิจไทยจะขยายตัวโดยมีปัจจัยสนับสนุนหลักจากการบริโภคภายในประเทศและการลงทุนภาครัฐที่ขยายตัวได้ดี อย่างไรก็ตาม ภาคธุรกิจยังคงต้องเผชิญกับความท้าทายจากปัจจัยภายนอก เช่น สงครามการค้า ทิศทางนโยบายการเงินของประเทศมหาอำนาจ และความผันผวนของราคาพลังงานในตลาดโลก</p>
+<span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span>
+<ul class="risk-measures">
+<li>ติดตาม วิเคราะห์ และประเมินสถานการณ์ของปัจจัยที่มีผลกระทบต่อความผันผวนของราคาผลิตภัณฑ์ ได้แก่ ราคาน้ำมันตลาดโลก ภาวะเศรษฐกิจ การเปลี่ยนแปลงอุปสงค์และอุปทาน และการเปลี่ยนแปลงของสภาพภูมิอากาศโลก เพื่อวางแผนการซื้อขายสินค้า</li>
+<li>การทำสัญญาซื้อขายสินค้าล่วงหน้าแบบประกันราคาระยะยาวระหว่าง<span style="white-space: nowrap;">บริษัท</span>คู่ค้า โดยมีการกำหนดเป้าหมายของราคา ปริมาณ และระยะเวลาในการบริหารความเสี่ยงอย่างเหมาะสมให้สอดคล้องกับแผนธุรกิจของ<span style="white-space: nowrap;">บริษัทฯ</span></li>
+<li>การบริหารจัดการสินค้าคงเหลือให้เหมาะสม และการวางแผนการสั่งซื้อให้สอดคล้องกับแผนการขาย เพื่อลดผลกระทบจากความผันผวนของราคาที่มีต่อผลตอบแทนและผลประกอบการของ<span style="white-space: nowrap;">บริษัท</span></li>
+</ul>
+</div>
+<div class="risk-card">
+<h4>ความเสี่ยงธุรกิจหยุดชะงักของห่วงโซ่อุปทาน (Supply Chain Disruption Risk)</h4>
+<span class="risk-section-title">ลักษณะความเสี่ยง:</span>
+<p class="risk-desc"><span style="white-space: nowrap;">บริษัท</span>ประเมินว่าในปี 2568 ความผันผวนจากการเปลี่ยนแปลงของสภาพภูมิอากาศ (Climate Change) และอุบัติภัยทางธรณีวิทยาอย่างเหตุการณ์แผ่นดินไหวในประเทศไทย เป็นปัจจัยสำคัญที่อาจนำไปสู่ ความเสี่ยงต่อการหยุดชะงักของห่วงโซ่อุปทาน (Supply Chain Disruption) อย่างรุนแรง ซึ่งจะส่งผลกระทบต่อเนื่องเป็นทอดๆ ต่อกระบวนการทางธุรกิจได้</p>
+<span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span>
+<ul class="risk-measures">
+<li>การบริหารจัดการสินค้าคงคลังปรับปรุงนโยบายการสำรองสินค้าและวัตถุดิบ (Safety Stock) ให้สามารถบริหารจัดการการขนส่งได้อย่างมีประสิทธิภาพ</li>
+<li>การจัดทำแผนฉุกเฉินรองรับวิกฤตการณ์ให้ครอบคลุมทั้งห่วงโซ่อุปทาน และการฝึกซ้อมรับมือ</li>
+<li>ติดตั้งโปรแกรมการทำงานบนอุปกรณ์พกพาเพื่อให้สามารถรองรับดำเนินงานภายนอกได้</li>
+</ul>
+</div>
+</div>
+<h3 class="text-h4" style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
                 ความเสี่ยงที่อาจเกิดขึ้นใหม่ (Emerging Risks)
             </h3>
-            
-            <div class="risk-grid" style="grid-template-columns: 1fr;"> <!-- Make this one full width since it's only one item -->
-                <div class="risk-card">
-                    <h4>ความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)</h4>
-                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
-                    <p class="risk-desc">ปัจจุบันปัญหาภัยธรรมชาติเกิดขึ้นบ่อยครั้งและรุนแรงขึ้น ซึ่งมีสาเหตุหลักมาจากการเปลี่ยนแปลงสภาพภูมิอากาศ จากกิจกรรมของมนุษย์ เช่น การปล่อยก๊าซเรือนกระจก และการทำลายทรัพยากรธรรมชาติ ประเด็นดังกล่าวกลายเป็นความคาดหวังสำคัญที่ลูกค้าและผู้มีส่วนได้เสียมีต่อ<span style="white-space: nowrap;">บริษัท</span></p>
-                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
-                    <p class="risk-desc" style="margin-bottom: 10px;"><span style="white-space: nowrap;">บริษัท</span>มุ่งมั่นบริหารจัดการธุรกิจโดยคำนึงถึงมิติ ESG อย่างเคร่งครัด ทั้งการป้องกันความเสี่ยงจากการหยุดชะงักของห่วงโซ่อุปทานจากภัยธรรมชาติในปี 2568 และการยกระดับมาตรฐานการดำเนินงานที่เป็นมิตรต่อสิ่งแวดล้อม</p>
-                    <ul class="risk-measures">
-                        <li>การจัดตั้งคณะทำงานและนโยบายด้านความยั่งยืนในการประเมินกำหนดเป้าหมาย และการดำเนินการให้เป็นไปตามกลยุทธ์ของ<span style="white-space: nowrap;">บริษัท</span></li>
-                        <li>การจัดทำรายงานการปล่อยก๊าซเรือนกระจกขององค์กร (CFO) และต้องได้รับการรับรองจากองค์การบริหารจัดการก๊าซเรือนกระจก (องค์การมหาชน) และ ISO 14064-1</li>
-                        <li>การกำหนดแนวทางการบริหารจัดการด้านสิ่งแวดล้อม สังคม และธรรมาภิบาล รวมทั้งความมีส่วนร่วมของทุกหน่วยงาน เพื่อให้เกิดความเป็นวัฒนธรรมขององค์กร</li>
-                        <li>จัดทำแผนโครงการต่างๆให้ครอบคลุมทั้ง 3 มิติ มิติสิ่งแวดล้อม มิติสังคม และมิติธรรมาภิบาล</li>
-                    </ul>
-                </div>
-            </div>
-            <h3 class="text-h4" style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
-                ความเสี่ยงด้านระบบสารสนเทศและการปฏิบัติงาน (IT & Operational Risk)
+<div class="risk-grid" style="grid-template-columns: 1fr;"> <!-- Make this one full width since it's only one item -->
+<div class="risk-card">
+<h4>ความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)</h4>
+<span class="risk-section-title">ลักษณะความเสี่ยง:</span>
+<p class="risk-desc">ปัจจุบันปัญหาภัยธรรมชาติเกิดขึ้นบ่อยครั้งและรุนแรงขึ้น ซึ่งมีสาเหตุหลักมาจากการเปลี่ยนแปลงสภาพภูมิอากาศ จากกิจกรรมของมนุษย์ เช่น การปล่อยก๊าซเรือนกระจก และการทำลายทรัพยากรธรรมชาติ ประเด็นดังกล่าวกลายเป็นความคาดหวังสำคัญที่ลูกค้าและผู้มีส่วนได้เสียมีต่อ<span style="white-space: nowrap;">บริษัท</span></p>
+<span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span>
+<p class="risk-desc" style="margin-bottom: 10px;"><span style="white-space: nowrap;">บริษัท</span>มุ่งมั่นบริหารจัดการธุรกิจโดยคำนึงถึงมิติ ESG อย่างเคร่งครัด ทั้งการป้องกันความเสี่ยงจากการหยุดชะงักของห่วงโซ่อุปทานจากภัยธรรมชาติในปี 2568 และการยกระดับมาตรฐานการดำเนินงานที่เป็นมิตรต่อสิ่งแวดล้อม</p>
+<ul class="risk-measures">
+<li>การจัดตั้งคณะทำงานและนโยบายด้านความยั่งยืนในการประเมินกำหนดเป้าหมาย และการดำเนินการให้เป็นไปตามกลยุทธ์ของ<span style="white-space: nowrap;">บริษัท</span></li>
+<li>การจัดทำรายงานการปล่อยก๊าซเรือนกระจกขององค์กร (CFO) และต้องได้รับการรับรองจากองค์การบริหารจัดการก๊าซเรือนกระจก (องค์การมหาชน) และ ISO 14064-1</li>
+<li>การกำหนดแนวทางการบริหารจัดการด้านสิ่งแวดล้อม สังคม และธรรมาภิบาล รวมทั้งความมีส่วนร่วมของทุกหน่วยงาน เพื่อให้เกิดความเป็นวัฒนธรรมขององค์กร</li>
+<li>จัดทำแผนโครงการต่างๆให้ครอบคลุมทั้ง 3 มิติ มิติสิ่งแวดล้อม มิติสังคม และมิติธรรมาภิบาล</li>
+</ul>
+</div>
+</div>
+<h3 class="text-h4" style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-light);  display: flex; align-items: center; gap: 10px;">
+                ความเสี่ยงด้านระบบสารสนเทศและการปฏิบัติงาน (IT &amp; Operational Risk)
             </h3>
-            
-            <div class="risk-grid">
-                <div class="risk-card">
-                    <h4>ความเสี่ยงด้านความปลอดภัยทางไซเบอร์และระบบไอที (Cybersecurity & IT Risk)</h4>
-                    <span class="risk-section-title">ลักษณะความเสี่ยง:</span> 
-                    <p class="risk-desc">ในยุคดิจิทัล การพึ่งพาระบบสารสนเทศในการดำเนินธุรกิจมีมากขึ้น ทำให้บริษัทเผชิญกับความเสี่ยงจากการโจมตีทางไซเบอร์ (Cyberattacks) ข้อมูลรั่วไหล หรือระบบเครือข่ายขัดข้อง ซึ่งอาจส่งผลกระทบต่อความต่อเนื่องในการดำเนินงาน และความน่าเชื่อถือของบริษัท</p>
-                    <span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span> 
-                    <ul class="risk-measures">
-                        <li>ประกาศใช้นโยบายการรักษาความปลอดภัยด้านไอที และนโยบายการควบคุมการปฏิบัติงานอย่างเคร่งครัด</li>
-                        <li>จัดทำแนวปฏิบัติแผนรองรับและแนวทางป้องกันกรณีฉุกเฉิน (Incident Response Plan) เพื่อรับมือกับเหตุการณ์ที่ไม่คาดคิด</li>
-                        <li>ติดตั้งระบบรักษาความปลอดภัยเครือข่าย สำรองข้อมูลอย่างสม่ำเสมอ และจำกัดสิทธิ์การเข้าถึงข้อมูลสำคัญ</li>
-                    </ul>
-                </div>
-            </div>
-            </div>
-            <!-- ดาวน์โหลดเอกสาร --></div>
-                    <h3 style="margin-top:40px; color:var(--primary);">เอกสารดาวน์โหลด</h3>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายการบริหารจัดการความเสี่ยง</h4>
-                                <p>อัปเดตล่าสุด: ปี 2567 | ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/นโยบายบริหารความเสี่ยง.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                </div>
-
-                <div id="gov_control" class="category-section">
-                    <h2 class="section-title">นโยบายการควบคุมภายใน</h2>
-                    <div class="policy-content-wrapper"><style>
+<div class="risk-grid">
+<div class="risk-card">
+<h4>ความเสี่ยงด้านความปลอดภัยทางไซเบอร์และระบบไอที (Cybersecurity &amp; IT Risk)</h4>
+<span class="risk-section-title">ลักษณะความเสี่ยง:</span>
+<p class="risk-desc">ในยุคดิจิทัล การพึ่งพาระบบสารสนเทศในการดำเนินธุรกิจมีมากขึ้น ทำให้บริษัทเผชิญกับความเสี่ยงจากการโจมตีทางไซเบอร์ (Cyberattacks) ข้อมูลรั่วไหล หรือระบบเครือข่ายขัดข้อง ซึ่งอาจส่งผลกระทบต่อความต่อเนื่องในการดำเนินงาน และความน่าเชื่อถือของบริษัท</p>
+<span class="risk-section-title">มาตรการจัดการความเสี่ยง:</span>
+<ul class="risk-measures">
+<li>ประกาศใช้นโยบายการรักษาความปลอดภัยด้านไอที และนโยบายการควบคุมการปฏิบัติงานอย่างเคร่งครัด</li>
+<li>จัดทำแนวปฏิบัติแผนรองรับและแนวทางป้องกันกรณีฉุกเฉิน (Incident Response Plan) เพื่อรับมือกับเหตุการณ์ที่ไม่คาดคิด</li>
+<li>ติดตั้งระบบรักษาความปลอดภัยเครือข่าย สำรองข้อมูลอย่างสม่ำเสมอ และจำกัดสิทธิ์การเข้าถึงข้อมูลสำคัญ</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- ดาวน์โหลดเอกสาร --></div>
+<h3 style="margin-top:40px; color:var(--primary);">เอกสารดาวน์โหลด</h3>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายการบริหารจัดการความเสี่ยง</h4>
+<p>อัปเดตล่าสุด: ปี 2567 | ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/นโยบายบริหารความเสี่ยง.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="gov_control">
+<h2 class="section-title">นโยบายการควบคุมภายใน</h2>
+<div class="policy-content-wrapper"><style>
         .intro-box {
             background: var(--white);
             border-radius: 0px;
@@ -655,190 +684,267 @@
 
     </style>
 <section-header title="การควบคุมภายในและรายการระหว่างกัน"></section-header>
-            
-            <div class="intro-box">
-                <div class="intro-text">
-                    <p><strong><span style="white-space: nowrap;">บริษัท</span> ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน)</strong> หรือ “<span style="white-space: nowrap;">บริษัทฯ</span>” ได้ดำเนินงานด้านการควบคุมภายในตามมาตรฐานสากล <strong>COSO (Committee of Sponsoring Organizations of the Treadway Commission)</strong> เพื่อให้<span style="white-space: nowrap;">บริษัทฯ</span> บรรลุวัตถุประสงค์ทั้ง 3 ด้าน ได้แก่ ด้านการดำเนินงาน (Operation) ด้านการรายงาน (Reporting) และด้านการปฏิบัติตามกฎหมาย ระเบียบ ข้อบังคับที่เกี่ยวข้องกับการดำเนินธุรกิจของ<span style="white-space: nowrap;">บริษัทฯ</span> (Compliance)</p>
-                    <p>โดยฝ่ายบริหารและหน่วยงานตรวจสอบภายในของ<span style="white-space: nowrap;">บริษัทฯ</span> ได้จัดทำแบบประเมินการควบคุมภายในประจำปี ตามหลักเกณฑ์ที่สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (ก.ล.ต.) กำหนด ซึ่งแบบประเมินความเพียงพอของระบบการควบคุมภายในของ<span style="white-space: nowrap;">บริษัทฯ</span> ได้ผ่านการสอบทานและให้ความเห็น ข้อเสนอแนะ โดยคณะกรรมการตรวจสอบ และรายงานต่อคณะกรรมการ<span style="white-space: nowrap;">บริษัท</span>พิจารณา ในการประชุมครั้งที่ 1/2568 เมื่อวันที่ 26 กุมภาพันธ์ 2568 คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span> เห็นว่า <strong>ระบบการควบคุมภายในของ<span style="white-space: nowrap;">บริษัทฯ</span> มีความเพียงพอและเหมาะสม ไม่พบข้อบกพร่องที่สำคัญที่อาจกระทบต่อระบบการควบคุมภายในของ<span style="white-space: nowrap;">บริษัทฯ</span></strong> รายงานแบบประเมินความเพียงพอของระบบการควบคุมภายในมีการจัดทำเอกสารอ้างอิงการตอบแบบประเมินที่ชัดเจน ครบถ้วน ถูกต้อง เชื่อถือได้ และการดำเนินธุรกิจเป็นไปตามกฎหมายและระเบียบข้อบังคับที่เกี่ยวข้อง</p>
-                </div>
-            </div>
+<div class="intro-box">
+<div class="intro-text">
+<p><strong><span style="white-space: nowrap;">บริษัท</span> ยูเนี่ยน ปิโตรเคมีคอล จำกัด (มหาชน)</strong> หรือ “<span style="white-space: nowrap;">บริษัทฯ</span>” ได้ดำเนินงานด้านการควบคุมภายในตามมาตรฐานสากล <strong>COSO (Committee of Sponsoring Organizations of the Treadway Commission)</strong> เพื่อให้<span style="white-space: nowrap;">บริษัทฯ</span> บรรลุวัตถุประสงค์ทั้ง 3 ด้าน ได้แก่ ด้านการดำเนินงาน (Operation) ด้านการรายงาน (Reporting) และด้านการปฏิบัติตามกฎหมาย ระเบียบ ข้อบังคับที่เกี่ยวข้องกับการดำเนินธุรกิจของ<span style="white-space: nowrap;">บริษัทฯ</span> (Compliance)</p>
+<p>โดยฝ่ายบริหารและหน่วยงานตรวจสอบภายในของ<span style="white-space: nowrap;">บริษัทฯ</span> ได้จัดทำแบบประเมินการควบคุมภายในประจำปี ตามหลักเกณฑ์ที่สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (ก.ล.ต.) กำหนด ซึ่งแบบประเมินความเพียงพอของระบบการควบคุมภายในของ<span style="white-space: nowrap;">บริษัทฯ</span> ได้ผ่านการสอบทานและให้ความเห็น ข้อเสนอแนะ โดยคณะกรรมการตรวจสอบ และรายงานต่อคณะกรรมการ<span style="white-space: nowrap;">บริษัท</span>พิจารณา ในการประชุมครั้งที่ 1/2568 เมื่อวันที่ 26 กุมภาพันธ์ 2568 คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span> เห็นว่า <strong>ระบบการควบคุมภายในของ<span style="white-space: nowrap;">บริษัทฯ</span> มีความเพียงพอและเหมาะสม ไม่พบข้อบกพร่องที่สำคัญที่อาจกระทบต่อระบบการควบคุมภายในของ<span style="white-space: nowrap;">บริษัทฯ</span></strong> รายงานแบบประเมินความเพียงพอของระบบการควบคุมภายในมีการจัดทำเอกสารอ้างอิงการตอบแบบประเมินที่ชัดเจน ครบถ้วน ถูกต้อง เชื่อถือได้ และการดำเนินธุรกิจเป็นไปตามกฎหมายและระเบียบข้อบังคับที่เกี่ยวข้อง</p>
+</div>
+</div>
+<div style="margin-top: 60px;">
+<section-header title="ระบบการควบคุมภายในของบริษัทฯ (COSO)"></section-header>
+<p class="coso-subtitle"><span style="white-space: nowrap;">บริษัทฯ</span> มีหน่วยงานที่รับผิดชอบเกี่ยวกับงานควบคุมภายในและกำหนดให้ระบบการควบคุมภายในเข้าไปอยู่ในทุกกิจกรรม ทุกฝ่าย และทุกระดับใน<span style="white-space: nowrap;">บริษัทฯ</span> เพื่อมุ่งเน้นให้มีระบบการควบคุมภายในที่เพียงพอและเหมาะสมกับการดำเนินธุรกิจ ซึ่งในปี 2568 <span style="white-space: nowrap;">บริษัทฯ</span> ได้มีการดำเนินการเพื่อเพิ่มประสิทธิภาพระบบการควบคุมภายใน และสรุปผลการดำเนินงานตามองค์ประกอบ 5 ด้าน ดังนี้</p>
+<div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
+<!-- COSO 1 -->
+<div>
+<h4 class="text-h4" style="color: var(--primary); margin-top: 0;">1. การควบคุมภายในองค์กร (Control Environment)</h4>
+<p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span> และผู้บริหาร มุ่งเน้นให้บุคลากรมีความรู้ ความสามารถ ซึ่งจะช่วยให้การดำเนินธุรกิจขององค์กรเติบโตอย่างยั่งยืน จึงได้กำหนดให้มีจรรยาบรรณธุรกิจ และการกำกับดูแลการดำเนินธุรกิจของ<span style="white-space: nowrap;">บริษัทฯ</span> เพื่อให้<span style="white-space: nowrap;">บริษัทฯ</span> มีระบบการควบคุมภายในองค์กรที่ดีและเหมาะสม ดังนี้</p>
+<ul class="styled-list">
+<li><strong style="color: var(--primary);">นโยบายและจรรยาบรรณ:</strong> กำหนดนโยบายการกำกับดูแลกิจการที่ดี นโยบายต่อต้านการทุจริตคอร์รัปชั่น ข้อกำหนดเกี่ยวกับจรรยาบรรณธุรกิจ ระเบียบปฏิบัติ ข้อบังคับทางวินัย และมีการติดตามผลการปฏิบัติตามเป็นประจำทุกปี พร้อมสื่อสารให้กรรมการ ผู้บริหาร และพนักงาน ยึดถือและปฏิบัติ</li>
+<li><strong style="color: var(--primary);">ความเป็นอิสระของคณะกรรมการ:</strong> คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span> มีความเป็นอิสระจากฝ่ายบริหาร มีการกำหนดขอบเขต อำนาจหน้าที่ชัดเจน ทำหน้าที่กำกับดูแลโดยรวม ให้ความเห็นต่อทิศทางกลยุทธ์ และติดตามผลดำเนินงานอย่างสม่ำเสมอ</li>
+<li><strong style="color: var(--primary);">โครงสร้างองค์กร:</strong> กำหนดโครงสร้างองค์กรและสายการปฏิบัติงาน เพื่อให้การบริหารจัดการมีประสิทธิภาพ มีการแบ่งแยกหน้าที่ในส่วนงานที่สำคัญ กำหนดอำนาจอนุมัติ เพื่อให้เกิดการถ่วงดุลอำนาจ รวมถึงมีแผนพัฒนาบุคลากร สรรหาผู้สืบทอดตำแหน่ง (Succession Plan) และประเมินผลปฏิบัติงานอย่างเป็นระบบ</li>
+</ul>
+</div>
+<!-- COSO 2 -->
+<div>
+<h4 class="text-h4" style="color: var(--primary); margin-top: 0;">2. การประเมินความเสี่ยง (Risk Assessment)</h4>
+<p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span> และผู้บริหารให้ความสำคัญในการบริหารจัดการความเสี่ยง เพื่อให้บรรลุเป้าหมายที่กำหนดไว้และนำพา<span style="white-space: nowrap;">บริษัทฯ</span> ไปสู่การเติบโตอย่างยั่งยืน โดยจัดตั้ง <strong>คณะกรรมการบริหารความเสี่ยง (Risk Management Committee)</strong> จำนวน 4 ท่าน เพื่อกำกับดูแลการบริหารความเสี่ยงให้เป็นไปอย่างเหมาะสมและสอดคล้องกับกลยุทธ์</p>
+<ul class="styled-list">
+<li><strong style="color: var(--primary);">กรอบการบริหารความเสี่ยง (ERM):</strong> วิเคราะห์ความเสี่ยง ประเมิน ติดตาม และจัดทำแผนบริหารจัดการความเสี่ยง ทั้งระดับองค์กร (Corporate Risk) ระดับปฏิบัติการ (Operation Risk) และความเสี่ยงโครงการ (Projects Risk) โดยพิจารณาโอกาสเกิดการทุจริตคอร์รัปชั่นด้วย</li>
+<li><strong style="color: var(--primary);">การติดตามและรายงาน:</strong> ผู้รับผิดชอบความเสี่ยงจะกำหนดตัวชี้วัด (KPIs) และรายงานสรุปผลประจำเดือนต่อคณะกรรมการบริหาร และรายงานระดับองค์กรต่อคณะกรรมการ<span style="white-space: nowrap;">บริษัท</span>ในทุกไตรมาส เพื่อประเมินความเสี่ยงคงเหลือให้อยู่ในระดับที่ยอมรับได้</li>
+<li><strong style="color: var(--primary);">แผนรองรับภาวะวิกฤต:</strong> พัฒนาระบบการบริหารความเสี่ยงเพื่อรองรับและบริหารจัดการเมื่อเผชิญเหตุฉุกเฉิน ทำให้การดำเนินธุรกิจเป็นไปอย่างต่อเนื่อง (BCP) ลดผลกระทบและรักษาภาพลักษณ์องค์กร</li>
+</ul>
+</div>
+<!-- COSO 3 -->
+<div>
+<h4 class="text-h4" style="color: var(--primary); margin-top: 0;">3. การควบคุมการปฏิบัติงาน (Control Activities)</h4>
+<p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;"><span style="white-space: nowrap;">บริษัทฯ</span> ได้กำหนดกิจกรรมการควบคุมที่มีประสิทธิภาพ เพื่อช่วยลดความเสี่ยงให้อยู่ในระดับที่ยอมรับได้ มีการจัดทำระเบียบปฏิบัติ นโยบาย คู่มือและขั้นตอนปฏิบัติงานที่เป็นลายลักษณ์อักษร</p>
+<ul class="styled-list">
+<li><strong style="color: var(--primary);">การกำหนดขอบเขตอำนาจ:</strong> กระจายอำนาจอนุมัติ มีการแบ่งแยกหน้าที่ มีนโยบายเกี่ยวกับรายการที่อาจมีความขัดแย้งทางผลประโยชน์ (Conflict of Interest) และดำเนินธุรกรรมที่โปร่งใส ตรวจสอบได้ เป็นธรรม</li>
+<li><strong style="color: var(--primary);">มาตรฐาน ISO 9001:2015:</strong> ดำเนินการตามมาตรฐาน มีการสอบทานปฏิบัติงานให้เป็นไปตามกฎระเบียบ ข้อบังคับ เพื่อให้มั่นใจว่าการปฏิบัติงานมีประสิทธิภาพและมีการควบคุมภายในที่เพียงพอ</li>
+</ul>
+</div>
+<!-- COSO 4 -->
+<div>
+<h4 class="text-h4" style="color: var(--primary); margin-top: 0;">4. ระบบสารสนเทศและการสื่อสารข้อมูล (Information &amp; Communication)</h4>
+<p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;"><span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญต่อระบบสารสนเทศและการใช้ข้อมูลทั้งภายในและภายนอกองค์กร ส่งเสริมให้มีการพัฒนาเทคโนโลยีสารสนเทศให้มีความทันสมัย</p>
+<ul class="styled-list">
+<li><strong style="color: var(--primary);">ความปลอดภัยของข้อมูล:</strong> กำหนดสิทธิการเข้าฐานข้อมูลที่สำคัญ ตรวจสอบสิทธิปีละครั้ง กำหนดนโยบายรักษาความลับ (Confidentiality) ความถูกต้อง (Integrity) ความพร้อมใช้ (Availability) และจัดการข้อมูลที่มีผลต่อราคาหลักทรัพย์ (Market Sensitive Information)</li>
+<li><strong style="color: var(--primary);">การใช้เทคโนโลยี:</strong> ใช้ระบบ <strong>Wisible</strong> สำหรับกระบวนการขายเพื่อติดตามและตรวจสอบความผิดปกติ และใช้ระบบ <strong>ERP</strong> ในการควบคุมสินเชื่อ ลดความเสี่ยงหนี้สูญ ส่งผลให้สามารถเก็บหนี้ได้ตามเป้าหมาย</li>
+<li><strong style="color: var(--primary);">นโยบาย IT Security &amp; PDPA:</strong> กำหนดนโยบายรักษาความปลอดภัยด้าน IT การสำรองข้อมูล และการรับมือเหตุฉุกเฉิน รวมถึงนโยบายคุ้มครองข้อมูลส่วนบุคคล (PDPA) สื่อสารให้พนักงานรับทราบอย่างทั่วถึง และมีช่องทางรับเรื่องร้องเรียนที่โปร่งใส</li>
+<li><strong style="color: var(--primary);">การตรวจสอบระบบ IT:</strong> มีการควบคุมวงเงินอนุมัติในระบบสารสนเทศ และมีการตรวจสอบการปฏิบัติงานโดยฝ่าย IT Audit เพื่อปรับปรุงการควบคุมภายในอย่างต่อเนื่อง</li>
+</ul>
+</div>
+<!-- COSO 5 -->
+<div>
+<h4 class="text-h4" style="color: var(--primary); margin-top: 0;">5. ระบบการติดตาม (Monitoring Activities)</h4>
+<p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;"><strong class="skimmable-bold">ระบบการตรวจสอบภายใน:</strong> หน่วยงานตรวจสอบภายในมีความเป็นอิสระ รายงานตรงต่อ <strong>คณะกรรมการตรวจสอบ</strong> ทำหน้าที่สร้างความเชื่อมั่นและให้คำปรึกษา เพื่อให้การกำกับดูแลกิจการ การบริหารความเสี่ยง และการควบคุมภายในเป็นไปอย่างมีประสิทธิภาพ</p>
+<ul class="styled-list">
+<li><strong style="color: var(--primary);">การจัดทำแผนตรวจสอบ:</strong> จัดทำแผนการตรวจสอบภายในประจำปี เพื่อประเมินระบบการควบคุมภายในของกระบวนการต่างๆ</li>
+<li><strong style="color: var(--primary);">รายงานผลและติดตาม:</strong> รายงานผลการตรวจสอบต่อคณะกรรมการตรวจสอบในทุกๆ ไตรมาส และติดตามผลการดำเนินการแก้ไขตามข้อเสนอแนะอย่างต่อเนื่อง</li>
+<li><strong style="color: var(--primary);">ความเป็นอิสระในการแสดงความเห็น:</strong> ในการปฏิบัติหน้าที่ ฝ่ายตรวจสอบภายในไม่มีข้อจำกัดในการแสดงความเห็น และปราศจากประเด็นขัดแย้งกับหน่วยงานรับตรวจ</li>
+</ul>
+</div>
+</div>
+</div></div>
+<h3 style="margin-top:40px; color:var(--primary);">เอกสารดาวน์โหลด</h3>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>ประกาศนโยบายการควบคุมการปฏิบัติงาน</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/ประกาศนโยบายการควบคุมการปฏิบัติงาน.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="sustainability">
+<h2 class="section-title">นโยบายด้านความยั่งยืน (ESG)</h2>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายด้านสิ่งแวดล้อม</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/นโยบายด้านสิ่งแวดล้อม.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
 
-            <div style="margin-top: 60px;">
-                <section-header title="ระบบการควบคุมภายในของบริษัทฯ (COSO)"></section-header>
-                <p class="coso-subtitle"><span style="white-space: nowrap;">บริษัทฯ</span> มีหน่วยงานที่รับผิดชอบเกี่ยวกับงานควบคุมภายในและกำหนดให้ระบบการควบคุมภายในเข้าไปอยู่ในทุกกิจกรรม ทุกฝ่าย และทุกระดับใน<span style="white-space: nowrap;">บริษัทฯ</span> เพื่อมุ่งเน้นให้มีระบบการควบคุมภายในที่เพียงพอและเหมาะสมกับการดำเนินธุรกิจ ซึ่งในปี 2568 <span style="white-space: nowrap;">บริษัทฯ</span> ได้มีการดำเนินการเพื่อเพิ่มประสิทธิภาพระบบการควบคุมภายใน และสรุปผลการดำเนินงานตามองค์ประกอบ 5 ด้าน ดังนี้</p>
-
-                <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
-                    <!-- COSO 1 -->
-                    <div>
-                        <h4 class="text-h4" style="color: var(--primary); margin-top: 0;">1. การควบคุมภายในองค์กร (Control Environment)</h4>
-                        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span> และผู้บริหาร มุ่งเน้นให้บุคลากรมีความรู้ ความสามารถ ซึ่งจะช่วยให้การดำเนินธุรกิจขององค์กรเติบโตอย่างยั่งยืน จึงได้กำหนดให้มีจรรยาบรรณธุรกิจ และการกำกับดูแลการดำเนินธุรกิจของ<span style="white-space: nowrap;">บริษัทฯ</span> เพื่อให้<span style="white-space: nowrap;">บริษัทฯ</span> มีระบบการควบคุมภายในองค์กรที่ดีและเหมาะสม ดังนี้</p>
-                        <ul class="styled-list">
-                            <li><strong style="color: var(--primary);">นโยบายและจรรยาบรรณ:</strong> กำหนดนโยบายการกำกับดูแลกิจการที่ดี นโยบายต่อต้านการทุจริตคอร์รัปชั่น ข้อกำหนดเกี่ยวกับจรรยาบรรณธุรกิจ ระเบียบปฏิบัติ ข้อบังคับทางวินัย และมีการติดตามผลการปฏิบัติตามเป็นประจำทุกปี พร้อมสื่อสารให้กรรมการ ผู้บริหาร และพนักงาน ยึดถือและปฏิบัติ</li>
-                            <li><strong style="color: var(--primary);">ความเป็นอิสระของคณะกรรมการ:</strong> คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span> มีความเป็นอิสระจากฝ่ายบริหาร มีการกำหนดขอบเขต อำนาจหน้าที่ชัดเจน ทำหน้าที่กำกับดูแลโดยรวม ให้ความเห็นต่อทิศทางกลยุทธ์ และติดตามผลดำเนินงานอย่างสม่ำเสมอ</li>
-                            <li><strong style="color: var(--primary);">โครงสร้างองค์กร:</strong> กำหนดโครงสร้างองค์กรและสายการปฏิบัติงาน เพื่อให้การบริหารจัดการมีประสิทธิภาพ มีการแบ่งแยกหน้าที่ในส่วนงานที่สำคัญ กำหนดอำนาจอนุมัติ เพื่อให้เกิดการถ่วงดุลอำนาจ รวมถึงมีแผนพัฒนาบุคลากร สรรหาผู้สืบทอดตำแหน่ง (Succession Plan) และประเมินผลปฏิบัติงานอย่างเป็นระบบ</li>
-                        </ul>
-                    </div>
-
-                    <!-- COSO 2 -->
-                    <div>
-                        <h4 class="text-h4" style="color: var(--primary); margin-top: 0;">2. การประเมินความเสี่ยง (Risk Assessment)</h4>
-                        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">คณะกรรมการ<span style="white-space: nowrap;">บริษัท</span> และผู้บริหารให้ความสำคัญในการบริหารจัดการความเสี่ยง เพื่อให้บรรลุเป้าหมายที่กำหนดไว้และนำพา<span style="white-space: nowrap;">บริษัทฯ</span> ไปสู่การเติบโตอย่างยั่งยืน โดยจัดตั้ง <strong>คณะกรรมการบริหารความเสี่ยง (Risk Management Committee)</strong> จำนวน 4 ท่าน เพื่อกำกับดูแลการบริหารความเสี่ยงให้เป็นไปอย่างเหมาะสมและสอดคล้องกับกลยุทธ์</p>
-                        <ul class="styled-list">
-                            <li><strong style="color: var(--primary);">กรอบการบริหารความเสี่ยง (ERM):</strong> วิเคราะห์ความเสี่ยง ประเมิน ติดตาม และจัดทำแผนบริหารจัดการความเสี่ยง ทั้งระดับองค์กร (Corporate Risk) ระดับปฏิบัติการ (Operation Risk) และความเสี่ยงโครงการ (Projects Risk) โดยพิจารณาโอกาสเกิดการทุจริตคอร์รัปชั่นด้วย</li>
-                            <li><strong style="color: var(--primary);">การติดตามและรายงาน:</strong> ผู้รับผิดชอบความเสี่ยงจะกำหนดตัวชี้วัด (KPIs) และรายงานสรุปผลประจำเดือนต่อคณะกรรมการบริหาร และรายงานระดับองค์กรต่อคณะกรรมการ<span style="white-space: nowrap;">บริษัท</span>ในทุกไตรมาส เพื่อประเมินความเสี่ยงคงเหลือให้อยู่ในระดับที่ยอมรับได้</li>
-                            <li><strong style="color: var(--primary);">แผนรองรับภาวะวิกฤต:</strong> พัฒนาระบบการบริหารความเสี่ยงเพื่อรองรับและบริหารจัดการเมื่อเผชิญเหตุฉุกเฉิน ทำให้การดำเนินธุรกิจเป็นไปอย่างต่อเนื่อง (BCP) ลดผลกระทบและรักษาภาพลักษณ์องค์กร</li>
-                        </ul>
-                    </div>
-
-                    <!-- COSO 3 -->
-                    <div>
-                        <h4 class="text-h4" style="color: var(--primary); margin-top: 0;">3. การควบคุมการปฏิบัติงาน (Control Activities)</h4>
-                        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;"><span style="white-space: nowrap;">บริษัทฯ</span> ได้กำหนดกิจกรรมการควบคุมที่มีประสิทธิภาพ เพื่อช่วยลดความเสี่ยงให้อยู่ในระดับที่ยอมรับได้ มีการจัดทำระเบียบปฏิบัติ นโยบาย คู่มือและขั้นตอนปฏิบัติงานที่เป็นลายลักษณ์อักษร</p>
-                        <ul class="styled-list">
-                            <li><strong style="color: var(--primary);">การกำหนดขอบเขตอำนาจ:</strong> กระจายอำนาจอนุมัติ มีการแบ่งแยกหน้าที่ มีนโยบายเกี่ยวกับรายการที่อาจมีความขัดแย้งทางผลประโยชน์ (Conflict of Interest) และดำเนินธุรกรรมที่โปร่งใส ตรวจสอบได้ เป็นธรรม</li>
-                            <li><strong style="color: var(--primary);">มาตรฐาน ISO 9001:2015:</strong> ดำเนินการตามมาตรฐาน มีการสอบทานปฏิบัติงานให้เป็นไปตามกฎระเบียบ ข้อบังคับ เพื่อให้มั่นใจว่าการปฏิบัติงานมีประสิทธิภาพและมีการควบคุมภายในที่เพียงพอ</li>
-                        </ul>
-                    </div>
-
-                    <!-- COSO 4 -->
-                    <div>
-                        <h4 class="text-h4" style="color: var(--primary); margin-top: 0;">4. ระบบสารสนเทศและการสื่อสารข้อมูล (Information & Communication)</h4>
-                        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;"><span style="white-space: nowrap;">บริษัทฯ</span> ให้ความสำคัญต่อระบบสารสนเทศและการใช้ข้อมูลทั้งภายในและภายนอกองค์กร ส่งเสริมให้มีการพัฒนาเทคโนโลยีสารสนเทศให้มีความทันสมัย</p>
-                        <ul class="styled-list">
-                            <li><strong style="color: var(--primary);">ความปลอดภัยของข้อมูล:</strong> กำหนดสิทธิการเข้าฐานข้อมูลที่สำคัญ ตรวจสอบสิทธิปีละครั้ง กำหนดนโยบายรักษาความลับ (Confidentiality) ความถูกต้อง (Integrity) ความพร้อมใช้ (Availability) และจัดการข้อมูลที่มีผลต่อราคาหลักทรัพย์ (Market Sensitive Information)</li>
-                            <li><strong style="color: var(--primary);">การใช้เทคโนโลยี:</strong> ใช้ระบบ <strong>Wisible</strong> สำหรับกระบวนการขายเพื่อติดตามและตรวจสอบความผิดปกติ และใช้ระบบ <strong>ERP</strong> ในการควบคุมสินเชื่อ ลดความเสี่ยงหนี้สูญ ส่งผลให้สามารถเก็บหนี้ได้ตามเป้าหมาย</li>
-                            <li><strong style="color: var(--primary);">นโยบาย IT Security & PDPA:</strong> กำหนดนโยบายรักษาความปลอดภัยด้าน IT การสำรองข้อมูล และการรับมือเหตุฉุกเฉิน รวมถึงนโยบายคุ้มครองข้อมูลส่วนบุคคล (PDPA) สื่อสารให้พนักงานรับทราบอย่างทั่วถึง และมีช่องทางรับเรื่องร้องเรียนที่โปร่งใส</li>
-                            <li><strong style="color: var(--primary);">การตรวจสอบระบบ IT:</strong> มีการควบคุมวงเงินอนุมัติในระบบสารสนเทศ และมีการตรวจสอบการปฏิบัติงานโดยฝ่าย IT Audit เพื่อปรับปรุงการควบคุมภายในอย่างต่อเนื่อง</li>
-                        </ul>
-                    </div>
-
-                    <!-- COSO 5 -->
-                    <div>
-                        <h4 class="text-h4" style="color: var(--primary); margin-top: 0;">5. ระบบการติดตาม (Monitoring Activities)</h4>
-                        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;"><strong class="skimmable-bold">ระบบการตรวจสอบภายใน:</strong> หน่วยงานตรวจสอบภายในมีความเป็นอิสระ รายงานตรงต่อ <strong>คณะกรรมการตรวจสอบ</strong> ทำหน้าที่สร้างความเชื่อมั่นและให้คำปรึกษา เพื่อให้การกำกับดูแลกิจการ การบริหารความเสี่ยง และการควบคุมภายในเป็นไปอย่างมีประสิทธิภาพ</p>
-                        <ul class="styled-list">
-                            <li><strong style="color: var(--primary);">การจัดทำแผนตรวจสอบ:</strong> จัดทำแผนการตรวจสอบภายในประจำปี เพื่อประเมินระบบการควบคุมภายในของกระบวนการต่างๆ</li>
-                            <li><strong style="color: var(--primary);">รายงานผลและติดตาม:</strong> รายงานผลการตรวจสอบต่อคณะกรรมการตรวจสอบในทุกๆ ไตรมาส และติดตามผลการดำเนินการแก้ไขตามข้อเสนอแนะอย่างต่อเนื่อง</li>
-                            <li><strong style="color: var(--primary);">ความเป็นอิสระในการแสดงความเห็น:</strong> ในการปฏิบัติหน้าที่ ฝ่ายตรวจสอบภายในไม่มีข้อจำกัดในการแสดงความเห็น และปราศจากประเด็นขัดแย้งกับหน่วยงานรับตรวจ</li>
-                        </ul>
-                    </div>
-                </div>
-            </div></div>
-                    <h3 style="margin-top:40px; color:var(--primary);">เอกสารดาวน์โหลด</h3>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>ประกาศนโยบายการควบคุมการปฏิบัติงาน</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="assets/เอกสารกำกับดูแล/ประกาศนโยบายการควบคุมการปฏิบัติงาน.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                </div>
-
-                <div id="sustainability" class="category-section">
-                    <h2 class="section-title">นโยบายด้านความยั่งยืน (ESG)</h2>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายความยั่งยืนระดับองค์กร</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/นโยบายความยั่งยืนด้านผลิตภัณฑ์ ลูกค้า และ.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายการจัดการสิ่งแวดล้อม การป้องกันมลพิษ และการใช้ทรัพยากรอย่างมีประสิทธิภาพ</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="assets/เอกสารสิ่งแวดล้อม/นโยบายการจัดการสิ่งแวดล้อม การป้องกันมลพิษ และการใช้ทรัพยากรอย่างมีประสิทธิภาพ.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายการเปลี่ยนแปลงสภาพภูมิอากาศและการลดการปล่อยคาร์บอน</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="assets/เอกสารสิ่งแวดล้อม/นโยบายการเปลี่ยนแปลงสภาพภูมิอากาศและการลดการปล่อยคาร์บอน.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายอนุรักษ์พลังงาน</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="assets/เอกสารสิ่งแวดล้อม/นโยบายอนุรักษ์พลังงาน.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                </div>
-
-                <div id="hr" class="category-section">
-                    <h2 class="section-title">นโยบายด้านพนักงาน</h2>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฏิบัติ</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="assets/เอกสารสังคม/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายอาชีวอนามัยและความปลอดภัย</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="assets/เอกสารสังคม/นโยบายอาชีวอนามัยและความปลอดภัย.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                </div>
-
-                <div id="partner" class="category-section">
-                    <h2 class="section-title">นโยบายคู่ค้าและธุรกิจ</h2>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายจัดซื้อจัดจ้างอย่างยั่งยืน</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/นโยบายจัดซื้อจัดจ้างอย่างยั่งยืน.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                    <div class="doc-item">
-                        <div class="doc-info">
-                            <div class="doc-icon"><i data-feather="file-text"></i></div>
-                            <div class="doc-text">
-                                <h4>นโยบายคุ้มครองข้อมูลส่วนบุคคล (PDPA)</h4>
-                                <p>ไฟล์ PDF</p>
-                            </div>
-                        </div>
-                        <a href="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/PDPA.pdf" target="_blank" class="doc-download-btn"><i data-feather="download"></i> ดาวน์โหลด</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </main>
-
-    <main-footer></main-footer>
-
-    <script>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายความยั่งยืนระดับองค์กร</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="การกำกับดูแลและเศรษฐกิจ/เอกสารPDF/นโยบายความยั่งยืนด้านผลิตภัณฑ์ ลูกค้า และ.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายการเปลี่ยนแปลงสภาพภูมิอากาศและการลดการปล่อยคาร์บอน</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารสิ่งแวดล้อม/นโยบายการเปลี่ยนแปลงสภาพภูมิอากาศและการลดการปล่อยคาร์บอน.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายอนุรักษ์พลังงาน</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารสิ่งแวดล้อม/นโยบายอนุรักษ์พลังงาน.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="hr">
+<h2 class="section-title">นโยบายด้านพนักงาน</h2>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฏิบัติ</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารสังคม/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายอาชีวอนามัยและความปลอดภัย</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารสังคม/นโยบายอาชีวอนามัยและความปลอดภัย.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="hr_reports">
+<h2 class="section-title">บันทึกและรายงานด้านบุคลากร</h2>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>บันทึกตรวจสอบและรับรองข้อมูลสัดส่วนผู้หญิงในตำแหน่งบริหาร ประจำปี 2569</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารสังคม/บันทึกตรวจสอบและรับรองข้อมูลสัดส่วนผู้หญิงในตำแหน่งบริหาร.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>บันทึกผลการตรวจสอบแรงงานข้ามชาติ ประจำปี 2569</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารสังคม/บันทึกผลการตรวจสอบแรงงานข้ามชาติ.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="partner">
+<h2 class="section-title">นโยบายคู่ค้า ลูกค้า และการตลาด</h2>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายจัดซื้อจัดจ้างอย่างยั่งยืน</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="https://www.unionpetrochemical.com/wp-content/uploads/2026/06/นโยบายจัดซื้อจัดจ้างอย่างยั่งยืน.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายการขายและการตลาด</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารดาวน์โหลด/นโยบายการขายและการตลาด.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="pdpa">
+<h2 class="section-title">นโยบายคุ้มครองข้อมูลส่วนบุคคล (PDPA)</h2>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายคุ้มครองข้อมูลส่วนบุคคล (PDPA)</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารดาวน์โหลด/PDPA.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>Take Down Notice &amp; Complaint</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารดาวน์โหลด/Take-down-Complaint-Form.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="finance">
+<h2 class="section-title">นโยบายด้านบัญชีและการเงิน</h2>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายการบัญชี การเงิน ภาษี และงบประมาณ (ฉบับปี 2567)</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/นโยบายการบัญชี_การเงิน_ภาษี_และงบประมาณ.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+<div class="category-section" id="it">
+<h2 class="section-title">นโยบายด้านเทคโนโลยีสารสนเทศ</h2>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายบริหารจัดการซอฟต์แวร์ และลิขสิทธิ์</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/นโยบายบริหารจัดการซอฟต์แวร์_และลิขสิทธิ์.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>นโยบายการรักษาความปลอดภัยด้านไอที</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/นโยบายการรักษาความปลอดภัยด้านไอที.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+<div class="doc-item">
+<div class="doc-info">
+<div class="doc-icon"><i data-feather="file-text"></i></div>
+<div class="doc-text">
+<h4>แนวปฏิบัติแผนรองรับและแนวทางป้องกันกรณีระบบไอที</h4>
+<p>ไฟล์ PDF</p>
+</div>
+</div>
+<a class="doc-download-btn" href="assets/เอกสารกำกับดูแล/แนวปฏิบัติแผนรองรับและแนวทางป้องกัน.pdf" target="_blank"><i data-feather="download"></i> ดาวน์โหลด</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<main-footer></main-footer>
+<script>
         feather.replace();
 
         document.addEventListener('DOMContentLoaded', function() {

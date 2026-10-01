@@ -1754,19 +1754,30 @@ details.esg-accordion .accordion-content {
     }
     
     .dropdown-content {
-        position: static;
-        width: 100%;
+        position: static !important;
+        width: 100% !important;
         display: none;
-        box-shadow: none;
-        padding: 10px 0 0 20px;
-        border: none;
-        border-left: 2px solid var(--primary);
-        margin-top: 10px;
-        background-color: transparent;
+        box-shadow: none !important;
+        padding: 10px 0 0 20px !important;
+        border: none !important;
+        border-left: 2px solid var(--primary) !important;
+        margin-top: 10px !important;
+        margin-left: 0 !important;
+        background-color: transparent !important;
     }
     
     .dropdown.active .dropdown-content {
         display: block !important;
+    }
+    
+    .dropdown.active .dropdown-content.mega-menu {
+        display: flex !important;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .mega-col {
+        min-width: 100%;
     }
 }
 
