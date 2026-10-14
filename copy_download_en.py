@@ -52,6 +52,18 @@ content = content.replace('ดาวน์โหลด', 'Download')
 # Update the PDF links to the English versions where applicable!
 content = content.replace('ukem-or-2025-th.pdf', '../assets/เอกสารดาวน์โหลด/ukem-or-2025-en.pdf')
 content = content.replace('assets/เอกสารภาพรวมความยั่งยืน/ESG_Report_2025.pdf', '../assets/เอกสารดาวน์โหลด/ESG_Report_2025_en.pdf')
+content = content.replace('assets/เอกสารดาวน์โหลด/นโยบายการขายและการตลาด.pdf', '../assets/เอกสารดาวน์โหลด/SALES AND MARKETING POLICY.pdf')
+content = content.replace('assets/เอกสารสังคม/นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฎิบัติ.pdf', '../assets/เอกสารสังคม/Labor, Human Rights and Non-Discrimination Policy.pdf')
+content = content.replace('นโยบายแรงงาน สิทธิมนุษยชน และการไม่เลือกปฏิบัติ', 'Labor, Human Rights and Non-Discrimination Policy')
+content = content.replace('https://www.unionpetrochemical.com/wp-content/uploads/2026/06/นโยบายจัดซื้อจัดจ้างอย่างยั่งยืน.pdf', '../assets/เอกสารดาวน์โหลด/นโยบายจัดซื้อจัดจ้างอย่างยั่งยืน.pdf')
+content = content.replace('assets/เอกสารกำกับดูแล/ประกาศนโยบายการควบคุมการปฏิบัติงาน.pdf', '../assets/เอกสารกำกับดูแล/Policy on Operations Control and Security En.pdf')
+content = content.replace('ประกาศนโยบายการควบคุมการปฏิบัติงาน', 'Policy on Operations Control and Security')
+content = content.replace('Operational Control Policy', 'Policy on Operations Control and Security')
+content = content.replace('https://www.unionpetrochemical.com/wp-content/uploads/2026/06/Sustainable-Procurement-Policy.pdf', '../assets/เอกสารดาวน์โหลด/SUSTAINABLE PROCUREMENT POLICY.pdf')
+content = content.replace('assets/เอกสารกำกับดูแล/แนวปฏิบัติแผนรองรับและแนวทางป้องกัน.pdf', '../assets/เอกสารกำกับดูแล/Emergency Preparedness and Preventive Measures for Information Technology Disasters.pdf')
+content = content.replace('แนวปฏิบัติแผนรองรับและแนวทางป้องกันกรณีระบบไอที', 'Emergency Preparedness and Preventive Measures for Information Technology Disasters')
+content = content.replace('IT Incident Response and Prevention Plan', 'Emergency Preparedness and Preventive Measures for Information Technology Disasters')
+content = content.replace('assets/เอกสารดาวน์โหลด/นโยบายจัดซื้อจัดจ้างอย่างยั่งยืน.pdf', '../assets/เอกสารดาวน์โหลด/SUSTAINABLE PROCUREMENT POLICY.pdf')
 
 # Update relative paths to PDFs for deep links (since this is in en/ folder, we need ../)
 def repl_href(m):
