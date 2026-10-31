@@ -151,7 +151,7 @@ class MainNav extends HTMLElement {
                 </div>
                 
                 <div class="nav-links">
-                    <a href="https://www.unionpetrochemical.com/" target="_blank" class="dropdown">Back to Main Website</a>
+                    <a href="https://www.unionpetrochemical.com/" target="_blank" class="dropdown">Main Website</a>
                     <div class="dropdown">
                         About UKEM
                         <div class="dropdown-content">
